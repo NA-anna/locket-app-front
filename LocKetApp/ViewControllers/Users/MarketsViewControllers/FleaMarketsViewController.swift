@@ -15,29 +15,27 @@ class FleaMarketsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //마켓 데이터 가져오기
         getMarkets {
             self.tableView.reloadData()
         }
     }
 
     
-    // 세그먼트 변경 액션 
+    // 세그먼트 변경 액션
+    var filtered = markets
     @IBAction func changeSegment(_ sender: UISegmentedControl) {
-        if sender.selectedSegmentIndex == 0 {
-            getMarkets {
-                self.tableView.reloadData()
-            }
-        }else {  //모집중
-            getMarkets {
-                let filtered = markets.filter { market in
-                    guard let sellersForm = market.sellersForm else { return false }
-                    let today = Date().toString()
-                    return market.needSellers && sellersForm.deadline > today
-                }
-                markets = filtered
-                self.tableView.reloadData()
+        
+       //모집중
+        if segCon.selectedSegmentIndex == 1 {
+            filtered = markets.filter { market in
+                guard let sellersForm = market.sellersForm else { return false }
+                let today = Date().toString()
+                return market.needSellers && sellersForm.deadline > today
             }
         }
+        self.tableView.reloadData()
+
     }
     
     // MARK: - Table view data source
@@ -47,7 +45,13 @@ class FleaMarketsViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return markets.count
+        if segCon.selectedSegmentIndex == 0 {
+            return markets.count
+        }else {
+            return filtered.count
+            
+        }
+        
     }
 
     
@@ -57,8 +61,12 @@ class FleaMarketsViewController: UITableViewController {
         // 악세사리
         cell.accessoryType = .disclosureIndicator //UIImageView(image: UIImage(systemName: "heart"))
         
-        let market = markets[indexPath.row]
-        print(market)
+        
+        var market = markets[indexPath.row]
+        if segCon.selectedSegmentIndex == 1 {
+            market = filtered[indexPath.row]
+        }
+        
         // TABLE VIEW 에 값 지정
         let lblTitle = cell.viewWithTag(1) as? UILabel
         lblTitle?.text = market.name

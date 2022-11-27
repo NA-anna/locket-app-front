@@ -66,7 +66,7 @@ class FiveMarketDetailViewController: UIViewController {
             // PUT
             putUserData( collection: "users", id: user.id, body: jsonDictionary ){ //bodyData ){
                  
-                
+                // GET (재조회)
                 getLoginUser(id: user.id ){_ in }
             }
             

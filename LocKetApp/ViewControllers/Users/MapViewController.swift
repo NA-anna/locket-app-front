@@ -18,26 +18,6 @@ class MapViewController: UIViewController, MTMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
-        // 데이터 가져오기---------------------------------------------------
-        var combinedFiveMarkets: [Item] = []
-        get5Markets( numOfRows: 10, type: "5일장") {
-            print("맵1")
-            combinedFiveMarkets = fiveMarkets
-            
-            get5Markets( numOfRows: 10, type: "상설장+5일장") {
-                print("맵2")
-                combinedFiveMarkets.append(contentsOf: fiveMarkets)
-                fiveMarkets = combinedFiveMarkets
-            }
-        }
-        getMarkets {
-            print("맵")
-        }
-        //----------------------------------------------------------------
-        
-        
-        
         // 1 맵뷰 그리기 by Kakao
         mapView = MTMapView(frame: self.view.frame)
         mapView.delegate = self
@@ -65,9 +45,33 @@ class MapViewController: UIViewController, MTMapViewDelegate {
         let myMarker = MTMapLocationMarkerItem()
         myMarker.customTrackingImageName = "mylocation"
         mapView.updateCurrentLocationMarker(myMarker)
+
+        
+        
+        // 데이터 가져오기---------------------------------------------------
+        var combinedFiveMarkets: [Item] = []
+        get5Markets( numOfRows: 10, type: "5일장") {
+            
+            combinedFiveMarkets = fiveMarkets
+            
+            get5Markets( numOfRows: 10, type: "상설장+5일장") {
+                
+                combinedFiveMarkets.append(contentsOf: fiveMarkets)
+                fiveMarkets = combinedFiveMarkets
+                
+                getMarkets {
+
+                    self.drawMap()
+                }
+            }
+        }
+        
+        //----------------------------------------------------------------
+        
         
 
-        drawMap()
+
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -76,8 +80,8 @@ class MapViewController: UIViewController, MTMapViewDelegate {
 
     // 데이터의 좌표 맵에 그리기
     func drawMap(){
-        //5일장
         
+        //5일장
         for fivemarket in fiveMarkets{
             if let latitude = Double(fivemarket.latitude),
                let longitude = Double(fivemarket.longitude){
@@ -119,11 +123,7 @@ class MapViewController: UIViewController, MTMapViewDelegate {
         }
         mapView.addPOIItems(markers)
     }
-    
-    
-    //
- //   func setCurrentLocation
-    
+  
     
  
     func mapView(_ mapView: MTMapView!, updateCurrentLocation location: MTMapPoint!, withAccuracy accuracy: MTMapLocationAccuracy) {

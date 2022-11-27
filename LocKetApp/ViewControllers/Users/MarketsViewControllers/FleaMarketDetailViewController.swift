@@ -69,14 +69,15 @@ class FleaMarketDetailViewController: UIViewController {
             // PUT
             putUserData( collection: "users", id: user.id, body: jsonDictionary ){ //bodyData ){
                  
+                // GET (재조회)
                 getLoginUser(id: user.id ){_ in }
             }
             
         // F -> 삭제
         }else {
             // 즐겨찾기에서 삭제
-            if let index = user.favorites.fav_fleamarkets.firstIndex( where: { $0.market_id == market.name } ){
-                user.favorites.fav_fivemarkets.remove(at: index)
+            if let index = user.favorites.fav_fleamarkets.firstIndex( where: { $0.market_id == market._id } ){
+                user.favorites.fav_fleamarkets.remove(at: index)
             }
             
             // 데이터 인코딩

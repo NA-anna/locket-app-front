@@ -48,7 +48,7 @@ extension MypageViewController:UITableViewDataSource, UITableViewDelegate{
         case 0:
             symbol?.image = UIImage(systemName: "bell")
             symbol?.tintColor = .label
-            label?.text = "나의 신청 마켓!!!!!!"
+            label?.text = "나의 신청 마켓"
             
         case 1:
             symbol?.image = UIImage(systemName: "heart")

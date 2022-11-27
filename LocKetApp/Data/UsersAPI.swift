@@ -39,7 +39,6 @@ func putUserData( collection route : String, id : String, body: [String : Any], 
 
     // 2 Alamofire
     let params: Parameters = body
-    print(params)
     AF.request(
         strUrl,
         method: .put,
@@ -49,7 +48,6 @@ func putUserData( collection route : String, id : String, body: [String : Any], 
         debugPrint(response)
         switch response.result {
         case .success(_)://obj): //통신성공
-            print("PUT 응답 코드 :: ", response.response?.statusCode ?? 0)
             handler()
         case .failure(let e):   //통신실패
             print(e.localizedDescription)

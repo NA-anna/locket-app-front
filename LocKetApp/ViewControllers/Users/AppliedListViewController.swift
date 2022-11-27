@@ -15,9 +15,14 @@ class AppliedListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //마켓 데이터 가져오기
+        getMarkets {
+            self.tableView.reloadData()
+        }
+        
+        //셀러 신청한 데이터 가져오기
         guard let user = user else {return}
         let userId = user.id
-        
         getSeller(userId: userId) {
             self.tableView.reloadData()
         }
@@ -30,20 +35,30 @@ class AppliedListViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return sellers.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "listcell", for: indexPath)
 
+        let seller = sellers[indexPath.row]
         
-        blobstorage.downloadImage(blobName: "한강달빛야시장_fd480dd0-8771-4a3d-bc60-8640f34eb6fb_heungmin7", handler: { data in
-            let image = UIImage(data: data)
+        let blobName = seller.photo[0]
+        print(blobName)
+        if blobName != "" {
             
-            let imageView = tableView.viewWithTag(1) as? UIImageView
-            imageView?.image = image
-        })
+            blobstorage.downloadImage(blobName: blobName, handler: { data in
+                let image = UIImage(data: data)
+                DispatchQueue.main.async {
+                    let imageView = tableView.viewWithTag(1) as? UIImageView
+                    imageView?.image = image
+                }
+            })
+        }
+        
+        let lblName = tableView.viewWithTag(2) as? UILabel
+        lblName?.text = seller.marketId
         
 
         return cell

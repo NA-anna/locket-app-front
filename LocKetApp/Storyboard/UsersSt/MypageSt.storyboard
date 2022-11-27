@@ -228,7 +228,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bwd-jq-45V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1866" y="68"/>
+            <point key="canvasLocation" x="-817" y="828"/>
         </scene>
         <!--mypage-->
         <scene sceneID="aXw-gA-TL6">
@@ -340,6 +340,9 @@
                                                 <constraint firstItem="1d3-gN-4Sa" firstAttribute="centerX" secondItem="531-xh-Pc3" secondAttribute="centerX" id="uWa-z1-KV8"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="aAi-AQ-eKP" kind="show" id="aJs-kn-tpJ"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -367,7 +370,51 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IME-fT-Mhg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="696.92307692307691" y="67.535545023696685"/>
+            <point key="canvasLocation" x="-208" y="68"/>
+        </scene>
+        <!--Applied List View Controller-->
+        <scene sceneID="aXb-J8-ztf">
+            <objects>
+                <tableViewController id="aAi-AQ-eKP" customClass="AppliedListViewController" customModule="LocKetApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="xVA-oI-KSe">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="listcell" id="RkH-hk-9J8">
+                                <rect key="frame" x="0.0" y="50" width="390" height="120"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RkH-hk-9J8" id="L5p-S4-JbD">
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="120"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CCw-Sb-siZ">
+                                            <rect key="frame" x="20" y="0.0" width="120" height="120"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k5r-tA-M1e">
+                                            <rect key="frame" x="145" y="32" width="100" height="54.666666666666686"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="200" id="ebg-GU-jiX"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="aAi-AQ-eKP" id="8GQ-Pg-pF6"/>
+                            <outlet property="delegate" destination="aAi-AQ-eKP" id="Nt9-g8-ZKi"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="ejC-p1-YjV"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wfJ-eM-iZF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="657" y="68"/>
         </scene>
     </scenes>
     <resources>
