@@ -1,0 +1,16 @@
+PODS:
+  - AZSClient (0.2.6)
+
+DEPENDENCIES:
+  - AZSClient
+
+SPEC REPOS:
+  trunk:
+    - AZSClient
+
+SPEC CHECKSUMS:
+  AZSClient: efd576cabf56f97e38cb1b614739f4b0c1906392
+
+PODFILE CHECKSUM: 6aaa0e6d0cbb4d76e6df639d779cbb55464cf9d0
+
+COCOAPODS: 1.11.3
