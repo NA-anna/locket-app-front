@@ -1,72 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YjA-Sn-YdK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HcN-6E-kzx">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--UserHomeSt-->
-        <scene sceneID="yeg-8z-HJI">
+        <scene sceneID="zAu-4S-goz">
             <objects>
-                <viewControllerPlaceholder storyboardName="UserHomeSt" id="Ult-ft-Apg" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="R0f-pV-6B5"/>
+                <viewControllerPlaceholder storyboardName="UserHomeSt" id="QtU-TW-cbH" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="xYU-D3-TPE"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cFY-8D-nia" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="30t-Vh-Hnb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1519" y="103"/>
         </scene>
         <!--MarkerSt-->
-        <scene sceneID="IEa-gr-fRa">
+        <scene sceneID="RUI-IF-Y4J">
             <objects>
-                <viewControllerPlaceholder storyboardName="MarkerSt" id="yul-6r-fbI" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="8hC-vx-8zq"/>
+                <viewControllerPlaceholder storyboardName="MarkerSt" id="dzu-EY-gOF" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="내 주변" id="KHv-aF-cEM"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Bk0-AI-hbU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CxR-El-Ayd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1782" y="102"/>
         </scene>
         <!--FavoriteSt-->
-        <scene sceneID="Fso-nt-0U6">
+        <scene sceneID="bkB-4O-mk1">
             <objects>
-                <viewControllerPlaceholder storyboardName="FavoriteSt" id="dcO-iZ-1eh" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="v3e-3h-8RR"/>
+                <viewControllerPlaceholder storyboardName="FavoriteSt" id="dhQ-d4-3zg" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="좋아요" image="heart" catalog="system" id="JX9-9d-rCF">
+                        <color key="badgeColor" red="0.96841138599999999" green="0.77008184850000005" blue="0.25373728350000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <imageReference key="selectedImage" image="heart.fill" catalog="system"/>
+                    </tabBarItem>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7ix-d2-q2q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cHh-Zg-8J7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2075" y="102"/>
         </scene>
         <!--MypageSt-->
-        <scene sceneID="QpM-xO-AwB">
+        <scene sceneID="7zH-3b-N40">
             <objects>
-                <viewControllerPlaceholder storyboardName="MypageSt" id="k4a-Dj-lGg" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="flm-YE-PN2"/>
+                <viewControllerPlaceholder storyboardName="MypageSt" id="Cda-bo-9ZR" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="마이페이지" selectedImage="person.fill" catalog="system" id="r8c-El-mtI">
+                        <color key="badgeColor" red="0.96841138599999999" green="0.77008184850000005" blue="0.25373728350000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBarItem>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Bi4-cQ-PCO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BhT-ng-zuS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2375" y="102"/>
         </scene>
         <!--Tab Bar Controller-->
-        <scene sceneID="Gpw-gb-wcg">
+        <scene sceneID="DbP-72-dcb">
             <objects>
-                <tabBarController id="YjA-Sn-YdK" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="4N0-P0-sLu"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DO7-kh-bl6">
+                <tabBarController id="HcN-6E-kzx" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="fH9-AX-UIF"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ck8-iF-fto">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.96841138599999999" green="0.77008184850000005" blue="0.25373728350000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <tabBarAppearance key="standardAppearance"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Ult-ft-Apg" kind="relationship" relationship="viewControllers" id="A01-H6-3My"/>
-                        <segue destination="yul-6r-fbI" kind="relationship" relationship="viewControllers" id="XW1-sM-mTd"/>
-                        <segue destination="dcO-iZ-1eh" kind="relationship" relationship="viewControllers" id="EP6-4H-CbK"/>
-                        <segue destination="k4a-Dj-lGg" kind="relationship" relationship="viewControllers" id="4fn-hJ-FJ1"/>
+                        <segue destination="QtU-TW-cbH" kind="relationship" relationship="viewControllers" id="25y-fK-68L"/>
+                        <segue destination="dzu-EY-gOF" kind="relationship" relationship="viewControllers" id="msy-zf-7dx"/>
+                        <segue destination="dhQ-d4-3zg" kind="relationship" relationship="viewControllers" id="KRt-KI-T7q"/>
+                        <segue destination="Cda-bo-9ZR" kind="relationship" relationship="viewControllers" id="7ol-0h-DRT"/>
                     </connections>
                 </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Xxf-IK-0PW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d6N-dA-33y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="715" y="394"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="heart" catalog="system" width="128" height="107"/>
+        <image name="heart.fill" catalog="system" width="128" height="107"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+    </resources>
 </document>

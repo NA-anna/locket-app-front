@@ -10,7 +10,7 @@ import UIKit
 class UserHomeViewController: UIViewController {
 
     @IBOutlet var lblHello: UILabel!
-    
+    @IBOutlet var searchBar: UISearchBar!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -19,5 +19,20 @@ class UserHomeViewController: UIViewController {
         lblHello.text = "\(name)님, \n안녕하세요"
     }
     
+    // 빈 화면 터치 시 키보드 내려가기
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
+        
+        self.view.endEditing(true)
+    }
+    
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    */
 
 }
