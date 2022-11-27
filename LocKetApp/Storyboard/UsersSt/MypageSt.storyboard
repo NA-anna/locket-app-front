@@ -244,7 +244,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="6F3-ko-T6E">
                                         <rect key="frame" x="31.333333333333343" y="100" width="327.33333333333326" height="66.666666666666686"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="project 1" translatesAutoresizingMaskIntoConstraints="NO" id="igP-ko-mDY">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="rocket_up 1" translatesAutoresizingMaskIntoConstraints="NO" id="igP-ko-mDY">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="66.666666666666671"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="80" id="ZBd-hb-VIN"/>
@@ -426,6 +426,7 @@
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="project 1" width="66.666664123535156" height="66.666664123535156"/>
         <image name="questionmark.circle" catalog="system" width="128" height="123"/>
+        <image name="rocket_up 1" width="66.666664123535156" height="66.666664123535156"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
