@@ -17,10 +17,10 @@
             </objects>
             <point key="canvasLocation" x="1519" y="103"/>
         </scene>
-        <!--MarkerSt-->
+        <!--MapSt-->
         <scene sceneID="RUI-IF-Y4J">
             <objects>
-                <viewControllerPlaceholder storyboardName="MarkerSt" id="dzu-EY-gOF" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="MapSt" id="dzu-EY-gOF" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="내 주변" id="KHv-aF-cEM"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CxR-El-Ayd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

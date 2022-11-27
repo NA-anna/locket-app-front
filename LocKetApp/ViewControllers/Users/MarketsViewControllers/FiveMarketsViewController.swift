@@ -51,15 +51,15 @@ class FiveMarketsViewController: UITableViewController {
         
         let market = fiveMarkets[indexPath.row]
         
-        // TABLE VIEW 에 값 지정
+        // TABLE VIEW 에 데이터 뿌리기
         let lblTitle = cell.viewWithTag(1) as? UILabel
         lblTitle?.text = market.mrktNm
-        let lblCategory = cell.viewWithTag(2) as? UILabel
-        lblCategory?.text = market.mrktEstblCycle
+//        let lblCategory = cell.viewWithTag(2) as? UILabel
+//        lblCategory?.text = market.mrktEstblCycle
         let lblPlace = cell.viewWithTag(3) as? UILabel
         lblPlace?.text = "주소: \(market.rdnmadr)"
-//        let lblDate = cell.viewWithTag(4) as? UILabel
-//        lblDate?.text = "\(market.startdate) ~ \(market.enddate)"
+        let lblDate = cell.viewWithTag(4) as? UILabel
+        lblDate?.text = market.mrktEstblCycle
         let lblDescription = cell.viewWithTag(5) as? UILabel
         lblDescription?.text = market.trtmntPrdlst
 

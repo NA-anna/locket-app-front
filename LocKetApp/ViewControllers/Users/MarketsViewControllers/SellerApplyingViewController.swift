@@ -34,8 +34,8 @@ class SellerApplyingViewController: UIViewController {
         lblHello.text = "\(name)님, \n'\(market.name)'셀러 참가를 위해 \n아래 내용을 적어주세요"
         
         txtVwDescription.layer.borderWidth = 1.0
-        txtVwDescription.layer.borderColor = UIColor.systemGray6.cgColor
         txtVwDescription.layer.cornerRadius = 10
+        txtVwDescription.layer.borderColor = UIColor.systemGray6.cgColor
         
     }
     

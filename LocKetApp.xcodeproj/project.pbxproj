@@ -24,7 +24,7 @@
 		A47FB3A6292D1E9F00884C61 /* UsersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47FB3A5292D1E9F00884C61 /* UsersAPI.swift */; };
 		A47FB3A8292D436600884C61 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47FB3A7292D436600884C61 /* FavoritesViewController.swift */; };
 		A491A733292B8DBE0061BA62 /* MypageSt.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A491A72F292B8DBD0061BA62 /* MypageSt.storyboard */; };
-		A491A734292B8DBE0061BA62 /* MarkerSt.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A491A730292B8DBD0061BA62 /* MarkerSt.storyboard */; };
+		A491A734292B8DBE0061BA62 /* MapSt.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A491A730292B8DBD0061BA62 /* MapSt.storyboard */; };
 		A491A735292B8DBE0061BA62 /* FavoriteSt.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A491A731292B8DBD0061BA62 /* FavoriteSt.storyboard */; };
 		A491A738292B8DE70061BA62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A491A737292B8DE70061BA62 /* Main.storyboard */; };
 		A491A73B292B8FCF0061BA62 /* 5MarketsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A491A73A292B8FCF0061BA62 /* 5MarketsAPI.swift */; };
@@ -110,7 +110,7 @@
 		A47FB3A5292D1E9F00884C61 /* UsersAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersAPI.swift; sourceTree = "<group>"; };
 		A47FB3A7292D436600884C61 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		A491A72F292B8DBD0061BA62 /* MypageSt.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MypageSt.storyboard; sourceTree = "<group>"; };
-		A491A730292B8DBD0061BA62 /* MarkerSt.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MarkerSt.storyboard; sourceTree = "<group>"; };
+		A491A730292B8DBD0061BA62 /* MapSt.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MapSt.storyboard; sourceTree = "<group>"; };
 		A491A731292B8DBD0061BA62 /* FavoriteSt.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FavoriteSt.storyboard; sourceTree = "<group>"; };
 		A491A737292B8DE70061BA62 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A491A73A292B8FCF0061BA62 /* 5MarketsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 5MarketsAPI.swift; sourceTree = "<group>"; };
@@ -228,7 +228,7 @@
 				A47901B3292F4F110032003C /* UsersTabBarSt.storyboard */,
 				A456E07F292F6DDA00388D42 /* UserHomeSt.storyboard */,
 				A4A36A2F292F1AC8001696CE /* Markets */,
-				A491A730292B8DBD0061BA62 /* MarkerSt.storyboard */,
+				A491A730292B8DBD0061BA62 /* MapSt.storyboard */,
 				A491A731292B8DBD0061BA62 /* FavoriteSt.storyboard */,
 				A491A72F292B8DBD0061BA62 /* MypageSt.storyboard */,
 			);
@@ -536,7 +536,7 @@
 				A49DF6D5292B84630008D6B8 /* th_line.png in Resources */,
 				A49DF6DE292B84630008D6B8 /* info_box_tail.png in Resources */,
 				A49DF6CD292B84630008D6B8 /* map_pin_custom.png in Resources */,
-				A491A734292B8DBE0061BA62 /* MarkerSt.storyboard in Resources */,
+				A491A734292B8DBE0061BA62 /* MapSt.storyboard in Resources */,
 				A491A738292B8DE70061BA62 /* Main.storyboard in Resources */,
 				A49DF6DD292B84630008D6B8 /* map_pinup_custom.png in Resources */,
 				A49DF6D2292B84630008D6B8 /* map_pinup@3x.png in Resources */,
@@ -790,6 +790,7 @@
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LocKetApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "가는날이장날";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -802,7 +803,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = net.womenup2022.nyj.LocKetApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = LocKetApp;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/nayujin/Desktop/LocKetApp/LocKetApp/LocKetApp-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
@@ -826,6 +827,7 @@
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LocKetApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "가는날이장날";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -838,7 +840,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = net.womenup2022.nyj.LocKetApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = LocKetApp;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/nayujin/Desktop/LocKetApp/LocKetApp/LocKetApp-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;

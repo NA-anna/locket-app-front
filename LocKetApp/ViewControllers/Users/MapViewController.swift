@@ -7,27 +7,31 @@
 
 import UIKit
 import CoreLocation
-
+import MapKit
 
 class MapViewController: UIViewController, MTMapViewDelegate {
 
     var mapView: MTMapView!
     var markers = [MTMapPOIItem()]
     var locationManager: CLLocationManager!
+
     
+    @IBOutlet var mapViewFrame: MKMapView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // 1 맵뷰 그리기 by Kakao
-        mapView = MTMapView(frame: self.view.frame)
+        mapView = MTMapView(frame: self.mapViewFrame.frame)
         mapView.delegate = self
         mapView.baseMapType = .standard
         self.view.addSubview(mapView)
         
 
         // 2 좌표 중심 설정 by Kakao
+        /*
         let defaultMapPoint = MTMapPoint(geoCoord: MTMapPointGeo(latitude: 37.4630783, longitude: 126.9059344))
         mapView.setMapCenter(defaultMapPoint, zoomLevel: 1, animated: true)
+         */
         
         
         // 3 현재 위치 정보 권한 가져오기

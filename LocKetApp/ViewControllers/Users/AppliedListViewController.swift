@@ -44,17 +44,18 @@ class AppliedListViewController: UITableViewController {
 
         let seller = sellers[indexPath.row]
         
-        let blobName = seller.photo[0]
-        print(blobName)
-        if blobName != "" {
-            
-            blobstorage.downloadImage(blobName: blobName, handler: { data in
-                let image = UIImage(data: data)
-                DispatchQueue.main.async {
-                    let imageView = tableView.viewWithTag(1) as? UIImageView
-                    imageView?.image = image
-                }
-            })
+        var image = UIImage(named: "rocket_up")
+        if seller.photo.count > 0 {
+            let blobName = seller.photo[0]
+            if blobName != "" {
+                blobstorage.downloadImage(blobName: blobName, handler: { data in
+                    image = UIImage(data: data)
+                })
+            }
+        }
+        DispatchQueue.main.async {
+            let imageView = tableView.viewWithTag(1) as? UIImageView
+            imageView?.image = image
         }
         
         let lblName = tableView.viewWithTag(2) as? UILabel

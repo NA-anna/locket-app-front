@@ -6,8 +6,10 @@
 //  
 
 import UIKit
+import CoreLocation
+import MapKit
 
-class FiveMarketDetailViewController: UIViewController {
+class FiveMarketDetailViewController: UIViewController, MTMapViewDelegate {
 
     var fiveMarket: Item?
     var isFavorite: Bool = false{
@@ -21,7 +23,8 @@ class FiveMarketDetailViewController: UIViewController {
             }
         }
     }
-    
+    @IBOutlet var lblMarketName: UILabel!
+    @IBOutlet var mapView: MKMapView!
     @IBOutlet var textView: UITextView!
     @IBOutlet var btnLike: UIButton!
     
@@ -30,18 +33,41 @@ class FiveMarketDetailViewController: UIViewController {
         super.viewDidLoad()
         
         // 화면에 뿌려본 것. 나중에 주석 필요
+/*
         let jsonData: Data = try! JSONEncoder().encode(fiveMarket) // data
         let jsonString:String = String.init(data: jsonData, encoding: .utf8) ?? "err"
         textView.text = jsonString
-
+*/
+        
+        // 데이터
+        guard let user = user, let fiveMarket = fiveMarket else {return}
+        
+        // 맵뷰
+        // 1 맵뷰 그리기 by Kakao
+        var mapView: MTMapView!
+        mapView = MTMapView(frame: self.mapView.frame)
+        mapView.delegate = self
+        mapView.baseMapType = .standard
+        self.view.addSubview(mapView)
+        
+        // 2 좌표 중심 설정 by Kakao
+        guard let lat = Double(fiveMarket.latitude),
+              let long = Double(fiveMarket.longitude) else {return}
+        let defaultMapPoint = MTMapPoint(geoCoord: MTMapPointGeo(latitude: lat, longitude: long))
+        mapView.setMapCenter(defaultMapPoint, zoomLevel: 1, animated: true)
+        
+        // 마켓정보
+        lblMarketName.text = "'\(fiveMarket.mrktNm)'을 구경해보세요!"
+        textView.text = "'\(fiveMarket.storNumber)'개의 점포에서 \n'\(fiveMarket.trtmntPrdlst)' 등의 상품을 구경하세요! \n\n\(fiveMarket.rdnmadr) \n\(fiveMarket.lnmadr) \n\n이 곳으로 오세요!"
+        
         //하트 색칠하기
-        if let user = user, let fiveMarket = fiveMarket {
-            isFavorite = user.favorites.fav_fivemarkets.contains { element in
-                if element.market_name == fiveMarket.mrktNm {
-                    return true
-                }else { return false }
-            }
+        isFavorite = user.favorites.fav_fivemarkets.contains { element in
+            if element.market_name == fiveMarket.mrktNm {
+                return true
+            }else { return false }
         }
+        
+        
     }
     
     // [즐겨찾기] 터치! -> PUT
@@ -87,16 +113,10 @@ class FiveMarketDetailViewController: UIViewController {
                 // GET (재조회)
                 getLoginUser(id: user.id ){_ in }
             }
-            
         }
-
     }
-    
-    
-
-
- 
 }
+
 
 
 

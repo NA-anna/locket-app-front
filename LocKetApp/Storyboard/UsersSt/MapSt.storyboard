@@ -3,6 +3,7 @@
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -32,12 +33,27 @@
                     <view key="view" contentMode="scaleToFill" id="20c-Ft-zzv">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WDs-2i-xWH">
+                                <rect key="frame" x="0.0" y="91" width="390" height="670"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="H8l-sc-xAc"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="WDs-2i-xWH" firstAttribute="leading" secondItem="H8l-sc-xAc" secondAttribute="leading" id="7wO-3b-0ln"/>
+                            <constraint firstItem="WDs-2i-xWH" firstAttribute="trailing" secondItem="H8l-sc-xAc" secondAttribute="trailing" id="AVE-Ht-ewc"/>
+                            <constraint firstItem="WDs-2i-xWH" firstAttribute="bottom" secondItem="H8l-sc-xAc" secondAttribute="bottom" id="AwW-nx-eCC"/>
+                            <constraint firstItem="WDs-2i-xWH" firstAttribute="top" secondItem="H8l-sc-xAc" secondAttribute="top" id="gB1-EJ-pgc"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="내 주변" image="mappin.and.ellipse" catalog="system" id="HlN-bC-SU8"/>
                     <navigationItem key="navigationItem" id="QfQ-Ob-3aa"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="mapViewFrame" destination="WDs-2i-xWH" id="bQN-GC-G0O"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BrM-JK-25b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
