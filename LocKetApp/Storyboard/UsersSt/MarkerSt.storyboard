@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lbu-ea-ZQ4">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -12,6 +11,8 @@
         <scene sceneID="xO4-7k-qpN">
             <objects>
                 <navigationController title="Home" id="lbu-ea-ZQ4" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="내 주변" image="mappin.and.ellipse" catalog="system" id="g2S-sl-EEt"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="kld-7n-pKe">
                         <rect key="frame" x="0.0" y="47" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -24,7 +25,7 @@
             </objects>
             <point key="canvasLocation" x="-1108" y="68"/>
         </scene>
-        <!--marker-->
+        <!--내 주변-->
         <scene sceneID="x6V-iq-1hN">
             <objects>
                 <viewController id="0HC-u4-xTY" customClass="MapViewController" customModule="LocKetApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -34,8 +35,9 @@
                         <viewLayoutGuide key="safeArea" id="H8l-sc-xAc"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="marker" image="location.north.fill" catalog="system" id="kex-FH-Jhe"/>
+                    <tabBarItem key="tabBarItem" title="내 주변" image="mappin.and.ellipse" catalog="system" id="HlN-bC-SU8"/>
                     <navigationItem key="navigationItem" id="QfQ-Ob-3aa"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BrM-JK-25b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -43,6 +45,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="location.north.fill" catalog="system" width="110" height="128"/>
+        <image name="mappin.and.ellipse" catalog="system" width="117" height="128"/>
     </resources>
 </document>

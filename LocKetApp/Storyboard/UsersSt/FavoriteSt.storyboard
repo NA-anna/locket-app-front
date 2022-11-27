@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6Ie-IA-jkM">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -12,7 +11,7 @@
         <scene sceneID="4hp-6k-UPw">
             <objects>
                 <navigationController title="Home" id="6Ie-IA-jkM" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="즐겨찾기" image="bookmark.fill" catalog="system" id="cLY-eB-XRX"/>
+                    <tabBarItem key="tabBarItem" title="관심목록" image="heart" catalog="system" selectedImage="heart.fill" id="YAV-7d-zuT"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="GBt-yR-efs">
                         <rect key="frame" x="0.0" y="47" width="390" height="44"/>
@@ -26,7 +25,7 @@
             </objects>
             <point key="canvasLocation" x="-1108" y="68"/>
         </scene>
-        <!--즐겨찾기-->
+        <!--나의 관심 마켓-->
         <scene sceneID="6LL-ik-oDM">
             <objects>
                 <tableViewController id="Y8Q-jx-tKG" customClass="FavoritesViewController" customModule="LocKetApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -58,9 +57,9 @@
                             <outlet property="delegate" destination="Y8Q-jx-tKG" id="yIa-xL-yv9"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="즐겨찾기" selectedImage="bookmark.fill" catalog="system" id="TCX-UJ-Orz"/>
+                    <tabBarItem key="tabBarItem" title="관심목록" selectedImage="heart.fill" catalog="system" id="0cw-lj-u15"/>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="즐겨찾기" id="h8c-rO-TUd"/>
+                    <navigationItem key="navigationItem" title="나의 관심 마켓" id="h8c-rO-TUd"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9NF-S7-Shd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -69,7 +68,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bookmark.fill" catalog="system" width="110" height="128"/>
+        <image name="heart" catalog="system" width="128" height="107"/>
+        <image name="heart.fill" catalog="system" width="128" height="107"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
