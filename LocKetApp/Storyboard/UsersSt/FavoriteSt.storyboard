@@ -41,12 +41,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="390" height="80"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" ambiguous="YES" image="rocket_up 1" translatesAutoresizingMaskIntoConstraints="NO" id="Mdv-iX-zdv">
-                                            <rect key="frame" x="20" y="7" width="80" height="66.666666666666686"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="80" id="jMx-sc-kfI"/>
-                                            </constraints>
-                                        </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="tableView로 즐겨찾기한 list 뿌리기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y7B-eV-QeK">
                                             <rect key="frame" x="108" y="11" width="241" height="33"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -54,6 +48,12 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" ambiguous="YES" image="rocket_up 1" translatesAutoresizingMaskIntoConstraints="NO" id="Mdv-iX-zdv">
+                                            <rect key="frame" x="20" y="10" width="80" height="66.666666666666686"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="80" id="jMx-sc-kfI"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>

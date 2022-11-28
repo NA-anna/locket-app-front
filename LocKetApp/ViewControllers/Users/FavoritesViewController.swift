@@ -26,12 +26,8 @@ class FavoritesViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 2
-//        guard let user = user else { return 0 }
-//        return user.favorites.fav_fleamarkets.count + user.favorites.fav_fivemarkets.count
     }
-    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 10.0
-    }
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
      
         guard let user = user else { return 0 }

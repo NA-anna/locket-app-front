@@ -20,6 +20,12 @@ class MapViewController: UIViewController, MTMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // 0 현재 위치 정보 권한 가져오기 by Apple
+        locationManager = CLLocationManager()
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization() //위치정보 권한설정
+        
+        
         // 1 맵뷰 그리기 by Kakao
         mapView = MTMapView(frame: self.mapViewFrame.frame)
         mapView.delegate = self
@@ -34,25 +40,19 @@ class MapViewController: UIViewController, MTMapViewDelegate {
          */
         
         
-        // 3 현재 위치 정보 권한 가져오기
-        locationManager = CLLocationManager()
-        locationManager.delegate = self
-        locationManager.requestWhenInUseAuthorization() //위치정보 권한설정
-        
-        
         // + 현재 위치 트래킹 by Kakao
         mapView.currentLocationTrackingMode = .onWithoutHeading//.onWithHeading
         mapView.showCurrentLocationMarker = true
         
         
-        // 현재 위치 마커 커스터마이징
+        // + 현재 위치 마커 커스터마이징
         let myMarker = MTMapLocationMarkerItem()
         myMarker.customTrackingImageName = "mylocation"
         mapView.updateCurrentLocationMarker(myMarker)
 
         
         
-        // 데이터 가져오기---------------------------------------------------
+        // 데이터 가져오기------------------------------------
         var combinedFiveMarkets: [Item] = []
         get5Markets( numOfRows: 10, type: "5일장") {
             
@@ -69,15 +69,10 @@ class MapViewController: UIViewController, MTMapViewDelegate {
                 }
             }
         }
+        //-----------------------------------------------
         
-        //----------------------------------------------------------------
-        
-        
-
-
-        
+            
     }
-    
     override func viewWillAppear(_ animated: Bool) {
         drawMap()
     }
@@ -142,7 +137,20 @@ class MapViewController: UIViewController, MTMapViewDelegate {
         print("headingAngle: ", headingAngle)
     }
     
-  
+
+    func mapView(_ mapView: MTMapView!, touchedCalloutBalloonOf poiItem: MTMapPOIItem!) {
+        print("선택!")
+        
+//        // 스토리보드의 파일 찾기
+//        let storyboard: UIStoryboard? = UIStoryboard(name: "FleaMarketDetailSt", bundle: Bundle.main)
+//        // 스토리보드에서 지정해준 ViewController의 ID
+//        guard let vc = storyboard?.instantiateViewController(identifier: "marketStoryboard") else { return }
+//        // 화면 전환방식 선택 (default : .modal)
+//        //vc.modalTransitionStyle = .fullScreen
+//        // 화면 전환!
+//        self.present(vc, animated: true)
+        
+    }
     
     
 }

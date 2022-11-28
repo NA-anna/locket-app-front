@@ -19,7 +19,7 @@ func getLoginUser( id: String, handler: @escaping(Bool)->() ) {
         strUrl,
         method: .get
     ).responseDecodable(of: User.self) { response in
-        //debugPrint(response)
+        debugPrint(response)
         switch response.result {
         case .success( _)://obj):
             guard let data = response.value else { fatalError() }
