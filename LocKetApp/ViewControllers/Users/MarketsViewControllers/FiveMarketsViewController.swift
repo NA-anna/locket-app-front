@@ -47,7 +47,7 @@ class FiveMarketsViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "fivemarketscell", for: indexPath)
 
         // 악세사리
-        cell.accessoryType = .disclosureIndicator //UIImageView(image: UIImage(systemName: "heart"))
+        //cell.accessoryType = .disclosureIndicator //UIImageView(image: UIImage(systemName: "heart"))
         
         let market = fiveMarkets[indexPath.row]
         

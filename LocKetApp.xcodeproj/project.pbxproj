@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A400850C29352616009FC8BD /* FiveMarketsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A400850B29352616009FC8BD /* FiveMarketsCell.swift */; };
 		A438075929335FC300C4596C /* MypageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A438075829335FC300C4596C /* MypageViewController.swift */; };
 		A438075B2933DD0700C4596C /* FiveMarketDetailSt.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A438075A2933DD0700C4596C /* FiveMarketDetailSt.storyboard */; };
 		A438075D2933DD1E00C4596C /* FleaMarketDetailSt.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A438075C2933DD1E00C4596C /* FleaMarketDetailSt.storyboard */; };
+		A438075F29345F8800C4596C /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A438075E29345F8800C4596C /* LaunchViewController.swift */; };
 		A444C099293265A6008F02C5 /* AppliedListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A444C098293265A6008F02C5 /* AppliedListViewController.swift */; };
 		A444C09B29326905008F02C5 /* SellersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A444C09A29326905008F02C5 /* SellersAPI.swift */; };
 		A444C09D293276E0008F02C5 /* GlobalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A444C09C293276E0008F02C5 /* GlobalData.swift */; };
@@ -95,9 +97,11 @@
 		0DBD1F6CCA14FCEE6C33FC4C /* Pods_LocKetApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocKetApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FC14F7F5E26D947265CA310 /* Pods-LocKetApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocKetApp.debug.xcconfig"; path = "Target Support Files/Pods-LocKetApp/Pods-LocKetApp.debug.xcconfig"; sourceTree = "<group>"; };
 		63B5E63C81B72C97837214C7 /* Pods-LocKetApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocKetApp.release.xcconfig"; path = "Target Support Files/Pods-LocKetApp/Pods-LocKetApp.release.xcconfig"; sourceTree = "<group>"; };
+		A400850B29352616009FC8BD /* FiveMarketsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiveMarketsCell.swift; sourceTree = "<group>"; };
 		A438075829335FC300C4596C /* MypageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MypageViewController.swift; sourceTree = "<group>"; };
 		A438075A2933DD0700C4596C /* FiveMarketDetailSt.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FiveMarketDetailSt.storyboard; sourceTree = "<group>"; };
 		A438075C2933DD1E00C4596C /* FleaMarketDetailSt.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FleaMarketDetailSt.storyboard; sourceTree = "<group>"; };
+		A438075E29345F8800C4596C /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		A444C098293265A6008F02C5 /* AppliedListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppliedListViewController.swift; sourceTree = "<group>"; };
 		A444C09A29326905008F02C5 /* SellersAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellersAPI.swift; sourceTree = "<group>"; };
 		A444C09C293276E0008F02C5 /* GlobalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalData.swift; sourceTree = "<group>"; };
@@ -258,6 +262,7 @@
 				A4931EFF29308821003DA9D0 /* FleaMarketDetailViewController.swift */,
 				A44ACA322931FDBE001F0900 /* SellerViewController.swift */,
 				A44ACA52293236B9001F0900 /* SellerApplyingViewController.swift */,
+				A400850B29352616009FC8BD /* FiveMarketsCell.swift */,
 			);
 			path = MarketsViewControllers;
 			sourceTree = "<group>";
@@ -348,6 +353,7 @@
 				A4931EF8292F74CB003DA9D0 /* Login */,
 				A4931EF9292F74D9003DA9D0 /* Users */,
 				A4931EFA292F751A003DA9D0 /* BusinessUsers */,
+				A438075E29345F8800C4596C /* LaunchViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -619,6 +625,7 @@
 				A44ACA332931FDBF001F0900 /* SellerViewController.swift in Sources */,
 				A491A73B292B8FCF0061BA62 /* 5MarketsAPI.swift in Sources */,
 				A49DF6FA292B85620008D6B8 /* FleaMarketsViewController.swift in Sources */,
+				A438075F29345F8800C4596C /* LaunchViewController.swift in Sources */,
 				A44ACA4F2932135A001F0900 /* AzureBlobStorage.swift in Sources */,
 				A444C099293265A6008F02C5 /* AppliedListViewController.swift in Sources */,
 				A47FB3A6292D1E9F00884C61 /* UsersAPI.swift in Sources */,
@@ -629,6 +636,7 @@
 				A49DF6F9292B85620008D6B8 /* Host.swift in Sources */,
 				A444C09D293276E0008F02C5 /* GlobalData.swift in Sources */,
 				A438075929335FC300C4596C /* MypageViewController.swift in Sources */,
+				A400850C29352616009FC8BD /* FiveMarketsCell.swift in Sources */,
 				A49DF6EB292B85140008D6B8 /* AddViewController_category.swift in Sources */,
 				A49DF680292B64FF0008D6B8 /* SceneDelegate.swift in Sources */,
 				A49DF6A4292B82FD0008D6B8 /* MapViewController.swift in Sources */,
