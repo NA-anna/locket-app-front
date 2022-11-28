@@ -12,7 +12,7 @@
         <!--Five Market Detail View Controller-->
         <scene sceneID="Lwu-wV-u6h">
             <objects>
-                <viewController id="64H-z5-jtw" customClass="FiveMarketDetailViewController" customModule="LocKetApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FleaMarketDetail" id="64H-z5-jtw" customClass="FiveMarketDetailViewController" customModule="LocKetApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LJO-vQ-wej">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

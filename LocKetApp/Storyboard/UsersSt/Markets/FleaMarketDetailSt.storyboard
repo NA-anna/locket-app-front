@@ -197,7 +197,7 @@
         <!--Flea Market Detail View Controller-->
         <scene sceneID="XlN-bI-cNF">
             <objects>
-                <viewController id="WFC-Pq-bVL" customClass="FleaMarketDetailViewController" customModule="LocKetApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FleaMarketDetail" id="WFC-Pq-bVL" customClass="FleaMarketDetailViewController" customModule="LocKetApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fn7-3p-9LN">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -226,7 +226,7 @@
                                 <attributedString key="attributedText">
                                     <fragment content="마켓">
                                         <attributes>
-                                            <font key="NSFont" size="22" name=".AppleSDGothicNeoI-Regular"/>
+                                            <font key="NSFont" metaFont="system" size="22"/>
                                             <font key="NSOriginalFont" metaFont="system" size="22"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
@@ -239,7 +239,7 @@
                                     </fragment>
                                     <fragment content="이름">
                                         <attributes>
-                                            <font key="NSFont" size="22" name=".AppleSDGothicNeoI-Regular"/>
+                                            <font key="NSFont" metaFont="system" size="22"/>
                                             <font key="NSOriginalFont" metaFont="system" size="22"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
