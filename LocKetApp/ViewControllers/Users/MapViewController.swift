@@ -50,8 +50,9 @@ class MapViewController: UIViewController, MTMapViewDelegate {
         myMarker.customTrackingImageName = "mylocation"
         mapView.updateCurrentLocationMarker(myMarker)
 
+        self.drawMap()
         
-        
+        /*
         // 데이터 가져오기------------------------------------
         var combinedFiveMarkets: [Item] = []
         get5Markets( numOfRows: 10, type: "5일장") {
@@ -70,7 +71,7 @@ class MapViewController: UIViewController, MTMapViewDelegate {
             }
         }
         //-----------------------------------------------
-        
+        */
             
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -114,7 +115,7 @@ class MapViewController: UIViewController, MTMapViewDelegate {
             marker.itemName = placeName
             marker.mapPoint = mapPoint
             marker.markerType = .customImage
-            marker.customImage = UIImage(named: "marker")
+            marker.customImage = UIImage(named: "liked")
             marker.showAnimationType = .noAnimation
             markers.append(marker)
            

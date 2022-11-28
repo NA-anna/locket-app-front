@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 
 //==================api Header 정보======================//
-let serviceKey = "mAe+GWpPxmtRRex6gA7cL5l3Eno9CgDEaLfRPGK3L7JoGnLMku54NhrJr3wlr4wT6FH1UqUn1qXECQiO6xMS4g=="// "mAe%2BGWpPxmtRRex6gA7cL5l3Eno9CgDEaLfRPGK3L7JoGnLMku54NhrJr3wlr4wT6FH1UqUn1qXECQiO6xMS4g%3D%3D"
+let serviceKey = "mAe+GWpPxmtRRex6gA7cL5l3Eno9CgDEaLfRPGK3L7JoGnLMku54NhrJr3wlr4wT6FH1UqUn1qXECQiO6xMS4g=="
 
 //======================================================//
 struct ResultDataOf5Market: Codable {
@@ -66,35 +66,12 @@ func get5Markets( numOfRows: Int, type: String, handler: @escaping()->() ) {
         switch response.result {
         case .success( _)://obj):
             guard let items = response.value?.response.body.items else { fatalError() }
-//            let filtered = items.filter { item in
-//                return item.mrktType.contains("5일장") || item.mrktType.contains("상설장+5일장")
-//            }
             fiveMarkets = items
             handler()
         case .failure(let e):
             print(e.localizedDescription)
         }
     }
-    
-
 }
 
 
-
-
-/*
-AF.request(
-    strUrl,
-    method: .get,
-    parameters: ["serviceKey": serviceKey, "pageNo": 1, "numOfRows": 250, "type": "json", "mrktType": "상설장+5일장"]
-).responseDecodable(of: ResultDataOf5Market.self){ response in
-    //debugPrint(response)
-    switch response.result {
-    case .success( _)://obj):
-        guard let items = response.value?.response.body.items else { fatalError() }
-        fiveMarkets.append(contentsOf: items)
-    case .failure(let e):
-        print(e.localizedDescription)
-    }
-}
- */

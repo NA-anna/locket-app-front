@@ -64,7 +64,7 @@ class SellerApplyingViewController: UIViewController {
               let description = txtVwDescription.text else {return}
         let blobName = market.name + "_" + marketId + "_" + user.id
         let bodyData : [String: Any] = [
-            "userid"     : user.id,
+            "userId"     : user.id,
             "marketId"   : marketId,
             "category"   : category,
             "subCategory": subCategory,
@@ -73,7 +73,30 @@ class SellerApplyingViewController: UIViewController {
             "photo"      : [blobName],
             "state"      : "신청"
         ]
-        postSeller( collection: "sellers", body: bodyData)
+        postSeller( collection: "sellers", body: bodyData) { flag in
+            if flag {
+                // alert 
+                let alert = UIAlertController(title: "", message: "참여하기가 신청되었습니다!", preferredStyle: .alert)
+                let actionOK = UIAlertAction(title: "확인", style: .default, handler: { _ in
+                    //화면전환
+                    self.tabBarController?.selectedIndex = 0
+         
+                })
+                alert.addAction(actionOK)
+                self.present(alert, animated: true)
+            }else {
+                // alert
+                let alert = UIAlertController(title: "", message: "저장되지 못했습니다. 다시 확인 후 진행해주세요", preferredStyle: .alert)
+                let actionOK = UIAlertAction(title: "확인", style: .default, handler: { _ in
+                    //화면전환
+                    self.tabBarController?.selectedIndex = 0
+         
+                })
+                alert.addAction(actionOK)
+                self.present(alert, animated: true)
+                
+            }
+        }
   
     
         
@@ -82,15 +105,7 @@ class SellerApplyingViewController: UIViewController {
         blobstorage.uploadImage(image: image, blobName: blobName )
         
         
-        // alert
-        let alert = UIAlertController(title: "저장되었습니다", message: "", preferredStyle: .alert)
-        let actionOK = UIAlertAction(title: "확인", style: .default, handler: { _ in
-            //화면전환
-            self.tabBarController?.selectedIndex = 0
- 
-        })
-        alert.addAction(actionOK)
-        present(alert, animated: true)
+        
     }
 }
 
