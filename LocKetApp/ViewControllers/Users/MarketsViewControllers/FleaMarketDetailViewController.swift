@@ -123,7 +123,7 @@ class FleaMarketDetailViewController: UIViewController, MTMapViewDelegate {
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let vc = segue.destination as? SellerApplyingViewController
+        let vc = segue.destination as? ApplyingViewController
         vc?.market = market
         
     }

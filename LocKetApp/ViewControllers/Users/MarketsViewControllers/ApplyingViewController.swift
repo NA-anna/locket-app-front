@@ -1,5 +1,5 @@
 //
-//  SellerApplyingViewController.swift
+//  ApplyingViewController.swift
 //  LocKetApp
 //
 //  Created by 나유진 on 2022/11/26.
@@ -8,7 +8,7 @@
 import UIKit
 
 
-class SellerApplyingViewController: UIViewController {
+class ApplyingViewController: UIViewController {
 
     // 부모 화면에서 전달받은 데이터
     var market: Market?
@@ -110,7 +110,7 @@ class SellerApplyingViewController: UIViewController {
 }
 
 
-extension SellerApplyingViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+extension ApplyingViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         guard let image = info[.originalImage] as? UIImage else { return } //info[.originalImage] : Any? -> UIImage?
@@ -127,7 +127,7 @@ extension SellerApplyingViewController: UIImagePickerControllerDelegate, UINavig
 
 
 // TextFiled [완료] 클릭 시 -> 키보드 닫기
-extension SellerApplyingViewController: UITextFieldDelegate {
+extension ApplyingViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
         //최초반응자 사임..
