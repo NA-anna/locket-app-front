@@ -3,7 +3,6 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
-        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -62,11 +61,6 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CxJ-tD-1BB">
-                                <rect key="frame" x="41" y="200" width="310" height="164"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <standardMapConfiguration key="preferredConfiguration"/>
-                            </mapView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Odj-yz-fNP">
                                 <rect key="frame" x="263" y="697" width="88" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -77,6 +71,11 @@
                                     <segue destination="Fi1-sD-AV9" kind="show" id="phb-aF-6bY"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QCi-VI-00x">
+                                <rect key="frame" x="41" y="200" width="310" height="164"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2To-pL-t8H"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -86,7 +85,6 @@
                         <outlet property="btnApplying" destination="Odj-yz-fNP" id="KuD-QJ-WUM"/>
                         <outlet property="btnLike" destination="uPg-Ol-qJc" id="sjC-0U-KgJ"/>
                         <outlet property="lblMarketName" destination="aym-9l-qyw" id="0M9-xT-HWK"/>
-                        <outlet property="mapView" destination="CxJ-tD-1BB" id="qxA-im-qlL"/>
                         <outlet property="textView" destination="RhO-R2-AQs" id="qvs-Ue-96g"/>
                     </connections>
                 </viewController>

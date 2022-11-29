@@ -7,7 +7,6 @@
 
 import UIKit
 import CoreLocation
-import MapKit
 
 class MapViewController: UIViewController, MTMapViewDelegate {
 
@@ -16,7 +15,7 @@ class MapViewController: UIViewController, MTMapViewDelegate {
     var locationManager: CLLocationManager!
 
     
-    @IBOutlet var mapViewFrame: MKMapView!
+    @IBOutlet var viewFrame: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,7 +26,7 @@ class MapViewController: UIViewController, MTMapViewDelegate {
         
         
         // 1 맵뷰 그리기 by Kakao
-        mapView = MTMapView(frame: self.mapViewFrame.frame)
+        mapView = MTMapView(frame: self.viewFrame.frame)
         mapView.delegate = self
         mapView.baseMapType = .standard
         self.view.addSubview(mapView)

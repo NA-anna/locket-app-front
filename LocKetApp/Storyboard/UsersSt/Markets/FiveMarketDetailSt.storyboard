@@ -3,7 +3,6 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
-        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -62,11 +61,11 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5A2-Bv-L2v">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zXZ-uA-teS">
                                 <rect key="frame" x="41" y="200" width="310" height="164"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <standardMapConfiguration key="preferredConfiguration"/>
-                            </mapView>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="auq-9g-MDB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -75,8 +74,8 @@
                     <connections>
                         <outlet property="btnLike" destination="eBp-Gf-nI9" id="6ow-hq-d7w"/>
                         <outlet property="lblMarketName" destination="ULz-vL-rYA" id="0P0-em-aPT"/>
-                        <outlet property="mapView" destination="5A2-Bv-L2v" id="gf2-4h-ov2"/>
                         <outlet property="textView" destination="w0l-qv-gl0" id="N5b-VU-nbl"/>
+                        <outlet property="viewFrame" destination="zXZ-uA-teS" id="wbh-nH-XBp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gel-Zk-H0A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
