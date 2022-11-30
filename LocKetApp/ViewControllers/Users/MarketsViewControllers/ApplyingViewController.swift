@@ -37,6 +37,11 @@ class ApplyingViewController: UIViewController {
         txtVwDescription.layer.cornerRadius = 10
         txtVwDescription.layer.borderColor = UIColor.systemGray6.cgColor
         
+        
+        // 피커뷰
+        let picker = UIPickerView()
+        picker.delegate = self
+        self.txtFldCategory.inputView = picker // 텍스트 필드 입력 방식을 키보드 대신 피커 뷰로 설정
     }
     
     @IBAction func actPhotoLibrary(_ sender: Any) {
@@ -49,12 +54,12 @@ class ApplyingViewController: UIViewController {
     }
     
     @IBAction func actButton(_ sender: Any) {
-        add()
+        post()
     }
     
     
     
-    func add() {
+    func post() {
         
         // DB에 저장
         guard let user = user, let market = market, let marketId = market._id else {return}
@@ -138,4 +143,40 @@ extension ApplyingViewController: UITextFieldDelegate {
         return true
     }
     
+}
+
+
+
+// 피커뷰
+extension ApplyingViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+           return 1
+       }
+       
+       // 컴포넌트가 가질 목록의 길이
+       func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+           guard let market = market, let sellersForm = market.sellersForm else { return 0 }
+           return sellersForm.needCategory.count
+       }
+       
+       // 컴포넌트의 목록 각 행에 출력될 내용
+       func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+           guard let market = market, let sellersForm = market.sellersForm else { return "" }
+           return sellersForm.needCategory[row]
+       }
+       
+       // 컴포넌트의 행을 선택했을 때 실행할 액션
+       func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+           
+           guard let market = market, let sellersForm = market.sellersForm else { return }
+           
+           // 선택된 계정을 텍스트 필드에 입력
+           let item = sellersForm.needCategory[row]
+           self.txtFldCategory.text = item
+           
+           // 입력 뷰 닫기
+           self.view.endEditing(true)
+       }
+
 }

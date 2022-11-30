@@ -86,6 +86,7 @@
                         <outlet property="btnLike" destination="uPg-Ol-qJc" id="sjC-0U-KgJ"/>
                         <outlet property="lblMarketName" destination="aym-9l-qyw" id="0M9-xT-HWK"/>
                         <outlet property="textView" destination="RhO-R2-AQs" id="qvs-Ue-96g"/>
+                        <outlet property="viewFrame" destination="QCi-VI-00x" id="n6s-lB-0iN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IUU-QL-gir" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

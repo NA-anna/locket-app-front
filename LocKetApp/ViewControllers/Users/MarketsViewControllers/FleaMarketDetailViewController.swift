@@ -7,7 +7,7 @@
 
 import UIKit
 import CoreLocation
-import MapKit
+//import MapKit
 
 class FleaMarketDetailViewController: UIViewController, MTMapViewDelegate {
     
@@ -25,7 +25,8 @@ class FleaMarketDetailViewController: UIViewController, MTMapViewDelegate {
         }
     }
     @IBOutlet var lblMarketName: UILabel!
-    @IBOutlet var mapView: MKMapView!
+    //@IBOutlet var mapView: MKMapView!
+    @IBOutlet var viewFrame: UIView!
     @IBOutlet var textView: UITextView!
     @IBOutlet var btnLike: UIButton!
     @IBOutlet var btnApplying: UIButton!
@@ -46,7 +47,7 @@ class FleaMarketDetailViewController: UIViewController, MTMapViewDelegate {
         // 맵뷰
         // 1 맵뷰 그리기 by Kakao
         var mapView: MTMapView!
-        mapView = MTMapView(frame: self.mapView.frame)
+        mapView = MTMapView(frame: self.viewFrame.frame)
         mapView.delegate = self
         mapView.baseMapType = .standard
         self.view.addSubview(mapView)
