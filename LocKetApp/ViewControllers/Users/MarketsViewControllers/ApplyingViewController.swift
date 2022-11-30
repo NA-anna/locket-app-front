@@ -31,6 +31,7 @@ class ApplyingViewController: UIViewController {
         guard let user = user, let market = market else {return}
         let name = user.name
         
+        // 오브젝트 설정
         lblHello.text = "\(name)님, \n'\(market.name)'셀러 참가를 위해 \n아래 내용을 적어주세요"
         
         txtVwDescription.layer.borderWidth = 1.0
@@ -38,26 +39,32 @@ class ApplyingViewController: UIViewController {
         txtVwDescription.layer.borderColor = UIColor.systemGray6.cgColor
         
         
-        // 피커뷰
+        // UITextField 프로토콜
+        txtFldSubCategory.delegate = self
+        txtFldSNS.delegate = self
+        
+        
+        // UIPickerView 프로토콜
         let picker = UIPickerView()
         picker.delegate = self
         self.txtFldCategory.inputView = picker // 텍스트 필드 입력 방식을 키보드 대신 피커 뷰로 설정
     }
     
     @IBAction func actPhotoLibrary(_ sender: Any) {
-        
         let picker = UIImagePickerController()
         picker.delegate = self
         picker.sourceType = .photoLibrary
         picker.modalPresentationStyle = .fullScreen
         present(picker, animated: true)
     }
-    
     @IBAction func actButton(_ sender: Any) {
         post()
     }
     
-    
+    // 빈 화면 터치 시 입력 닫기
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
     
     func post() {
         
@@ -114,7 +121,7 @@ class ApplyingViewController: UIViewController {
     }
 }
 
-
+// UIImagePicker -> Photo Library
 extension ApplyingViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
@@ -126,28 +133,15 @@ extension ApplyingViewController: UIImagePickerControllerDelegate, UINavigationC
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true)
     }
-    
 }
 
 
 
-// TextFiled [완료] 클릭 시 -> 키보드 닫기
-extension ApplyingViewController: UITextFieldDelegate {
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        
-        //최초반응자 사임..
-        textField.resignFirstResponder()
-        
-        
-        
-        return true
-    }
-    
-}
 
 
 
-// 피커뷰
+
+// UIPickerView
 extension ApplyingViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -179,4 +173,16 @@ extension ApplyingViewController: UIPickerViewDelegate, UIPickerViewDataSource {
            self.view.endEditing(true)
        }
 
+}
+
+// TextFiled [완료] 클릭 시 -> 키보드 닫기
+extension ApplyingViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        //최초반응자 사임..
+        txtFldSubCategory.resignFirstResponder()
+        txtFldSNS.resignFirstResponder()
+        
+        return true
+    }
 }

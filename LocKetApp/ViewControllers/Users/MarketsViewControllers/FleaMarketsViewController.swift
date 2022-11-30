@@ -59,7 +59,7 @@ class FleaMarketsViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "marketscell", for: indexPath)
 
         // 악세사리
-        cell.accessoryType = .disclosureIndicator //UIImageView(image: UIImage(systemName: "heart"))
+        //cell.accessoryType = .disclosureIndicator //UIImageView(image: UIImage(systemName: "heart"))
         
         
         var market = markets[indexPath.row]

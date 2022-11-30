@@ -10,7 +10,6 @@
 		A400850C29352616009FC8BD /* FiveMarketsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A400850B29352616009FC8BD /* FiveMarketsCell.swift */; };
 		A400850E293535CD009FC8BD /* ApplyingSt.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A400850D293535CD009FC8BD /* ApplyingSt.storyboard */; };
 		A4008510293539A6009FC8BD /* AddingSt.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A400850F293539A6009FC8BD /* AddingSt.storyboard */; };
-		A400851229353CC4009FC8BD /* ApplyingViewController_Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = A400851129353CC4009FC8BD /* ApplyingViewController_Category.swift */; };
 		A438075929335FC300C4596C /* MypageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A438075829335FC300C4596C /* MypageViewController.swift */; };
 		A438075B2933DD0700C4596C /* FiveMarketDetailSt.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A438075A2933DD0700C4596C /* FiveMarketDetailSt.storyboard */; };
 		A438075D2933DD1E00C4596C /* FleaMarketDetailSt.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A438075C2933DD1E00C4596C /* FleaMarketDetailSt.storyboard */; };
@@ -101,7 +100,6 @@
 		A400850B29352616009FC8BD /* FiveMarketsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiveMarketsCell.swift; sourceTree = "<group>"; };
 		A400850D293535CD009FC8BD /* ApplyingSt.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ApplyingSt.storyboard; sourceTree = "<group>"; };
 		A400850F293539A6009FC8BD /* AddingSt.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddingSt.storyboard; sourceTree = "<group>"; };
-		A400851129353CC4009FC8BD /* ApplyingViewController_Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplyingViewController_Category.swift; sourceTree = "<group>"; };
 		A438075829335FC300C4596C /* MypageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MypageViewController.swift; sourceTree = "<group>"; };
 		A438075A2933DD0700C4596C /* FiveMarketDetailSt.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FiveMarketDetailSt.storyboard; sourceTree = "<group>"; };
 		A438075C2933DD1E00C4596C /* FleaMarketDetailSt.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FleaMarketDetailSt.storyboard; sourceTree = "<group>"; };
@@ -249,9 +247,9 @@
 		A491A739292B8E730061BA62 /* AddViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				A49DF6E9292B85140008D6B8 /* AddViewController.swift */,
 				A49DF6E8292B85140008D6B8 /* AddViewController_category.swift */,
 				A49DF6EA292B85140008D6B8 /* AddViewController_place.swift */,
-				A49DF6E9292B85140008D6B8 /* AddViewController.swift */,
 			);
 			path = AddViewControllers;
 			sourceTree = "<group>";
@@ -264,7 +262,6 @@
 				A49DF6F4292B85620008D6B8 /* FleaMarketsViewController.swift */,
 				A4931EFF29308821003DA9D0 /* FleaMarketDetailViewController.swift */,
 				A44ACA52293236B9001F0900 /* ApplyingViewController.swift */,
-				A400851129353CC4009FC8BD /* ApplyingViewController_Category.swift */,
 				A400850B29352616009FC8BD /* FiveMarketsCell.swift */,
 			);
 			path = MarketsViewControllers;
@@ -353,10 +350,10 @@
 		A49DF6A1292B82A00008D6B8 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				A438075E29345F8800C4596C /* LaunchViewController.swift */,
 				A4931EF8292F74CB003DA9D0 /* Login */,
 				A4931EF9292F74D9003DA9D0 /* Users */,
 				A4931EFA292F751A003DA9D0 /* BusinessUsers */,
-				A438075E29345F8800C4596C /* LaunchViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -634,7 +631,6 @@
 				A444C099293265A6008F02C5 /* AppliedListViewController.swift in Sources */,
 				A47FB3A6292D1E9F00884C61 /* UsersAPI.swift in Sources */,
 				A49DF6EC292B85140008D6B8 /* AddViewController.swift in Sources */,
-				A400851229353CC4009FC8BD /* ApplyingViewController_Category.swift in Sources */,
 				A47901B6292F6B300032003C /* BusinessHomeViewController.swift in Sources */,
 				A444C09B29326905008F02C5 /* SellersAPI.swift in Sources */,
 				A4931EFC29305661003DA9D0 /* BusinessusersAPI.swift in Sources */,

@@ -11,12 +11,7 @@ class FavoritesViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        //마켓 데이터 가져오기
-//        getMarkets {
-//            self.tableView.reloadData()
-//        }
-        
+            
     }
     override func viewWillAppear(_ animated: Bool) {
         tableView.reloadData()

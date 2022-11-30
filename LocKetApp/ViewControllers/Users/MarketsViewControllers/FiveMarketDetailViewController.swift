@@ -48,7 +48,7 @@ class FiveMarketDetailViewController: UIViewController, MTMapViewDelegate {
         mapView = MTMapView(frame: self.viewFrame.frame)
         mapView.delegate = self
         mapView.baseMapType = .standard
-        self.view.addSubview(mapView)
+        self.viewFrame.addSubview(mapView)
         
         // 2 좌표 중심 설정 by Kakao
         guard let lat = Double(fiveMarket.latitude),
@@ -57,8 +57,8 @@ class FiveMarketDetailViewController: UIViewController, MTMapViewDelegate {
         mapView.setMapCenter(defaultMapPoint, zoomLevel: 1, animated: true)
         
         // 마켓정보
-        lblMarketName.text = "'\(fiveMarket.mrktNm)'을 구경해보세요!"
-        textView.text = "'\(fiveMarket.storNumber)'개의 점포에서 \n'\(fiveMarket.trtmntPrdlst)' 등의 상품을 구경하세요! \n\n\(fiveMarket.rdnmadr) \n\(fiveMarket.lnmadr) \n\n이 곳으로 오세요!"
+        lblMarketName.text = "\(fiveMarket.mrktNm)으로 오세요!"
+        textView.text = "\(fiveMarket.storNumber)개의 점포 \n\(fiveMarket.trtmntPrdlst)\n상품을 구경하세요! \n\n도로명주소\n\(fiveMarket.rdnmadr) \n\n지번주소\n\(fiveMarket.lnmadr)"
         
         //하트 색칠하기
         isFavorite = user.favorites.fav_fivemarkets.contains { element in

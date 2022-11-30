@@ -7,7 +7,6 @@
 
 import UIKit
 import CoreLocation
-//import MapKit
 
 class FleaMarketDetailViewController: UIViewController, MTMapViewDelegate {
     
@@ -25,7 +24,6 @@ class FleaMarketDetailViewController: UIViewController, MTMapViewDelegate {
         }
     }
     @IBOutlet var lblMarketName: UILabel!
-    //@IBOutlet var mapView: MKMapView!
     @IBOutlet var viewFrame: UIView!
     @IBOutlet var textView: UITextView!
     @IBOutlet var btnLike: UIButton!
@@ -50,7 +48,7 @@ class FleaMarketDetailViewController: UIViewController, MTMapViewDelegate {
         mapView = MTMapView(frame: self.viewFrame.frame)
         mapView.delegate = self
         mapView.baseMapType = .standard
-        self.view.addSubview(mapView)
+        self.viewFrame.addSubview(mapView)
         
         // 2 좌표 중심 설정 by Kakao
         let lat = Double(market.location.coordinates[0])

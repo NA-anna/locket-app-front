@@ -13,6 +13,7 @@ class LaunchViewController: UIViewController {
         super.viewDidLoad()
 
         // 데이터 가져오기 작업
+        
         // (1) 5일장 데이터 가져와서 합치기 fiveMarkets -> fiveMarkets (for Map)
         var combinedFiveMarkets: [Item] = []
         get5Markets( numOfRows: 100, type: "5일장") {
