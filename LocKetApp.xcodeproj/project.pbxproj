@@ -799,7 +799,7 @@
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = LP572SD537;
+				DEVELOPMENT_TEAM = TCRTN643RF;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/DaumMap.embeddedframework",
@@ -821,10 +821,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = net.womenup.2022.nyj.LocKetApp;
+				PRODUCT_BUNDLE_IDENTIFIER = net.womenup.2022.kyj.LocKetApp;
 				PRODUCT_NAME = LocKetApp;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/nayujin/Desktop/LocKetApp/LocKetApp/LocKetApp-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/yeonji/Documents/ReStart/locket-app-front/LocKetApp/LocKetApp-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -839,7 +839,7 @@
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = LP572SD537;
+				DEVELOPMENT_TEAM = TCRTN643RF;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/DaumMap.embeddedframework",
@@ -861,10 +861,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = net.womenup.2022.nyj.LocKetApp;
+				PRODUCT_BUNDLE_IDENTIFIER = net.womenup.2022.kyj.LocKetApp;
 				PRODUCT_NAME = LocKetApp;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/nayujin/Desktop/LocKetApp/LocKetApp/LocKetApp-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/yeonji/Documents/ReStart/locket-app-front/LocKetApp/LocKetApp-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

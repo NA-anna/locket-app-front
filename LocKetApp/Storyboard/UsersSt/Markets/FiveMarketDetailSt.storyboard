@@ -12,7 +12,7 @@
         <scene sceneID="AyB-LV-oSK">
             <objects>
                 <viewController storyboardIdentifier="FleaMarketDetail" id="lwZ-4L-6jB" customClass="FiveMarketDetailViewController" customModule="LocKetApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="kzI-bU-PID">
+                    <view key="view" contentMode="scaleToFill" id="kzI-bU-PID">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -94,7 +94,6 @@
                                     <constraint firstItem="V3q-I9-UjU" firstAttribute="centerX" secondItem="Jud-c5-sI9" secondAttribute="centerX" id="UcW-aE-X8I"/>
                                     <constraint firstItem="Iov-Ud-OCg" firstAttribute="trailing" secondItem="qc0-gV-jUc" secondAttribute="trailing" id="fnX-RZ-cZi"/>
                                     <constraint firstItem="V3q-I9-UjU" firstAttribute="leading" secondItem="w2Q-09-yQB" secondAttribute="leading" id="foX-Pr-MP4"/>
-                                    <constraint firstAttribute="width" constant="309.67000000000002" id="uFE-Ba-T5f"/>
                                     <constraint firstItem="w2Q-09-yQB" firstAttribute="centerX" secondItem="Jud-c5-sI9" secondAttribute="centerX" id="zrN-tU-eQR"/>
                                 </constraints>
                             </stackView>
@@ -102,8 +101,8 @@
                         <viewLayoutGuide key="safeArea" id="Rgr-L2-LPA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="a4N-BK-yhg" firstAttribute="centerX" secondItem="kzI-bU-PID" secondAttribute="centerX" id="TsO-ym-h14"/>
-                            <constraint firstItem="a4N-BK-yhg" firstAttribute="leading" secondItem="Rgr-L2-LPA" secondAttribute="leading" constant="41.666666666666657" id="hcm-I0-XfR"/>
+                            <constraint firstItem="a4N-BK-yhg" firstAttribute="leading" secondItem="Rgr-L2-LPA" secondAttribute="leading" constant="41.666666666666657" id="2IV-ot-pcx"/>
+                            <constraint firstItem="a4N-BK-yhg" firstAttribute="centerX" secondItem="kzI-bU-PID" secondAttribute="centerX" id="8e0-pf-Wk6"/>
                             <constraint firstItem="a4N-BK-yhg" firstAttribute="top" secondItem="Rgr-L2-LPA" secondAttribute="top" constant="40" id="mGN-1r-Jod"/>
                         </constraints>
                     </view>
