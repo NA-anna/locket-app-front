@@ -10,10 +10,20 @@ import UIKit
 class AddViewController_category: UITableViewController {
 
     var parentVC: AddViewController?
-    
+    //var sellerCategories: [String] = gSellerCategories
+    var arrCheck: [Bool] = [Bool](repeating: false, count: gSellerCategories.count)
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.allowsMultipleSelection = true
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        if let parentVC = self.parentVC {
+            parentVC.arrCheck = arrCheck
+            print("데이터 전송 to parent")
+    
+        }
     }
 
     
@@ -35,19 +45,14 @@ class AddViewController_category: UITableViewController {
 
         let lblCategory = cell.viewWithTag(1) as? UILabel
         lblCategory?.text = gSellerCategories[indexPath.row]
+        let btnCheck = cell.viewWithTag(2) as? UIButton
+        btnCheck?.isHidden = !arrCheck[indexPath.row]
 
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        let category = gSellerCategories[indexPath.row]
-        
-        if let parentVC = self.parentVC {
-            print("데이터 전송 to parent")
-            parentVC.categories = category
-            dismiss(animated: true)
-        }
-        
+        arrCheck[indexPath.row].self.toggle()
+        tableView.reloadData()
     }
 }

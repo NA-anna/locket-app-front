@@ -12,11 +12,24 @@ class AddViewController: UIViewController {
     //Azure Storage 설정 세팅
     var blobstorage: AZBlobService = AZBlobService.init(connectionString, containerName: "marketprofile")
     
+    /*
     var categories: String?{
         didSet(oldValue){
         }willSet(newValue){
             txtFldSellerCategories.text = newValue
             enableAddBtn()
+        }
+    }*/
+    var arrCheck: [Bool] = [Bool](repeating: false, count: gSellerCategories.count){
+        didSet{
+            var arr: [String] = []
+            for i in 0..<gSellerCategories.count {
+                if arrCheck[i] {
+                    arr.append(gSellerCategories[i])
+                }
+            }
+            txtFldSellerCategories.text = arr.joined(separator: ", ")
+            print(arr)
         }
     }
     var place: Document?{
@@ -153,6 +166,7 @@ class AddViewController: UIViewController {
         if segueID == "category"{
             let childVC = segue.destination as? AddViewController_category
             childVC?.parentVC = self
+        
         }else if segueID == "place"{
             let childVC = segue.destination as? AddViewController_place
             childVC?.parentVC = self
@@ -213,10 +227,7 @@ extension AddViewController: UIPickerViewDelegate, UIPickerViewDataSource {
 
 
 
-
-
-
-// TextFiled [완료] 클릭 시 -> 키보드 닫기
+// UITextFiled : [완료] 클릭 시 -> 키보드 닫기
 extension AddViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         

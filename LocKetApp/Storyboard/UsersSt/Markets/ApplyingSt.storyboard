@@ -8,6 +8,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="0mv-Kq-ys7">
+            <objects>
+                <navigationController id="doo-bs-SRa" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7Q2-I7-TkA">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ekU-FW-SKg" kind="relationship" relationship="rootViewController" id="tuF-JP-8RA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eb1-1a-sEA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3169" y="401"/>
+        </scene>
         <!--Applying View Controller-->
         <scene sceneID="ERS-uJ-x4d">
             <objects>
@@ -173,12 +189,12 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3g0-4p-am3"/>
-                        <color key="backgroundColor" red="1" green="0.98823529409999999" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <toolbarItems>
-                        <barButtonItem enabled="NO" title="등록" id="ylt-7K-ObP"/>
-                    </toolbarItems>
-                    <navigationItem key="navigationItem" id="EYt-cv-PfZ"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="EYt-cv-PfZ">
+                        <barButtonItem key="rightBarButtonItem" title="신청" id="UGT-Ze-GCR"/>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="imageView" destination="2z1-Cl-3qT" id="lFW-Yg-it1"/>

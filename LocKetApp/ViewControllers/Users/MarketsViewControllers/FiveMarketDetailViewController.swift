@@ -45,7 +45,7 @@ class FiveMarketDetailViewController: UIViewController, MTMapViewDelegate {
         // 맵뷰
         // 1 맵뷰 그리기 by Kakao
         var mapView: MTMapView!
-        mapView = MTMapView(frame: self.viewFrame.frame)
+        mapView = MTMapView(frame: self.viewFrame.bounds) 
         mapView.delegate = self
         mapView.baseMapType = .standard
         self.viewFrame.addSubview(mapView)
