@@ -9,19 +9,18 @@ import UIKit
 
 class FleaMarketsViewController: UITableViewController {
 
-    // 장날보기|모집중 세그먼트
-    @IBOutlet var segCon: UISegmentedControl!
+    //Azure Storage 설정 세팅
+    var blobstorage: AZBlobService = AZBlobService.init(connectionString, containerName: "marketprofile")
     
+    var filtered = markets
+    
+    @IBOutlet var segCon: UISegmentedControl!  // 장날보기|모집중 세그먼트
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
-
-    
     // 세그먼트 변경 액션
-    var filtered = markets
     @IBAction func changeSegment(_ sender: UISegmentedControl) {
-        
        //모집중
         if segCon.selectedSegmentIndex == 1 {
             filtered = markets.filter { market in
@@ -64,6 +63,23 @@ class FleaMarketsViewController: UITableViewController {
         }
         
         // TABLE VIEW 에 값 지정
+        // 사진 파일이 있으면 애저 스트로지에서 가져오기
+        if market.photo.count > 0 {
+            let blobName = market.photo[0]
+            if blobName != "" {
+                blobstorage.downloadImage(blobName: blobName, handler: { data in
+                    let image = UIImage(data: data)
+                    DispatchQueue.main.async {
+                        let imageView = cell.viewWithTag(10) as? UIImageView
+                        imageView?.image = image
+                    }
+                })
+            }
+        // 사진 파일이 없으면 디폴트 이미지
+        }else {
+            let imageView = cell.viewWithTag(10) as? UIImageView
+            imageView?.image = UIImage(named: "rocket_up")
+        }
         let lblTitle = cell.viewWithTag(1) as? UILabel
         lblTitle?.text = market.name
         let lblCategory = cell.viewWithTag(2) as? UILabel
@@ -80,40 +96,11 @@ class FleaMarketsViewController: UITableViewController {
     }
     
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
+ 
 
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
 
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
 
-    }
-    */
 
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
 
     
     
