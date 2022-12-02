@@ -87,6 +87,7 @@ class ApplyingViewController: UIViewController {
         ]
         postSeller( collection: "sellers", body: bodyData) { flag in
             if flag {
+                
                 // alert 
                 let alert = UIAlertController(title: "", message: "참여하기가 신청되었습니다!", preferredStyle: .alert)
                 let actionOK = UIAlertAction(title: "확인", style: .default, handler: { _ in
@@ -110,11 +111,13 @@ class ApplyingViewController: UIViewController {
             }
         }
   
-    
         
         //Azure Storage에 사진 blob 저장
         guard let image = imageView.image else {return}
         blobstorage.uploadImage(image: image, blobName: blobName )
+    
+        
+        
         
         
         

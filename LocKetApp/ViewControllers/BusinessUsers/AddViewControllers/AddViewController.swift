@@ -11,15 +11,7 @@ class AddViewController: UIViewController {
     
     //Azure Storage 설정 세팅
     var blobstorage: AZBlobService = AZBlobService.init(connectionString, containerName: "marketprofile")
-    
-    /*
-    var categories: String?{
-        didSet(oldValue){
-        }willSet(newValue){
-            txtFldSellerCategories.text = newValue
-            enableAddBtn()
-        }
-    }*/
+
     var arrCheck: [Bool] = [Bool](repeating: false, count: gSellerCategories.count){
         didSet{
             var arr: [String] = []
@@ -29,9 +21,9 @@ class AddViewController: UIViewController {
                 }
             }
             txtFldSellerCategories.text = arr.joined(separator: ", ")
-            print(arr)
         }
     }
+    // child view 에서 선택된 데이터
     var place: Document?{
         didSet(oldValue){
         }willSet(newValue){
@@ -45,18 +37,21 @@ class AddViewController: UIViewController {
     var longitude: String?
     
     @IBOutlet var btnDone: UIBarButtonItem!
+    @IBOutlet var viewMain: UIView!
     @IBOutlet var lblHello: UILabel!
     @IBOutlet var imageView: UIImageView!
-    @IBOutlet weak var txtFldName: UITextField!
+    @IBOutlet var txtFldName: UITextField!
     @IBOutlet weak var txtFldCategory: UITextField!
     @IBOutlet var datePickerStartDate: UIDatePicker!
     @IBOutlet var datePickerEndDate: UIDatePicker!
     @IBOutlet weak var txtFldPlace: UITextField!
-    @IBOutlet weak var txtFldDescription: UITextView!
+    @IBOutlet var txtVwDescription: UITextView!
     @IBOutlet var viewSellers: UIView!
+    @IBOutlet var swSeller: UISwitch!
     @IBOutlet var txtFldSellerCount: UITextField!
     @IBOutlet var datePickerDeadline: UIDatePicker!
     @IBOutlet var txtFldSellerCategories: UITextField!
+    @IBOutlet var txtVwSellerDescription: UITextView!
     
     
     override func viewDidLoad() {
@@ -66,7 +61,13 @@ class AddViewController: UIViewController {
         
         // 오브젝트 설정
         let name = businessuser.name
-        lblHello.text = "\(name)님, \n'마켓 등록를 위해 \n아래 내용을 적어주세요"
+        lblHello.text = "\(name)님, \n마켓 등록를 위해 \n아래 내용을 적어주세요"
+        
+        txtVwDescription.layer.borderWidth = 1.0
+        txtVwDescription.layer.cornerRadius = 10
+        txtVwDescription.layer.borderColor = UIColor.systemGray6.cgColor
+        
+        
         
         // UITextField 프로토콜
         txtFldName.delegate = self
@@ -84,13 +85,21 @@ class AddViewController: UIViewController {
         picker.modalPresentationStyle = .fullScreen
         present(picker, animated: true)
     }
+    @IBAction func actTitleDidEnd(_ sender: Any) {
+        enableAddBtn()
+    }
+    @IBAction func actCategoryValueChanged(_ sender: Any) {
+        enableAddBtn()
+    }
     @IBAction func swNeedSellers(_ sender: UISwitch) {
        
-        
         if  sender.isOn{
             viewSellers.isHidden = false
+            viewMain.frame.size.height = 1100
         }else {
             viewSellers.isHidden = true
+            viewMain.frame.size.height = 800
+            
         }
           
     }
@@ -98,63 +107,104 @@ class AddViewController: UIViewController {
         post()
     }
     
-    // 빈 화면 터치 시 입력 닫기
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
-    }
     
-    func post(){
-            // DB에 저장
-            guard let title = txtFldName.text,
-                  let category = txtFldCategory.text,
-                  let place = txtFldPlace.text,
-                  let latitude = latitude,
-                  let longitude = longitude,
-                  let description = txtFldDescription.text
-            else { return }
-            var startDate = datePickerStartDate.date.toString()
-            var idx = startDate.index(startDate.startIndex, offsetBy: 9)
-            startDate = String(startDate[...idx])
-            var endDate = datePickerEndDate.date.toString()
-            idx = endDate.index(endDate.startIndex, offsetBy: 9)
-            endDate = String(endDate[...idx])
-            
-            let bodyData : [String: Any] = [
-                "businessusersId" : "2020-2020-1234",
-                "name"            : title,
-                "category"        : category,
-                "place"           : place,
-                "location"        : [ "type": "Point",
-                                      "coordinates": [latitude, longitude] ],
-                "startdate"       : startDate,
-                "enddate"         : endDate,
-                "description"     : description,
-                "isPromotional"   : false,
-                "needSellers"     : false
-            ]
-            postMarketData( collection: "markets", body: bodyData)
-      
-        
-            // alert
-            let alert = UIAlertController(title: "저장되었습니다", message: "", preferredStyle: .alert)
-            let actionOK = UIAlertAction(title: "확인", style: .default, handler: { _ in
-                //화면전환
-                self.tabBarController?.selectedIndex = 0
-     
-            })
-            alert.addAction(actionOK)
-            present(alert, animated: true)
-    }
     
     // 입력 확인(타이틀, 카테고리, 장소) 후 버튼 활성화 함수
     func enableAddBtn(){
+        print("버튼")
         if txtFldName.text != "" && txtFldCategory.text != "" && txtFldPlace.text != ""
         {
-            btnDone.isEnabled = true
-            print("--버튼 활성화--")
-            return
+            if swSeller.isOn && txtFldSellerCount.text != "" && txtFldSellerCategories.text != "" {
+                btnDone.isEnabled = true
+                print("--버튼 활성화--")
+                return
+            }else if !swSeller.isOn {
+                btnDone.isEnabled = true
+                print("--버튼 활성화--")
+                return
+            }
+
         }
     }
+    // 빈 화면 터치 시 입력 닫기
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        print("터치터치")
+        self.viewMain.endEditing(true)
+    }
+    
+    func post(){
+        // DB에 저장
+        guard let businessuser = businessuser,
+              let title = txtFldName.text,
+              let category = txtFldCategory.text,
+              let place = txtFldPlace.text,
+              let latitude = latitude,
+              let longitude = longitude,
+              let description = txtVwDescription.text,
+              let sellersCount = txtFldSellerCount.text,
+              let needCategories = txtFldSellerCategories.text?.components(separatedBy: ", "),
+              let sellerDescriptiob = txtVwSellerDescription.text
+        else { return }
+        var startDate = datePickerStartDate.date.toString()
+        var idx = startDate.index(startDate.startIndex, offsetBy: 9)
+            startDate = String(startDate[...idx])
+        var endDate = datePickerEndDate.date.toString()
+            idx = endDate.index(endDate.startIndex, offsetBy: 9)
+            endDate = String(endDate[...idx])
+        var deadline = datePickerDeadline.date.toString()
+            idx = deadline.index(deadline.startIndex, offsetBy: 9)
+            deadline = String(deadline[...idx])
+        //let blobName = market.name + "_" + marketId + "_" + user.id
+        
+            
+        let bodyData : [String: Any] = [
+            "businessusersId" : businessuser.id,
+            "name"            : title,
+            "category"        : category,
+            "place"           : place,
+            "location"        : [ "type": "Point",
+                                  "coordinates": [latitude, longitude] ],
+            "startdate"       : startDate,
+            "enddate"         : endDate,
+            "description"     : description,
+            "isPromotional"   : false,
+            "needSellers"     : swSeller.isOn ? true : false,
+            "sellersForm"     : [ "sellersCount" : sellersCount,
+                                  "deadline"     : deadline,
+                                  "needCategory" : needCategories,
+                                  "description"  : sellerDescriptiob
+                                ]
+        ]
+    
+        postMarketData(collection: "markets", body: bodyData, handler: { flag in
+            if flag {
+                // alert
+                let alert = UIAlertController(title: "", message: "등록되었습니다!", preferredStyle: .alert)
+                let actionOK = UIAlertAction(title: "확인", style: .default, handler: { _ in
+                    //화면전환
+                    self.tabBarController?.selectedIndex = 0
+         
+                })
+                alert.addAction(actionOK)
+                self.present(alert, animated: true)
+            }else {
+                // alert
+                let alert = UIAlertController(title: "", message: "등록되지 못했습니다. 다시 확인 후 진행해주세요", preferredStyle: .alert)
+                let actionOK = UIAlertAction(title: "확인", style: .default, handler: { _ in
+                    //화면전환
+                    self.tabBarController?.selectedIndex = 0
+         
+                })
+                alert.addAction(actionOK)
+                self.present(alert, animated: true)
+                
+            }
+        })
+        
+              
+    }
+    
+
 
     
     

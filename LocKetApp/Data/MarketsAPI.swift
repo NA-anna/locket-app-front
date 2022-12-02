@@ -32,7 +32,7 @@ func getMarkets( handler: @escaping()->() ) {
     }
 }
 
-func postMarketData( collection route : String, body: [String : Any] ) {
+func postMarketData( collection route : String, body: [String : Any], handler: @escaping(Bool)->() ) {
     
     // 1 url request
     let strUrl = host + "/" + route
@@ -49,9 +49,10 @@ func postMarketData( collection route : String, body: [String : Any] ) {
         //debugPrint(response)
         switch response.result {
         case .success(_)://obj): //통신성공
-            print("응답 코드 :: ", response.response?.statusCode ?? 0)
+            handler(true)
         case .failure(let e):   //통신실패
             print(e.localizedDescription)
+            handler(false)
         }
     }
 }

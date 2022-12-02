@@ -15,10 +15,6 @@ class FleaMarketsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        //마켓 데이터 가져오기
-//        getMarkets {
-//            self.tableView.reloadData()
-//        }
     }
 
     

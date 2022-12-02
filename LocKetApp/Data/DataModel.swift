@@ -64,20 +64,21 @@ struct Market: Codable {
     let enddate        : String
    // let site           : String
     let description    : String?
+    let photo          : [String]
     let isPromotional  : Bool
     let needSellers    : Bool
     let sellersForm    : SellersForm?
-    struct SellersForm : Codable{
-      let sellersCount   : Int
-      let deadline       : String
-      let needCategory   : [String]      //["음식", "의류", "소품", "수제"]
-      let charge         : String
-      let description    : String
-    }
 }
-struct Location: Codable{
+struct Location: Codable {
     let type       : String  //"Point"
     let coordinates: [Double]
+}
+struct SellersForm : Codable {
+  let sellersCount   : Int
+  let deadline       : String
+  let needCategory   : [String]     //["음식", "의류", "소품", "수제"]
+  //let charge         : String
+  let description    : String
 }
 /*------------------------------*/
 // sellers

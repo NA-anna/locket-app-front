@@ -45,12 +45,10 @@ class AddViewController_place: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        
         guard let parentVC = self.parentVC else { return }
         print("데이터 전송 to parent")
         parentVC.place = documents[indexPath.row]
-        dismiss(animated: true)
-        
+        navigationController?.popViewController(animated: true)
     }
 
 
