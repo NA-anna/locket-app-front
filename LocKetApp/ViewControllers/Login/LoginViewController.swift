@@ -44,7 +44,7 @@ class LoginViewController: UIViewController {
         // Businessuser Login
         }else {
             
-            getLoginBusinessuser(id: "happyfood") { flag in
+            getLoginBusinessuser(id: "iseoulu") { flag in
                 if flag {
                     
                     self.performSegue(withIdentifier: "businessuser", sender: nil)

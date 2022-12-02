@@ -40,7 +40,7 @@ class AppliedListViewController: UITableViewController {
         let seller = sellers[indexPath.row]
         guard let user = user else {return cell}
         
-        // 테이블 오브젝트
+        // UITableView 오브젝트
         
         // (1) 라벨
         if let index = markets.firstIndex(where: { $0._id == seller.marketId }){

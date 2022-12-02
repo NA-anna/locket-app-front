@@ -67,6 +67,7 @@ class AddViewController: UIViewController {
         txtVwDescription.layer.cornerRadius = 10
         txtVwDescription.layer.borderColor = UIColor.systemGray6.cgColor
         
+        viewSellers.isHidden = true
         
         
         // UITextField 프로토콜
@@ -154,10 +155,11 @@ class AddViewController: UIViewController {
         var deadline = datePickerDeadline.date.toString()
             idx = deadline.index(deadline.startIndex, offsetBy: 9)
             deadline = String(deadline[...idx])
-        //let blobName = market.name + "_" + marketId + "_" + user.id
-        
-            
-        let bodyData : [String: Any] = [
+    
+        let blobName = businessuser.id + "_" + String(markets.count+1) //블롭네임은 iseoulu_숫자
+                    
+        let bodyData : [String: Any] = swSeller.isOn ?
+        [
             "businessusersId" : businessuser.id,
             "name"            : title,
             "category"        : category,
@@ -167,13 +169,27 @@ class AddViewController: UIViewController {
             "startdate"       : startDate,
             "enddate"         : endDate,
             "description"     : description,
+            "photo"           : [blobName],
             "isPromotional"   : false,
-            "needSellers"     : swSeller.isOn ? true : false,
+            "needSellers"     : true,
             "sellersForm"     : [ "sellersCount" : sellersCount,
                                   "deadline"     : deadline,
                                   "needCategory" : needCategories,
                                   "description"  : sellerDescriptiob
                                 ]
+        ] : [
+            "businessusersId" : businessuser.id,
+            "name"            : title,
+            "category"        : category,
+            "place"           : place,
+            "location"        : [ "type": "Point",
+                                  "coordinates": [latitude, longitude] ],
+            "startdate"       : startDate,
+            "enddate"         : endDate,
+            "description"     : description,
+            "photo"           : [blobName],
+            "isPromotional"   : false,
+            "needSellers"     : false
         ]
     
         postMarketData(collection: "markets", body: bodyData, handler: { flag in
@@ -200,8 +216,11 @@ class AddViewController: UIViewController {
                 
             }
         })
-        
               
+        //Azure Storage에 사진 blob 저장
+        guard let image = imageView.image else {return}
+        blobstorage.uploadImage(image: image, blobName: blobName )
+        
     }
     
 

@@ -69,15 +69,16 @@ class ApplyingViewController: UIViewController {
     func post() {
         
         // DB에 저장
-        guard let user = user, let market = market, let marketId = market._id else {return}
+        guard let user = user, let market = market, let market_id = market._id
+              else {return}
         guard let category = txtFldCategory.text,
               let subCategory = txtFldSubCategory.text,
               let sns = txtFldSNS.text,
               let description = txtVwDescription.text else {return}
-        let blobName = market.name + "_" + marketId + "_" + user.id
+        let blobName = market.name + "_" + market_id + "_" + user.id
         let bodyData : [String: Any] = [
             "userId"     : user.id,
-            "marketId"   : marketId,
+            "marketId"   : market_id,
             "category"   : category,
             "subCategory": subCategory,
             "sns"        : [sns],
