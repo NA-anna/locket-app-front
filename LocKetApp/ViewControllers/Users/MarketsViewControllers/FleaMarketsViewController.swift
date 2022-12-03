@@ -12,25 +12,24 @@ class FleaMarketsViewController: UITableViewController {
     //Azure Storage 설정 세팅
     var blobstorage: AZBlobService = AZBlobService.init(connectionString, containerName: "marketprofile")
     
-    var filtered = markets
+    var recruitingMarkets = markets
     
     @IBOutlet var segCon: UISegmentedControl!  // 장날보기|모집중 세그먼트
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
     }
     // 세그먼트 변경 액션
     @IBAction func changeSegment(_ sender: UISegmentedControl) {
        //모집중
         if segCon.selectedSegmentIndex == 1 {
-            filtered = markets.filter { market in
+            recruitingMarkets = recruitingMarkets.filter { market in
                 guard let sellersForm = market.sellersForm else { return false }
                 let today = Date().toString()
                 return market.needSellers && sellersForm.deadline > today
             }
         }
         self.tableView.reloadData()
-
     }
     
     // MARK: - Table view data source
@@ -40,12 +39,16 @@ class FleaMarketsViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if segCon.selectedSegmentIndex == 0 {
-            return markets.count
-        }else {
-            return filtered.count
-            
+        
+        if segCon.selectedSegmentIndex == 1 {
+            return recruitingMarkets.count
         }
+        return markets.count
+//        if segCon.selectedSegmentIndex == 0 {
+//            return markets.count
+//        }else {
+//            return filtered.count
+//        }
         
     }
 
@@ -59,7 +62,7 @@ class FleaMarketsViewController: UITableViewController {
         
         var market = markets[indexPath.row]
         if segCon.selectedSegmentIndex == 1 {
-            market = filtered[indexPath.row]
+            market = recruitingMarkets[indexPath.row]
         }
         
         // TABLE VIEW 에 값 지정

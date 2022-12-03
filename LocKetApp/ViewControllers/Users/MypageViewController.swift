@@ -37,7 +37,7 @@ extension MypageViewController:UITableViewDataSource, UITableViewDelegate{
         return 1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return 3
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
@@ -50,17 +50,17 @@ extension MypageViewController:UITableViewDataSource, UITableViewDelegate{
             symbol?.tintColor = .label
             label?.text = "나의 신청 마켓"
             
-        case 1:
-            symbol?.image = UIImage(systemName: "heart")
-            symbol?.tintColor = .label
-            label?.text = "관심목록"
+//        case 1:
+//            symbol?.image = UIImage(systemName: "heart")
+//            symbol?.tintColor = .label
+//            label?.text = "관심목록"
             
-        case 2:
+        case 1:
             symbol?.image = UIImage(systemName: "questionmark.circle")
             symbol?.tintColor = .label
             label?.text = "고객센터"
             
-        case 3:
+        case 2:
             symbol?.image = UIImage(systemName: "ipad.and.arrow.forward")
             symbol?.tintColor = .label
             label?.text = "로그아웃"
@@ -71,6 +71,26 @@ extension MypageViewController:UITableViewDataSource, UITableViewDelegate{
         return cell
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.row{
+        case 0:
+            let storyBoard = UIStoryboard(name: "MypageSt", bundle: nil)
+            let vc = storyBoard.instantiateViewController(withIdentifier: "AppliedListView")
+            navigationController?.pushViewController(vc, animated: true)
+        case 1:
+            let vc = CustomModalViewController()
+            vc.modalPresentationStyle = .overCurrentContext
+            // keep false
+            // modal animation will be handled in VC itself
+            self.present(vc, animated: false)
+        case 2:
+            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyBoard.instantiateViewController(withIdentifier: "login")
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true)
+        default:
+            print("디폴트~")
+        }
+    }
     
 }

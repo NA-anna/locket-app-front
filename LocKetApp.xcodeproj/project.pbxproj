@@ -13,7 +13,7 @@
 		A438075929335FC300C4596C /* MypageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A438075829335FC300C4596C /* MypageViewController.swift */; };
 		A438075B2933DD0700C4596C /* FiveMarketDetailSt.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A438075A2933DD0700C4596C /* FiveMarketDetailSt.storyboard */; };
 		A438075D2933DD1E00C4596C /* FleaMarketDetailSt.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A438075C2933DD1E00C4596C /* FleaMarketDetailSt.storyboard */; };
-		A438075F29345F8800C4596C /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A438075E29345F8800C4596C /* LaunchViewController.swift */; };
+		A438075F29345F8800C4596C /* LaunchViewControllerX.swift in Sources */ = {isa = PBXBuildFile; fileRef = A438075E29345F8800C4596C /* LaunchViewControllerX.swift */; };
 		A444C099293265A6008F02C5 /* AppliedListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A444C098293265A6008F02C5 /* AppliedListViewController.swift */; };
 		A444C09B29326905008F02C5 /* SellersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A444C09A29326905008F02C5 /* SellersAPI.swift */; };
 		A444C09D293276E0008F02C5 /* GlobalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A444C09C293276E0008F02C5 /* GlobalData.swift */; };
@@ -41,7 +41,6 @@
 		A49DF67E292B64FF0008D6B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49DF67D292B64FF0008D6B8 /* AppDelegate.swift */; };
 		A49DF680292B64FF0008D6B8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49DF67F292B64FF0008D6B8 /* SceneDelegate.swift */; };
 		A49DF682292B64FF0008D6B8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49DF681292B64FF0008D6B8 /* LoginViewController.swift */; };
-		A49DF685292B64FF0008D6B8 /* Main0.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A49DF683292B64FF0008D6B8 /* Main0.storyboard */; };
 		A49DF68A292B65000008D6B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A49DF688292B65000008D6B8 /* LaunchScreen.storyboard */; };
 		A49DF693292B65340008D6B8 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A49DF692292B65340008D6B8 /* Metal.framework */; };
 		A49DF695292B653F0008D6B8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A49DF694292B653F0008D6B8 /* SystemConfiguration.framework */; };
@@ -90,6 +89,8 @@
 		A49DF6FA292B85620008D6B8 /* FleaMarketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49DF6F4292B85620008D6B8 /* FleaMarketsViewController.swift */; };
 		A49DF6FD292B85910008D6B8 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = A49DF6FC292B85910008D6B8 /* Alamofire */; };
 		A4A36A2C292F18C6001696CE /* FiveMarketsSt.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4A36A2B292F18C6001696CE /* FiveMarketsSt.storyboard */; };
+		A4C08EC9293B44A80075294B /* ProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = A4C08EC8293B44A80075294B /* ProgressHUD */; };
+		A4C08ECB293B72A20075294B /* CustomModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C08ECA293B72A20075294B /* CustomModalViewController.swift */; };
 		D6F5640DD4D2E8F1515BD067 /* Pods_LocKetApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DBD1F6CCA14FCEE6C33FC4C /* Pods_LocKetApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -103,7 +104,7 @@
 		A438075829335FC300C4596C /* MypageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MypageViewController.swift; sourceTree = "<group>"; };
 		A438075A2933DD0700C4596C /* FiveMarketDetailSt.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FiveMarketDetailSt.storyboard; sourceTree = "<group>"; };
 		A438075C2933DD1E00C4596C /* FleaMarketDetailSt.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FleaMarketDetailSt.storyboard; sourceTree = "<group>"; };
-		A438075E29345F8800C4596C /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
+		A438075E29345F8800C4596C /* LaunchViewControllerX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewControllerX.swift; sourceTree = "<group>"; };
 		A444C098293265A6008F02C5 /* AppliedListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppliedListViewController.swift; sourceTree = "<group>"; };
 		A444C09A29326905008F02C5 /* SellersAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellersAPI.swift; sourceTree = "<group>"; };
 		A444C09C293276E0008F02C5 /* GlobalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalData.swift; sourceTree = "<group>"; };
@@ -131,7 +132,6 @@
 		A49DF67D292B64FF0008D6B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A49DF67F292B64FF0008D6B8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A49DF681292B64FF0008D6B8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		A49DF684292B64FF0008D6B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main0.storyboard; sourceTree = "<group>"; };
 		A49DF686292B65000008D6B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A49DF689292B65000008D6B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A49DF68B292B65000008D6B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -190,6 +190,7 @@
 		A49DF6F3292B85620008D6B8 /* Host.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Host.swift; sourceTree = "<group>"; };
 		A49DF6F4292B85620008D6B8 /* FleaMarketsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FleaMarketsViewController.swift; sourceTree = "<group>"; };
 		A4A36A2B292F18C6001696CE /* FiveMarketsSt.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FiveMarketsSt.storyboard; sourceTree = "<group>"; };
+		A4C08ECA293B72A20075294B /* CustomModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomModalViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +200,7 @@
 			files = (
 				A49DF6FD292B85910008D6B8 /* Alamofire in Frameworks */,
 				A49DF69F292B65BA0008D6B8 /* libc++.tbd in Frameworks */,
+				A4C08EC9293B44A80075294B /* ProgressHUD in Frameworks */,
 				A49DF69E292B65970008D6B8 /* libxml2.tbd in Frameworks */,
 				A49DF6E7292B84630008D6B8 /* DaumMap.framework in Frameworks */,
 				A49DF69D292B658E0008D6B8 /* libsqlite3.tbd in Frameworks */,
@@ -283,6 +285,7 @@
 				A491A743292BE7A70061BA62 /* MarketsViewControllers */,
 				A47FB3A7292D436600884C61 /* FavoritesViewController.swift */,
 				A438075829335FC300C4596C /* MypageViewController.swift */,
+				A4C08ECA293B72A20075294B /* CustomModalViewController.swift */,
 				A444C098293265A6008F02C5 /* AppliedListViewController.swift */,
 			);
 			path = Users;
@@ -350,7 +353,7 @@
 		A49DF6A1292B82A00008D6B8 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				A438075E29345F8800C4596C /* LaunchViewController.swift */,
+				A438075E29345F8800C4596C /* LaunchViewControllerX.swift */,
 				A4931EF8292F74CB003DA9D0 /* Login */,
 				A4931EF9292F74D9003DA9D0 /* Users */,
 				A4931EFA292F751A003DA9D0 /* BusinessUsers */,
@@ -442,7 +445,6 @@
 				A49DF6F2292B85620008D6B8 /* kakaoAPI.swift */,
 				A44ACA4E2932135A001F0900 /* AzureBlobStorage.swift */,
 				A4931EFD293066FC003DA9D0 /* mylocation.png */,
-				A49DF683292B64FF0008D6B8 /* Main0.storyboard */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -479,6 +481,7 @@
 			name = LocKetApp;
 			packageProductDependencies = (
 				A49DF6FC292B85910008D6B8 /* Alamofire */,
+				A4C08EC8293B44A80075294B /* ProgressHUD */,
 			);
 			productName = LocKetApp;
 			productReference = A49DF67A292B64FF0008D6B8 /* LocKetApp.app */;
@@ -510,6 +513,7 @@
 			mainGroup = A49DF671292B64FF0008D6B8;
 			packageReferences = (
 				A49DF6FB292B85910008D6B8 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				A4C08EC7293B44A80075294B /* XCRemoteSwiftPackageReference "ProgressHUD" */,
 			);
 			productRefGroup = A49DF67B292B64FF0008D6B8 /* Products */;
 			projectDirPath = "";
@@ -564,7 +568,6 @@
 				A491A733292B8DBE0061BA62 /* MypageSt.storyboard in Resources */,
 				A491A735292B8DBE0061BA62 /* FavoriteSt.storyboard in Resources */,
 				A49DF6CE292B84630008D6B8 /* shadow_balloon.png in Resources */,
-				A49DF685292B64FF0008D6B8 /* Main0.storyboard in Resources */,
 				A49DF6E5292B84630008D6B8 /* daum_th_line.png in Resources */,
 				A47934F9292F4CAB00F5A99A /* BusinessuserHomeSt.storyboard in Resources */,
 				A491A740292BDF000061BA62 /* Assets.xcassets in Resources */,
@@ -626,7 +629,7 @@
 				A49DF67E292B64FF0008D6B8 /* AppDelegate.swift in Sources */,
 				A491A73B292B8FCF0061BA62 /* 5MarketsAPI.swift in Sources */,
 				A49DF6FA292B85620008D6B8 /* FleaMarketsViewController.swift in Sources */,
-				A438075F29345F8800C4596C /* LaunchViewController.swift in Sources */,
+				A438075F29345F8800C4596C /* LaunchViewControllerX.swift in Sources */,
 				A44ACA4F2932135A001F0900 /* AzureBlobStorage.swift in Sources */,
 				A444C099293265A6008F02C5 /* AppliedListViewController.swift in Sources */,
 				A47FB3A6292D1E9F00884C61 /* UsersAPI.swift in Sources */,
@@ -645,6 +648,7 @@
 				A47FB3A8292D436600884C61 /* FavoritesViewController.swift in Sources */,
 				A491A742292BE7A20061BA62 /* FiveMarketsViewController.swift in Sources */,
 				A49DF6F7292B85620008D6B8 /* MarketsAPI.swift in Sources */,
+				A4C08ECB293B72A20075294B /* CustomModalViewController.swift in Sources */,
 				A49DF6ED292B85140008D6B8 /* AddViewController_place.swift in Sources */,
 				A49DF6F8292B85620008D6B8 /* kakaoAPI.swift in Sources */,
 				A49DF6F5292B85620008D6B8 /* Utils.swift in Sources */,
@@ -657,14 +661,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		A49DF683292B64FF0008D6B8 /* Main0.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A49DF684292B64FF0008D6B8 /* Base */,
-			);
-			name = Main0.storyboard;
-			sourceTree = "<group>";
-		};
 		A49DF688292B65000008D6B8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -902,6 +898,14 @@
 				kind = branch;
 			};
 		};
+		A4C08EC7293B44A80075294B /* XCRemoteSwiftPackageReference "ProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/relatedcode/ProgressHUD.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 13.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -909,6 +913,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A49DF6FB292B85910008D6B8 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		A4C08EC8293B44A80075294B /* ProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A4C08EC7293B44A80075294B /* XCRemoteSwiftPackageReference "ProgressHUD" */;
+			productName = ProgressHUD;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

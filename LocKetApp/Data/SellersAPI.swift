@@ -33,7 +33,7 @@ func getSeller( userId: String, handler: @escaping()->() ) {
     }
 }
 
-func postSeller( collection route : String, body: [String : Any], handler: @escaping(Bool)->() ) {
+func postSeller( collection route : String, body: [String : Any], handler: @escaping(Int)->() ) {
     
     // 1 url request
     let strUrl = host + "/" + route
@@ -48,6 +48,10 @@ func postSeller( collection route : String, body: [String : Any], handler: @esca
     ).responseDecodable(of: Seller.self) { response in
 
         debugPrint(response)
+        if let res = response.response{
+            handler(res.statusCode)
+        }
+        /*
         switch response.result {
         case .success(_)://obj): //통신성공
             handler(true)
@@ -55,5 +59,6 @@ func postSeller( collection route : String, body: [String : Any], handler: @esca
             print(e.localizedDescription)
             handler(false)
         }
+         */
     }
 }

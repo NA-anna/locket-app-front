@@ -1,5 +1,5 @@
 //
-//  LaunchViewController.swift
+//  LaunchViewControllerX.swift
 //  LocKetApp
 //
 //  Created by 나유진 on 2022/11/28.
@@ -7,12 +7,12 @@
 
 import UIKit
 
-class LaunchViewController: UIViewController {
+class LaunchViewControllerX: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // 데이터 가져오기 작업
+        //---------------데이터 가져오기 작업---------------
         
         // (1) 플리마켓 데이터 가져오기
         getMarkets {}

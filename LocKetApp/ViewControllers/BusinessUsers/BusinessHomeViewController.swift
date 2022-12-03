@@ -20,13 +20,11 @@ class BusinessHomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        
         guard let businessuser = businessuser else {return}
         
-        getMarketsOfBusinessuser(businessuserId: businessuser.id) {
-            self.tableView.reloadData()
-        }
-        
-        
+    
         // 오브젝트 세팅
         let name = businessuser.name
         lblHello.text = "\(name)님, \n안녕하세요. \n등록된 마켓내역을 확인하세요."

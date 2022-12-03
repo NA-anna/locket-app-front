@@ -173,18 +173,9 @@
                                 <rect key="frame" x="40" y="188" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="photo.artframe" catalog="system"/>
+                                <buttonConfiguration key="configuration" style="gray" image="photo.artframe" catalog="system"/>
                                 <connections>
                                     <action selector="actPhotoLibrary:" destination="ekU-FW-SKg" eventType="touchUpInside" id="kIv-tj-Ruh"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cr4-1u-CAi">
-                                <rect key="frame" x="153" y="665" width="88" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="셀러 신청"/>
-                                <connections>
-                                    <action selector="actButton:" destination="ekU-FW-SKg" eventType="touchUpInside" id="3MH-Zi-S3C"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -193,7 +184,11 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="EYt-cv-PfZ">
-                        <barButtonItem key="rightBarButtonItem" title="신청" id="UGT-Ze-GCR"/>
+                        <barButtonItem key="rightBarButtonItem" title="신청" id="UGT-Ze-GCR">
+                            <connections>
+                                <action selector="actApplying:" destination="ekU-FW-SKg" id="iVL-PV-OA1"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>

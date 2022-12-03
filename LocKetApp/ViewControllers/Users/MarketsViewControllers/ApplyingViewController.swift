@@ -32,7 +32,7 @@ class ApplyingViewController: UIViewController {
         let name = user.name
         
         // 오브젝트 설정
-        lblHello.text = "\(name)님, \n'\(market.name)'셀러 참가를 위해 \n아래 내용을 적어주세요"
+        lblHello.text = "\(name)님, \n'\(market.name)' 셀러 참가를 위해 \n아래 내용을 적어주세요"
         
         txtVwDescription.layer.borderWidth = 1.0
         txtVwDescription.layer.cornerRadius = 10
@@ -57,9 +57,11 @@ class ApplyingViewController: UIViewController {
         picker.modalPresentationStyle = .fullScreen
         present(picker, animated: true)
     }
-    @IBAction func actButton(_ sender: Any) {
+    
+    @IBAction func actApplying(_ sender: Any) {
         post()
     }
+
     
     // 빈 화면 터치 시 입력 닫기
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -84,10 +86,10 @@ class ApplyingViewController: UIViewController {
             "sns"        : [sns],
             "description": description,
             "photo"      : [blobName],
-            "state"      : "신청"
+            "state"      : "신청완료"
         ]
-        postSeller( collection: "sellers", body: bodyData) { flag in
-            if flag {
+        postSeller( collection: "sellers", body: bodyData) { statusCode in
+            if statusCode <= 204 {
                 
                 // alert 
                 let alert = UIAlertController(title: "", message: "참여하기가 신청되었습니다!", preferredStyle: .alert)

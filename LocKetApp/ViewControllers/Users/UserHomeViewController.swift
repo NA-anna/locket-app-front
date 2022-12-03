@@ -23,12 +23,12 @@ class UserHomeViewController: UIViewController {
         lblHello.text = "\(name)님, \n안녕하세요"
         
         // UICollectionView 데이터
-        let filtered = markets.filter { market in
+        let recruitingMarkets = markets.filter { market in
             guard let sellersForm = market.sellersForm else { return false }
             let today = Date().toString()
             return market.needSellers && sellersForm.deadline > today
         }
-        markets = filtered
+        
         
         
 //        collectionView.dataSource = self

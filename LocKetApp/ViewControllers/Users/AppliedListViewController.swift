@@ -38,7 +38,7 @@ class AppliedListViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "listcell", for: indexPath)
 
         let seller = sellers[indexPath.row]
-        guard let user = user else {return cell}
+        //guard let user = user else {return cell}
         
         // UITableView 오브젝트
         
@@ -51,16 +51,16 @@ class AppliedListViewController: UITableViewController {
         }
     
         let lblCategory = cell.viewWithTag(3) as? UILabel
-        lblCategory?.text = "카테고리: " + seller.category + " / " + seller.subCategory
+        lblCategory?.text = seller.category + " / " + seller.subCategory
         
         let lblSNS = cell.viewWithTag(4) as? UILabel
         lblSNS?.text = seller.sns.joined(separator: ", ")
         
-        let lblDescription = cell.viewWithTag(5) as? UILabel
-        lblDescription?.text = seller.description
+        let txtViewDescription = cell.viewWithTag(5) as? UITextView
+        txtViewDescription?.text = seller.description
 
         let lblState = cell.viewWithTag(6) as? UILabel
-        lblState?.text = "신청상태: " + seller.state
+        lblState?.text = seller.state
         
         // (2) 이미지
         // 사진 파일이 있으면 애저 스트로지에서 가져오기
