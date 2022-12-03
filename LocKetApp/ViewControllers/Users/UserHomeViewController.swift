@@ -12,6 +12,8 @@ class UserHomeViewController: UIViewController {
     //Azure Storage 설정 세팅
     var blobstorage: AZBlobService = AZBlobService.init(connectionString, containerName: "marketprofile")
     
+    var recruitingMarkets = markets
+    
     @IBOutlet var lblHello: UILabel!
     @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var collectionView: UICollectionView!
@@ -23,17 +25,18 @@ class UserHomeViewController: UIViewController {
         lblHello.text = "\(name)님, \n안녕하세요"
         
         // UICollectionView 데이터
-        let recruitingMarkets = markets.filter { market in
+        recruitingMarkets = recruitingMarkets.filter { market in
             guard let sellersForm = market.sellersForm else { return false }
             let today = Date().toString()
             return market.needSellers && sellersForm.deadline > today
         }
         
         
+        // UICollectionView 프로토콜
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        collectionView.contentInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
         
-//        collectionView.dataSource = self
-//        collectionView.delegate = self
-        //collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
     
     // 빈 화면 터치 시 키보드 내려가기
@@ -42,20 +45,21 @@ class UserHomeViewController: UIViewController {
     }
     
 }
-/*
+
 // UICollectionView 프로토콜
 extension UserHomeViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return recruitingMarkets.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "marketcell", for: indexPath)
         
         let market = markets[indexPath.row]
         
-        cell.layer.borderColor = UIColor.gray.cgColor
-        cell.layer.borderWidth = 1
+        cell.layer.borderWidth = 0.5
+        cell.layer.borderColor = UIColor.systemGray4.cgColor
+        cell.layer.cornerRadius = 20
         
         // 사진 파일이 있으면 애저 스트로지에서 가져오기
         if market.photo.count > 0 {
@@ -81,6 +85,7 @@ extension UserHomeViewController: UICollectionViewDataSource, UICollectionViewDe
         return cell
         
     }
+    //간격?
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 10
     }
@@ -88,9 +93,9 @@ extension UserHomeViewController: UICollectionViewDataSource, UICollectionViewDe
         return 10
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        //let itemSpace = 10.0
-        let width =  collectionView.frame.width
-        return CGSize(width: width, height: width*0.5)
+        //let width =  collectionView.frame.width * 2/3
+        let height = collectionView.frame.height * 2/3
+        return CGSize(width: height * 1.5, height: height)
     }
 }
-*/
+

@@ -39,9 +39,9 @@ class LoginViewController: UIViewController {
                     getMarkets {
                         // (2) 5일장 데이터 가져와서 합치기 fiveMarkets -> fiveMarkets (for Map)
                         var combinedFiveMarkets: [Item] = []
-                        get5Markets( numOfRows: 300, type: "5일장") {
+                        get5Markets( numOfRows: 150, type: "5일장") {
                             combinedFiveMarkets = fiveMarkets
-                            get5Markets( numOfRows: 300, type: "상설장+5일장") {
+                            get5Markets( numOfRows: 100, type: "상설장+5일장") {
                                 combinedFiveMarkets.append(contentsOf: fiveMarkets)
                                 fiveMarkets = combinedFiveMarkets
                                 

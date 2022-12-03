@@ -61,6 +61,8 @@ class FiveMarketsViewController: UITableViewController {
         lblDate?.text = market.mrktEstblCycle
         let lblDescription = cell.viewWithTag(5) as? UILabel
         lblDescription?.text = market.trtmntPrdlst
+        let imageView = cell.viewWithTag(10) as? UIImageView
+        imageView?.layer.cornerRadius = 20
 
 
         return cell

@@ -51,7 +51,7 @@ class AppliedListViewController: UITableViewController {
         }
     
         let lblCategory = cell.viewWithTag(3) as? UILabel
-        lblCategory?.text = seller.category + " / " + seller.subCategory
+        lblCategory?.text = seller.category + " > " + seller.subCategory
         
         let lblSNS = cell.viewWithTag(4) as? UILabel
         lblSNS?.text = seller.sns.joined(separator: ", ")

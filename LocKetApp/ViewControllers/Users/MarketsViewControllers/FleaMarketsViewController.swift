@@ -74,6 +74,7 @@ class FleaMarketsViewController: UITableViewController {
                     let image = UIImage(data: data)
                     DispatchQueue.main.async {
                         let imageView = cell.viewWithTag(10) as? UIImageView
+                        imageView?.layer.cornerRadius = 20
                         imageView?.image = image
                     }
                 })
@@ -81,6 +82,7 @@ class FleaMarketsViewController: UITableViewController {
         // 사진 파일이 없으면 디폴트 이미지
         }else {
             let imageView = cell.viewWithTag(10) as? UIImageView
+            imageView?.layer.cornerRadius = 20
             imageView?.image = UIImage(named: "rocket_up")
         }
         let lblTitle = cell.viewWithTag(1) as? UILabel
