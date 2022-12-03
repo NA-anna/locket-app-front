@@ -53,7 +53,11 @@ struct Businessuser: Codable {
 struct Markets: Codable {
     let documents : [Market]
 }
-struct Market: Codable {
+struct Market: Codable, Equatable {
+    static func == (lhs: Market, rhs: Market) -> Bool {
+        return true
+    }
+    
     let _id            : String?
     let businessusersId: String
     let name           : String

@@ -48,7 +48,7 @@
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="lgL-ed-jt7">
                                                             <rect key="frame" x="0.0" y="0.0" width="330" height="75"/>
                                                             <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="10" contentMode="scaleAspectFit" image="facebook" translatesAutoresizingMaskIntoConstraints="NO" id="mUu-gx-gZ2">
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="10" contentMode="scaleAspectFill" image="rocket_up" translatesAutoresizingMaskIntoConstraints="NO" id="mUu-gx-gZ2">
                                                                     <rect key="frame" x="0.0" y="0.0" width="70" height="75"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="70" id="NGg-69-hdB"/>
@@ -175,7 +175,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="facebook" width="50" height="50"/>
+        <image name="rocket_up" width="170.66667175292969" height="170.66667175292969"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

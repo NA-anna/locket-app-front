@@ -44,9 +44,10 @@ class FavoritesViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "favoritescell", for: indexPath)
 
         cell.layer.borderWidth = 0.5
-        cell.layer.cornerRadius = 30
         cell.layer.borderColor = UIColor.systemGray4.cgColor
-        cell.clipsToBounds = true
+        
+//        cell.layer.cornerRadius = 30
+//        cell.clipsToBounds = true
         //cell.layer.masksToBounds = true
         //cell.frame.inset(by: UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10))
 

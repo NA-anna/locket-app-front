@@ -30,14 +30,7 @@ class MapViewController: UIViewController, MTMapViewDelegate {
         mapView.delegate = self
         mapView.baseMapType = .standard
         self.view.addSubview(mapView)
-        
-
-        // 2 좌표 중심 설정 by Kakao
-        /*
-        let defaultMapPoint = MTMapPoint(geoCoord: MTMapPointGeo(latitude: 37.4630783, longitude: 126.9059344))
-        mapView.setMapCenter(defaultMapPoint, zoomLevel: 1, animated: true)
-         */
-        
+     
         
         // + 현재 위치 트래킹 by Kakao
         mapView.currentLocationTrackingMode = .onWithoutHeading//.onWithHeading
@@ -94,8 +87,11 @@ class MapViewController: UIViewController, MTMapViewDelegate {
                 marker.itemName = placeName
                 marker.mapPoint = mapPoint
                 marker.markerType = .customImage
-                marker.customImage = UIImage(named: "marker")
+                marker.customImage = UIImage(named: "pin_blueblack")
                 marker.showAnimationType = .noAnimation
+                if let idx = fiveMarkets.firstIndex(of: fivemarket) {
+                    marker.tag = idx
+                }
                 markers.append(marker)
                 
             }
@@ -106,16 +102,19 @@ class MapViewController: UIViewController, MTMapViewDelegate {
             let longitude = Double(market.location.coordinates[1])
             let placeName = market.name
                 
-            // 2 좌표 포인트
+            // 2 좌표 포인트 by Kakao
             let mapPoint = MTMapPoint(geoCoord: MTMapPointGeo(latitude: latitude, longitude: longitude))
             
-            // 3 마커 찍기 (추가)
+            // 3 마커 추가 by Kakao
             let marker = MTMapPOIItem()
             marker.itemName = placeName
             marker.mapPoint = mapPoint
             marker.markerType = .customImage
-            marker.customImage = UIImage(named: "liked")
+            marker.customImage = UIImage(named: "pin_red")
             marker.showAnimationType = .noAnimation
+            if let idx = markets.firstIndex(of: market) {
+                marker.tag = idx
+            }
             markers.append(marker)
            
             
@@ -140,9 +139,18 @@ class MapViewController: UIViewController, MTMapViewDelegate {
 
     func mapView(_ mapView: MTMapView!, touchedCalloutBalloonOf poiItem: MTMapPOIItem!) {
         
-        let storyBoard = UIStoryboard(name: "FleaMarketDetailSt", bundle: nil)
-        let vc = storyBoard.instantiateViewController(withIdentifier: "FleaMarketDetail")
-        self.navigationController?.pushViewController(vc, animated: true)
+        if poiItem.customImage == UIImage(named: "pin_red") {
+            let storyBoard = UIStoryboard(name: "FleaMarketDetailSt", bundle: nil)
+            let vc = storyBoard.instantiateViewController(withIdentifier: "FleaMarketDetail") as? FleaMarketDetailViewController
+            vc?.market = markets[poiItem.tag]
+            self.navigationController?.pushViewController(vc!, animated: true)
+        }else {
+            let storyBoard = UIStoryboard(name: "FiveMarketDetailSt", bundle: nil)
+            let vc = storyBoard.instantiateViewController(withIdentifier: "FiveMarketDetail") as? FiveMarketDetailViewController
+            vc?.fiveMarket = fiveMarkets[poiItem.tag]
+            self.navigationController?.pushViewController(vc!, animated: true)
+        }
+        
     
     }
     

@@ -14,7 +14,10 @@ class LaunchViewController: UIViewController {
 
         // 데이터 가져오기 작업
         
-        // (1) 5일장 데이터 가져와서 합치기 fiveMarkets -> fiveMarkets (for Map)
+        // (1) 플리마켓 데이터 가져오기
+        getMarkets {}
+        
+        // (2) 5일장 데이터 가져와서 합치기 fiveMarkets -> fiveMarkets (for Map)
         var combinedFiveMarkets: [Item] = []
         get5Markets( numOfRows: 300, type: "5일장") {
             combinedFiveMarkets = fiveMarkets
@@ -23,8 +26,7 @@ class LaunchViewController: UIViewController {
                 fiveMarkets = combinedFiveMarkets
             }
         }
-        // (2) 플리마켓 데이터 가져오기
-        getMarkets {}
+        
         //-----------------------------------------------
         
     
