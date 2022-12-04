@@ -117,7 +117,7 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="65" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="mp9-tu-gB4">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="65" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="mp9-tu-gB4">
                                 <rect key="frame" x="36" y="270" width="321" height="325"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -141,6 +141,9 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" title="모집보기 &gt;"/>
+                                                    <connections>
+                                                        <segue destination="LkP-tz-4lQ" kind="show" id="sWM-jY-k2m"/>
+                                                    </connections>
                                                 </button>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m82-rO-oIT">
                                                     <rect key="frame" x="9" y="0.0" width="91" height="65"/>
@@ -165,6 +168,16 @@
             </objects>
             <point key="canvasLocation" x="-2463.3587786259541" y="864.78873239436621"/>
         </scene>
+        <!--ApplicationListSt-->
+        <scene sceneID="1aC-bS-4v8">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ApplicationListSt" id="LkP-tz-4lQ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="di2-39-307"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9ae-iX-bx4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1821" y="846"/>
+        </scene>
         <!--AddingSt-->
         <scene sceneID="dK6-Vw-0e9">
             <objects>
@@ -173,7 +186,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="17v-FV-mp5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1856" y="865"/>
+            <point key="canvasLocation" x="-1815" y="1069"/>
         </scene>
     </scenes>
     <resources>

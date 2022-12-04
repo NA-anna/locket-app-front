@@ -58,9 +58,11 @@ class FiveMarketsViewController: UITableViewController {
         let lblPlace = cell.viewWithTag(3) as? UILabel
         lblPlace?.text = "주소: \(market.rdnmadr)"
         let lblDate = cell.viewWithTag(4) as? UILabel
-        lblDate?.text = market.mrktEstblCycle
+        let openDay = market.mrktEstblCycle.components(separatedBy: "+").joined(separator: ", ")
+        lblDate?.text = openDay
         let lblDescription = cell.viewWithTag(5) as? UILabel
-        lblDescription?.text = market.trtmntPrdlst
+        let productList = market.trtmntPrdlst.components(separatedBy: "+").joined(separator: ", ")
+        lblDescription?.text = productList 
         let imageView = cell.viewWithTag(10) as? UIImageView
         imageView?.layer.cornerRadius = 20
 

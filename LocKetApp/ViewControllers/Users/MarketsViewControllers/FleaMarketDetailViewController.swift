@@ -39,6 +39,11 @@ class FleaMarketDetailViewController: UIViewController, MTMapViewDelegate {
         textView.text = jsonString
  */
 
+        // UITextView style
+        textView.layer.borderWidth = 1.0
+        textView.layer.cornerRadius = 10
+        textView.layer.borderColor = UIColor.systemGray5.cgColor
+        
         // 데이터
         guard let user = user, let market = market else {return}
         

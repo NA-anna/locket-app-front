@@ -81,13 +81,28 @@ extension BusinessHomeViewController: UITableViewDataSource, UITableViewDelegate
         let btn = cell.viewWithTag(3) as? UIButton
         if market.needSellers && sellersForm.deadline > today { //모집중 마켓
             btn?.isHidden = false
+            btn?.tag = indexPath.row
+            
         }else {
             btn?.isHidden = true
         }
+        
         
 
         return cell
     }
     
-    
+
+    // MARK: - Navigation
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let vc = segue.destination as? ApplicationListViewController
+        
+        if let tag = (sender as? UIButton)?.tag {
+            vc?.market = markets[tag]
+        }
+    }
 }
+
+

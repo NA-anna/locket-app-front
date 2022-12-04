@@ -1,28 +1,28 @@
 //
-//  AppliedListViewController.swift
+//  ApplicationListViewController.swift
 //  LocKetApp
 //
-//  Created by 나유진 on 2022/11/27.
+//  Created by 나유진 on 2022/12/04.
 //
 
 import UIKit
 
-class AppliedListViewController: UITableViewController {
+class ApplicationListViewController: UITableViewController {
     
     //Azure Storage 설정 세팅
     var blobstorage: AZBlobService = AZBlobService.init(connectionString, containerName: "sellerprofile")
     
+    var market: Market?
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // 내가 신청한 셀러 목록
-        guard let user = user else {return}
-        let userId = user.id
-        getSellersByUser(userId: userId) {
+        // 신청된 셀러 목록
+        guard let market = market, let marketId = market._id else {return}
+        getSellersByMarket(marketId: marketId) {
             self.tableView.reloadData()
         }
+    
         
-
     }
 
     // MARK: - Table view data source
@@ -35,7 +35,6 @@ class AppliedListViewController: UITableViewController {
         return sellers.count
     }
 
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "listcell", for: indexPath)
 
@@ -100,10 +99,6 @@ class AppliedListViewController: UITableViewController {
 
         return cell
     }
-    
-
-
-
     
 
 }

@@ -40,7 +40,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="x21-3w-6fE">
-                                            <rect key="frame" x="15" y="6.5" width="329" height="67"/>
+                                            <rect key="frame" x="15" y="6.5" width="273" height="67"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="rocket_up 1" translatesAutoresizingMaskIntoConstraints="NO" id="NUf-P4-eKe">
                                                     <rect key="frame" x="0.0" y="0.0" width="80" height="67"/>
@@ -49,7 +49,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tableView로 즐겨찾기한 list 뿌리기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HLm-7D-1ie">
-                                                    <rect key="frame" x="88" y="23.5" width="241" height="20.5"/>
+                                                    <rect key="frame" x="88" y="23.5" width="185" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -60,6 +60,7 @@
                                     <constraints>
                                         <constraint firstItem="x21-3w-6fE" firstAttribute="leading" secondItem="2kV-Ni-0nj" secondAttribute="leading" constant="15" id="Xle-jq-MDK"/>
                                         <constraint firstItem="x21-3w-6fE" firstAttribute="centerY" secondItem="2kV-Ni-0nj" secondAttribute="centerY" id="sZr-7b-ak5"/>
+                                        <constraint firstAttribute="trailing" secondItem="x21-3w-6fE" secondAttribute="trailing" id="xx6-1K-s2h"/>
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>

@@ -7,6 +7,6 @@
 
 import Foundation
  
-let gCategories = ["플리마켓", "5일장"]  //CT001 코드화 필요
-let gSellerCategories = ["음식", "의류", "소품", "수제"]
+let gCategories = ["야시장", "플리마켓", "벼룩시장", "팝업", "5일장"]  //CT001 코드화 필요
+let gSellerCategories = ["먹거리", "의류", "수제소품"]
 

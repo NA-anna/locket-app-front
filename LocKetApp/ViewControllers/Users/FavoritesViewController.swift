@@ -45,11 +45,6 @@ class FavoritesViewController: UITableViewController {
 
         cell.layer.borderWidth = 0.5
         cell.layer.borderColor = UIColor.systemGray4.cgColor
-        
-//        cell.layer.cornerRadius = 30
-//        cell.clipsToBounds = true
-        //cell.layer.masksToBounds = true
-        //cell.frame.inset(by: UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10))
 
         
         let tableIndex = indexPath.row

@@ -38,6 +38,10 @@ class FiveMarketDetailViewController: UIViewController, MTMapViewDelegate {
         let jsonString:String = String.init(data: jsonData, encoding: .utf8) ?? "err"
         textView.text = jsonString
 */
+        // UITextView style
+        textView.layer.borderWidth = 1.0
+        textView.layer.cornerRadius = 10
+        textView.layer.borderColor = UIColor.systemGray5.cgColor
         
         // 데이터
         guard let user = user, let fiveMarket = fiveMarket else {return}
@@ -57,8 +61,9 @@ class FiveMarketDetailViewController: UIViewController, MTMapViewDelegate {
         mapView.setMapCenter(defaultMapPoint, zoomLevel: 1, animated: true)
         
         // 마켓정보
+        let productList = fiveMarket.trtmntPrdlst.components(separatedBy: "+").joined(separator: ", ")
         lblMarketName.text = "\(fiveMarket.mrktNm)으로 오세요!"
-        textView.text = "\(fiveMarket.storNumber)개의 점포 \n\(fiveMarket.trtmntPrdlst)\n상품을 구경하세요! \n\n도로명주소\n\(fiveMarket.rdnmadr) \n\n지번주소\n\(fiveMarket.lnmadr)"
+        textView.text = "\(fiveMarket.storNumber)개의 점포 \n\(productList)\n상품을 구경하세요! \n\n도로명주소\n\(fiveMarket.rdnmadr) \n\n지번주소\n\(fiveMarket.lnmadr)"
         
         //하트 색칠하기
         isFavorite = user.favorites.fav_fivemarkets.contains { element in

@@ -91,6 +91,8 @@
 		A4A36A2C292F18C6001696CE /* FiveMarketsSt.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4A36A2B292F18C6001696CE /* FiveMarketsSt.storyboard */; };
 		A4C08EC9293B44A80075294B /* ProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = A4C08EC8293B44A80075294B /* ProgressHUD */; };
 		A4C08ECB293B72A20075294B /* CustomModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C08ECA293B72A20075294B /* CustomModalViewController.swift */; };
+		A4C08ECD293CB0020075294B /* ApplicationListSt.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4C08ECC293CB0010075294B /* ApplicationListSt.storyboard */; };
+		A4C08ECF293CB3800075294B /* ApplicationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C08ECE293CB3800075294B /* ApplicationListViewController.swift */; };
 		D6F5640DD4D2E8F1515BD067 /* Pods_LocKetApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DBD1F6CCA14FCEE6C33FC4C /* Pods_LocKetApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -191,6 +193,8 @@
 		A49DF6F4292B85620008D6B8 /* FleaMarketsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FleaMarketsViewController.swift; sourceTree = "<group>"; };
 		A4A36A2B292F18C6001696CE /* FiveMarketsSt.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FiveMarketsSt.storyboard; sourceTree = "<group>"; };
 		A4C08ECA293B72A20075294B /* CustomModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomModalViewController.swift; sourceTree = "<group>"; };
+		A4C08ECC293CB0010075294B /* ApplicationListSt.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ApplicationListSt.storyboard; sourceTree = "<group>"; };
+		A4C08ECE293CB3800075294B /* ApplicationListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,6 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				A47934F8292F4CAB00F5A99A /* BusinessuserHomeSt.storyboard */,
+				A4C08ECC293CB0010075294B /* ApplicationListSt.storyboard */,
 				A400850F293539A6009FC8BD /* AddingSt.storyboard */,
 			);
 			path = BusinessusersSt;
@@ -295,6 +300,7 @@
 			isa = PBXGroup;
 			children = (
 				A47901B5292F6B300032003C /* BusinessHomeViewController.swift */,
+				A4C08ECE293CB3800075294B /* ApplicationListViewController.swift */,
 				A491A739292B8E730061BA62 /* AddViewControllers */,
 			);
 			path = BusinessUsers;
@@ -529,6 +535,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4C08ECD293CB0020075294B /* ApplicationListSt.storyboard in Resources */,
 				A4931EFE293066FC003DA9D0 /* mylocation.png in Resources */,
 				A49DF6E2292B84630008D6B8 /* map_present.png in Resources */,
 				A49DF6D8292B84630008D6B8 /* map_pin@3x.png in Resources */,
@@ -650,6 +657,7 @@
 				A49DF6F7292B85620008D6B8 /* MarketsAPI.swift in Sources */,
 				A4C08ECB293B72A20075294B /* CustomModalViewController.swift in Sources */,
 				A49DF6ED292B85140008D6B8 /* AddViewController_place.swift in Sources */,
+				A4C08ECF293CB3800075294B /* ApplicationListViewController.swift in Sources */,
 				A49DF6F8292B85620008D6B8 /* kakaoAPI.swift in Sources */,
 				A49DF6F5292B85620008D6B8 /* Utils.swift in Sources */,
 				A49DF6F6292B85620008D6B8 /* DataModel.swift in Sources */,
