@@ -22,7 +22,7 @@ class UserHomeViewController: UIViewController {
         
         guard let user = user else {return}
         let name = user.name
-        lblHello.text = "\(name)님, \n안녕하세요"
+        lblHello.text = "\(name)님, \n안녕하세요."
         
         // UICollectionView 데이터
         recruitingMarkets = recruitingMarkets.filter { market in
@@ -62,26 +62,31 @@ extension UserHomeViewController: UICollectionViewDataSource, UICollectionViewDe
         cell.layer.cornerRadius = 20
         
         // 사진 파일이 있으면 애저 스트로지에서 가져오기
+        let imageView = cell.viewWithTag(1) as? UIImageView
         if market.photo.count > 0 {
             let blobName = market.photo[0]
             if blobName != "" {
                 blobstorage.downloadImage(blobName: blobName, handler: { data in
                     let image = UIImage(data: data)
                     DispatchQueue.main.async {
-                        let imageView = cell.viewWithTag(1) as? UIImageView
                         imageView?.image = image
                     }
                 })
             }
         // 사진 파일이 없으면 디폴트 이미지
         }else {
-            let imageView = cell.viewWithTag(1) as? UIImageView
             imageView?.image = UIImage(named: "rocket_up")
         }
 
         let lblName = cell.viewWithTag(2) as? UILabel
         lblName?.text = market.name
 
+        let lblName2 = cell.viewWithTag(3) as? UILabel
+        lblName2?.text = market.place
+        
+        let lblName3 = cell.viewWithTag(4) as? UILabel
+        lblName3?.text = market.description
+        
         return cell
         
     }

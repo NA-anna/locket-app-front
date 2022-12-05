@@ -60,9 +60,9 @@ struct Market: Codable, Equatable {
     
     let _id            : String?
     let businessusersId: String
-    let name           : String
+    let name           : String       // 마켓 이름
     let category       : String       // [ct001: 플리마켓, ct002: 야시장]
-    let place          : String
+    let place          : String       // 마켓 열리는 장소
     let location       : Location
     let startdate      : String
     let enddate        : String
