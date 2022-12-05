@@ -45,16 +45,12 @@ class FiveMarketsViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "fivemarketscell", for: indexPath)
 
-        // 악세사리
-        //cell.accessoryType = .disclosureIndicator //UIImageView(image: UIImage(systemName: "heart"))
         
         let market = fiveMarkets[indexPath.row]
         
         // TABLE VIEW 에 데이터 뿌리기
         let lblTitle = cell.viewWithTag(1) as? UILabel
         lblTitle?.text = market.mrktNm
-//        let lblCategory = cell.viewWithTag(2) as? UILabel
-//        lblCategory?.text = market.mrktEstblCycle
         let lblPlace = cell.viewWithTag(3) as? UILabel
         lblPlace?.text = "주소: \(market.rdnmadr)"
         let lblDate = cell.viewWithTag(4) as? UILabel

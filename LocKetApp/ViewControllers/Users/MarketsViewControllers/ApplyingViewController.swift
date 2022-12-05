@@ -104,9 +104,7 @@ class ApplyingViewController: UIViewController {
                 // alert
                 let alert = UIAlertController(title: "", message: "저장되지 못했습니다. 다시 확인 후 진행해주세요", preferredStyle: .alert)
                 let actionOK = UIAlertAction(title: "확인", style: .default, handler: { _ in
-                    //화면전환
-                    self.tabBarController?.selectedIndex = 0
-         
+                    
                 })
                 alert.addAction(actionOK)
                 self.present(alert, animated: true)

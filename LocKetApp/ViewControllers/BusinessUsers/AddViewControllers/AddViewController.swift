@@ -37,8 +37,7 @@ class AddViewController: UIViewController {
     var longitude: String?
     
     @IBOutlet var btnDone: UIBarButtonItem!
-    @IBOutlet var viewMain: UIView!
-    @IBOutlet var lblHello: UILabel!
+    //@IBOutlet var viewMain: UIView!
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var txtFldName: UITextField!
     @IBOutlet weak var txtFldCategory: UITextField!
@@ -57,16 +56,12 @@ class AddViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        guard let businessuser = businessuser else {return}
-        
-        // 오브젝트 설정
-        let name = businessuser.name
-        lblHello.text = "\(name)님, \n마켓 등록를 위해 \n아래 내용을 적어주세요"
-        
+        // style
         txtVwDescription.layer.borderWidth = 1.0
         txtVwDescription.layer.cornerRadius = 10
         txtVwDescription.layer.borderColor = UIColor.systemGray6.cgColor
         
+        // 오브젝트 세팅
         viewSellers.isHidden = true
         
         
@@ -79,6 +74,11 @@ class AddViewController: UIViewController {
         self.txtFldCategory.inputView = picker // 텍스트 필드 입력 방식을 키보드 대신 피커 뷰로 설정
    
     }
+    // 빈 화면 터치 시 입력 닫기
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     @IBAction func actPhotoLibrary(_ sender: Any) {
         let picker = UIImagePickerController()
         picker.delegate = self
@@ -96,11 +96,11 @@ class AddViewController: UIViewController {
        
         if  sender.isOn{
             viewSellers.isHidden = false
-            viewMain.frame.size.height = 1100
+            //viewMain.frame.size.height = 1100
         }else {
             viewSellers.isHidden = true
-            viewMain.frame.size.height = 800
-            
+            //viewMain.frame.size.height = 800
+
         }
           
     }
@@ -112,26 +112,19 @@ class AddViewController: UIViewController {
     
     // 입력 확인(타이틀, 카테고리, 장소) 후 버튼 활성화 함수
     func enableAddBtn(){
-        print("버튼")
         if txtFldName.text != "" && txtFldCategory.text != "" && txtFldPlace.text != ""
         {
             if swSeller.isOn && txtFldSellerCount.text != "" && txtFldSellerCategories.text != "" {
                 btnDone.isEnabled = true
-                print("--버튼 활성화--")
                 return
             }else if !swSeller.isOn {
                 btnDone.isEnabled = true
-                print("--버튼 활성화--")
                 return
             }
 
         }
     }
-    // 빈 화면 터치 시 입력 닫기
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        print("터치터치")
-        self.viewMain.endEditing(true)
-    }
+
     
     func post(){
         // DB에 저장
@@ -156,7 +149,7 @@ class AddViewController: UIViewController {
             idx = deadline.index(deadline.startIndex, offsetBy: 9)
             deadline = String(deadline[...idx])
     
-        let blobName = businessuser.id + "_" + String(markets.count+1) //블롭네임은 iseoulu_숫자
+        let blobName = businessuser.id + "_" + title + "_" + UUID().uuidString //블롭네임은 iseoulu_한강달빛야시장_랜덤넘버
                     
         let bodyData : [String: Any] = swSeller.isOn ?
         [
@@ -192,14 +185,20 @@ class AddViewController: UIViewController {
             "needSellers"     : false
         ]
     
-        postMarketData(collection: "markets", body: bodyData, handler: { flag in
-            if flag {
+        // POST
+        postMarketData(collection: "markets", body: bodyData, handler: { statusCode in
+            if statusCode <= 204 {
                 // alert
-                let alert = UIAlertController(title: "", message: "등록되었습니다!", preferredStyle: .alert)
+                let alert = UIAlertController(title: "", message: "마켓이 등록되었습니다!", preferredStyle: .alert)
                 let actionOK = UIAlertAction(title: "확인", style: .default, handler: { _ in
-                    //화면전환
-                    self.tabBarController?.selectedIndex = 0
-         
+                    
+                    // GET (재조회)
+                    getMarketsOfBusinessuser(businessuserId: businessuser.id) {
+                        
+                        //화면전환
+                        self.navigationController?.popViewController(animated: true)
+                    }
+                    
                 })
                 alert.addAction(actionOK)
                 self.present(alert, animated: true)
@@ -207,9 +206,6 @@ class AddViewController: UIViewController {
                 // alert
                 let alert = UIAlertController(title: "", message: "등록되지 못했습니다. 다시 확인 후 진행해주세요", preferredStyle: .alert)
                 let actionOK = UIAlertAction(title: "확인", style: .default, handler: { _ in
-                    //화면전환
-                    self.tabBarController?.selectedIndex = 0
-         
                 })
                 alert.addAction(actionOK)
                 self.present(alert, animated: true)

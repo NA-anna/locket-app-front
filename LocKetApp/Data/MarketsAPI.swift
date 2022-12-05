@@ -56,8 +56,8 @@ func getMarketsOfBusinessuser( businessuserId: String, handler: @escaping()->() 
         }
     }
 }
-
-func postMarketData( collection route : String, body: [String : Any], handler: @escaping(Bool)->() ) {
+// 마켓 등록
+func postMarketData( collection route : String, body: [String : Any], handler: @escaping(Int)->() ) {
     
     // 1 url request
     let strUrl = host + "/" + route
@@ -72,13 +72,16 @@ func postMarketData( collection route : String, body: [String : Any], handler: @
     ).responseDecodable(of: Market.self) { response in
 
         debugPrint(response)
-        switch response.result {
-        case .success(_)://obj): //통신성공
-            handler(true)
-        case .failure(let e):   //통신실패
-            print(e.localizedDescription)
-            handler(false)
+        if let res = response.response{
+            handler(res.statusCode)
         }
+//        switch response.result {
+//        case .success(_)://obj): //통신성공
+//            handler(true)
+//        case .failure(let e):   //통신실패
+//            print(e.localizedDescription)
+//            handler(false)
+//        }
     }
 }
 

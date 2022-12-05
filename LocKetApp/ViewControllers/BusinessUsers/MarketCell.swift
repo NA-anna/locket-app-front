@@ -25,7 +25,9 @@ class MarketCell: UITableViewCell {
     // UITableView 오브젝트 세팅
     func setValues(market: Market, index: Int){
         
-        // (1) 이미지
+        // 스타일
+        imgVw.layer.cornerRadius = 10
+        
         // 사진 파일이 있으면 애저 스트로지에서 가져오기
         if market.photo.count > 0 {
             let blobName = market.photo[0]
@@ -41,9 +43,8 @@ class MarketCell: UITableViewCell {
         }else {
             imgVw.image = UIImage(named: "rocket_up")
         }
-        // (2) 라벨
+        
         lbl.text = market.name
-        // (3) 버튼
         btn.isHidden = true
         if let sellersForm = market.sellersForm
         {
