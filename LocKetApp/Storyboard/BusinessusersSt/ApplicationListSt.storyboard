@@ -23,15 +23,15 @@
             </objects>
             <point key="canvasLocation" x="-1526" y="-468"/>
         </scene>
-        <!--나의 신청 마켓-->
+        <!--셀러 신청 내역-->
         <scene sceneID="GyX-pn-EqX">
             <objects>
-                <tableViewController storyboardIdentifier="AppliedListView" id="KfM-6L-i7l" customClass="ApplicationListViewController" customModule="LocKetApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="SellerListView" id="KfM-6L-i7l" customClass="ApplicationListViewController" customModule="LocKetApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" allowsSelection="NO" rowHeight="450" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="x8M-jI-7vd">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="listcell" id="EAi-iz-2hX">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="sellercell" id="EAi-iz-2hX" customClass="SellerCell" customModule="LocKetApp" customModuleProvider="target">
                                 <rect key="frame" x="20" y="55.333332061767578" width="353" height="450"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EAi-iz-2hX" id="CSa-UE-oQ1">
@@ -94,6 +94,14 @@
                                         <constraint firstItem="pbw-71-Rkh" firstAttribute="top" secondItem="CSa-UE-oQ1" secondAttribute="top" constant="25" id="hbY-j8-XZa"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="btn" destination="fYD-ML-jFu" id="EMJ-S3-gTT"/>
+                                    <outlet property="imgVw" destination="cjq-Zy-CFH" id="yB2-a4-z8j"/>
+                                    <outlet property="lblCategory" destination="MPh-yd-BMk" id="Ykd-yc-Oa9"/>
+                                    <outlet property="lblName" destination="ykM-yQ-b1Y" id="82J-zP-7Hw"/>
+                                    <outlet property="lblSNS" destination="d3U-4S-B0g" id="ZlY-wZ-dkh"/>
+                                    <outlet property="txtViewDescription" destination="bgd-ic-Owd" id="mAe-qK-ev6"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -101,7 +109,7 @@
                             <outlet property="delegate" destination="KfM-6L-i7l" id="Q8H-Tb-eXi"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="나의 신청 마켓" id="sN2-aW-o5q"/>
+                    <navigationItem key="navigationItem" title="셀러 신청 내역" id="sN2-aW-o5q"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hnc-pv-6RM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

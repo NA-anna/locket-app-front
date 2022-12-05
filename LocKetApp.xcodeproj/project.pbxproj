@@ -93,6 +93,8 @@
 		A4C08ECB293B72A20075294B /* CustomModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C08ECA293B72A20075294B /* CustomModalViewController.swift */; };
 		A4C08ECD293CB0020075294B /* ApplicationListSt.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4C08ECC293CB0010075294B /* ApplicationListSt.storyboard */; };
 		A4C08ECF293CB3800075294B /* ApplicationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C08ECE293CB3800075294B /* ApplicationListViewController.swift */; };
+		A4C08ED1293D96320075294B /* MarketCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C08ED0293D96320075294B /* MarketCell.swift */; };
+		A4C08ED3293D9BB00075294B /* SellerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C08ED2293D9BB00075294B /* SellerCell.swift */; };
 		D6F5640DD4D2E8F1515BD067 /* Pods_LocKetApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DBD1F6CCA14FCEE6C33FC4C /* Pods_LocKetApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -195,6 +197,8 @@
 		A4C08ECA293B72A20075294B /* CustomModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomModalViewController.swift; sourceTree = "<group>"; };
 		A4C08ECC293CB0010075294B /* ApplicationListSt.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ApplicationListSt.storyboard; sourceTree = "<group>"; };
 		A4C08ECE293CB3800075294B /* ApplicationListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationListViewController.swift; sourceTree = "<group>"; };
+		A4C08ED0293D96320075294B /* MarketCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketCell.swift; sourceTree = "<group>"; };
+		A4C08ED2293D9BB00075294B /* SellerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellerCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -300,7 +304,9 @@
 			isa = PBXGroup;
 			children = (
 				A47901B5292F6B300032003C /* BusinessHomeViewController.swift */,
+				A4C08ED0293D96320075294B /* MarketCell.swift */,
 				A4C08ECE293CB3800075294B /* ApplicationListViewController.swift */,
+				A4C08ED2293D9BB00075294B /* SellerCell.swift */,
 				A491A739292B8E730061BA62 /* AddViewControllers */,
 			);
 			path = BusinessUsers;
@@ -645,10 +651,12 @@
 				A444C09B29326905008F02C5 /* SellersAPI.swift in Sources */,
 				A4931EFC29305661003DA9D0 /* BusinessusersAPI.swift in Sources */,
 				A49DF6F9292B85620008D6B8 /* Host.swift in Sources */,
+				A4C08ED3293D9BB00075294B /* SellerCell.swift in Sources */,
 				A444C09D293276E0008F02C5 /* GlobalData.swift in Sources */,
 				A438075929335FC300C4596C /* MypageViewController.swift in Sources */,
 				A400850C29352616009FC8BD /* FiveMarketsCell.swift in Sources */,
 				A49DF6EB292B85140008D6B8 /* AddViewController_category.swift in Sources */,
+				A4C08ED1293D96320075294B /* MarketCell.swift in Sources */,
 				A49DF680292B64FF0008D6B8 /* SceneDelegate.swift in Sources */,
 				A49DF6A4292B82FD0008D6B8 /* MapViewController.swift in Sources */,
 				A44ACA53293236B9001F0900 /* ApplyingViewController.swift in Sources */,

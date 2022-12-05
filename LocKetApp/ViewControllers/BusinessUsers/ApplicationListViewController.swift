@@ -9,8 +9,7 @@ import UIKit
 
 class ApplicationListViewController: UITableViewController {
     
-    //Azure Storage 설정 세팅
-    var blobstorage: AZBlobService = AZBlobService.init(connectionString, containerName: "sellerprofile")
+
     
     var market: Market?
     override func viewDidLoad() {
@@ -36,8 +35,7 @@ class ApplicationListViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "listcell", for: indexPath)
-print("cellForRowAt")
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "sellercell", for: indexPath) as? SellerCell else { return UITableViewCell() }
         
         // style
         cell.layer.borderWidth = 1.0
@@ -48,56 +46,19 @@ print("cellForRowAt")
         
         
         let seller = sellers[indexPath.row]
+        cell.setValues(seller: seller, index : indexPath.row)
         
+        // 타겟 지정
+        cell.btn.addTarget(self, action: #selector(stateTapped(_:)), for: .touchUpInside)
+    
         
-        // UITableView 오브젝트 세팅
-        
-        // (1) 라벨
-        let lblName = cell.viewWithTag(2) as? UILabel
-        let lblCategory = cell.viewWithTag(3) as? UILabel
-        let lblSNS = cell.viewWithTag(4) as? UILabel
-        let txtViewDescription = cell.viewWithTag(5) as? UITextView
-        let btn = cell.viewWithTag(6) as? UIButton
-        
-        if let index = markets.firstIndex(where: { $0._id == seller.marketId }){
-            let marketName = markets[index].name
-            lblName?.text = marketName
-        }
-        lblCategory?.text = seller.category + " > " + seller.subCategory
-        lblSNS?.text = seller.sns.joined(separator: ", ")
-        txtViewDescription?.text = seller.description
-        btn?.setTitle(seller.state, for: .normal)
-        btn?.tag = indexPath.row
-        btn?.addTarget(self, action: #selector(stateTapped(_:)), for: .touchUpInside)
-        
-        
-        // (2) 이미지
-        // 사진 파일이 있으면 애저 스트로지에서 가져오기
-        let imageView = cell.viewWithTag(1) as? UIImageView
-        if seller.photo.count > 0 {
-            let blobName = seller.photo[0]
-            if blobName != "" {
-                blobstorage.downloadImage(blobName: blobName, handler: { data in
-                    let image = UIImage(data: data)
-                    DispatchQueue.main.async {
-                        imageView?.image = image
-                    }
-                })
-            }
-        // 사진 파일이 없으면 디폴트 이미지
-        }else {
-            imageView?.image = UIImage(named: "rocket_up")
-        }
-
-        
-        
-        
-        
-        
+               
 
         return cell
     }
     
+    
+
     @objc func stateTapped(_ sender: UIButton){
         
         let alert = UIAlertController(title: "", message: "선택하시면 신청상태가 변경됩니다.", preferredStyle: .actionSheet)
@@ -116,7 +77,7 @@ print("cellForRowAt")
                 guard let sellerId = seller._id else {return}
                 putSellerData( id: sellerId, body: jsonDictionary ){ statusCode in
                     if statusCode <= 204 {
-                        self.tableView.reloadData()
+//                        self.tableView.reloadData()
 //                        // GET (재조회)
 //                        // 신청된 셀러 목록
 //                        guard let market = self.market, let marketId = market._id else {return}
@@ -132,4 +93,5 @@ print("cellForRowAt")
         alert.addAction(actionCancle)
         self.present(alert, animated: true)
     }
+ 
 }

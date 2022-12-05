@@ -122,7 +122,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="marketcell" id="SLr-jr-DN1">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="marketcell" id="SLr-jr-DN1" customClass="MarketCell" customModule="LocKetApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="321" height="65"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SLr-jr-DN1" id="0eB-Yd-D2L">
@@ -151,6 +151,11 @@
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="btn" destination="EaJ-8h-iZX" id="4KU-yh-Rn9"/>
+                                            <outlet property="imgVw" destination="m82-rO-oIT" id="FSy-EP-9KS"/>
+                                            <outlet property="lbl" destination="do4-JP-W1n" id="31r-Qg-0pr"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
