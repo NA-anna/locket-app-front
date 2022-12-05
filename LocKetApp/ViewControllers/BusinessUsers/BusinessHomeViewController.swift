@@ -38,7 +38,6 @@ class BusinessHomeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         tableView.reloadData()
     }
-    
 }
 
 extension BusinessHomeViewController: UITableViewDataSource, UITableViewDelegate {
@@ -49,7 +48,6 @@ extension BusinessHomeViewController: UITableViewDataSource, UITableViewDelegate
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "marketcell", for: indexPath)
-        
         
         let market = markets[indexPath.row]
         
@@ -76,16 +74,23 @@ extension BusinessHomeViewController: UITableViewDataSource, UITableViewDelegate
         let lblTitle = cell.viewWithTag(2) as? UILabel
         lblTitle?.text = market.name
         // (3) 버튼
-        let today = Date().toString()
-        guard let sellersForm = market.sellersForm else { return cell }
         let btn = cell.viewWithTag(3) as? UIButton
-        if market.needSellers && sellersForm.deadline > today { //모집중 마켓
-            btn?.isHidden = false
-            btn?.tag = indexPath.row
-            
-        }else {
+        btn?.isHidden = true
+        if let sellersForm = market.sellersForm
+        {
+            if market.needSellers && sellersForm.deadline > Date().toString() { //모집중 마켓
+                btn?.isHidden = false
+                btn?.tag = indexPath.row
+                print("0",indexPath.row)
+            }else {
+                btn?.isHidden = true
+                print("1",indexPath.row)
+            }
+        } else {
             btn?.isHidden = true
+            print("2",indexPath.row)
         }
+        
         
         
 

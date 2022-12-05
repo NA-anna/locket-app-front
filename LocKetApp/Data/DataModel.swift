@@ -91,7 +91,7 @@ struct Sellers: Codable {
     let documents : [Seller]
 }
 struct Seller : Codable {
-    let _id        : String
+    let _id        : String?
     let userId     : String
     let marketId   : String
     let category   : String
@@ -99,5 +99,5 @@ struct Seller : Codable {
     let sns        : [String]
     let description: String
     let photo      : [String]
-    let state      : String
+    var state      : String
 }

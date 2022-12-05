@@ -54,41 +54,36 @@ class AppliedListViewController: UITableViewController {
         // UITableView 오브젝트
         
         // (1) 라벨
+        let lblName = cell.viewWithTag(2) as? UILabel
+        let lblCategory = cell.viewWithTag(3) as? UILabel
+        let lblSNS = cell.viewWithTag(4) as? UILabel
+        let txtViewDescription = cell.viewWithTag(5) as? UITextView
+        let lblState = cell.viewWithTag(6) as? UILabel
+        
         if let index = markets.firstIndex(where: { $0._id == seller.marketId }){
             let marketName = markets[index].name
-            
-            let lblName = cell.viewWithTag(2) as? UILabel
             lblName?.text = marketName
         }
-    
-        let lblCategory = cell.viewWithTag(3) as? UILabel
         lblCategory?.text = seller.category + " > " + seller.subCategory
-        
-        let lblSNS = cell.viewWithTag(4) as? UILabel
         lblSNS?.text = seller.sns.joined(separator: ", ")
-        
-        let txtViewDescription = cell.viewWithTag(5) as? UITextView
         txtViewDescription?.text = seller.description
-
-        let lblState = cell.viewWithTag(6) as? UILabel
         lblState?.text = seller.state
         
         // (2) 이미지
         // 사진 파일이 있으면 애저 스트로지에서 가져오기
+        let imageView = cell.viewWithTag(1) as? UIImageView
         if seller.photo.count > 0 {
             let blobName = seller.photo[0]
             if blobName != "" {
                 blobstorage.downloadImage(blobName: blobName, handler: { data in
                     let image = UIImage(data: data)
                     DispatchQueue.main.async {
-                        let imageView = cell.viewWithTag(1) as? UIImageView
                         imageView?.image = image
                     }
                 })
             }
         // 사진 파일이 없으면 디폴트 이미지
         }else {
-            let imageView = cell.viewWithTag(1) as? UIImageView
             imageView?.image = UIImage(named: "rocket_up")
         }
 

@@ -57,6 +57,8 @@ func getSellersByMarket( marketId: String, handler: @escaping()->() ) {
     }
     
 }
+
+// 셀러 등록 (신청)
 func postSeller( collection route : String, body: [String : Any], handler: @escaping(Int)->() ) {
     
     // 1 url request
@@ -75,14 +77,27 @@ func postSeller( collection route : String, body: [String : Any], handler: @esca
         if let res = response.response{
             handler(res.statusCode)
         }
-        /*
-        switch response.result {
-        case .success(_)://obj): //통신성공
-            handler(true)
-        case .failure(let e):   //통신실패
-            print(e.localizedDescription)
-            handler(false)
+
+    }
+}
+
+// 셀러 변경
+func putSellerData( id : String, body: [String : Any], handler: @escaping(Int)->() ) {
+    
+    // 1 url request
+    let strUrl = host + "/sellers/" + id
+
+    // 2 Alamofire
+    let params: Parameters = body
+    AF.request(
+        strUrl,
+        method: .put,
+        parameters: params,
+        encoding: JSONEncoding.default // [인코딩 스타일]
+    ).responseDecodable(of: User.self) { response in
+        debugPrint(response)
+        if let res = response.response{
+            handler(res.statusCode)
         }
-         */
     }
 }

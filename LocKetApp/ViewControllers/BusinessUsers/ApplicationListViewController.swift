@@ -37,7 +37,7 @@ class ApplicationListViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "listcell", for: indexPath)
-
+print("cellForRowAt")
         
         // style
         cell.layer.borderWidth = 1.0
@@ -50,44 +50,42 @@ class ApplicationListViewController: UITableViewController {
         let seller = sellers[indexPath.row]
         
         
-        // UITableView 오브젝트
+        // UITableView 오브젝트 세팅
         
         // (1) 라벨
+        let lblName = cell.viewWithTag(2) as? UILabel
+        let lblCategory = cell.viewWithTag(3) as? UILabel
+        let lblSNS = cell.viewWithTag(4) as? UILabel
+        let txtViewDescription = cell.viewWithTag(5) as? UITextView
+        let btn = cell.viewWithTag(6) as? UIButton
+        
         if let index = markets.firstIndex(where: { $0._id == seller.marketId }){
             let marketName = markets[index].name
-            
-            let lblName = cell.viewWithTag(2) as? UILabel
             lblName?.text = marketName
         }
-    
-        let lblCategory = cell.viewWithTag(3) as? UILabel
         lblCategory?.text = seller.category + " > " + seller.subCategory
-        
-        let lblSNS = cell.viewWithTag(4) as? UILabel
         lblSNS?.text = seller.sns.joined(separator: ", ")
-        
-        let txtViewDescription = cell.viewWithTag(5) as? UITextView
         txtViewDescription?.text = seller.description
-
-        let lblState = cell.viewWithTag(6) as? UILabel
-        lblState?.text = seller.state
+        btn?.setTitle(seller.state, for: .normal)
+        btn?.tag = indexPath.row
+        btn?.addTarget(self, action: #selector(stateTapped(_:)), for: .touchUpInside)
+        
         
         // (2) 이미지
         // 사진 파일이 있으면 애저 스트로지에서 가져오기
+        let imageView = cell.viewWithTag(1) as? UIImageView
         if seller.photo.count > 0 {
             let blobName = seller.photo[0]
             if blobName != "" {
                 blobstorage.downloadImage(blobName: blobName, handler: { data in
                     let image = UIImage(data: data)
                     DispatchQueue.main.async {
-                        let imageView = cell.viewWithTag(1) as? UIImageView
                         imageView?.image = image
                     }
                 })
             }
         // 사진 파일이 없으면 디폴트 이미지
         }else {
-            let imageView = cell.viewWithTag(1) as? UIImageView
             imageView?.image = UIImage(named: "rocket_up")
         }
 
@@ -100,5 +98,38 @@ class ApplicationListViewController: UITableViewController {
         return cell
     }
     
-
+    @objc func stateTapped(_ sender: UIButton){
+        
+        let alert = UIAlertController(title: "", message: "선택하시면 신청상태가 변경됩니다.", preferredStyle: .actionSheet)
+        for item in gSellerApplicationState {
+            let action = UIAlertAction(title: item, style: .default) {_ in
+                print("API 호줄")
+                
+                var seller = sellers[sender.tag]
+                seller.state = item
+                
+                // 데이터 인코딩
+                let jsonData: Data = try! JSONEncoder().encode(seller)
+                guard let jsonDictionary = try? JSONSerialization.jsonObject(with: jsonData, options: []) as? [String: Any] else {return}
+                
+                // PUT
+                guard let sellerId = seller._id else {return}
+                putSellerData( id: sellerId, body: jsonDictionary ){ statusCode in
+                    if statusCode <= 204 {
+                        self.tableView.reloadData()
+//                        // GET (재조회)
+//                        // 신청된 셀러 목록
+//                        guard let market = self.market, let marketId = market._id else {return}
+//                        getSellersByMarket(marketId: marketId) {
+//                            self.tableView.reloadData()
+//                        }
+                    }
+                }
+            }
+            alert.addAction(action)
+        }
+        let actionCancle = UIAlertAction(title: "취소", style: .cancel)
+        alert.addAction(actionCancle)
+        self.present(alert, animated: true)
+    }
 }
