@@ -57,9 +57,9 @@ extension UserHomeViewController: UICollectionViewDataSource, UICollectionViewDe
         
         let market = markets[indexPath.row]
         
-        cell.layer.borderWidth = 0.5
-        cell.layer.borderColor = UIColor.systemGray4.cgColor
-        cell.layer.cornerRadius = 20
+        //cell.layer.borderWidth = 0.5
+        //cell.layer.borderColor = UIColor.systemGray4.cgColor
+        cell.layer.cornerRadius = 10
         
         // 사진 파일이 있으면 애저 스트로지에서 가져오기
         let imageView = cell.viewWithTag(1) as? UIImageView
@@ -98,7 +98,6 @@ extension UserHomeViewController: UICollectionViewDataSource, UICollectionViewDe
         return 10
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        //let width =  collectionView.frame.width * 2/3
         let height = collectionView.frame.height * 2/3
         return CGSize(width: height * 1.5, height: height)
     }

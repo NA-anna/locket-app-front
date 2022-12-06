@@ -9,8 +9,7 @@ import UIKit
 
 class FleaMarketsViewController: UITableViewController {
 
-    //Azure Storage 설정 세팅
-    var blobstorage: AZBlobService = AZBlobService.init(connectionString, containerName: "marketprofile")
+    
     
     var recruitingMarkets = markets
     
@@ -40,81 +39,46 @@ class FleaMarketsViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        if segCon.selectedSegmentIndex == 1 {
+        if segCon.selectedSegmentIndex == 0 {
+            return markets.count
+        }else {
             return recruitingMarkets.count
         }
-        return markets.count
-//        if segCon.selectedSegmentIndex == 0 {
-//            return markets.count
-//        }else {
-//            return filtered.count
-//        }
-        
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "marketscell", for: indexPath)
-
-        // 악세사리
-        //cell.accessoryType = .disclosureIndicator //UIImageView(image: UIImage(systemName: "heart"))
         
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "marketcell", for: indexPath) as? FleaMarketCell else { return UITableViewCell() }
         
         var market = markets[indexPath.row]
         if segCon.selectedSegmentIndex == 1 {
             market = recruitingMarkets[indexPath.row]
         }
         
-        // TABLE VIEW 에 값 지정
-        // 사진 파일이 있으면 애저 스트로지에서 가져오기
-        if market.photo.count > 0 {
-            let blobName = market.photo[0]
-            if blobName != "" {
-                blobstorage.downloadImage(blobName: blobName, handler: { data in
-                    let image = UIImage(data: data)
-                    DispatchQueue.main.async {
-                        let imageView = cell.viewWithTag(10) as? UIImageView
-                        imageView?.layer.cornerRadius = 20
-                        imageView?.image = image
-                    }
-                })
-            }
-        // 사진 파일이 없으면 디폴트 이미지
-        }else {
-            let imageView = cell.viewWithTag(10) as? UIImageView
-            imageView?.layer.cornerRadius = 20
-            imageView?.image = UIImage(named: "rocket_up")
-        }
-        let lblTitle = cell.viewWithTag(1) as? UILabel
-        lblTitle?.text = market.name
-        let lblCategory = cell.viewWithTag(2) as? UILabel
-        lblCategory?.text = market.category
-        let lblPlace = cell.viewWithTag(3) as? UILabel
-        lblPlace?.text = "장소: \(market.place)"
-        let lblDate = cell.viewWithTag(4) as? UILabel
-        lblDate?.text = "\(market.startdate) ~ \(market.enddate)"
-        let lblDescription = cell.viewWithTag(5) as? UILabel
-        lblDescription?.text = market.description
-
+        cell.setValues(market: market, index : indexPath.row)
 
         return cell
     }
     
 
  
-
-
-
-
-
-    
-    
+ 
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let vc = segue.destination as? FleaMarketDetailViewController
+        
+        
         if let index = tableView.indexPathForSelectedRow?.row {
-            vc?.market = markets[index]
+            
+            if segCon.selectedSegmentIndex == 0 {
+                vc?.market = markets[index]
+            }else {
+                vc?.market = recruitingMarkets[index]
+            }
+            
+            
             vc?.isGathering = (segCon.selectedSegmentIndex == 1) //모집중이면 True
         }
     }
