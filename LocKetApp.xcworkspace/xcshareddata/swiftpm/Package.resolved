@@ -26,6 +26,15 @@
         "revision" : "22c3f83268b4c47b4623fe3a9701af7310fa8d8a",
         "version" : "13.6.1"
       }
+    },
+    {
+      "identity" : "sidemenu",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jonkykong/SideMenu.git",
+      "state" : {
+        "revision" : "8bd4fd128923cf5494fa726839af8afe12908ad9",
+        "version" : "6.5.0"
+      }
     }
   ],
   "version" : 2
