@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lwZ-4L-6jB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IPo-Zy-o8M">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -8,61 +8,27 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Five Market Detail View Controller-->
-        <scene sceneID="AyB-LV-oSK">
+        <!--마켓이름-->
+        <scene sceneID="G4U-ko-jU7">
             <objects>
-                <viewController storyboardIdentifier="FiveMarketDetail" modalPresentationStyle="fullScreen" id="lwZ-4L-6jB" customClass="FiveMarketDetailViewController" customModule="LocKetApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="kzI-bU-PID">
+                <viewController storyboardIdentifier="FiveMarketDetail" modalPresentationStyle="fullScreen" id="IPo-Zy-o8M" customClass="FiveMarketDetailViewController" customModule="LocKetApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8nK-oL-cLI">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="a4N-BK-yhg">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ZP2-m6-Xaj">
                                 <rect key="frame" x="30" y="133" width="333" height="586"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Jud-c5-sI9">
-                                        <rect key="frame" x="0.0" y="0.0" width="333" height="35"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Phg-0j-uJi">
-                                                <rect key="frame" x="0.0" y="0.0" width="333" height="35"/>
-                                                <attributedString key="attributedText">
-                                                    <fragment content="마켓">
-                                                        <attributes>
-                                                            <font key="NSFont" size="22" name=".AppleSDGothicNeoI-Regular"/>
-                                                            <font key="NSOriginalFont" metaFont="system" size="22"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                    <fragment content=" ">
-                                                        <attributes>
-                                                            <font key="NSFont" metaFont="system" size="22"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                    <fragment content="이름">
-                                                        <attributes>
-                                                            <font key="NSFont" size="22" name=".AppleSDGothicNeoI-Regular"/>
-                                                            <font key="NSOriginalFont" metaFont="system" size="22"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                </attributedString>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="35" id="ubU-Cr-SEh"/>
-                                        </constraints>
-                                    </stackView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qc0-gV-jUc">
-                                        <rect key="frame" x="0.0" y="43" width="333" height="170"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qxO-Uv-huX">
+                                        <rect key="frame" x="0.0" y="0.0" width="333" height="170"/>
                                         <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                         <color key="tintColor" systemColor="tintColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="170" id="36S-7X-U7E"/>
+                                            <constraint firstAttribute="height" constant="170" id="TVo-gM-phY"/>
                                         </constraints>
                                     </view>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dp8-9F-tE6">
-                                        <rect key="frame" x="0.0" y="221" width="333" height="365"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYs-Ay-cSK">
+                                        <rect key="frame" x="0.0" y="178" width="333" height="408"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </string>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -72,55 +38,56 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="Rgr-L2-LPA"/>
+                        <viewLayoutGuide key="safeArea" id="fwj-sC-2hs"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="a4N-BK-yhg" firstAttribute="leading" secondItem="Rgr-L2-LPA" secondAttribute="leading" constant="30" id="DyM-qh-hyM"/>
-                            <constraint firstItem="Rgr-L2-LPA" firstAttribute="trailing" secondItem="a4N-BK-yhg" secondAttribute="trailing" constant="30" id="LIC-WM-dt1"/>
-                            <constraint firstItem="a4N-BK-yhg" firstAttribute="top" secondItem="Rgr-L2-LPA" secondAttribute="top" constant="30" id="X09-fG-zWr"/>
-                            <constraint firstItem="Rgr-L2-LPA" firstAttribute="bottom" secondItem="a4N-BK-yhg" secondAttribute="bottom" constant="50" id="ewU-Fr-nZi"/>
+                            <constraint firstItem="ZP2-m6-Xaj" firstAttribute="top" secondItem="fwj-sC-2hs" secondAttribute="top" constant="30" id="2Jm-kt-CIU"/>
+                            <constraint firstItem="fwj-sC-2hs" firstAttribute="bottom" secondItem="ZP2-m6-Xaj" secondAttribute="bottom" constant="50" id="bY5-UE-wJ6"/>
+                            <constraint firstItem="fwj-sC-2hs" firstAttribute="trailing" secondItem="ZP2-m6-Xaj" secondAttribute="trailing" constant="30" id="hsb-6l-6U0"/>
+                            <constraint firstItem="ZP2-m6-Xaj" firstAttribute="leading" secondItem="fwj-sC-2hs" secondAttribute="leading" constant="30" id="mLi-1D-Xu1"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="V4U-fZ-SlW">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="4kF-wd-IUU">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Iov-Ud-OCg">
-                                <rect key="frame" x="44" y="4.6666666666666679" width="333" height="35"/>
+                    <navigationItem key="navigationItem" title="마켓이름" id="REb-dA-zr6">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="1St-4F-Xwr">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="uhS-K7-Cms">
+                                <rect key="frame" x="326.33333333333331" y="4.6666666666666679" width="50.666666666666686" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.96841138599999999" green="0.77008184850000005" blue="0.25373728350000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system"/>
                                 <connections>
-                                    <action selector="actFavorite:" destination="lwZ-4L-6jB" eventType="touchUpInside" id="KVX-9J-oWy"/>
+                                    <action selector="actFavorite:" destination="IPo-Zy-o8M" eventType="touchUpInside" id="6Be-4P-InV"/>
                                 </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="btnLike" destination="Iov-Ud-OCg" id="dRV-RK-p4w"/>
-                        <outlet property="lblMarketName" destination="Phg-0j-uJi" id="iPL-ws-ZI4"/>
-                        <outlet property="textView" destination="dp8-9F-tE6" id="cxa-z3-rUA"/>
-                        <outlet property="viewFrame" destination="qc0-gV-jUc" id="XwX-u1-IXM"/>
+                        <outlet property="MarketName" destination="REb-dA-zr6" id="iU8-OL-CSu"/>
+                        <outlet property="btnLike" destination="uhS-K7-Cms" id="Wwu-Wc-aub"/>
+                        <outlet property="marketName" destination="REb-dA-zr6" id="VWW-5N-8rM"/>
+                        <outlet property="textView" destination="bYs-Ay-cSK" id="8HA-Qj-wPp"/>
+                        <outlet property="viewFrame" destination="qxO-Uv-huX" id="7Ty-hi-4rb"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5pR-gO-T8Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zSw-6f-gjQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1559.5419847328244" y="-338.73239436619718"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="iMz-vR-Amb">
+        <scene sceneID="UKs-cX-HW0">
             <objects>
-                <navigationController modalPresentationStyle="fullScreen" id="xiZ-fG-pK7" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8MH-CS-TNO">
+                <navigationController modalPresentationStyle="fullScreen" id="ILg-Uy-XII" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XTo-8j-1WD">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="lwZ-4L-6jB" kind="relationship" relationship="rootViewController" id="8g3-Pk-rUe"/>
+                        <segue destination="IPo-Zy-o8M" kind="relationship" relationship="rootViewController" id="tAG-rg-F1V"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="J1H-jj-uXh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cdA-zb-CbK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="802" y="-339"/>
         </scene>

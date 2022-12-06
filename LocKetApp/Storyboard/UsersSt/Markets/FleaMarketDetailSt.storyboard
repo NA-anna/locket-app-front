@@ -31,34 +31,6 @@
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="dCf-wQ-w87">
                                         <rect key="frame" x="0.0" y="0.0" width="333" height="35"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I2M-UQ-Dco">
-                                                <rect key="frame" x="0.0" y="0.0" width="333" height="35"/>
-                                                <attributedString key="attributedText">
-                                                    <fragment content="마켓">
-                                                        <attributes>
-                                                            <font key="NSFont" size="22" name=".AppleSDGothicNeoI-Regular"/>
-                                                            <font key="NSOriginalFont" metaFont="system" size="22"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                    <fragment content=" ">
-                                                        <attributes>
-                                                            <font key="NSFont" metaFont="system" size="22"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                    <fragment content="이름">
-                                                        <attributes>
-                                                            <font key="NSFont" size="22" name=".AppleSDGothicNeoI-Regular"/>
-                                                            <font key="NSOriginalFont" metaFont="system" size="22"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                </attributedString>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="gLA-pP-VrO"/>
                                         </constraints>
@@ -124,7 +96,6 @@
                     <connections>
                         <outlet property="btnApplying" destination="avW-ks-NNG" id="QgF-ro-uVX"/>
                         <outlet property="btnLike" destination="QCd-xC-gez" id="flA-aD-OFI"/>
-                        <outlet property="lblMarketName" destination="I2M-UQ-Dco" id="RuV-C3-fdV"/>
                         <outlet property="textView" destination="F9c-73-sCn" id="fc5-Vw-Y53"/>
                         <outlet property="viewFrame" destination="OwP-f5-hz5" id="FE9-1X-22B"/>
                     </connections>

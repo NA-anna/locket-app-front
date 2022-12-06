@@ -22,7 +22,7 @@ class FiveMarketDetailViewController: UIViewController, MTMapViewDelegate {
             }
         }
     }
-    @IBOutlet var lblMarketName: UILabel!
+    @IBOutlet var marketName: UINavigationItem!
     @IBOutlet var viewFrame: UIView!
     @IBOutlet var textView: UITextView!
     @IBOutlet var btnLike: UIButton!
@@ -61,7 +61,7 @@ class FiveMarketDetailViewController: UIViewController, MTMapViewDelegate {
         
         // 마켓정보
         let productList = fiveMarket.trtmntPrdlst.components(separatedBy: "+").joined(separator: ", ")
-        lblMarketName.text = fiveMarket.mrktNm
+        marketName.title = fiveMarket.mrktNm
         textView.text = "점포 수: \(fiveMarket.storNumber)\n상품: \(productList)\n\n주소\n(도로명):\(fiveMarket.rdnmadr) \n(지번):\(fiveMarket.lnmadr)\n\n공용화장실 유뮤: \(fiveMarket.pblicToiletYn)\n주차장: \(fiveMarket.prkplceYn)"
         
         //하트 색칠하기

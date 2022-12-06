@@ -92,6 +92,7 @@
 		A4B4BDF8293E72EA002D678E /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B4BDF7293E72EA002D678E /* SignInViewController.swift */; };
 		A4B4BDFA293F4116002D678E /* FiveMarketCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B4BDF9293F4116002D678E /* FiveMarketCell.swift */; };
 		A4B4BDFC293F43B8002D678E /* FleaMarketCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B4BDFB293F43B8002D678E /* FleaMarketCell.swift */; };
+		A4B4BE03293F799E002D678E /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A4B4BE02293F799E002D678E /* IQKeyboardManagerSwift */; };
 		A4C08EC9293B44A80075294B /* ProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = A4C08EC8293B44A80075294B /* ProgressHUD */; };
 		A4C08ECB293B72A20075294B /* CustomModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C08ECA293B72A20075294B /* CustomModalViewController.swift */; };
 		A4C08ECD293CB0020075294B /* ApplicationListSt.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4C08ECC293CB0010075294B /* ApplicationListSt.storyboard */; };
@@ -217,6 +218,7 @@
 				A4C08EC9293B44A80075294B /* ProgressHUD in Frameworks */,
 				A49DF69E292B65970008D6B8 /* libxml2.tbd in Frameworks */,
 				A49DF6E7292B84630008D6B8 /* DaumMap.framework in Frameworks */,
+				A4B4BE03293F799E002D678E /* IQKeyboardManagerSwift in Frameworks */,
 				A49DF69D292B658E0008D6B8 /* libsqlite3.tbd in Frameworks */,
 				A49DF699292B65590008D6B8 /* QuartzCore.framework in Frameworks */,
 				A49DF697292B65490008D6B8 /* CoreLocation.framework in Frameworks */,
@@ -503,6 +505,7 @@
 			packageProductDependencies = (
 				A49DF6FC292B85910008D6B8 /* Alamofire */,
 				A4C08EC8293B44A80075294B /* ProgressHUD */,
+				A4B4BE02293F799E002D678E /* IQKeyboardManagerSwift */,
 			);
 			productName = LocKetApp;
 			productReference = A49DF67A292B64FF0008D6B8 /* LocKetApp.app */;
@@ -535,6 +538,7 @@
 			packageReferences = (
 				A49DF6FB292B85910008D6B8 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				A4C08EC7293B44A80075294B /* XCRemoteSwiftPackageReference "ProgressHUD" */,
+				A4B4BE01293F799E002D678E /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 			);
 			productRefGroup = A49DF67B292B64FF0008D6B8 /* Products */;
 			projectDirPath = "";
@@ -926,6 +930,14 @@
 				kind = branch;
 			};
 		};
+		A4B4BE01293F799E002D678E /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = exactVersion;
+				version = 6.5.0;
+			};
+		};
 		A4C08EC7293B44A80075294B /* XCRemoteSwiftPackageReference "ProgressHUD" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/relatedcode/ProgressHUD.git";
@@ -941,6 +953,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A49DF6FB292B85910008D6B8 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		A4B4BE02293F799E002D678E /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A4B4BE01293F799E002D678E /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
 		};
 		A4C08EC8293B44A80075294B /* ProgressHUD */ = {
 			isa = XCSwiftPackageProductDependency;
