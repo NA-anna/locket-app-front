@@ -42,7 +42,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="fivemarketscell" id="36a-cj-pE9" customClass="FiveMarketsCell" customModule="LocKetApp" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="fivemarketcell" id="36a-cj-pE9" customClass="FiveMarketCell" customModule="LocKetApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="50" width="393" height="130"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="36a-cj-pE9" id="MPW-HR-fDH">
@@ -121,8 +121,11 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="descrip" destination="43N-7A-cDD" id="DaH-lM-2du"/>
-                                    <outlet property="place" destination="0Jm-c7-SWQ" id="1VJ-3B-aHf"/>
+                                    <outlet property="imgVw" destination="4Yy-3F-ep0" id="GJm-Ef-9JT"/>
+                                    <outlet property="lblDate" destination="bcJ-05-jm3" id="FgY-6X-np6"/>
+                                    <outlet property="lblDescription" destination="43N-7A-cDD" id="ADf-6p-QWV"/>
+                                    <outlet property="lblPlace" destination="0Jm-c7-SWQ" id="mAS-NS-bKA"/>
+                                    <outlet property="lblTitle" destination="1al-7s-g8K" id="ujz-Pi-Tu4"/>
                                     <segue destination="WjJ-Hp-0nP" kind="show" id="9R1-aM-3Hq"/>
                                 </connections>
                             </tableViewCell>
@@ -152,7 +155,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1TB-Ld-1TG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="716.79389312977094" y="-338.02816901408454"/>
+            <point key="canvasLocation" x="593" y="-338"/>
         </scene>
     </scenes>
     <resources>

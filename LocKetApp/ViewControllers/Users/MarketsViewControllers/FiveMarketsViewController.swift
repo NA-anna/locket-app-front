@@ -37,35 +37,22 @@ class FiveMarketsViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return fiveMarkets.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "fivemarketscell", for: indexPath)
-
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "fivemarketcell", for: indexPath) as? FiveMarketCell else { return UITableViewCell() }
         
         let market = fiveMarkets[indexPath.row]
-        
-        // TABLE VIEW 에 데이터 뿌리기
-        let lblTitle = cell.viewWithTag(1) as? UILabel
-        lblTitle?.text = market.mrktNm
-        let lblPlace = cell.viewWithTag(3) as? UILabel
-        lblPlace?.text = "주소: \(market.rdnmadr)"
-        let lblDate = cell.viewWithTag(4) as? UILabel
-        let openDay = market.mrktEstblCycle.components(separatedBy: "+").joined(separator: ", ")
-        lblDate?.text = openDay
-        let lblDescription = cell.viewWithTag(5) as? UILabel
-        let productList = market.trtmntPrdlst.components(separatedBy: "+").joined(separator: ", ")
-        lblDescription?.text = productList 
-        let imageView = cell.viewWithTag(10) as? UIImageView
-        imageView?.layer.cornerRadius = 20
-
+        cell.setValues(market: market, index : indexPath.row)
 
         return cell
     }
 
+    
+    
     
     // MARK: - Navigation
 

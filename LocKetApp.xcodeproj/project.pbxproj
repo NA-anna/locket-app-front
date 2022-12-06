@@ -90,6 +90,8 @@
 		A49DF6FD292B85910008D6B8 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = A49DF6FC292B85910008D6B8 /* Alamofire */; };
 		A4A36A2C292F18C6001696CE /* FiveMarketsSt.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4A36A2B292F18C6001696CE /* FiveMarketsSt.storyboard */; };
 		A4B4BDF8293E72EA002D678E /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B4BDF7293E72EA002D678E /* SignInViewController.swift */; };
+		A4B4BDFA293F4116002D678E /* FiveMarketCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B4BDF9293F4116002D678E /* FiveMarketCell.swift */; };
+		A4B4BDFC293F43B8002D678E /* FleaMarketCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B4BDFB293F43B8002D678E /* FleaMarketCell.swift */; };
 		A4C08EC9293B44A80075294B /* ProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = A4C08EC8293B44A80075294B /* ProgressHUD */; };
 		A4C08ECB293B72A20075294B /* CustomModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C08ECA293B72A20075294B /* CustomModalViewController.swift */; };
 		A4C08ECD293CB0020075294B /* ApplicationListSt.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4C08ECC293CB0010075294B /* ApplicationListSt.storyboard */; };
@@ -196,6 +198,8 @@
 		A49DF6F4292B85620008D6B8 /* FleaMarketsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FleaMarketsViewController.swift; sourceTree = "<group>"; };
 		A4A36A2B292F18C6001696CE /* FiveMarketsSt.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FiveMarketsSt.storyboard; sourceTree = "<group>"; };
 		A4B4BDF7293E72EA002D678E /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		A4B4BDF9293F4116002D678E /* FiveMarketCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveMarketCell.swift; sourceTree = "<group>"; };
+		A4B4BDFB293F43B8002D678E /* FleaMarketCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FleaMarketCell.swift; sourceTree = "<group>"; };
 		A4C08ECA293B72A20075294B /* CustomModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomModalViewController.swift; sourceTree = "<group>"; };
 		A4C08ECC293CB0010075294B /* ApplicationListSt.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ApplicationListSt.storyboard; sourceTree = "<group>"; };
 		A4C08ECE293CB3800075294B /* ApplicationListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationListViewController.swift; sourceTree = "<group>"; };
@@ -271,8 +275,10 @@
 			isa = PBXGroup;
 			children = (
 				A491A741292BE7A20061BA62 /* FiveMarketsViewController.swift */,
+				A4B4BDF9293F4116002D678E /* FiveMarketCell.swift */,
 				A47FB3A3292D185400884C61 /* FiveMarketDetailViewController.swift */,
 				A49DF6F4292B85620008D6B8 /* FleaMarketsViewController.swift */,
+				A4B4BDFB293F43B8002D678E /* FleaMarketCell.swift */,
 				A4931EFF29308821003DA9D0 /* FleaMarketDetailViewController.swift */,
 				A44ACA52293236B9001F0900 /* ApplyingViewController.swift */,
 				A400850B29352616009FC8BD /* FiveMarketsCell.swift */,
@@ -642,7 +648,9 @@
 			files = (
 				A49DF682292B64FF0008D6B8 /* LoginViewController.swift in Sources */,
 				A4931EF7292F74BA003DA9D0 /* UserHomeViewController.swift in Sources */,
+				A4B4BDFC293F43B8002D678E /* FleaMarketCell.swift in Sources */,
 				A49DF67E292B64FF0008D6B8 /* AppDelegate.swift in Sources */,
+				A4B4BDFA293F4116002D678E /* FiveMarketCell.swift in Sources */,
 				A491A73B292B8FCF0061BA62 /* 5MarketsAPI.swift in Sources */,
 				A49DF6FA292B85620008D6B8 /* FleaMarketsViewController.swift in Sources */,
 				A438075F29345F8800C4596C /* LaunchViewControllerX.swift in Sources */,
