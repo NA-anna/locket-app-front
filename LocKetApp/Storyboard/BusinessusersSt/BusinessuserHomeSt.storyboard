@@ -32,18 +32,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button toolTip="마켓 등록" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZNm-kk-88S">
-                                <rect key="frame" x="150" y="729" width="92" height="89"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="add"/>
-                                <connections>
-                                    <segue destination="unG-7o-6Pd" kind="show" id="h6J-9n-NBp"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0wD-fW-OaA" userLabel="연유라떼님, 안녕하세요.">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0wD-fW-OaA" userLabel="연유라떼님, 안녕하세요.">
                                 <rect key="frame" x="59" y="108" width="285" height="90"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="연유라떼님">
                                         <attributes>
@@ -117,10 +107,12 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="65" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="mp9-tu-gB4">
-                                <rect key="frame" x="36" y="249" width="321" height="378"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="65" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="mp9-tu-gB4">
+                                <rect key="frame" x="36" y="258" width="321" height="378"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="378" id="IG2-YB-WG6"/>
+                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="marketcell" id="SLr-jr-DN1" customClass="MarketCell" customModule="LocKetApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="321" height="65"/>
@@ -159,11 +151,38 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button toolTip="마켓 등록" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZNm-kk-88S">
+                                <rect key="frame" x="229" y="693" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="1tN-LF-M27"/>
+                                    <constraint firstAttribute="width" constant="60" id="hAM-sz-Olf"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="add"/>
+                                <connections>
+                                    <segue destination="unG-7o-6Pd" kind="show" id="h6J-9n-NBp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mp9-tu-gB4" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="36" id="1nb-LT-0aP"/>
+                            <constraint firstItem="mp9-tu-gB4" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="8rd-ek-j09"/>
+                            <constraint firstItem="0wD-fW-OaA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="59" id="FG7-7V-Edj"/>
+                            <constraint firstItem="ZNm-kk-88S" firstAttribute="top" secondItem="mp9-tu-gB4" secondAttribute="bottom" constant="57" id="HBz-Ly-lGj"/>
+                            <constraint firstItem="mp9-tu-gB4" firstAttribute="top" secondItem="0wD-fW-OaA" secondAttribute="bottom" constant="60" id="aBd-tX-ewg"/>
+                            <constraint firstItem="ZNm-kk-88S" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="229" id="evm-oy-1pF"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="0wD-fW-OaA" secondAttribute="trailing" constant="49" id="fDK-C0-6fK"/>
+                            <constraint firstItem="0wD-fW-OaA" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="5" id="nnA-8l-QaR"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="ZNm-kk-88S" secondAttribute="bottom" constant="65" id="yIm-hh-N5A"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="UTf-jO-cuY"/>
+                    <navigationItem key="navigationItem" id="UTf-jO-cuY">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="line.3.horizontal" catalog="system" id="MNw-5z-5Ph">
+                            <color key="tintColor" systemColor="labelColor"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="lblHello" destination="0wD-fW-OaA" id="6Oi-Yb-CYL"/>
                         <outlet property="tableView" destination="mp9-tu-gB4" id="Lwi-5x-mO4"/>
@@ -196,6 +215,10 @@
     </scenes>
     <resources>
         <image name="add" width="100" height="100"/>
+        <image name="line.3.horizontal" catalog="system" width="128" height="65"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
