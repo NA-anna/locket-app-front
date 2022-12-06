@@ -49,44 +49,45 @@
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="130"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="On2-Kt-Djo">
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="On2-Kt-Djo">
                                             <rect key="frame" x="36.666666666666657" y="29.333333333333336" width="320" height="71.333333333333314"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="10" contentMode="scaleAspectFit" image="fiveMarket_default" translatesAutoresizingMaskIntoConstraints="NO" id="yfh-lz-Ytj">
-                                                    <rect key="frame" x="0.0" y="0.0" width="70" height="71.333333333333329"/>
+                                                    <rect key="frame" x="0.0" y="5.6666666666666714" width="60" height="60"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="70" id="K63-EH-cyp"/>
+                                                        <constraint firstAttribute="width" constant="60" id="K63-EH-cyp"/>
+                                                        <constraint firstAttribute="height" constant="60" id="Pj3-tK-9ip"/>
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6Fm-eo-7ze">
-                                                    <rect key="frame" x="90" y="0.0" width="230" height="71.333333333333329"/>
+                                                    <rect key="frame" x="80" y="0.0" width="240" height="71.333333333333329"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fTV-2h-SZd">
-                                                            <rect key="frame" x="0.0" y="0.0" width="230" height="71.333333333333329"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="240" height="71.333333333333329"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Jky-bu-j9s">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="230" height="71.333333333333329"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="71.333333333333329"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rA6-LV-HF3">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="230" height="21.666666666666668"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="240" height="21.666666666666668"/>
                                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Place" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eDM-EU-gub">
-                                                                            <rect key="frame" x="0.0" y="21.666666666666668" width="230" height="15.666666666666668"/>
+                                                                            <rect key="frame" x="0.0" y="21.666666666666668" width="240" height="15.666666666666668"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                                             <color key="textColor" systemColor="secondaryLabelColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IYM-sN-eB0">
-                                                                            <rect key="frame" x="0.0" y="37.333333333333343" width="230" height="17"/>
+                                                                            <rect key="frame" x="0.0" y="37.333333333333343" width="240" height="17"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                             <color key="textColor" systemColor="secondaryLabelColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FtA-aN-i6l">
-                                                                            <rect key="frame" x="0.0" y="54.333333333333343" width="230" height="17"/>
+                                                                            <rect key="frame" x="0.0" y="54.333333333333343" width="240" height="17"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <nil key="highlightedColor"/>

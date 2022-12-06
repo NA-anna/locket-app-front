@@ -20,7 +20,7 @@ class FiveMarketCell: UITableViewCell {
     func setValues(market: Item, index: Int){
         
         // 스타일
-        imgVw.layer.cornerRadius = 20
+        imgVw.layer.cornerRadius = 10
         
         // TABLE VIEW 에 데이터 뿌리기
         lblTitle.text = market.mrktNm

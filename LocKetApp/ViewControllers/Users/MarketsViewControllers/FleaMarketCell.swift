@@ -23,6 +23,7 @@ class FleaMarketCell: UITableViewCell {
     func setValues(market: Market, index: Int){
         
         // 스타일
+        imgVw.layer.cornerRadius = 10
         
         // TABLE VIEW 에 값 지정
     
@@ -33,14 +34,12 @@ class FleaMarketCell: UITableViewCell {
                 blobstorage.downloadImage(blobName: blobName, handler: { data in
                     let image = UIImage(data: data)
                     DispatchQueue.main.async {
-                        self.imgVw.layer.cornerRadius = 20
                         self.imgVw.image = image
                     }
                 })
             }
         // 사진 파일이 없으면 디폴트 이미지
         }else {
-            imgVw.layer.cornerRadius = 20
             imgVw.image = UIImage(named: "rocket_up")
         }
     

@@ -39,8 +39,8 @@ class FleaMarketDetailViewController: UIViewController, MTMapViewDelegate {
         textView.text = jsonString
  */
 
-        // UITextView style
-        viewFrame.layer.cornerRadius = 20
+        // style
+        self.navigationController?.navigationBar.topItem?.title = ""  // 내비게이션바 back 문구 지우기
         textView.layer.borderWidth = 1.0
         textView.layer.borderColor = UIColor.systemGray5.cgColor
         
