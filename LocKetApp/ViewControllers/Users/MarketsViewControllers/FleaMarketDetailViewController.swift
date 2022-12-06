@@ -40,8 +40,8 @@ class FleaMarketDetailViewController: UIViewController, MTMapViewDelegate {
  */
 
         // UITextView style
+        viewFrame.layer.cornerRadius = 20
         textView.layer.borderWidth = 1.0
-        textView.layer.cornerRadius = 10
         textView.layer.borderColor = UIColor.systemGray5.cgColor
         
         // 데이터
@@ -62,8 +62,9 @@ class FleaMarketDetailViewController: UIViewController, MTMapViewDelegate {
         mapView.setMapCenter(defaultMapPoint, zoomLevel: 1, animated: true)
         
         // 마켓정보
-        lblMarketName.text = "'\(market.name)'을 구경해보세요!"
-        textView.text = "'\(market.startdate)'부터 \n'\(market.enddate)'까지 열리는 \n'\(market.name)'에 놀러오세요! \n\n\(market.place) \n\n이 곳으로 오세요!"
+        guard let des = market.description else {return}
+        lblMarketName.text = market.name
+        textView.text = "날짜 : \(market.startdate) 부터 \(market.enddate)까지\n \n장소: \(market.place)\n\n\(des)"
         
         // 하트 색칠하기
         isFavorite = user.favorites.fav_fleamarkets.contains { element in

@@ -19,7 +19,6 @@ class FiveMarketDetailViewController: UIViewController, MTMapViewDelegate {
                 btnLike.setImage(UIImage(systemName: "heart.fill"), for: .normal)
             }else {
                 btnLike.setImage(UIImage(systemName: "heart"), for: .normal)
-                //저장
             }
         }
     }
@@ -39,8 +38,8 @@ class FiveMarketDetailViewController: UIViewController, MTMapViewDelegate {
         textView.text = jsonString
 */
         // UITextView style
+        viewFrame.layer.cornerRadius = 20
         textView.layer.borderWidth = 1.0
-        textView.layer.cornerRadius = 10
         textView.layer.borderColor = UIColor.systemGray5.cgColor
         
         // 데이터
@@ -62,8 +61,8 @@ class FiveMarketDetailViewController: UIViewController, MTMapViewDelegate {
         
         // 마켓정보
         let productList = fiveMarket.trtmntPrdlst.components(separatedBy: "+").joined(separator: ", ")
-        lblMarketName.text = "\(fiveMarket.mrktNm)으로 오세요!"
-        textView.text = "\(fiveMarket.storNumber)개의 점포 \n\(productList)\n상품을 구경하세요! \n\n도로명주소\n\(fiveMarket.rdnmadr) \n\n지번주소\n\(fiveMarket.lnmadr)"
+        lblMarketName.text = fiveMarket.mrktNm
+        textView.text = "점포 수: \(fiveMarket.storNumber)\n상품: \(productList)\n\n주소\n(도로명):\(fiveMarket.rdnmadr) \n(지번):\(fiveMarket.lnmadr)\n\n공용화장실 유뮤: \(fiveMarket.pblicToiletYn)\n주차장: \(fiveMarket.prkplceYn)"
         
         //하트 색칠하기
         isFavorite = user.favorites.fav_fivemarkets.contains { element in

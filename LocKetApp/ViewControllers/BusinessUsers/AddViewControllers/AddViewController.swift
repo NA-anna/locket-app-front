@@ -28,8 +28,8 @@ class AddViewController: UIViewController {
         didSet(oldValue){
         }willSet(newValue){
             txtFldPlace.text = newValue?.place_name
-            latitude = newValue?.x
-            longitude = newValue?.y
+            latitude = newValue?.y
+            longitude = newValue?.x
             enableAddBtn()
         }
     }

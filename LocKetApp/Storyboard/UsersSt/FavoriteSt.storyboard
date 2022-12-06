@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qkk-dL-OXx">
-    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -13,7 +13,7 @@
                     <tabBarItem key="tabBarItem" title="관심목록" image="heart" catalog="system" selectedImage="heart.fill" id="dYR-pM-T23"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5KO-7b-jwA">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -29,27 +29,27 @@
             <objects>
                 <tableViewController id="9IO-Lx-RMi" customClass="FavoritesViewController" customModule="LocKetApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="none" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="BIK-CC-zVz">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="favoritescell" id="Tqx-Xt-wo0">
-                                <rect key="frame" x="16" y="55.5" width="288" height="80"/>
+                                <rect key="frame" x="20" y="55.333332061767578" width="350" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Tqx-Xt-wo0" id="2kV-Ni-0nj">
-                                    <rect key="frame" x="0.0" y="0.0" width="288" height="80"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="350" height="80"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="x21-3w-6fE">
-                                            <rect key="frame" x="15" y="6.5" width="273" height="67"/>
+                                            <rect key="frame" x="15" y="6.6666666666666643" width="335" height="66.666666666666686"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="rocket_up 1" translatesAutoresizingMaskIntoConstraints="NO" id="NUf-P4-eKe">
-                                                    <rect key="frame" x="0.0" y="0.0" width="80" height="67"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="80" height="66.666666666666671"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="80" id="pXR-5l-tWj"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tableView로 즐겨찾기한 list 뿌리기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HLm-7D-1ie">
-                                                    <rect key="frame" x="88" y="23.5" width="185" height="20.5"/>
+                                                    <rect key="frame" x="88" y="23.333333333333336" width="247" height="20.333333333333336"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>

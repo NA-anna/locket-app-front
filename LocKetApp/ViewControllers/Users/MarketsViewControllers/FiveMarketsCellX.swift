@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FiveMarketsCell: UITableViewCell {
+class FiveMarketsCellX: UITableViewCell {
 
     @IBOutlet var title: UILabel!
     @IBOutlet var place: UILabel!
