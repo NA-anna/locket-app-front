@@ -99,6 +99,8 @@
 		A4C08ECF293CB3800075294B /* ApplicationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C08ECE293CB3800075294B /* ApplicationListViewController.swift */; };
 		A4C08ED1293D96320075294B /* MarketCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C08ED0293D96320075294B /* MarketCell.swift */; };
 		A4C08ED3293D9BB00075294B /* SellerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C08ED2293D9BB00075294B /* SellerCell.swift */; };
+		A654D4E4293F81DC00C0808F /* SideMenu in Frameworks */ = {isa = PBXBuildFile; productRef = A654D4E3293F81DC00C0808F /* SideMenu */; };
+		A654D4E6293F82C900C0808F /* SideMenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A654D4E5293F82C900C0808F /* SideMenuNavigationController.swift */; };
 		D6F5640DD4D2E8F1515BD067 /* Pods_LocKetApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DBD1F6CCA14FCEE6C33FC4C /* Pods_LocKetApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -206,6 +208,7 @@
 		A4C08ECE293CB3800075294B /* ApplicationListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationListViewController.swift; sourceTree = "<group>"; };
 		A4C08ED0293D96320075294B /* MarketCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketCell.swift; sourceTree = "<group>"; };
 		A4C08ED2293D9BB00075294B /* SellerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellerCell.swift; sourceTree = "<group>"; };
+		A654D4E5293F82C900C0808F /* SideMenuNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuNavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +222,7 @@
 				A49DF69E292B65970008D6B8 /* libxml2.tbd in Frameworks */,
 				A49DF6E7292B84630008D6B8 /* DaumMap.framework in Frameworks */,
 				A4B4BE03293F799E002D678E /* IQKeyboardManagerSwift in Frameworks */,
+				A654D4E4293F81DC00C0808F /* SideMenu in Frameworks */,
 				A49DF69D292B658E0008D6B8 /* libsqlite3.tbd in Frameworks */,
 				A49DF699292B65590008D6B8 /* QuartzCore.framework in Frameworks */,
 				A49DF697292B65490008D6B8 /* CoreLocation.framework in Frameworks */,
@@ -380,6 +384,7 @@
 				A4931EF8292F74CB003DA9D0 /* Login */,
 				A4931EF9292F74D9003DA9D0 /* Users */,
 				A4931EFA292F751A003DA9D0 /* BusinessUsers */,
+				A654D4E5293F82C900C0808F /* SideMenuNavigationController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -506,6 +511,7 @@
 				A49DF6FC292B85910008D6B8 /* Alamofire */,
 				A4C08EC8293B44A80075294B /* ProgressHUD */,
 				A4B4BE02293F799E002D678E /* IQKeyboardManagerSwift */,
+				A654D4E3293F81DC00C0808F /* SideMenu */,
 			);
 			productName = LocKetApp;
 			productReference = A49DF67A292B64FF0008D6B8 /* LocKetApp.app */;
@@ -539,6 +545,7 @@
 				A49DF6FB292B85910008D6B8 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				A4C08EC7293B44A80075294B /* XCRemoteSwiftPackageReference "ProgressHUD" */,
 				A4B4BE01293F799E002D678E /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				A654D4E2293F81DC00C0808F /* XCRemoteSwiftPackageReference "SideMenu" */,
 			);
 			productRefGroup = A49DF67B292B64FF0008D6B8 /* Products */;
 			projectDirPath = "";
@@ -671,6 +678,7 @@
 				A438075929335FC300C4596C /* MypageViewController.swift in Sources */,
 				A400850C29352616009FC8BD /* FiveMarketsCellX.swift in Sources */,
 				A49DF6EB292B85140008D6B8 /* AddViewController_category.swift in Sources */,
+				A654D4E6293F82C900C0808F /* SideMenuNavigationController.swift in Sources */,
 				A4C08ED1293D96320075294B /* MarketCell.swift in Sources */,
 				A49DF680292B64FF0008D6B8 /* SceneDelegate.swift in Sources */,
 				A49DF6A4292B82FD0008D6B8 /* MapViewController.swift in Sources */,
@@ -827,7 +835,7 @@
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = LP572SD537;
+				DEVELOPMENT_TEAM = TCRTN643RF;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/DaumMap.embeddedframework",
@@ -849,10 +857,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = net.womenup.2022.nyj.LocKetApp;
+				PRODUCT_BUNDLE_IDENTIFIER = net.womenup.2022.kyj.LocKetApp;
 				PRODUCT_NAME = LocKetApp;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/nayujin/Desktop/LocKetApp/LocKetApp/LocKetApp-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/yeonji/Documents/ReStart 2 4/locket-app-front/LocKetApp/LocKetApp-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -892,7 +900,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = net.womenup.2022.nyj.LocKetApp;
 				PRODUCT_NAME = LocKetApp;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/nayujin/Desktop/LocKetApp/LocKetApp/LocKetApp-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/yeonji/Documents/ReStart 2 4/locket-app-front/LocKetApp/LocKetApp-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -946,6 +954,14 @@
 				minimumVersion = 13.0.0;
 			};
 		};
+		A654D4E2293F81DC00C0808F /* XCRemoteSwiftPackageReference "SideMenu" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jonkykong/SideMenu.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -963,6 +979,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A4C08EC7293B44A80075294B /* XCRemoteSwiftPackageReference "ProgressHUD" */;
 			productName = ProgressHUD;
+		};
+		A654D4E3293F81DC00C0808F /* SideMenu */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A654D4E2293F81DC00C0808F /* XCRemoteSwiftPackageReference "SideMenu" */;
+			productName = SideMenu;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
