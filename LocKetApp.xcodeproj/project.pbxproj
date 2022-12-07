@@ -93,6 +93,8 @@
 		A4B4BDFA293F4116002D678E /* FiveMarketCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B4BDF9293F4116002D678E /* FiveMarketCell.swift */; };
 		A4B4BDFC293F43B8002D678E /* FleaMarketCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B4BDFB293F43B8002D678E /* FleaMarketCell.swift */; };
 		A4B4BE03293F799E002D678E /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A4B4BE02293F799E002D678E /* IQKeyboardManagerSwift */; };
+		A4B4BE05293FC391002D678E /* RoundUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B4BE04293FC391002D678E /* RoundUIImageView.swift */; };
+		A4B4BE072940619E002D678E /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B4BE062940619E002D678E /* MenuViewController.swift */; };
 		A4C08EC9293B44A80075294B /* ProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = A4C08EC8293B44A80075294B /* ProgressHUD */; };
 		A4C08ECB293B72A20075294B /* CustomModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C08ECA293B72A20075294B /* CustomModalViewController.swift */; };
 		A4C08ECD293CB0020075294B /* ApplicationListSt.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4C08ECC293CB0010075294B /* ApplicationListSt.storyboard */; };
@@ -203,6 +205,8 @@
 		A4B4BDF7293E72EA002D678E /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		A4B4BDF9293F4116002D678E /* FiveMarketCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveMarketCell.swift; sourceTree = "<group>"; };
 		A4B4BDFB293F43B8002D678E /* FleaMarketCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FleaMarketCell.swift; sourceTree = "<group>"; };
+		A4B4BE04293FC391002D678E /* RoundUIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundUIImageView.swift; sourceTree = "<group>"; };
+		A4B4BE062940619E002D678E /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		A4C08ECA293B72A20075294B /* CustomModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomModalViewController.swift; sourceTree = "<group>"; };
 		A4C08ECC293CB0010075294B /* ApplicationListSt.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ApplicationListSt.storyboard; sourceTree = "<group>"; };
 		A4C08ECE293CB3800075294B /* ApplicationListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationListViewController.swift; sourceTree = "<group>"; };
@@ -244,27 +248,27 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		A47934F7292F4C5F00F5A99A /* BusinessusersSt */ = {
+		A47934F7292F4C5F00F5A99A /* BUSINESSUSERS */ = {
 			isa = PBXGroup;
 			children = (
 				A47934F8292F4CAB00F5A99A /* BusinessuserHomeSt.storyboard */,
 				A4C08ECC293CB0010075294B /* ApplicationListSt.storyboard */,
 				A400850F293539A6009FC8BD /* AddingSt.storyboard */,
 			);
-			path = BusinessusersSt;
+			path = BUSINESSUSERS;
 			sourceTree = "<group>";
 		};
-		A47934FA292F4CBE00F5A99A /* UsersSt */ = {
+		A47934FA292F4CBE00F5A99A /* USERS */ = {
 			isa = PBXGroup;
 			children = (
 				A47901B3292F4F110032003C /* UsersTabBarSt.storyboard */,
 				A456E07F292F6DDA00388D42 /* UserHomeSt.storyboard */,
-				A4A36A2F292F1AC8001696CE /* Markets */,
-				A491A730292B8DBD0061BA62 /* MapSt.storyboard */,
-				A491A731292B8DBD0061BA62 /* FavoriteSt.storyboard */,
-				A491A72F292B8DBD0061BA62 /* MypageSt.storyboard */,
+				A4A36A2F292F1AC8001696CE /* TAB1-Markets */,
+				A4B4BE0A294068F9002D678E /* TAB2-Map */,
+				A4B4BE09294068ED002D678E /* TAB3-Favorites */,
+				A4B4BE08294068BE002D678E /* TAB4-MyPage */,
 			);
-			path = UsersSt;
+			path = USERS;
 			sourceTree = "<group>";
 		};
 		A491A739292B8E730061BA62 /* AddViewControllers */ = {
@@ -301,7 +305,7 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
-		A4931EF9292F74D9003DA9D0 /* Users */ = {
+		A4931EF9292F74D9003DA9D0 /* USERS */ = {
 			isa = PBXGroup;
 			children = (
 				A4931EF6292F74BA003DA9D0 /* UserHomeViewController.swift */,
@@ -312,19 +316,21 @@
 				A4C08ECA293B72A20075294B /* CustomModalViewController.swift */,
 				A444C098293265A6008F02C5 /* AppliedListViewController.swift */,
 			);
-			path = Users;
+			path = USERS;
 			sourceTree = "<group>";
 		};
-		A4931EFA292F751A003DA9D0 /* BusinessUsers */ = {
+		A4931EFA292F751A003DA9D0 /* BUSINESSUSERS */ = {
 			isa = PBXGroup;
 			children = (
 				A47901B5292F6B300032003C /* BusinessHomeViewController.swift */,
+				A654D4E5293F82C900C0808F /* SideMenuNavigationController.swift */,
+				A4B4BE062940619E002D678E /* MenuViewController.swift */,
 				A4C08ED0293D96320075294B /* MarketCell.swift */,
 				A4C08ECE293CB3800075294B /* ApplicationListViewController.swift */,
 				A4C08ED2293D9BB00075294B /* SellerCell.swift */,
 				A491A739292B8E730061BA62 /* AddViewControllers */,
 			);
-			path = BusinessUsers;
+			path = BUSINESSUSERS;
 			sourceTree = "<group>";
 		};
 		A49DF671292B64FF0008D6B8 = {
@@ -353,7 +359,6 @@
 				A49DF6A1292B82A00008D6B8 /* ViewControllers */,
 				A49DF67D292B64FF0008D6B8 /* AppDelegate.swift */,
 				A49DF67F292B64FF0008D6B8 /* SceneDelegate.swift */,
-				A49DF6EE292B85620008D6B8 /* Utils.swift */,
 				A49DF686292B65000008D6B8 /* Assets.xcassets */,
 				A49DF68B292B65000008D6B8 /* Info.plist */,
 				A49DF6A0292B66770008D6B8 /* LocKetApp-Bridging-Header.h */,
@@ -382,9 +387,8 @@
 			children = (
 				A438075E29345F8800C4596C /* LaunchViewControllerX.swift */,
 				A4931EF8292F74CB003DA9D0 /* Login */,
-				A4931EF9292F74D9003DA9D0 /* Users */,
-				A4931EFA292F751A003DA9D0 /* BusinessUsers */,
-				A654D4E5293F82C900C0808F /* SideMenuNavigationController.swift */,
+				A4931EF9292F74D9003DA9D0 /* USERS */,
+				A4931EFA292F751A003DA9D0 /* BUSINESSUSERS */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -394,8 +398,8 @@
 			children = (
 				A49DF688292B65000008D6B8 /* LaunchScreen.storyboard */,
 				A491A737292B8DE70061BA62 /* Main.storyboard */,
-				A47934FA292F4CBE00F5A99A /* UsersSt */,
-				A47934F7292F4C5F00F5A99A /* BusinessusersSt */,
+				A47934FA292F4CBE00F5A99A /* USERS */,
+				A47934F7292F4C5F00F5A99A /* BUSINESSUSERS */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -472,12 +476,14 @@
 				A491A73A292B8FCF0061BA62 /* 5MarketsAPI.swift */,
 				A49DF6F2292B85620008D6B8 /* kakaoAPI.swift */,
 				A44ACA4E2932135A001F0900 /* AzureBlobStorage.swift */,
+				A4B4BE04293FC391002D678E /* RoundUIImageView.swift */,
+				A49DF6EE292B85620008D6B8 /* Utils.swift */,
 				A4931EFD293066FC003DA9D0 /* mylocation.png */,
 			);
 			path = Data;
 			sourceTree = "<group>";
 		};
-		A4A36A2F292F1AC8001696CE /* Markets */ = {
+		A4A36A2F292F1AC8001696CE /* TAB1-Markets */ = {
 			isa = PBXGroup;
 			children = (
 				A4A36A2B292F18C6001696CE /* FiveMarketsSt.storyboard */,
@@ -486,7 +492,31 @@
 				A438075C2933DD1E00C4596C /* FleaMarketDetailSt.storyboard */,
 				A400850D293535CD009FC8BD /* ApplyingSt.storyboard */,
 			);
-			path = Markets;
+			path = "TAB1-Markets";
+			sourceTree = "<group>";
+		};
+		A4B4BE08294068BE002D678E /* TAB4-MyPage */ = {
+			isa = PBXGroup;
+			children = (
+				A491A72F292B8DBD0061BA62 /* MypageSt.storyboard */,
+			);
+			path = "TAB4-MyPage";
+			sourceTree = "<group>";
+		};
+		A4B4BE09294068ED002D678E /* TAB3-Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				A491A731292B8DBD0061BA62 /* FavoriteSt.storyboard */,
+			);
+			path = "TAB3-Favorites";
+			sourceTree = "<group>";
+		};
+		A4B4BE0A294068F9002D678E /* TAB2-Map */ = {
+			isa = PBXGroup;
+			children = (
+				A491A730292B8DBD0061BA62 /* MapSt.storyboard */,
+			);
+			path = "TAB2-Map";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -680,6 +710,7 @@
 				A49DF6EB292B85140008D6B8 /* AddViewController_category.swift in Sources */,
 				A654D4E6293F82C900C0808F /* SideMenuNavigationController.swift in Sources */,
 				A4C08ED1293D96320075294B /* MarketCell.swift in Sources */,
+				A4B4BE05293FC391002D678E /* RoundUIImageView.swift in Sources */,
 				A49DF680292B64FF0008D6B8 /* SceneDelegate.swift in Sources */,
 				A49DF6A4292B82FD0008D6B8 /* MapViewController.swift in Sources */,
 				A44ACA53293236B9001F0900 /* ApplyingViewController.swift in Sources */,
@@ -687,6 +718,7 @@
 				A491A742292BE7A20061BA62 /* FiveMarketsViewController.swift in Sources */,
 				A49DF6F7292B85620008D6B8 /* MarketsAPI.swift in Sources */,
 				A4C08ECB293B72A20075294B /* CustomModalViewController.swift in Sources */,
+				A4B4BE072940619E002D678E /* MenuViewController.swift in Sources */,
 				A49DF6ED292B85140008D6B8 /* AddViewController_place.swift in Sources */,
 				A4B4BDF8293E72EA002D678E /* SignInViewController.swift in Sources */,
 				A4C08ECF293CB3800075294B /* ApplicationListViewController.swift in Sources */,
@@ -835,7 +867,7 @@
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = TCRTN643RF;
+				DEVELOPMENT_TEAM = LP572SD537;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/DaumMap.embeddedframework",
@@ -857,10 +889,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = net.womenup.2022.kyj.LocKetApp;
+				PRODUCT_BUNDLE_IDENTIFIER = net.nyj.LocKetApp;
 				PRODUCT_NAME = LocKetApp;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/yeonji/Documents/ReStart 2 4/locket-app-front/LocKetApp/LocKetApp-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/nayujin/Desktop/LocKetApp/LocKetApp/LocKetApp-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -897,10 +929,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = net.womenup.2022.nyj.LocKetApp;
+				PRODUCT_BUNDLE_IDENTIFIER = net.nyj.LocKetApp;
 				PRODUCT_NAME = LocKetApp;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/yeonji/Documents/ReStart 2 4/locket-app-front/LocKetApp/LocKetApp-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/nayujin/Desktop/LocKetApp/LocKetApp/LocKetApp-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

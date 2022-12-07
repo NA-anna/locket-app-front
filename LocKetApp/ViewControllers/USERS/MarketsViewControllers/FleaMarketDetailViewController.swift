@@ -10,8 +10,10 @@ import CoreLocation
 
 class FleaMarketDetailViewController: UIViewController, MTMapViewDelegate {
     
+    //Azure Storage 설정 세팅
+    var blobstorage: AZBlobService = AZBlobService.init(connectionString, containerName: "marketprofile")
+    
     var market: Market?
-    var isGathering: Bool = false
     var isFavorite: Bool = false{
         didSet(oldValue){
         }willSet(newValue){
@@ -23,7 +25,8 @@ class FleaMarketDetailViewController: UIViewController, MTMapViewDelegate {
             }
         }
     }
-    @IBOutlet var lblMarketName: UILabel!
+    @IBOutlet var marketName: UINavigationItem!
+    @IBOutlet var imageView: UIImageView!
     @IBOutlet var viewFrame: UIView!
     @IBOutlet var textView: UITextView!
     @IBOutlet var btnLike: UIButton!
@@ -31,14 +34,7 @@ class FleaMarketDetailViewController: UIViewController, MTMapViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // 화면에 뿌려본 것. 나중에 주석 필요
-/*
-        let jsonData: Data = try! JSONEncoder().encode(market) // data
-        let jsonString: String = String.init(data: jsonData, encoding: .utf8) ?? "err"
-        textView.text = jsonString
- */
-
+        
         // style
         self.navigationController?.navigationBar.topItem?.title = ""  // 내비게이션바 back 문구 지우기
         textView.layer.borderWidth = 1.0
@@ -46,7 +42,38 @@ class FleaMarketDetailViewController: UIViewController, MTMapViewDelegate {
         
         // 데이터
         guard let user = user, let market = market else {return}
+  
+        // 사진 파일이 있으면 애저 스트로지에서 가져오기
+        if market.photo.count > 0 {
+            let blobName = market.photo[0]
+            if blobName != "" {
+                blobstorage.downloadImage(blobName: blobName, handler: { data in
+                    let image = UIImage(data: data)
+                    DispatchQueue.main.async {
+                        self.imageView.image = image
+                    }
+                })
+            }
+        }
         
+        // 마켓정보
+        guard let des = market.description else {return}
+        marketName.title = market.name
+        textView.text = "날짜 : \(market.startdate) 부터 \(market.enddate)까지\n \n장소: \(market.place)\n\n\(des)"
+        
+        // 하트 색칠하기
+        isFavorite = user.favorites.fav_fleamarkets.contains { element in
+            if element.market_id == market._id {
+                return true
+            }else { return false }
+        }
+        
+        // 신청하기 버튼 활성화
+        btnApplying.isHidden = !market.isGathering()
+        
+        
+        
+
         // 맵뷰
         // 1 맵뷰 그리기 by Kakao
         var mapView: MTMapView!
@@ -61,21 +88,7 @@ class FleaMarketDetailViewController: UIViewController, MTMapViewDelegate {
         let defaultMapPoint = MTMapPoint(geoCoord: MTMapPointGeo(latitude: lat, longitude: long))
         mapView.setMapCenter(defaultMapPoint, zoomLevel: 1, animated: true)
         
-        // 마켓정보
-        guard let des = market.description else {return}
-        lblMarketName.text = market.name
-        textView.text = "날짜 : \(market.startdate) 부터 \(market.enddate)까지\n \n장소: \(market.place)\n\n\(des)"
-        
-        // 하트 색칠하기
-        isFavorite = user.favorites.fav_fleamarkets.contains { element in
-            if element.market_id == market._id {
-                return true
-            }else { return false }
-        }
-        
-        // 신청하기 버튼 활성화
-        btnApplying.isHidden = !isGathering
-        
+
     }
     
     @IBAction func actFavorite(_ sender: UIButton) {

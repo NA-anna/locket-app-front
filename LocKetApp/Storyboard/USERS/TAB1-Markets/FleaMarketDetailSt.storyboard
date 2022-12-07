@@ -18,7 +18,7 @@
             </objects>
             <point key="canvasLocation" x="4034" y="280"/>
         </scene>
-        <!--Flea Market Detail View Controller-->
+        <!--마켓이름-->
         <scene sceneID="Q9a-NV-pTk">
             <objects>
                 <viewController storyboardIdentifier="FleaMarketDetail" id="XSt-HB-kkW" customClass="FleaMarketDetailViewController" customModule="LocKetApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -29,22 +29,22 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="THc-4x-75e">
                                 <rect key="frame" x="30" y="133" width="333" height="645"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="dCf-wQ-w87">
-                                        <rect key="frame" x="0.0" y="0.0" width="333" height="35"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vey-Uz-8gS">
+                                        <rect key="frame" x="0.0" y="0.0" width="333" height="300"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="35" id="gLA-pP-VrO"/>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="300" id="SSn-fa-ka1"/>
                                         </constraints>
-                                    </stackView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OwP-f5-hz5">
-                                        <rect key="frame" x="0.0" y="43" width="333" height="170"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OwP-f5-hz5">
+                                        <rect key="frame" x="0.0" y="308" width="333" height="100"/>
                                         <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                         <color key="tintColor" systemColor="tintColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="170" id="1DY-2k-x6m"/>
+                                            <constraint firstAttribute="height" constant="100" id="CLB-Jk-9Bd"/>
                                         </constraints>
                                     </view>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="F9c-73-sCn">
-                                        <rect key="frame" x="0.0" y="221" width="333" height="382"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="F9c-73-sCn">
+                                        <rect key="frame" x="0.0" y="416" width="333" height="187"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </string>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -79,7 +79,7 @@
                             <constraint firstItem="pfv-Rn-Dzx" firstAttribute="trailing" secondItem="THc-4x-75e" secondAttribute="trailing" constant="30" id="zzd-LZ-Sx0"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="FZP-ft-EHD">
+                    <navigationItem key="navigationItem" title="마켓이름" id="FZP-ft-EHD">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="lyH-jd-tAz">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="QCd-xC-gez">
                                 <rect key="frame" x="44" y="4.6666666666666679" width="333" height="35"/>
@@ -96,6 +96,8 @@
                     <connections>
                         <outlet property="btnApplying" destination="avW-ks-NNG" id="QgF-ro-uVX"/>
                         <outlet property="btnLike" destination="QCd-xC-gez" id="flA-aD-OFI"/>
+                        <outlet property="imageView" destination="vey-Uz-8gS" id="Fnj-kW-Spr"/>
+                        <outlet property="marketName" destination="FZP-ft-EHD" id="LZT-lb-bLk"/>
                         <outlet property="textView" destination="F9c-73-sCn" id="fc5-Vw-Y53"/>
                         <outlet property="viewFrame" destination="OwP-f5-hz5" id="FE9-1X-22B"/>
                     </connections>

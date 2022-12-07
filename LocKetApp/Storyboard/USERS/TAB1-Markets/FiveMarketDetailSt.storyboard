@@ -64,7 +64,6 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="MarketName" destination="REb-dA-zr6" id="iU8-OL-CSu"/>
                         <outlet property="btnLike" destination="uhS-K7-Cms" id="Wwu-Wc-aub"/>
                         <outlet property="marketName" destination="REb-dA-zr6" id="VWW-5N-8rM"/>
                         <outlet property="textView" destination="bYs-Ay-cSK" id="8HA-Qj-wPp"/>

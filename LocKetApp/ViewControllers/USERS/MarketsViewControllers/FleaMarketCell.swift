@@ -22,8 +22,6 @@ class FleaMarketCell: UITableViewCell {
     // UITableView 오브젝트 세팅
     func setValues(market: Market, index: Int){
         
-        // 스타일
-        imgVw.layer.cornerRadius = 10
         
         // TABLE VIEW 에 값 지정
     

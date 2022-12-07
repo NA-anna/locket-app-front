@@ -31,7 +31,6 @@ class UserHomeViewController: UIViewController {
             return market.needSellers && sellersForm.deadline > today
         }
         
-        
         // UICollectionView 프로토콜
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -44,10 +43,29 @@ class UserHomeViewController: UIViewController {
         self.view.endEditing(true)
     }
     
+    
+    // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let segueID = segue.identifier
+        if segueID == "gatheringMarket"{
+            let childVC = segue.destination as? FleaMarketDetailViewController
+            if let cell = sender as? UICollectionViewCell,
+               let indexPath = self.collectionView?.indexPath(for: cell){
+                childVC?.market = recruitingMarkets[indexPath.row]
+            }
+        }
+    }
 }
 
+
+
+
+
+
 // UICollectionView 프로토콜
-extension UserHomeViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+
+extension UserHomeViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return recruitingMarkets.count
@@ -55,10 +73,8 @@ extension UserHomeViewController: UICollectionViewDataSource, UICollectionViewDe
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "marketcell", for: indexPath)
         
-        let market = markets[indexPath.row]
+        let market = recruitingMarkets[indexPath.row]
         
-        //cell.layer.borderWidth = 0.5
-        //cell.layer.borderColor = UIColor.systemGray4.cgColor
         cell.layer.cornerRadius = 10
         
         // 사진 파일이 있으면 애저 스트로지에서 가져오기
@@ -91,15 +107,16 @@ extension UserHomeViewController: UICollectionViewDataSource, UICollectionViewDe
         
     }
     //간격?
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 10
-    }
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 10
-    }
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+//        return 10
+//    }
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+//        return 5
+//    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let height = collectionView.frame.height * 2/3
-        return CGSize(width: height * 1.5, height: height)
+        let height = collectionView.bounds.height //* 2/3
+        return CGSize(width: height * 1, height: height)
     }
 }
 

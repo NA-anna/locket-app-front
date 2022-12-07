@@ -79,7 +79,7 @@ class FleaMarketsViewController: UITableViewController {
             }
             
             
-            vc?.isGathering = (segCon.selectedSegmentIndex == 1) //모집중이면 True
+            //vc?.isGathering = (segCon.selectedSegmentIndex == 1) //모집중이면 True
         }
     }
 

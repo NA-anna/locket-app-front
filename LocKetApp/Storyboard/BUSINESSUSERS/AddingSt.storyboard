@@ -443,7 +443,7 @@
         <!--마켓 등록 하기-->
         <scene sceneID="NG0-Vs-G7U">
             <objects>
-                <viewController id="XcI-Nu-pmP" customClass="AddViewController" customModule="LocKetApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="addingSt" id="XcI-Nu-pmP" customClass="AddViewController" customModule="LocKetApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lLm-FE-CB2">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

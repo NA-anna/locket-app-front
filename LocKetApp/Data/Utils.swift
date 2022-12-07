@@ -65,6 +65,12 @@ extension String {
 
 */
 
+// 화면에 뿌려본 것. 나중에 주석 필요
+/*
+let jsonData: Data = try! JSONEncoder().encode(market) // data
+let jsonString: String = String.init(data: jsonData, encoding: .utf8) ?? "err"
+textView.text = jsonString
+*/
 
 extension UITextView {
     func setLineAndLetterSpacing(_ text: String){

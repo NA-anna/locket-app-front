@@ -37,7 +37,6 @@ class AddViewController: UIViewController {
     var longitude: String?
     
     @IBOutlet var btnDone: UIBarButtonItem!
-    //@IBOutlet var viewMain: UIView!
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var txtFldName: UITextField!
     @IBOutlet weak var txtFldCategory: UITextField!
@@ -57,6 +56,8 @@ class AddViewController: UIViewController {
         super.viewDidLoad()
         
         // style
+        self.navigationController?.navigationBar.topItem?.title = ""  // 내비게이션바 back 문구 지우기
+        
         txtVwDescription.layer.borderWidth = 1.0
         txtVwDescription.layer.cornerRadius = 10
         txtVwDescription.layer.borderColor = UIColor.systemGray6.cgColor

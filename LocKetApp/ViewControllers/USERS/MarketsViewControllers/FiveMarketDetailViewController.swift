@@ -31,12 +31,7 @@ class FiveMarketDetailViewController: UIViewController, MTMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // 화면에 뿌려본 것. 나중에 주석 필요
-/*
-        let jsonData: Data = try! JSONEncoder().encode(fiveMarket) // data
-        let jsonString:String = String.init(data: jsonData, encoding: .utf8) ?? "err"
-        textView.text = jsonString
-*/
+
         // style
         self.navigationController?.navigationBar.topItem?.title = ""  // 내비게이션바 back 문구 지우기
         textView.layer.borderWidth = 1.0
@@ -44,6 +39,19 @@ class FiveMarketDetailViewController: UIViewController, MTMapViewDelegate {
         
         // 데이터
         guard let user = user, let fiveMarket = fiveMarket else {return}
+        
+        // 마켓정보
+        let productList = fiveMarket.trtmntPrdlst.components(separatedBy: "+").joined(separator: ", ")
+        marketName.title = fiveMarket.mrktNm
+        textView.text = "점포 수: \(fiveMarket.storNumber)\n상품: \(productList)\n\n주소\n(도로명):\(fiveMarket.rdnmadr) \n(지번):\(fiveMarket.lnmadr)\n\n공용화장실 유뮤: \(fiveMarket.pblicToiletYn)\n주차장: \(fiveMarket.prkplceYn)"
+        
+        //하트 색칠하기
+        isFavorite = user.favorites.fav_fivemarkets.contains { element in
+            if element.market_name == fiveMarket.mrktNm {
+                return true
+            }else { return false }
+        }
+        
         
         // 맵뷰
         // 1 맵뷰 그리기 by Kakao
@@ -59,17 +67,7 @@ class FiveMarketDetailViewController: UIViewController, MTMapViewDelegate {
         let defaultMapPoint = MTMapPoint(geoCoord: MTMapPointGeo(latitude: lat, longitude: long))
         mapView.setMapCenter(defaultMapPoint, zoomLevel: 1, animated: true)
         
-        // 마켓정보
-        let productList = fiveMarket.trtmntPrdlst.components(separatedBy: "+").joined(separator: ", ")
-        marketName.title = fiveMarket.mrktNm
-        textView.text = "점포 수: \(fiveMarket.storNumber)\n상품: \(productList)\n\n주소\n(도로명):\(fiveMarket.rdnmadr) \n(지번):\(fiveMarket.lnmadr)\n\n공용화장실 유뮤: \(fiveMarket.pblicToiletYn)\n주차장: \(fiveMarket.prkplceYn)"
-        
-        //하트 색칠하기
-        isFavorite = user.favorites.fav_fivemarkets.contains { element in
-            if element.market_name == fiveMarket.mrktNm {
-                return true
-            }else { return false }
-        }
+
         
         
     }

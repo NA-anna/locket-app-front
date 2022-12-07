@@ -27,7 +27,7 @@ class SellerCell: UITableViewCell {
     
     // UITableView 오브젝트 세팅
     func setValues(seller: Seller, index: Int){
-        print(seller)
+        
         // (1) 라벨
         if let index = markets.firstIndex(where: { $0._id == seller.marketId }){
             let marketName = markets[index].name
@@ -40,6 +40,7 @@ class SellerCell: UITableViewCell {
         
         // (2) 이미지
         // 사진 파일이 있으면 애저 스트로지에서 가져오기
+        imgVw.layer.cornerRadius = 5.0
         if seller.photo.count > 0 {
             let blobName = seller.photo[0]
             if blobName != "" {

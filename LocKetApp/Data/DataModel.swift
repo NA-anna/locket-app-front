@@ -72,6 +72,16 @@ struct Market: Codable, Equatable {
     let isPromotional  : Bool
     let needSellers    : Bool
     let sellersForm    : SellersForm?
+    
+    func isGathering() -> Bool {
+        if let sellersForm = sellersForm {
+            return (needSellers && sellersForm.deadline > Date().toString())
+        } else {
+            return false
+        }
+    }
+   // var isGathering: Bool = (needSellers && sellersForm.deadline > Date().toString())
+
 }
 struct Location: Codable {
     let type       : String  //"Point"

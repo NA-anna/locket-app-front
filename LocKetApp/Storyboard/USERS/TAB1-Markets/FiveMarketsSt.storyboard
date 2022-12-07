@@ -52,12 +52,17 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="On2-Kt-Djo">
                                             <rect key="frame" x="36.666666666666657" y="29.333333333333336" width="320" height="71.333333333333314"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="10" contentMode="scaleAspectFit" image="fiveMarket_default" translatesAutoresizingMaskIntoConstraints="NO" id="yfh-lz-Ytj">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="10" contentMode="scaleAspectFit" image="fiveMarket_default" translatesAutoresizingMaskIntoConstraints="NO" id="yfh-lz-Ytj" customClass="RoundUIImageView" customModule="LocKetApp" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="5.6666666666666714" width="60" height="60"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="60" id="K63-EH-cyp"/>
                                                         <constraint firstAttribute="height" constant="60" id="Pj3-tK-9ip"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6Fm-eo-7ze">
                                                     <rect key="frame" x="80" y="0.0" width="240" height="71.333333333333329"/>
