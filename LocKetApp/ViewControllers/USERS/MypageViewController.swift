@@ -9,7 +9,12 @@ import UIKit
 
 class MypageViewController: UIViewController {
 
+    //Azure Storage 설정 세팅
+    var blobstorage: AZBlobService = AZBlobService.init(connectionString, containerName: "userprofile")
+    
     @IBOutlet var tableView: UITableView!
+    
+    @IBOutlet var userProfile: RoundUIImageView!
     @IBOutlet var nickName: UILabel!
     @IBOutlet var userEmail: UILabel!
     
@@ -21,11 +26,23 @@ class MypageViewController: UIViewController {
         tableView.rowHeight = 60
         
         guard let user = user else {return}
+        
         let name = user.name
         nickName.text = "\(name)"
         
         let email = user.email
         userEmail.text = "\(email)"
+        
+        // 사진 파일이 있으면 애저 스트로지에서 가져오기
+        let blobName = user.id + ".png"
+        if blobName != "" {
+            blobstorage.downloadImage(blobName: blobName, handler: { data in
+                let image = UIImage(data: data)
+                DispatchQueue.main.async {
+                    self.userProfile?.image = image
+                }
+            })
+        }
         
     }
     

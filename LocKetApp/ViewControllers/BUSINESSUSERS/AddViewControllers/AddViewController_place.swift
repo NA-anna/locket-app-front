@@ -54,10 +54,13 @@ class AddViewController_place: UITableViewController {
 
 }
 
+
+// 서치바 검색 시 바로 파라미터가 안넘어가는 문제 해결해야 함
 extension AddViewController_place: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         
+        searchBar.resignFirstResponder()
         
         callApiForPlace(with: searchBar.text) // -> 전역변수 placePublicData: ResultData? 에 데이터 저장
         
@@ -68,6 +71,9 @@ extension AddViewController_place: UISearchBarDelegate {
             self.tableView.reloadData()  
         }
         
-        searchBar.resignFirstResponder()
+        
     }
+    
 }
+
+

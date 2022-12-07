@@ -13,6 +13,10 @@ class MarketsViewController: UITableViewController {
     var category = "" //카테고리
     var pMarkets = markets
     
+    
+    
+    @IBOutlet var marketsCategory: UINavigationItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,7 +37,7 @@ class MarketsViewController: UITableViewController {
             }
         }
         
-        
+        marketsCategory.title = self.category
         
     }
     

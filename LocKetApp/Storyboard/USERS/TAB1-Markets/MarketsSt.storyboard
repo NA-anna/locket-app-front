@@ -154,6 +154,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="장날보기" id="MNg-Nj-vZA"/>
+                    <connections>
+                        <outlet property="marketsCategory" destination="MNg-Nj-vZA" id="Lp3-pe-6mV"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uEu-pf-ce2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

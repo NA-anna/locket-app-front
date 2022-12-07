@@ -87,7 +87,7 @@ class MapViewController: UIViewController, MTMapViewDelegate {
                 marker.itemName = placeName
                 marker.mapPoint = mapPoint
                 marker.markerType = .customImage
-                marker.customImage = UIImage(named: "pin_blueblack")
+                marker.customImage = UIImage(named: "pin_5")
                 marker.showAnimationType = .noAnimation
                 if let idx = fiveMarkets.firstIndex(of: fivemarket) {
                     marker.tag = idx
@@ -110,7 +110,12 @@ class MapViewController: UIViewController, MTMapViewDelegate {
             marker.itemName = placeName
             marker.mapPoint = mapPoint
             marker.markerType = .customImage
-            marker.customImage = UIImage(named: "pin_red")
+            switch market.category {
+            case "플리마켓": marker.customImage = UIImage(named: "pin_f")
+            case "야시장": marker.customImage = UIImage(named: "pin_n")
+            case "팝업": marker.customImage = UIImage(named: "pin_p")
+            default: return
+            }
             marker.showAnimationType = .noAnimation
             if let idx = markets.firstIndex(of: market) {
                 marker.tag = idx
