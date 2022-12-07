@@ -59,7 +59,10 @@ class UserHomeViewController: UIViewController {
         case "popupmarket" :
             let childVC = segue.destination as? MarketsViewController
             childVC?.category = "팝업"
-        case "gatheringMarket" :
+        case "isGathering" :
+            let childVC = segue.destination as? MarketsViewController
+            childVC?.category = "모집중"
+        case "gatheringMarket" :  //모집중장터
             let childVC = segue.destination as? MarketDetailViewController
             if let cell = sender as? UICollectionViewCell,
                let indexPath = self.collectionView?.indexPath(for: cell){

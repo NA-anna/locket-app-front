@@ -10,7 +10,7 @@ import UIKit
 class MarketsViewController: UITableViewController {
 
 
-    var category = "플리마켓" //카테고리
+    var category = "" //카테고리
     var pMarkets = markets
     
     override func viewDidLoad() {
@@ -20,10 +20,19 @@ class MarketsViewController: UITableViewController {
         self.navigationController?.navigationBar.topItem?.title = ""  // 내비게이션바 back 문구 지우기
         
         
-        // 카테고리에 따라서 마켓 필터
-        self.pMarkets = markets.filter { market in
-            return market.category == self.category
+        // 모집중인 마켓만 필터
+        if category == "모집중"{
+            self.pMarkets = markets.filter { market in
+                return market.isGathering() == true
+            }
         }
+        // 카테고리에 따라서 마켓 필터
+        else if category != ""{
+            self.pMarkets = markets.filter { market in
+                return market.category == self.category
+            }
+        }
+        
         
         
     }
