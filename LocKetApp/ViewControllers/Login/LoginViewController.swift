@@ -41,16 +41,17 @@ class LoginViewController: UIViewController {
                     // (1) 플리마켓 데이터 가져오기
                     getMarkets {
                         // (2) 5일장 데이터 가져와서 합치기 fiveMarkets -> fiveMarkets (for Map)
-                        var combinedFiveMarkets: [Item] = []
-                        get5Markets( numOfRows: 150, type: "5일장") {
+                        //var combinedFiveMarkets: [Item] = []
+                        get5Markets( numOfRows: 200, type: "5일장") {
+                            // 화면전환
+                            self.performSegue(withIdentifier: "user", sender: nil)
+                            /*
                             combinedFiveMarkets = fiveMarkets
                             get5Markets( numOfRows: 100, type: "상설장+5일장") {
                                 combinedFiveMarkets.append(contentsOf: fiveMarkets)
                                 fiveMarkets = combinedFiveMarkets
-                                
-                                // 화면전환
-                                self.performSegue(withIdentifier: "user", sender: nil)
                             }
+                             */
                         }
                     }
                     

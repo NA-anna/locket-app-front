@@ -17,10 +17,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ZP2-m6-Xaj">
-                                <rect key="frame" x="30" y="133" width="333" height="586"/>
+                                <rect key="frame" x="30" y="133" width="333" height="596"/>
                                 <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img-fiveMarket" translatesAutoresizingMaskIntoConstraints="NO" id="XpZ-2I-hNh">
+                                        <rect key="frame" x="0.0" y="0.0" width="333" height="250"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="250" id="IcK-6C-YhH"/>
+                                        </constraints>
+                                    </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qxO-Uv-huX">
-                                        <rect key="frame" x="0.0" y="0.0" width="333" height="170"/>
+                                        <rect key="frame" x="0.0" y="258" width="333" height="170"/>
                                         <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                         <color key="tintColor" systemColor="tintColor"/>
                                         <constraints>
@@ -28,7 +34,7 @@
                                         </constraints>
                                     </view>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYs-Ay-cSK">
-                                        <rect key="frame" x="0.0" y="178" width="333" height="408"/>
+                                        <rect key="frame" x="0.0" y="436" width="333" height="160"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </string>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -42,7 +48,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="ZP2-m6-Xaj" firstAttribute="top" secondItem="fwj-sC-2hs" secondAttribute="top" constant="30" id="2Jm-kt-CIU"/>
-                            <constraint firstItem="fwj-sC-2hs" firstAttribute="bottom" secondItem="ZP2-m6-Xaj" secondAttribute="bottom" constant="50" id="bY5-UE-wJ6"/>
+                            <constraint firstItem="fwj-sC-2hs" firstAttribute="bottom" secondItem="ZP2-m6-Xaj" secondAttribute="bottom" constant="40" id="bY5-UE-wJ6"/>
                             <constraint firstItem="fwj-sC-2hs" firstAttribute="trailing" secondItem="ZP2-m6-Xaj" secondAttribute="trailing" constant="30" id="hsb-6l-6U0"/>
                             <constraint firstItem="ZP2-m6-Xaj" firstAttribute="leading" secondItem="fwj-sC-2hs" secondAttribute="leading" constant="30" id="mLi-1D-Xu1"/>
                         </constraints>
@@ -93,6 +99,7 @@
     </scenes>
     <resources>
         <image name="heart" catalog="system" width="128" height="107"/>
+        <image name="img-fiveMarket" width="220" height="104"/>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

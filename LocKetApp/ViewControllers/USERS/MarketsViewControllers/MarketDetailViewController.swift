@@ -1,5 +1,5 @@
 //
-//  FleaMarketDetailViewController.swift
+//  MarketDetailViewController.swift
 //  LocKetApp
 //
 //  Created by 나유진 on 2022/11/25.
@@ -8,7 +8,7 @@
 import UIKit
 import CoreLocation
 
-class FleaMarketDetailViewController: UIViewController, MTMapViewDelegate {
+class MarketDetailViewController: UIViewController, MTMapViewDelegate {
     
     //Azure Storage 설정 세팅
     var blobstorage: AZBlobService = AZBlobService.init(connectionString, containerName: "marketprofile")

@@ -23,16 +23,16 @@
             </objects>
             <point key="canvasLocation" x="1553" y="450"/>
         </scene>
-        <!--Flea Markets View Controller-->
+        <!--장날보기-->
         <scene sceneID="k54-1e-YdR">
             <objects>
-                <tableViewController storyboardIdentifier="marketStoryboard" id="kqK-IC-xR5" customClass="FleaMarketsViewController" customModule="LocKetApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="marketStoryboard" id="kqK-IC-xR5" customClass="MarketsViewController" customModule="LocKetApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="130" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="uVr-hd-Fmv">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="marketcell" id="Kq3-cg-gmf" customClass="FleaMarketCell" customModule="LocKetApp" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="marketcell" id="Kq3-cg-gmf" customClass="MarketsCell" customModule="LocKetApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="50" width="393" height="130"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Kq3-cg-gmf" id="ASj-lu-oVg">
@@ -153,34 +153,16 @@
                             <outlet property="delegate" destination="kqK-IC-xR5" id="V0N-rz-bz9"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="MNg-Nj-vZA">
-                        <nil key="title"/>
-                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" segmentControlStyle="bar" selectedSegmentIndex="0" id="KL7-fd-QbM">
-                            <rect key="frame" x="46.666666666666657" y="5.6666666666666679" width="300" height="33"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <segments>
-                                <segment title="장날보기"/>
-                                <segment title="모집중"/>
-                            </segments>
-                            <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <connections>
-                                <action selector="changeSegment:" destination="kqK-IC-xR5" eventType="valueChanged" id="yHP-Yl-cLh"/>
-                            </connections>
-                        </segmentedControl>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="segCon" destination="KL7-fd-QbM" id="PRz-rk-o6i"/>
-                    </connections>
+                    <navigationItem key="navigationItem" title="장날보기" id="MNg-Nj-vZA"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uEu-pf-ce2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2460" y="450"/>
         </scene>
-        <!--FleaMarketDetailSt-->
+        <!--MarketDetailSt-->
         <scene sceneID="R4c-qK-DJY">
             <objects>
-                <viewControllerPlaceholder storyboardName="FleaMarketDetailSt" id="ooM-Yf-xvR" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="MarketDetailSt" id="ooM-Yf-xvR" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Grt-SW-yWM"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oMd-SX-4rk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -188,6 +170,11 @@
             <point key="canvasLocation" x="3234" y="458"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="PPr-dO-n2P">
+            <size key="intrinsicContentSize" width="170.66666666666666" height="170.66666666666666"/>
+        </designable>
+    </designables>
     <resources>
         <image name="rocket_up" width="170.66667175292969" height="170.66667175292969"/>
         <systemColor name="systemBackgroundColor">

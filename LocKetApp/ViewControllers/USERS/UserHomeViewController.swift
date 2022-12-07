@@ -49,7 +49,7 @@ class UserHomeViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let segueID = segue.identifier
         if segueID == "gatheringMarket"{
-            let childVC = segue.destination as? FleaMarketDetailViewController
+            let childVC = segue.destination as? MarketDetailViewController
             if let cell = sender as? UICollectionViewCell,
                let indexPath = self.collectionView?.indexPath(for: cell){
                 childVC?.market = recruitingMarkets[indexPath.row]
@@ -57,6 +57,13 @@ class UserHomeViewController: UIViewController {
         }
     }
 }
+
+
+
+
+
+
+
 
 
 

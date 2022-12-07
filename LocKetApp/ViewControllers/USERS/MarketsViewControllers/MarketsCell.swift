@@ -1,5 +1,5 @@
 //
-//  FleaMarketCell.swift
+//  MarketsCell.swift
 //  LocKetApp
 //
 //  Created by 나유진 on 2022/12/06.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FleaMarketCell: UITableViewCell {
+class MarketsCell: UITableViewCell {
 
     //Azure Storage 설정 세팅
     var blobstorage: AZBlobService = AZBlobService.init(connectionString, containerName: "marketprofile")

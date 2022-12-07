@@ -140,8 +140,8 @@ class MapViewController: UIViewController, MTMapViewDelegate {
     func mapView(_ mapView: MTMapView!, touchedCalloutBalloonOf poiItem: MTMapPOIItem!) {
         
         if poiItem.customImage == UIImage(named: "pin_red") {
-            let storyBoard = UIStoryboard(name: "FleaMarketDetailSt", bundle: nil)
-            let vc = storyBoard.instantiateViewController(withIdentifier: "FleaMarketDetail") as? FleaMarketDetailViewController
+            let storyBoard = UIStoryboard(name: "MarketDetailSt", bundle: nil)
+            let vc = storyBoard.instantiateViewController(withIdentifier: "MarketDetail") as? MarketDetailViewController
             vc?.market = markets[poiItem.tag]
             self.navigationController?.pushViewController(vc!, animated: true)
         }else {

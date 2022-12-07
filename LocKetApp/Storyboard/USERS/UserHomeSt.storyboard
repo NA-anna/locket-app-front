@@ -294,27 +294,27 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EFf-Va-6Ha" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="176" y="47"/>
+            <point key="canvasLocation" x="191" y="-45"/>
         </scene>
-        <!--FleaMarketsSt-->
+        <!--MarketsSt-->
         <scene sceneID="Fgb-UV-viA">
             <objects>
-                <viewControllerPlaceholder storyboardName="FleaMarketsSt" id="e7F-vz-Imy" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="MarketsSt" id="e7F-vz-Imy" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Dx6-Vj-8cX"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DNk-rL-GIE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="176" y="80"/>
+            <point key="canvasLocation" x="209" y="64"/>
         </scene>
-        <!--FleaMarketDetailSt-->
+        <!--MarketDetailSt-->
         <scene sceneID="TWi-Ft-nhP">
             <objects>
-                <viewControllerPlaceholder storyboardName="FleaMarketDetailSt" id="3T8-g4-xsB" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="MarketDetailSt" id="3T8-g4-xsB" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="cHe-Nb-YEM"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="15B-bG-LvF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="119" y="200"/>
+            <point key="canvasLocation" x="191" y="187"/>
         </scene>
         <!--홈-->
         <scene sceneID="SQi-5Y-qyZ">
@@ -924,16 +924,16 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="o3x-YY-SFs">
-                                <rect key="frame" x="47.666666666666657" y="147" width="332.66666666666674" height="632"/>
+                                <rect key="frame" x="35" y="147" width="358" height="632"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8EW-4f-edy">
-                                        <rect key="frame" x="0.0" y="0.0" width="332.66666666666669" height="176"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="358" height="176"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="pl3-5X-yAr">
-                                                <rect key="frame" x="0.0" y="0.0" width="332.66666666666669" height="110"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="358" height="110"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="txk-as-VpW" userLabel="연유라떼님, 안녕하세요.">
-                                                        <rect key="frame" x="0.0" y="0.0" width="332.66666666666669" height="52.666666666666664"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="358" height="52.666666666666664"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="연유라떼님">
                                                                 <attributes>
@@ -967,7 +967,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오늘은 어떤 장에 가보시겠어요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lFR-os-HBA">
-                                                        <rect key="frame" x="0.0" y="87.666666666666657" width="332.66666666666669" height="22.333333333333329"/>
+                                                        <rect key="frame" x="0.0" y="87.666666666666657" width="358" height="22.333333333333329"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -975,10 +975,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="BMp-6W-ydt">
-                                                <rect key="frame" x="0.0" y="120" width="332.66666666666669" height="56"/>
+                                                <rect key="frame" x="0.0" y="120" width="358" height="56"/>
                                                 <subviews>
                                                     <searchBar contentMode="redraw" searchBarStyle="minimal" text="" placeholder="궁금한 마켓이 있다면 검색 해보세요." translatesAutoresizingMaskIntoConstraints="NO" id="xzk-sq-uhh">
-                                                        <rect key="frame" x="0.0" y="0.0" width="332.66666666666669" height="56"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="358" height="56"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <scopeButtonTitles>
                                                             <string>Title</string>
@@ -993,7 +993,7 @@
                                         </subviews>
                                     </stackView>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sOq-qd-nwE">
-                                        <rect key="frame" x="0.0" y="198" width="332.66666666666669" height="120"/>
+                                        <rect key="frame" x="0.0" y="198" width="358" height="120"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="SCf-vF-Gbi">
                                                 <rect key="frame" x="0.0" y="0.0" width="407" height="120"/>
@@ -1006,7 +1006,7 @@
                                                             <segue destination="3p1-NX-m99" kind="show" id="Ba8-iE-5Co"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LPO-Ir-vTf">
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LPO-Ir-vTf">
                                                         <rect key="frame" x="102" y="0.0" width="101" height="120"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" image="ic-market"/>
@@ -1014,12 +1014,15 @@
                                                             <segue destination="e7F-vz-Imy" kind="show" id="gNu-0P-R3z"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ESv-CU-vZP">
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ESv-CU-vZP">
                                                         <rect key="frame" x="204" y="0.0" width="101" height="120"/>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" image="ic-market2"/>
+                                                        <buttonConfiguration key="configuration" style="plain" image="ic-nightMarket"/>
+                                                        <connections>
+                                                            <segue destination="e7F-vz-Imy" kind="show" id="bOR-VZ-VIi"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zUY-gF-R8R">
+                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zUY-gF-R8R">
                                                         <rect key="frame" x="306" y="0.0" width="101" height="120"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" image="ic-popUp"/>
@@ -1038,19 +1041,19 @@
                                         <viewLayoutGuide key="frameLayoutGuide" id="R9z-rg-eEa"/>
                                     </scrollView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="AX9-98-dxF">
-                                        <rect key="frame" x="0.0" y="340" width="332.66666666666669" height="292"/>
+                                        <rect key="frame" x="0.0" y="340" width="358" height="292"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="EJM-6B-R14">
-                                                <rect key="frame" x="0.0" y="0.0" width="332.66666666666669" height="34"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="358" height="34"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="오늘의 모집중 장터" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gg2-QG-cAn">
-                                                        <rect key="frame" x="0.0" y="0.0" width="179.66666666666666" height="34"/>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="177" height="34"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oqJ-RH-fie">
-                                                        <rect key="frame" x="249.66666666666663" y="0.0" width="83" height="34"/>
+                                                        <rect key="frame" x="247" y="0.0" width="111" height="34"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="전체보기" cornerStyle="capsule">
@@ -1065,7 +1068,7 @@
                                                 </constraints>
                                             </stackView>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gqP-Cw-l07">
-                                                <rect key="frame" x="0.0" y="42" width="332.66666666666669" height="250"/>
+                                                <rect key="frame" x="0.0" y="42" width="358" height="250"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="250" id="fRo-2V-n0g"/>
@@ -1131,6 +1134,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="o3x-YY-SFs" firstAttribute="centerX" secondItem="Iej-gj-aGo" secondAttribute="centerX" id="JBO-LE-tnI"/>
+                            <constraint firstItem="o3x-YY-SFs" firstAttribute="leading" secondItem="aRI-Wv-3ck" secondAttribute="leading" constant="35" id="iQG-nh-5Ea"/>
                             <constraint firstItem="o3x-YY-SFs" firstAttribute="centerY" secondItem="Iej-gj-aGo" secondAttribute="centerY" id="tfQ-wl-t3j"/>
                         </constraints>
                     </view>
@@ -1152,12 +1156,16 @@
             <point key="canvasLocation" x="-480.84112149532706" y="64.146868250539967"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="gNu-0P-R3z"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Group 732" width="77" height="106"/>
         <image name="house" catalog="system" width="128" height="104"/>
         <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="ic-market" width="77" height="106"/>
         <image name="ic-market2" width="77" height="106"/>
+        <image name="ic-nightMarket" width="77" height="106"/>
         <image name="ic-popUp" width="77" height="106"/>
         <image name="img-fiveMarket" width="220" height="104"/>
         <image name="img-market" width="220" height="104"/>

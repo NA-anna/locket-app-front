@@ -12,7 +12,7 @@
 		A4008510293539A6009FC8BD /* AddingSt.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A400850F293539A6009FC8BD /* AddingSt.storyboard */; };
 		A438075929335FC300C4596C /* MypageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A438075829335FC300C4596C /* MypageViewController.swift */; };
 		A438075B2933DD0700C4596C /* FiveMarketDetailSt.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A438075A2933DD0700C4596C /* FiveMarketDetailSt.storyboard */; };
-		A438075D2933DD1E00C4596C /* FleaMarketDetailSt.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A438075C2933DD1E00C4596C /* FleaMarketDetailSt.storyboard */; };
+		A438075D2933DD1E00C4596C /* MarketDetailSt.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A438075C2933DD1E00C4596C /* MarketDetailSt.storyboard */; };
 		A438075F29345F8800C4596C /* LaunchViewControllerX.swift in Sources */ = {isa = PBXBuildFile; fileRef = A438075E29345F8800C4596C /* LaunchViewControllerX.swift */; };
 		A444C099293265A6008F02C5 /* AppliedListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A444C098293265A6008F02C5 /* AppliedListViewController.swift */; };
 		A444C09B29326905008F02C5 /* SellersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A444C09A29326905008F02C5 /* SellersAPI.swift */; };
@@ -22,7 +22,7 @@
 		A456E080292F6DDA00388D42 /* UserHomeSt.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A456E07F292F6DDA00388D42 /* UserHomeSt.storyboard */; };
 		A47901B4292F4F110032003C /* UsersTabBarSt.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A47901B3292F4F110032003C /* UsersTabBarSt.storyboard */; };
 		A47901B6292F6B300032003C /* BusinessHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47901B5292F6B300032003C /* BusinessHomeViewController.swift */; };
-		A47934F6292F1BA300F5A99A /* FleaMarketsSt.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A47934F5292F1BA300F5A99A /* FleaMarketsSt.storyboard */; };
+		A47934F6292F1BA300F5A99A /* MarketsSt.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A47934F5292F1BA300F5A99A /* MarketsSt.storyboard */; };
 		A47934F9292F4CAB00F5A99A /* BusinessuserHomeSt.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A47934F8292F4CAB00F5A99A /* BusinessuserHomeSt.storyboard */; };
 		A47FB3A4292D185400884C61 /* FiveMarketDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47FB3A3292D185400884C61 /* FiveMarketDetailViewController.swift */; };
 		A47FB3A6292D1E9F00884C61 /* UsersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47FB3A5292D1E9F00884C61 /* UsersAPI.swift */; };
@@ -37,7 +37,7 @@
 		A4931EF7292F74BA003DA9D0 /* UserHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4931EF6292F74BA003DA9D0 /* UserHomeViewController.swift */; };
 		A4931EFC29305661003DA9D0 /* BusinessusersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4931EFB29305661003DA9D0 /* BusinessusersAPI.swift */; };
 		A4931EFE293066FC003DA9D0 /* mylocation.png in Resources */ = {isa = PBXBuildFile; fileRef = A4931EFD293066FC003DA9D0 /* mylocation.png */; };
-		A4931F0029308821003DA9D0 /* FleaMarketDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4931EFF29308821003DA9D0 /* FleaMarketDetailViewController.swift */; };
+		A4931F0029308821003DA9D0 /* MarketDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4931EFF29308821003DA9D0 /* MarketDetailViewController.swift */; };
 		A49DF67E292B64FF0008D6B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49DF67D292B64FF0008D6B8 /* AppDelegate.swift */; };
 		A49DF680292B64FF0008D6B8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49DF67F292B64FF0008D6B8 /* SceneDelegate.swift */; };
 		A49DF682292B64FF0008D6B8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49DF681292B64FF0008D6B8 /* LoginViewController.swift */; };
@@ -86,12 +86,12 @@
 		A49DF6F7292B85620008D6B8 /* MarketsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49DF6F1292B85620008D6B8 /* MarketsAPI.swift */; };
 		A49DF6F8292B85620008D6B8 /* kakaoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49DF6F2292B85620008D6B8 /* kakaoAPI.swift */; };
 		A49DF6F9292B85620008D6B8 /* Host.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49DF6F3292B85620008D6B8 /* Host.swift */; };
-		A49DF6FA292B85620008D6B8 /* FleaMarketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49DF6F4292B85620008D6B8 /* FleaMarketsViewController.swift */; };
+		A49DF6FA292B85620008D6B8 /* MarketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49DF6F4292B85620008D6B8 /* MarketsViewController.swift */; };
 		A49DF6FD292B85910008D6B8 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = A49DF6FC292B85910008D6B8 /* Alamofire */; };
 		A4A36A2C292F18C6001696CE /* FiveMarketsSt.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4A36A2B292F18C6001696CE /* FiveMarketsSt.storyboard */; };
 		A4B4BDF8293E72EA002D678E /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B4BDF7293E72EA002D678E /* SignInViewController.swift */; };
 		A4B4BDFA293F4116002D678E /* FiveMarketCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B4BDF9293F4116002D678E /* FiveMarketCell.swift */; };
-		A4B4BDFC293F43B8002D678E /* FleaMarketCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B4BDFB293F43B8002D678E /* FleaMarketCell.swift */; };
+		A4B4BDFC293F43B8002D678E /* MarketsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B4BDFB293F43B8002D678E /* MarketsCell.swift */; };
 		A4B4BE03293F799E002D678E /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A4B4BE02293F799E002D678E /* IQKeyboardManagerSwift */; };
 		A4B4BE05293FC391002D678E /* RoundUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B4BE04293FC391002D678E /* RoundUIImageView.swift */; };
 		A4B4BE072940619E002D678E /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B4BE062940619E002D678E /* MenuViewController.swift */; };
@@ -115,7 +115,7 @@
 		A400850F293539A6009FC8BD /* AddingSt.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddingSt.storyboard; sourceTree = "<group>"; };
 		A438075829335FC300C4596C /* MypageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MypageViewController.swift; sourceTree = "<group>"; };
 		A438075A2933DD0700C4596C /* FiveMarketDetailSt.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FiveMarketDetailSt.storyboard; sourceTree = "<group>"; };
-		A438075C2933DD1E00C4596C /* FleaMarketDetailSt.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FleaMarketDetailSt.storyboard; sourceTree = "<group>"; };
+		A438075C2933DD1E00C4596C /* MarketDetailSt.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MarketDetailSt.storyboard; sourceTree = "<group>"; };
 		A438075E29345F8800C4596C /* LaunchViewControllerX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewControllerX.swift; sourceTree = "<group>"; };
 		A444C098293265A6008F02C5 /* AppliedListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppliedListViewController.swift; sourceTree = "<group>"; };
 		A444C09A29326905008F02C5 /* SellersAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellersAPI.swift; sourceTree = "<group>"; };
@@ -125,7 +125,7 @@
 		A456E07F292F6DDA00388D42 /* UserHomeSt.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserHomeSt.storyboard; sourceTree = "<group>"; };
 		A47901B3292F4F110032003C /* UsersTabBarSt.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UsersTabBarSt.storyboard; sourceTree = "<group>"; };
 		A47901B5292F6B300032003C /* BusinessHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessHomeViewController.swift; sourceTree = "<group>"; };
-		A47934F5292F1BA300F5A99A /* FleaMarketsSt.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FleaMarketsSt.storyboard; sourceTree = "<group>"; };
+		A47934F5292F1BA300F5A99A /* MarketsSt.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MarketsSt.storyboard; sourceTree = "<group>"; };
 		A47934F8292F4CAB00F5A99A /* BusinessuserHomeSt.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BusinessuserHomeSt.storyboard; sourceTree = "<group>"; };
 		A47FB3A3292D185400884C61 /* FiveMarketDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveMarketDetailViewController.swift; sourceTree = "<group>"; };
 		A47FB3A5292D1E9F00884C61 /* UsersAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersAPI.swift; sourceTree = "<group>"; };
@@ -139,7 +139,7 @@
 		A4931EF6292F74BA003DA9D0 /* UserHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHomeViewController.swift; sourceTree = "<group>"; };
 		A4931EFB29305661003DA9D0 /* BusinessusersAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessusersAPI.swift; sourceTree = "<group>"; };
 		A4931EFD293066FC003DA9D0 /* mylocation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mylocation.png; sourceTree = "<group>"; };
-		A4931EFF29308821003DA9D0 /* FleaMarketDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FleaMarketDetailViewController.swift; sourceTree = "<group>"; };
+		A4931EFF29308821003DA9D0 /* MarketDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketDetailViewController.swift; sourceTree = "<group>"; };
 		A49DF67A292B64FF0008D6B8 /* LocKetApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocKetApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A49DF67D292B64FF0008D6B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A49DF67F292B64FF0008D6B8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -200,11 +200,11 @@
 		A49DF6F1292B85620008D6B8 /* MarketsAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketsAPI.swift; sourceTree = "<group>"; };
 		A49DF6F2292B85620008D6B8 /* kakaoAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = kakaoAPI.swift; sourceTree = "<group>"; };
 		A49DF6F3292B85620008D6B8 /* Host.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Host.swift; sourceTree = "<group>"; };
-		A49DF6F4292B85620008D6B8 /* FleaMarketsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FleaMarketsViewController.swift; sourceTree = "<group>"; };
+		A49DF6F4292B85620008D6B8 /* MarketsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketsViewController.swift; sourceTree = "<group>"; };
 		A4A36A2B292F18C6001696CE /* FiveMarketsSt.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FiveMarketsSt.storyboard; sourceTree = "<group>"; };
 		A4B4BDF7293E72EA002D678E /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		A4B4BDF9293F4116002D678E /* FiveMarketCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveMarketCell.swift; sourceTree = "<group>"; };
-		A4B4BDFB293F43B8002D678E /* FleaMarketCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FleaMarketCell.swift; sourceTree = "<group>"; };
+		A4B4BDFB293F43B8002D678E /* MarketsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketsCell.swift; sourceTree = "<group>"; };
 		A4B4BE04293FC391002D678E /* RoundUIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundUIImageView.swift; sourceTree = "<group>"; };
 		A4B4BE062940619E002D678E /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		A4C08ECA293B72A20075294B /* CustomModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomModalViewController.swift; sourceTree = "<group>"; };
@@ -287,9 +287,9 @@
 				A491A741292BE7A20061BA62 /* FiveMarketsViewController.swift */,
 				A4B4BDF9293F4116002D678E /* FiveMarketCell.swift */,
 				A47FB3A3292D185400884C61 /* FiveMarketDetailViewController.swift */,
-				A49DF6F4292B85620008D6B8 /* FleaMarketsViewController.swift */,
-				A4B4BDFB293F43B8002D678E /* FleaMarketCell.swift */,
-				A4931EFF29308821003DA9D0 /* FleaMarketDetailViewController.swift */,
+				A49DF6F4292B85620008D6B8 /* MarketsViewController.swift */,
+				A4B4BDFB293F43B8002D678E /* MarketsCell.swift */,
+				A4931EFF29308821003DA9D0 /* MarketDetailViewController.swift */,
 				A44ACA52293236B9001F0900 /* ApplyingViewController.swift */,
 				A400850B29352616009FC8BD /* FiveMarketsCellX.swift */,
 			);
@@ -299,8 +299,8 @@
 		A4931EF8292F74CB003DA9D0 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				A4B4BDF7293E72EA002D678E /* SignInViewController.swift */,
 				A49DF681292B64FF0008D6B8 /* LoginViewController.swift */,
+				A4B4BDF7293E72EA002D678E /* SignInViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -488,8 +488,8 @@
 			children = (
 				A4A36A2B292F18C6001696CE /* FiveMarketsSt.storyboard */,
 				A438075A2933DD0700C4596C /* FiveMarketDetailSt.storyboard */,
-				A47934F5292F1BA300F5A99A /* FleaMarketsSt.storyboard */,
-				A438075C2933DD1E00C4596C /* FleaMarketDetailSt.storyboard */,
+				A47934F5292F1BA300F5A99A /* MarketsSt.storyboard */,
+				A438075C2933DD1E00C4596C /* MarketDetailSt.storyboard */,
 				A400850D293535CD009FC8BD /* ApplyingSt.storyboard */,
 			);
 			path = "TAB1-Markets";
@@ -603,12 +603,12 @@
 				A49DF6DA292B84630008D6B8 /* map_pin_red.png in Resources */,
 				A49DF6CC292B84630008D6B8 /* map_pinup_custom@3x.png in Resources */,
 				A438075B2933DD0700C4596C /* FiveMarketDetailSt.storyboard in Resources */,
-				A47934F6292F1BA300F5A99A /* FleaMarketsSt.storyboard in Resources */,
+				A47934F6292F1BA300F5A99A /* MarketsSt.storyboard in Resources */,
 				A49DF6D4292B84630008D6B8 /* copyright.png in Resources */,
 				A49DF6D3292B84630008D6B8 /* map_pin_shadow@3x.png in Resources */,
 				A49DF68A292B65000008D6B8 /* LaunchScreen.storyboard in Resources */,
 				A456E080292F6DDA00388D42 /* UserHomeSt.storyboard in Resources */,
-				A438075D2933DD1E00C4596C /* FleaMarketDetailSt.storyboard in Resources */,
+				A438075D2933DD1E00C4596C /* MarketDetailSt.storyboard in Resources */,
 				A49DF6D7292B84630008D6B8 /* daum_copyright.png in Resources */,
 				A49DF6DB292B84630008D6B8 /* info_box.png in Resources */,
 				A49DF6D1292B84630008D6B8 /* map_pin_custom@3x.png in Resources */,
@@ -689,11 +689,11 @@
 			files = (
 				A49DF682292B64FF0008D6B8 /* LoginViewController.swift in Sources */,
 				A4931EF7292F74BA003DA9D0 /* UserHomeViewController.swift in Sources */,
-				A4B4BDFC293F43B8002D678E /* FleaMarketCell.swift in Sources */,
+				A4B4BDFC293F43B8002D678E /* MarketsCell.swift in Sources */,
 				A49DF67E292B64FF0008D6B8 /* AppDelegate.swift in Sources */,
 				A4B4BDFA293F4116002D678E /* FiveMarketCell.swift in Sources */,
 				A491A73B292B8FCF0061BA62 /* 5MarketsAPI.swift in Sources */,
-				A49DF6FA292B85620008D6B8 /* FleaMarketsViewController.swift in Sources */,
+				A49DF6FA292B85620008D6B8 /* MarketsViewController.swift in Sources */,
 				A438075F29345F8800C4596C /* LaunchViewControllerX.swift in Sources */,
 				A44ACA4F2932135A001F0900 /* AzureBlobStorage.swift in Sources */,
 				A444C099293265A6008F02C5 /* AppliedListViewController.swift in Sources */,
@@ -726,7 +726,7 @@
 				A49DF6F5292B85620008D6B8 /* Utils.swift in Sources */,
 				A49DF6F6292B85620008D6B8 /* DataModel.swift in Sources */,
 				A47FB3A4292D185400884C61 /* FiveMarketDetailViewController.swift in Sources */,
-				A4931F0029308821003DA9D0 /* FleaMarketDetailViewController.swift in Sources */,
+				A4931F0029308821003DA9D0 /* MarketDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
