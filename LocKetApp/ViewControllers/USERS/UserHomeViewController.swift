@@ -48,12 +48,24 @@ class UserHomeViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let segueID = segue.identifier
-        if segueID == "gatheringMarket"{
+        
+        switch segueID {
+        case "fleamarket" :
+            let childVC = segue.destination as? MarketsViewController
+            childVC?.category = "플리마켓"
+        case "nightmarket" :
+            let childVC = segue.destination as? MarketsViewController
+            childVC?.category = "야시장"
+        case "popupmarket" :
+            let childVC = segue.destination as? MarketsViewController
+            childVC?.category = "팝업"
+        case "gatheringMarket" :
             let childVC = segue.destination as? MarketDetailViewController
             if let cell = sender as? UICollectionViewCell,
                let indexPath = self.collectionView?.indexPath(for: cell){
                 childVC?.market = recruitingMarkets[indexPath.row]
             }
+        default : return
         }
     }
 }

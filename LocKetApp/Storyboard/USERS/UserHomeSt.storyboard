@@ -1011,7 +1011,7 @@
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" image="ic-market"/>
                                                         <connections>
-                                                            <segue destination="e7F-vz-Imy" kind="show" id="gNu-0P-R3z"/>
+                                                            <segue destination="e7F-vz-Imy" kind="show" identifier="fleamarket" id="gNu-0P-R3z"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ESv-CU-vZP">
@@ -1019,13 +1019,16 @@
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" image="ic-nightMarket"/>
                                                         <connections>
-                                                            <segue destination="e7F-vz-Imy" kind="show" id="bOR-VZ-VIi"/>
+                                                            <segue destination="e7F-vz-Imy" kind="show" identifier="nightmarket" id="bOR-VZ-VIi"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zUY-gF-R8R">
                                                         <rect key="frame" x="306" y="0.0" width="101" height="120"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" image="ic-popUp"/>
+                                                        <connections>
+                                                            <segue destination="e7F-vz-Imy" kind="show" identifier="popupmarket" id="acP-Q5-X6v"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -1157,7 +1160,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="gNu-0P-R3z"/>
+        <segue reference="acP-Q5-X6v"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Group 732" width="77" height="106"/>
