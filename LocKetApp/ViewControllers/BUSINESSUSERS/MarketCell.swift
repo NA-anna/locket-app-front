@@ -25,9 +25,6 @@ class MarketCell: UITableViewCell {
     // UITableView 오브젝트 세팅
     func setValues(market: Market, index: Int){
         
-        // 스타일
-        imgVw.layer.cornerRadius = 10
-        
         // 사진 파일이 있으면 애저 스트로지에서 가져오기
         if market.photo.count > 0 {
             let blobName = market.photo[0]

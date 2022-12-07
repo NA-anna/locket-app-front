@@ -95,6 +95,8 @@
 		A4B4BE03293F799E002D678E /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A4B4BE02293F799E002D678E /* IQKeyboardManagerSwift */; };
 		A4B4BE05293FC391002D678E /* RoundUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B4BE04293FC391002D678E /* RoundUIImageView.swift */; };
 		A4B4BE072940619E002D678E /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B4BE062940619E002D678E /* MenuViewController.swift */; };
+		A4B4BE0C294102E0002D678E /* RoundUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B4BE0B294102E0002D678E /* RoundUIView.swift */; };
+		A4B4BE0E2941032C002D678E /* RoundUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B4BE0D2941032C002D678E /* RoundUILabel.swift */; };
 		A4C08EC9293B44A80075294B /* ProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = A4C08EC8293B44A80075294B /* ProgressHUD */; };
 		A4C08ECB293B72A20075294B /* CustomModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C08ECA293B72A20075294B /* CustomModalViewController.swift */; };
 		A4C08ECD293CB0020075294B /* ApplicationListSt.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4C08ECC293CB0010075294B /* ApplicationListSt.storyboard */; };
@@ -207,6 +209,8 @@
 		A4B4BDFB293F43B8002D678E /* MarketsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketsCell.swift; sourceTree = "<group>"; };
 		A4B4BE04293FC391002D678E /* RoundUIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundUIImageView.swift; sourceTree = "<group>"; };
 		A4B4BE062940619E002D678E /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		A4B4BE0B294102E0002D678E /* RoundUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundUIView.swift; sourceTree = "<group>"; };
+		A4B4BE0D2941032C002D678E /* RoundUILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundUILabel.swift; sourceTree = "<group>"; };
 		A4C08ECA293B72A20075294B /* CustomModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomModalViewController.swift; sourceTree = "<group>"; };
 		A4C08ECC293CB0010075294B /* ApplicationListSt.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ApplicationListSt.storyboard; sourceTree = "<group>"; };
 		A4C08ECE293CB3800075294B /* ApplicationListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationListViewController.swift; sourceTree = "<group>"; };
@@ -477,6 +481,8 @@
 				A49DF6F2292B85620008D6B8 /* kakaoAPI.swift */,
 				A44ACA4E2932135A001F0900 /* AzureBlobStorage.swift */,
 				A4B4BE04293FC391002D678E /* RoundUIImageView.swift */,
+				A4B4BE0D2941032C002D678E /* RoundUILabel.swift */,
+				A4B4BE0B294102E0002D678E /* RoundUIView.swift */,
 				A49DF6EE292B85620008D6B8 /* Utils.swift */,
 				A4931EFD293066FC003DA9D0 /* mylocation.png */,
 			);
@@ -714,6 +720,7 @@
 				A49DF680292B64FF0008D6B8 /* SceneDelegate.swift in Sources */,
 				A49DF6A4292B82FD0008D6B8 /* MapViewController.swift in Sources */,
 				A44ACA53293236B9001F0900 /* ApplyingViewController.swift in Sources */,
+				A4B4BE0E2941032C002D678E /* RoundUILabel.swift in Sources */,
 				A47FB3A8292D436600884C61 /* FavoritesViewController.swift in Sources */,
 				A491A742292BE7A20061BA62 /* FiveMarketsViewController.swift in Sources */,
 				A49DF6F7292B85620008D6B8 /* MarketsAPI.swift in Sources */,
@@ -727,6 +734,7 @@
 				A49DF6F6292B85620008D6B8 /* DataModel.swift in Sources */,
 				A47FB3A4292D185400884C61 /* FiveMarketDetailViewController.swift in Sources */,
 				A4931F0029308821003DA9D0 /* MarketDetailViewController.swift in Sources */,
+				A4B4BE0C294102E0002D678E /* RoundUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

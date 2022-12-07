@@ -24,7 +24,7 @@ class FiveMarketCell: UITableViewCell {
         lblTitle.text = market.mrktNm
         lblPlace.text = "주소: \(market.rdnmadr)"
 
-        let openDay = "장 열리는 날: " + market.mrktEstblCycle.components(separatedBy: "+").joined(separator: ", ")
+        let openDay = market.mrktEstblCycle.components(separatedBy: "+").joined(separator: ", ")
         lblDate.text = openDay
 
         let productList = "판매품목: " + market.trtmntPrdlst.components(separatedBy: "+").joined(separator: ", ")

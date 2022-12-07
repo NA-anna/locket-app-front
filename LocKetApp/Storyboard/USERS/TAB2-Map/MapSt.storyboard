@@ -49,9 +49,26 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="내 주변" image="mappin.and.ellipse" catalog="system" id="HlN-bC-SU8"/>
-                    <navigationItem key="navigationItem" id="QfQ-Ob-3aa"/>
+                    <navigationItem key="navigationItem" id="QfQ-Ob-3aa">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="i7h-rR-4Te">
+                            <rect key="frame" x="30.666666666666657" y="5.6666666666666679" width="329" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="First"/>
+                                <segment title="Second"/>
+                                <segment title="Third"/>
+                                <segment title="Fourth"/>
+                                <segment title=""/>
+                            </segments>
+                            <connections>
+                                <action selector="actSegmentChanged:" destination="0HC-u4-xTY" eventType="valueChanged" id="M93-Ic-ect"/>
+                            </connections>
+                        </segmentedControl>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="segment" destination="i7h-rR-4Te" id="rMD-b4-Y78"/>
                         <outlet property="viewFrame" destination="XsQ-nY-tuM" id="riW-6Z-waM"/>
                     </connections>
                 </viewController>

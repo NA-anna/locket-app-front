@@ -15,9 +15,20 @@ class MapViewController: UIViewController, MTMapViewDelegate {
     var locationManager: CLLocationManager!
 
     
+    @IBOutlet var segment: UISegmentedControl!
     @IBOutlet var viewFrame: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // 세그먼트 설정
+        segment.setTitle("전체", forSegmentAt: 0)
+        for idx in 0..<gCategories.count {
+            segment.setTitle(gCategories[idx], forSegmentAt: idx+1)
+        }
+        
+        
+        
+        
         
         // 0 현재 위치 정보 권한 가져오기 by Apple
         locationManager = CLLocationManager()
@@ -43,37 +54,46 @@ class MapViewController: UIViewController, MTMapViewDelegate {
         mapView.updateCurrentLocationMarker(myMarker)
 
         self.drawMap()
-        
-        /*
-        // 데이터 가져오기------------------------------------
-        var combinedFiveMarkets: [Item] = []
-        get5Markets( numOfRows: 10, type: "5일장") {
-            
-            combinedFiveMarkets = fiveMarkets
-            
-            get5Markets( numOfRows: 10, type: "상설장+5일장") {
-                
-                combinedFiveMarkets.append(contentsOf: fiveMarkets)
-                fiveMarkets = combinedFiveMarkets
-                
-                getMarkets {
-
-                    self.drawMap()
-                }
-            }
-        }
-        //-----------------------------------------------
-        */
-            
+    
     }
-    override func viewWillAppear(_ animated: Bool) {
+//    override func viewWillAppear(_ animated: Bool) {
+//        drawMap()
+//    }
+    
+    @IBAction func actSegmentChanged(_ sender: Any) {
         drawMap()
     }
-
+    
+    
+    
+    
+    
     // 데이터의 좌표 맵에 그리기
     func drawMap(){
         
-        //5일장
+        mapView.removeAllPOIItems()
+        markers = [] //배열 초기화
+        
+        switch segment.selectedSegmentIndex {
+        case 0 : //전체
+            markersOf5Markets()
+            markersOfMarkets(category: "ALL")
+        case 1 :
+            markersOfMarkets(category: segment.titleForSegment(at: 1)!)
+        case 2 :
+            markersOfMarkets(category: segment.titleForSegment(at: 2)!)
+        case 3 :
+            markersOfMarkets(category: segment.titleForSegment(at: 3)!)
+        case 4 :
+            markersOfMarkets(category: segment.titleForSegment(at: 4)!)
+        default: return
+        }
+        
+        mapView.addPOIItems(markers)
+    }
+    
+    //마커추가 - 5일장
+    func markersOf5Markets() {
         for fivemarket in fiveMarkets{
             if let latitude = Double(fivemarket.latitude),
                let longitude = Double(fivemarket.longitude){
@@ -93,38 +113,41 @@ class MapViewController: UIViewController, MTMapViewDelegate {
                     marker.tag = idx
                 }
                 markers.append(marker)
-                
             }
         }
-        //플리마켓
+    }
+    
+    //마커추가 - 마켓
+    func markersOfMarkets( category: String ) {
         for market in markets{
-            let latitude = Double(market.location.coordinates[0] )
-            let longitude = Double(market.location.coordinates[1])
-            let placeName = market.name
+            if ( market.category == category ) ||  category == "ALL" {
                 
-            // 2 좌표 포인트 by Kakao
-            let mapPoint = MTMapPoint(geoCoord: MTMapPointGeo(latitude: latitude, longitude: longitude))
-            
-            // 3 마커 추가 by Kakao
-            let marker = MTMapPOIItem()
-            marker.itemName = placeName
-            marker.mapPoint = mapPoint
-            marker.markerType = .customImage
-            switch market.category {
-            case "플리마켓": marker.customImage = UIImage(named: "pin_f")
-            case "야시장": marker.customImage = UIImage(named: "pin_n")
-            case "팝업": marker.customImage = UIImage(named: "pin_p")
-            default: return
+                let latitude = Double(market.location.coordinates[0] )
+                let longitude = Double(market.location.coordinates[1])
+                let placeName = market.name
+                
+                // 2 좌표 포인트 by Kakao
+                let mapPoint = MTMapPoint(geoCoord: MTMapPointGeo(latitude: latitude, longitude: longitude))
+                
+                // 3 마커 추가 by Kakao
+                let marker = MTMapPOIItem()
+                marker.itemName = placeName
+                marker.mapPoint = mapPoint
+                marker.markerType = .customImage
+                switch market.category {
+                case "플리마켓": marker.customImage = UIImage(named: "pin_f")
+                case "야시장": marker.customImage = UIImage(named: "pin_n")
+                case "팝업": marker.customImage = UIImage(named: "pin_p")
+                default: return
+                }
+                marker.showAnimationType = .noAnimation
+                if let idx = markets.lastIndex(of: market) {
+                    marker.tag = idx
+                }
+                markers.append(marker)
+                
             }
-            marker.showAnimationType = .noAnimation
-            if let idx = markets.firstIndex(of: market) {
-                marker.tag = idx
-            }
-            markers.append(marker)
-           
-            
         }
-        mapView.addPOIItems(markers)
     }
   
     
@@ -144,24 +167,22 @@ class MapViewController: UIViewController, MTMapViewDelegate {
 
     func mapView(_ mapView: MTMapView!, touchedCalloutBalloonOf poiItem: MTMapPOIItem!) {
         
-        if poiItem.customImage == UIImage(named: "pin_red") {
-            let storyBoard = UIStoryboard(name: "MarketDetailSt", bundle: nil)
-            let vc = storyBoard.instantiateViewController(withIdentifier: "MarketDetail") as? MarketDetailViewController
-            vc?.market = markets[poiItem.tag]
-            self.navigationController?.pushViewController(vc!, animated: true)
-        }else {
+        if poiItem.customImage == UIImage(named: "pin_5") {
             let storyBoard = UIStoryboard(name: "FiveMarketDetailSt", bundle: nil)
             let vc = storyBoard.instantiateViewController(withIdentifier: "FiveMarketDetail") as? FiveMarketDetailViewController
             vc?.fiveMarket = fiveMarkets[poiItem.tag]
             self.navigationController?.pushViewController(vc!, animated: true)
+        }else {
+            let storyBoard = UIStoryboard(name: "MarketDetailSt", bundle: nil)
+            let vc = storyBoard.instantiateViewController(withIdentifier: "MarketDetail") as? MarketDetailViewController
+            vc?.market = markets[poiItem.tag]
+            self.navigationController?.pushViewController(vc!, animated: true)
+
         }
         
     
     }
-    
-    
 }
-
 
 
 
@@ -188,3 +209,7 @@ extension MapViewController: CLLocationManagerDelegate {
     
     
 }
+
+
+
+

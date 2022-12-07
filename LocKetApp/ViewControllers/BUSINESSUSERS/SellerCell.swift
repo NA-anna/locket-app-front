@@ -40,7 +40,6 @@ class SellerCell: UITableViewCell {
         
         // (2) 이미지
         // 사진 파일이 있으면 애저 스트로지에서 가져오기
-        imgVw.layer.cornerRadius = 5.0
         if seller.photo.count > 0 {
             let blobName = seller.photo[0]
             if blobName != "" {
