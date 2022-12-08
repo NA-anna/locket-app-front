@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dX4-tE-7u9">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home-->
+        <scene sceneID="Gxg-ea-WEs">
+            <objects>
+                <navigationController title="Home" id="dX4-tE-7u9" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="관심목록" image="heart" catalog="system" selectedImage="heart.fill" id="cf6-8w-J7T"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oCH-Hi-uEk">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="xXQ-hU-OK1" kind="relationship" relationship="rootViewController" id="Bdk-0f-okM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qfF-DC-Wcr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1108" y="68"/>
+        </scene>
+        <!--나의 관심 마켓-->
+        <scene sceneID="VJf-mc-U5i">
+            <objects>
+                <tableViewController id="xXQ-hU-OK1" customClass="FavoritesViewController" customModule="LocKetApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="none" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="Tmo-kf-sDl">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="favoritescell" id="j4K-cQ-mKd">
+                                <rect key="frame" x="20" y="55.333332061767578" width="350" height="80"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="j4K-cQ-mKd" id="nUi-Oo-Zc9">
+                                    <rect key="frame" x="0.0" y="0.0" width="350" height="80"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="vhP-ep-L5T">
+                                            <rect key="frame" x="15" y="6.6666666666666643" width="335" height="66.666666666666686"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="rocket_up 1" translatesAutoresizingMaskIntoConstraints="NO" id="0Zt-UG-PPX">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="66.666666666666671"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="Gbp-6g-9e5"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tableView로 즐겨찾기한 list 뿌리기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IN9-fN-Q5J">
+                                                    <rect key="frame" x="58" y="23.333333333333336" width="277" height="20.333333333333336"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="vhP-ep-L5T" firstAttribute="centerY" secondItem="nUi-Oo-Zc9" secondAttribute="centerY" id="4b9-AH-gLA"/>
+                                        <constraint firstItem="vhP-ep-L5T" firstAttribute="leading" secondItem="nUi-Oo-Zc9" secondAttribute="leading" constant="15" id="WyP-yw-YiM"/>
+                                        <constraint firstAttribute="trailing" secondItem="vhP-ep-L5T" secondAttribute="trailing" id="oQt-SR-3R9"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="xXQ-hU-OK1" id="yEk-Uv-hjH"/>
+                            <outlet property="delegate" destination="xXQ-hU-OK1" id="s4U-qc-i5v"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="관심목록" selectedImage="heart.fill" catalog="system" id="Boy-sa-mUh"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="나의 관심 마켓" id="X1u-aB-cLA"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="caq-XZ-Tjn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-112.30769230769231" y="67.535545023696685"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="heart" catalog="system" width="128" height="107"/>
+        <image name="heart.fill" catalog="system" width="128" height="107"/>
+        <image name="rocket_up 1" width="66.666664123535156" height="66.666664123535156"/>
+    </resources>
+</document>

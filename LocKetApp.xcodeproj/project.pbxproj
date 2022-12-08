@@ -265,10 +265,10 @@
 			children = (
 				A47901B3292F4F110032003C /* UsersTabBarSt.storyboard */,
 				A456E07F292F6DDA00388D42 /* UserHomeSt.storyboard */,
-				A4A36A2F292F1AC8001696CE /* TAB1-Markets */,
-				A4B4BE0A294068F9002D678E /* TAB2-Map */,
-				A4B4BE09294068ED002D678E /* TAB3-Favorites */,
-				A4B4BE08294068BE002D678E /* TAB4-MyPage */,
+				A4A36A2F292F1AC8001696CE /* tab1-Markets */,
+				A4B4BE0A294068F9002D678E /* tab2-Map */,
+				A4B4BE09294068ED002D678E /* tab3-Favorites */,
+				A4B4BE08294068BE002D678E /* tab4-MyPage */,
 			);
 			path = USERS;
 			sourceTree = "<group>";
@@ -283,7 +283,7 @@
 			path = AddViewControllers;
 			sourceTree = "<group>";
 		};
-		A491A743292BE7A70061BA62 /* MarketsViewControllers */ = {
+		A491A743292BE7A70061BA62 /* tab1-Markets */ = {
 			isa = PBXGroup;
 			children = (
 				A491A741292BE7A20061BA62 /* FiveMarketsViewController.swift */,
@@ -295,7 +295,7 @@
 				A44ACA52293236B9001F0900 /* ApplyingViewController.swift */,
 				A400850B29352616009FC8BD /* FiveMarketsCellX.swift */,
 			);
-			path = MarketsViewControllers;
+			path = "tab1-Markets";
 			sourceTree = "<group>";
 		};
 		A4931EF8292F74CB003DA9D0 /* Login */ = {
@@ -311,12 +311,10 @@
 			isa = PBXGroup;
 			children = (
 				A4931EF6292F74BA003DA9D0 /* UserHomeViewController.swift */,
-				A491A743292BE7A70061BA62 /* MarketsViewControllers */,
-				A49DF6A3292B82FD0008D6B8 /* MapViewController.swift */,
-				A47FB3A7292D436600884C61 /* FavoritesViewController.swift */,
-				A438075829335FC300C4596C /* MypageViewController.swift */,
-				A4C08ECA293B72A20075294B /* CustomModalViewController.swift */,
-				A444C098293265A6008F02C5 /* AppliedListViewController.swift */,
+				A491A743292BE7A70061BA62 /* tab1-Markets */,
+				A49E693E2941B7EE0011C475 /* tab2-Map */,
+				A49E693F2941B7F50011C475 /* tab3-Favorites */,
+				A49E69402941B7FC0011C475 /* tab4-MyPage */,
 			);
 			path = USERS;
 			sourceTree = "<group>";
@@ -486,7 +484,33 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
-		A4A36A2F292F1AC8001696CE /* TAB1-Markets */ = {
+		A49E693E2941B7EE0011C475 /* tab2-Map */ = {
+			isa = PBXGroup;
+			children = (
+				A49DF6A3292B82FD0008D6B8 /* MapViewController.swift */,
+			);
+			path = "tab2-Map";
+			sourceTree = "<group>";
+		};
+		A49E693F2941B7F50011C475 /* tab3-Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				A47FB3A7292D436600884C61 /* FavoritesViewController.swift */,
+			);
+			path = "tab3-Favorites";
+			sourceTree = "<group>";
+		};
+		A49E69402941B7FC0011C475 /* tab4-MyPage */ = {
+			isa = PBXGroup;
+			children = (
+				A438075829335FC300C4596C /* MypageViewController.swift */,
+				A444C098293265A6008F02C5 /* AppliedListViewController.swift */,
+				A4C08ECA293B72A20075294B /* CustomModalViewController.swift */,
+			);
+			path = "tab4-MyPage";
+			sourceTree = "<group>";
+		};
+		A4A36A2F292F1AC8001696CE /* tab1-Markets */ = {
 			isa = PBXGroup;
 			children = (
 				A4A36A2B292F18C6001696CE /* FiveMarketsSt.storyboard */,
@@ -495,31 +519,31 @@
 				A438075C2933DD1E00C4596C /* MarketDetailSt.storyboard */,
 				A400850D293535CD009FC8BD /* ApplyingSt.storyboard */,
 			);
-			path = "TAB1-Markets";
+			path = "tab1-Markets";
 			sourceTree = "<group>";
 		};
-		A4B4BE08294068BE002D678E /* TAB4-MyPage */ = {
+		A4B4BE08294068BE002D678E /* tab4-MyPage */ = {
 			isa = PBXGroup;
 			children = (
 				A491A72F292B8DBD0061BA62 /* MypageSt.storyboard */,
 			);
-			path = "TAB4-MyPage";
+			path = "tab4-MyPage";
 			sourceTree = "<group>";
 		};
-		A4B4BE09294068ED002D678E /* TAB3-Favorites */ = {
+		A4B4BE09294068ED002D678E /* tab3-Favorites */ = {
 			isa = PBXGroup;
 			children = (
 				A491A731292B8DBD0061BA62 /* FavoriteSt.storyboard */,
 			);
-			path = "TAB3-Favorites";
+			path = "tab3-Favorites";
 			sourceTree = "<group>";
 		};
-		A4B4BE0A294068F9002D678E /* TAB2-Map */ = {
+		A4B4BE0A294068F9002D678E /* tab2-Map */ = {
 			isa = PBXGroup;
 			children = (
 				A491A730292B8DBD0061BA62 /* MapSt.storyboard */,
 			);
-			path = "TAB2-Map";
+			path = "tab2-Map";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
