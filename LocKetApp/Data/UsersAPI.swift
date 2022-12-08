@@ -32,6 +32,29 @@ func getLoginUser( id: String, handler: @escaping(Bool)->() ) {
     }
 }
 
+func getUser( id: String, handler: @escaping(User)->() ) {
+    
+    // 1 url request
+    let strUrl = host + "/users/" + id
+
+    // 2 Alamofire
+    AF.request(
+        strUrl,
+        method: .get
+    ).responseDecodable(of: User.self) { response in
+        debugPrint(response)
+        switch response.result {
+        case .success( _)://obj):
+            guard let data = response.value else { fatalError() }
+            //user = data
+            handler(data)
+        case .failure(let e):
+            print(e.localizedDescription)
+            //handler(false)
+        }
+    }
+}
+
 func putUserData( collection route : String, id : String, body: [String : Any], handler: @escaping()->() ) {
     
     // 1 url request

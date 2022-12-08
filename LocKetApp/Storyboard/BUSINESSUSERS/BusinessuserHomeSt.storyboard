@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -15,9 +16,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Qmb-Ff-UKa">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.93725490570000003" green="0.77647060160000003" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="yWD-1P-Yd1"/>
+                        <segue destination="Nuc-yW-EBN" kind="relationship" relationship="rootViewController" id="Xv4-8D-vaf"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i0J-Bm-wGE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -33,7 +35,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0wD-fW-OaA" userLabel="연유라떼님, 안녕하세요.">
-                                <rect key="frame" x="59" y="108" width="285" height="79"/>
+                                <rect key="frame" x="59" y="64" width="285" height="79"/>
                                 <attributedString key="attributedText">
                                     <fragment content="연유라떼님">
                                         <attributes>
@@ -108,7 +110,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="mp9-tu-gB4">
-                                <rect key="frame" x="30" y="247" width="333" height="450"/>
+                                <rect key="frame" x="30" y="203" width="333" height="450"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="450" id="IG2-YB-WG6"/>
@@ -150,9 +152,6 @@
                                                             <color key="tintColor" red="0.93725490570000003" green="0.77647060160000003" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <state key="normal" title="Button"/>
                                                             <buttonConfiguration key="configuration" style="plain" title="모집보기 &gt;"/>
-                                                            <connections>
-                                                                <segue destination="LkP-tz-4lQ" kind="show" id="sWM-jY-k2m"/>
-                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                 </stackView>
@@ -186,9 +185,6 @@
                     <navigationItem key="navigationItem" id="UTf-jO-cuY">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="line.3.horizontal" catalog="system" id="MNw-5z-5Ph">
                             <color key="tintColor" systemColor="labelColor"/>
-                            <connections>
-                                <segue destination="e4K-uh-xkR" kind="presentation" id="roz-Dx-2DP"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -198,7 +194,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2463.3587786259541" y="864.78873239436621"/>
+            <point key="canvasLocation" x="-2947" y="1767"/>
         </scene>
         <!--ApplicationListSt-->
         <scene sceneID="1aC-bS-4v8">
@@ -225,7 +221,7 @@
             <objects>
                 <tableViewController id="FGG-wR-Fpo" customClass="MenuViewController" customModule="LocKetApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="3R6-ME-mUW">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="0.98823529409999999" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
@@ -287,8 +283,9 @@
         <scene sceneID="so7-L4-IzC">
             <objects>
                 <navigationController id="e4K-uh-xkR" customClass="SideMenuNavigationController" customModule="SideMenu" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Tf7-Xi-xOv"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="8F8-XL-Hnv">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <userDefinedRuntimeAttributes>
@@ -302,6 +299,189 @@
             </objects>
             <point key="canvasLocation" x="-1909" y="1798"/>
         </scene>
+        <!--Business Home View Controller-->
+        <scene sceneID="Zej-Yy-L0K">
+            <objects>
+                <viewController id="Nuc-yW-EBN" customClass="BusinessHomeViewController" customModule="LocKetApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bfv-QO-xLZ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q4A-Jn-Pzz" userLabel="연유라떼님, 안녕하세요.">
+                                <rect key="frame" x="29.999999999999986" y="126" width="239.66666666666663" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="pzN-p7-hpL"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="연유라떼님">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="20"/>
+                                            <font key="NSOriginalFont" metaFont="system" size="20"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">,
+</string>
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="20"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="안녕하세요">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="20"/>
+                                            <font key="NSOriginalFont" metaFont="system" size="20"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">.
+</string>
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="20"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="등록된">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="20"/>
+                                            <font key="NSOriginalFont" metaFont="system" size="20"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="20"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="마켓내역을">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="20"/>
+                                            <font key="NSOriginalFont" metaFont="system" size="20"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="20"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="확인하세요">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="20"/>
+                                            <font key="NSOriginalFont" metaFont="system" size="20"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=".">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="20"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Yy8-Sf-AN6">
+                                <rect key="frame" x="30" y="236" width="333" height="490"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="marketcell" id="96d-Bx-9uk" customClass="MarketCell" customModule="LocKetApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="333" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="96d-Bx-9uk" id="MaD-Gg-R4H">
+                                            <rect key="frame" x="0.0" y="0.0" width="333" height="70"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Ohm-31-uQo">
+                                                    <rect key="frame" x="0.0" y="5" width="333" height="60"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sJW-Ab-hJN" customClass="RoundUIImageView" customModule="LocKetApp" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="90" height="60"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="90" id="5zS-O0-5Sp"/>
+                                                                <constraint firstAttribute="height" constant="60" id="O3P-7z-YOd"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="5"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i4F-8y-nYH">
+                                                            <rect key="frame" x="95" y="20.333333333333336" width="223" height="19.333333333333336"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="91j-at-a7X">
+                                                            <rect key="frame" x="323" y="13" width="10" height="34.333333333333336"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="34.329999999999998" id="21n-ge-57P"/>
+                                                                <constraint firstAttribute="width" constant="10" id="fxP-Iq-h8D"/>
+                                                            </constraints>
+                                                            <color key="tintColor" systemColor="tintColor"/>
+                                                            <state key="normal" title="Button"/>
+                                                            <buttonConfiguration key="configuration" style="plain" imagePlacement="trailing">
+                                                                <imageReference key="image" image="chevron.right" catalog="system"/>
+                                                            </buttonConfiguration>
+                                                            <connections>
+                                                                <segue destination="LkP-tz-4lQ" kind="show" id="WtL-Js-Jm4"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="333" id="Nff-C8-Os5"/>
+                                                        <constraint firstAttribute="height" constant="60" id="wng-EE-mvY"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Ohm-31-uQo" firstAttribute="centerY" secondItem="MaD-Gg-R4H" secondAttribute="centerY" id="Knc-n2-9y7"/>
+                                                <constraint firstItem="Ohm-31-uQo" firstAttribute="centerX" secondItem="MaD-Gg-R4H" secondAttribute="centerX" id="TVL-jX-OCT"/>
+                                                <constraint firstItem="Ohm-31-uQo" firstAttribute="leading" secondItem="MaD-Gg-R4H" secondAttribute="leading" id="wR1-yY-MC9"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="btn" destination="91j-at-a7X" id="9kw-pM-TVx"/>
+                                            <outlet property="imgVw" destination="sJW-Ab-hJN" id="anJ-IW-P16"/>
+                                            <outlet property="lbl" destination="i4F-8y-nYH" id="xLW-G9-gyQ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Rth-sD-OPp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="q4A-Jn-Pzz" firstAttribute="leading" secondItem="Rth-sD-OPp" secondAttribute="leading" constant="30" id="1El-UP-S9n"/>
+                            <constraint firstItem="Yy8-Sf-AN6" firstAttribute="centerX" secondItem="Bfv-QO-xLZ" secondAttribute="centerX" id="bhF-JI-eYf"/>
+                            <constraint firstItem="Rth-sD-OPp" firstAttribute="bottom" secondItem="Yy8-Sf-AN6" secondAttribute="bottom" constant="92" id="fKP-XJ-5ec"/>
+                            <constraint firstItem="q4A-Jn-Pzz" firstAttribute="leading" secondItem="Yy8-Sf-AN6" secondAttribute="leading" id="jf6-cw-Owd"/>
+                            <constraint firstItem="q4A-Jn-Pzz" firstAttribute="top" secondItem="Rth-sD-OPp" secondAttribute="top" constant="23" id="wHA-zE-24x"/>
+                            <constraint firstItem="Yy8-Sf-AN6" firstAttribute="top" secondItem="q4A-Jn-Pzz" secondAttribute="bottom" constant="30" id="xE0-lh-bIU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="qyu-7r-JAP">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="line.3.horizontal" catalog="system" id="tES-dc-o9Z">
+                            <color key="tintColor" systemColor="labelColor"/>
+                            <connections>
+                                <segue destination="e4K-uh-xkR" kind="show" id="JmP-89-hkR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="lblHello" destination="q4A-Jn-Pzz" id="dz3-ba-3LC"/>
+                        <outlet property="tableView" destination="Yy8-Sf-AN6" id="YeT-nz-Tdf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YPa-E2-lEJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2480" y="865"/>
+        </scene>
     </scenes>
     <resources>
         <image name="chevron.right" catalog="system" width="97" height="128"/>
@@ -311,6 +491,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

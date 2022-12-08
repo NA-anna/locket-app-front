@@ -11,7 +11,7 @@ class MarketsViewController: UITableViewController {
 
 
     var category = "" //카테고리
-    var pMarkets = markets
+    var pMarkets = markets //필터링 후 이 페이지에서만 사용되는 프라이빗 배열
     var searchFlag: Bool = false
     var searchedMarkets = markets
     
@@ -31,9 +31,12 @@ class MarketsViewController: UITableViewController {
         self.searchBar.text = paramText
         
         
+        navigationTitle.title = self.category
+        
         // <부모화면에서 전달받은 category 매개변수에 따라 데이터 분기>
         if category == "ALL"{
             pMarkets = markets
+            navigationTitle.title = "모든마켓"
            
         // 모집중인 마켓만 필터
         }else if category == "모집중"{
@@ -48,7 +51,7 @@ class MarketsViewController: UITableViewController {
             }
         }
         
-        navigationTitle.title = self.category
+        
         
     }
     

@@ -22,6 +22,8 @@ class AppliedListViewController: UITableViewController {
             self.tableView.reloadData()
         }
         
+        // style
+        self.navigationController?.navigationBar.topItem?.title = ""  // 내비게이션바 back 문구 지우기
 
     }
 

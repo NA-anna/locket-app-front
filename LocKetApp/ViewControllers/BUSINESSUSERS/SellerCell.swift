@@ -35,7 +35,17 @@ class SellerCell: UITableViewCell {
         }
         lblCategory.text = seller.category + " > " + seller.subCategory
         lblSNS.text = seller.sns.joined(separator: ", ")
-        txtViewDescription.text = seller.description
+        
+//        getLoginUser(id: seller.userId ){_ in
+//            txtViewDescription.text = seller.description +"\n" +
+//        }
+        getUser(id: seller.userId ){ data in
+            self.txtViewDescription.text = "신청자. " + data.name + "\n"
+            + "email.  " + data.email + "\n"
+            + "phone.  " + data.tel + "\n"
+            + seller.description
+        }
+        
         btn.setTitle(seller.state, for: .normal)
         
         // (2) 이미지

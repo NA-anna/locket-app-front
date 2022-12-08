@@ -996,7 +996,7 @@
                                         <rect key="frame" x="0.0" y="191" width="388" height="120"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SCf-vF-Gbi">
-                                                <rect key="frame" x="0.0" y="0.0" width="404" height="120"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="505" height="120"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0dt-BC-Dbk">
                                                         <rect key="frame" x="0.0" y="0.0" width="101" height="120"/>
@@ -1006,8 +1006,16 @@
                                                             <segue destination="3p1-NX-m99" kind="show" id="Ba8-iE-5Co"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LPO-Ir-vTf">
+                                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FA7-L9-nZw">
                                                         <rect key="frame" x="101" y="0.0" width="101" height="120"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" image="ic-all"/>
+                                                        <connections>
+                                                            <segue destination="e7F-vz-Imy" kind="show" identifier="all" id="Mf0-SN-dSw"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LPO-Ir-vTf">
+                                                        <rect key="frame" x="202" y="0.0" width="101" height="120"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" image="ic-market"/>
                                                         <connections>
@@ -1015,7 +1023,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ESv-CU-vZP">
-                                                        <rect key="frame" x="202" y="0.0" width="101" height="120"/>
+                                                        <rect key="frame" x="303" y="0.0" width="101" height="120"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" image="ic-nightMarket"/>
                                                         <connections>
@@ -1023,7 +1031,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zUY-gF-R8R">
-                                                        <rect key="frame" x="303" y="0.0" width="101" height="120"/>
+                                                        <rect key="frame" x="404" y="0.0" width="101" height="120"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" image="ic-popUp"/>
                                                         <connections>
@@ -1167,12 +1175,13 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="mMG-5a-ZSb"/>
+        <segue reference="Mf0-SN-dSw"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Group 732" width="77" height="106"/>
         <image name="house" catalog="system" width="128" height="104"/>
         <image name="house.fill" catalog="system" width="128" height="104"/>
+        <image name="ic-all" width="77" height="106"/>
         <image name="ic-market" width="77" height="106"/>
         <image name="ic-market2" width="77" height="106"/>
         <image name="ic-nightMarket" width="77" height="106"/>

@@ -14,6 +14,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="n5g-wE-MiU">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.93725490570000003" green="0.77647060160000003" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <connections>
                         <segue destination="Bst-6n-4fk" kind="relationship" relationship="rootViewController" id="E86-bB-M53"/>
@@ -33,7 +34,7 @@
             </objects>
             <point key="canvasLocation" x="1353" y="-338"/>
         </scene>
-        <!--5일장-->
+        <!--Five Markets View Controller-->
         <scene sceneID="kpa-q4-Kf4">
             <objects>
                 <tableViewController modalPresentationStyle="currentContext" id="Bst-6n-4fk" customClass="FiveMarketsViewController" customModule="LocKetApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -141,7 +142,28 @@
                             <outlet property="delegate" destination="Bst-6n-4fk" id="GpL-qc-SzM"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="5일장" id="Qp3-Cy-tQW"/>
+                    <navigationItem key="navigationItem" id="Qp3-Cy-tQW">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="YqV-kd-Tos">
+                            <rect key="frame" x="16" y="5.6666666666666679" width="361" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="전체"/>
+                                <segment title="서울/경기"/>
+                                <segment title="대전"/>
+                                <segment title="강원"/>
+                                <segment title="전라"/>
+                                <segment title="경상"/>
+                                <segment title="제주"/>
+                            </segments>
+                            <connections>
+                                <action selector="actSegmentChanged:" destination="Bst-6n-4fk" eventType="valueChanged" id="ijh-qz-GAh"/>
+                            </connections>
+                        </segmentedControl>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="segment" destination="YqV-kd-Tos" id="Od7-Pu-npc"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="paS-E9-5Ja" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

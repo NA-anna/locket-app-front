@@ -9,8 +9,6 @@ import UIKit
 
 class ApplicationListViewController: UITableViewController {
     
-
-    
     var market: Market?
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +19,8 @@ class ApplicationListViewController: UITableViewController {
             self.tableView.reloadData()
         }
     
-        
+        // style
+        self.navigationController?.navigationBar.topItem?.title = ""  // 내비게이션바 back 문구 지우기
     }
 
     // MARK: - Table view data source

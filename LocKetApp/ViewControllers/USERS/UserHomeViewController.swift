@@ -50,6 +50,9 @@ class UserHomeViewController: UIViewController {
         let segueID = segue.identifier
         
         switch segueID {
+        case "all" :
+            let childVC = segue.destination as? MarketsViewController
+            childVC?.category = "ALL"
         case "fleamarket" :
             let childVC = segue.destination as? MarketsViewController
             childVC?.category = "플리마켓"
