@@ -84,6 +84,29 @@ class UserHomeViewController: UIViewController {
 
 
 
+//===========================================================================================
+// Extension 확장
+//===========================================================================================
+
+// UI SEARCH BAR 프로토콜
+extension UserHomeViewController: UISearchBarDelegate {
+    
+    // MARK: - UISearchBar Delegate
+
+    // [검색]버튼 클릭 시
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        
+        // 화면 전환
+        let storyBoard = UIStoryboard(name: "MarketsSt", bundle: nil)
+        let vc = storyBoard.instantiateViewController(withIdentifier: "marketStoryboard") as? MarketsViewController
+        vc?.category = "ALL"
+        vc?.paramText = self.searchBar.text ?? ""
+        self.navigationController?.pushViewController(vc!, animated: true)
+        
+        searchBar.resignFirstResponder()
+    }
+}
+
 
 // UICollectionView 프로토콜
 

@@ -92,22 +92,3 @@ func callApiForPlace(with query: String?){  //외부 매개변수로 with를 쓰
 
 
 
-//func deliveryDataToVC(){
-//    print(self.tabBarController?.presentingViewController)
-//    guard let VCs = self.tabBarController?.viewControllers else {return}
-//    print(VCs)
-//    for vc in VCs {              //뷰컨트롤러가 클래스이기 때문에 주소값을 가리키고 있기에 직접 선언이 안되고 루프로 대응
-//        if vc is SecondViewController {
-//            guard let vc = vc as? SecondViewController else {return}
-//            vc.arrEvents = self.arrEvents
-//            print("데이터전송 to child")
-//        }else if vc is ThirdViewController {
-//            guard let vc = vc as? ThirdViewController else {return}
-//            vc.arrEvents = self.arrEvents
-//            print("데이터전송 to child")
-//        }
-//    }
-//}
-
-
-

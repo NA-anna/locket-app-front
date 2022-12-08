@@ -77,13 +77,12 @@ class ApplicationListViewController: UITableViewController {
                 guard let sellerId = seller._id else {return}
                 putSellerData( id: sellerId, body: jsonDictionary ){ statusCode in
                     if statusCode <= 204 {
-//                        self.tableView.reloadData()
-//                        // GET (재조회)
-//                        // 신청된 셀러 목록
-//                        guard let market = self.market, let marketId = market._id else {return}
-//                        getSellersByMarket(marketId: marketId) {
-//                            self.tableView.reloadData()
-//                        }
+                        // GET (재조회)
+                        // 신청된 셀러 목록
+                        guard let market = self.market, let marketId = market._id else {return}
+                        getSellersByMarket(marketId: marketId) {
+                            self.tableView.reloadData()
+                        }
                     }
                 }
             }

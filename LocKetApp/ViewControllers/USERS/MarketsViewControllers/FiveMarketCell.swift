@@ -22,7 +22,14 @@ class FiveMarketCell: UITableViewCell {
         
         // TABLE VIEW 에 데이터 뿌리기
         lblTitle.text = market.mrktNm
-        lblPlace.text = "주소: \(market.rdnmadr)"
+                
+        if let idx = market.rdnmadr.firstIndex(of: " ") {
+            let place = market.rdnmadr[...idx]
+            lblPlace.text = "지역: \(place)"
+        }else {
+            lblPlace.text = "주소: \(market.rdnmadr)"
+        }
+        
 
         let openDay = market.mrktEstblCycle.components(separatedBy: "+").joined(separator: ", ")
         lblDate.text = openDay

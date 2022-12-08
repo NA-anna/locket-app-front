@@ -16,7 +16,7 @@ class MarketsCell: UITableViewCell {
     @IBOutlet var lblTitle: UILabel!
     @IBOutlet var lblDate: UILabel!
     @IBOutlet var lblPlace: UILabel!
-    @IBOutlet var lblDescription: UILabel!
+   // @IBOutlet var lblDescription: UILabel!
     @IBOutlet var lblCategory: UILabel!
     
     // UITableView 오브젝트 세팅
@@ -49,7 +49,7 @@ class MarketsCell: UITableViewCell {
     
         lblDate.text = "\(market.startdate) ~ \(market.enddate)"
     
-        lblDescription.text = market.description
+       // lblDescription.text = market.description
 
         
         
