@@ -34,30 +34,30 @@
             </objects>
             <point key="canvasLocation" x="1353" y="-338"/>
         </scene>
-        <!--Five Markets View Controller-->
+        <!--5일장-->
         <scene sceneID="kpa-q4-Kf4">
             <objects>
                 <tableViewController modalPresentationStyle="currentContext" id="Bst-6n-4fk" customClass="FiveMarketsViewController" customModule="LocKetApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="110" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="W7F-gs-kGM">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="W7F-gs-kGM">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="fivemarketcell" id="16O-Od-296" customClass="FiveMarketCell" customModule="LocKetApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="50" width="393" height="110"/>
+                                <rect key="frame" x="0.0" y="50" width="393" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="16O-Od-296" id="PCv-rL-j6Z">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="110"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="90"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="On2-Kt-Djo">
-                                            <rect key="frame" x="31.666666666666657" y="20" width="330" height="70"/>
+                                            <rect key="frame" x="31.666666666666657" y="20" width="330" height="50"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="10" contentMode="scaleAspectFit" image="fiveMarket_default" translatesAutoresizingMaskIntoConstraints="NO" id="yfh-lz-Ytj" customClass="RoundUIImageView" customModule="LocKetApp" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="10" contentMode="scaleAspectFit" image="ic-5market" translatesAutoresizingMaskIntoConstraints="NO" id="yfh-lz-Ytj" customClass="RoundUIImageView" customModule="LocKetApp" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="70" id="K63-EH-cyp"/>
-                                                        <constraint firstAttribute="height" constant="70" id="Pj3-tK-9ip"/>
+                                                        <constraint firstAttribute="width" constant="50" id="K63-EH-cyp"/>
+                                                        <constraint firstAttribute="height" constant="50" id="Pj3-tK-9ip"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -66,19 +66,19 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6Fm-eo-7ze">
-                                                    <rect key="frame" x="90" y="0.0" width="240" height="70"/>
+                                                    <rect key="frame" x="70" y="0.0" width="260" height="50"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="fbz-d9-fbO">
-                                                            <rect key="frame" x="0.0" y="0.0" width="240" height="36.333333333333336"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="260" height="32"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rA6-LV-HF3">
-                                                                    <rect key="frame" x="0.0" y="6.6666666666666679" width="160" height="23"/>
+                                                                    <rect key="frame" x="0.0" y="4.6666666666666679" width="180" height="23"/>
                                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="syg-JY-8Zq" customClass="UILabel">
-                                                                    <rect key="frame" x="160" y="6.6666666666666679" width="80" height="23"/>
+                                                                    <rect key="frame" x="180" y="4.6666666666666679" width="80" height="23"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xgg-np-2hk" customClass="RoundUILabel" customModule="LocKetApp" customModuleProvider="target">
                                                                             <rect key="frame" x="0.0" y="0.0" width="80" height="23"/>
@@ -103,15 +103,9 @@
                                                             </subviews>
                                                         </stackView>
                                                         <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Place" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eDM-EU-gub">
-                                                            <rect key="frame" x="0.0" y="36.333333333333336" width="240" height="18"/>
+                                                            <rect key="frame" x="0.0" y="32" width="260" height="18"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <color key="textColor" systemColor="secondaryLabelColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FtA-aN-i6l">
-                                                            <rect key="frame" x="0.0" y="54.333333333333329" width="240" height="15.666666666666671"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                            <color key="textColor" systemColor="systemGrayColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
@@ -130,7 +124,6 @@
                                 <connections>
                                     <outlet property="imgVw" destination="yfh-lz-Ytj" id="xqT-1q-y1d"/>
                                     <outlet property="lblDate" destination="xgg-np-2hk" id="WVO-gf-e1W"/>
-                                    <outlet property="lblDescription" destination="FtA-aN-i6l" id="uJE-sn-ku8"/>
                                     <outlet property="lblPlace" destination="eDM-EU-gub" id="aVC-K8-icN"/>
                                     <outlet property="lblTitle" destination="rA6-LV-HF3" id="8bn-v6-NAJ"/>
                                     <segue destination="Uhw-zH-QW2" kind="show" id="eu4-pN-GDa"/>
@@ -142,28 +135,7 @@
                             <outlet property="delegate" destination="Bst-6n-4fk" id="GpL-qc-SzM"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Qp3-Cy-tQW">
-                        <nil key="title"/>
-                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="YqV-kd-Tos">
-                            <rect key="frame" x="16" y="5.6666666666666679" width="361" height="33"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <segments>
-                                <segment title="전체"/>
-                                <segment title="서울/경기"/>
-                                <segment title="대전"/>
-                                <segment title="강원"/>
-                                <segment title="전라"/>
-                                <segment title="경상"/>
-                                <segment title="제주"/>
-                            </segments>
-                            <connections>
-                                <action selector="actSegmentChanged:" destination="Bst-6n-4fk" eventType="valueChanged" id="ijh-qz-GAh"/>
-                            </connections>
-                        </segmentedControl>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="segment" destination="YqV-kd-Tos" id="Od7-Pu-npc"/>
-                    </connections>
+                    <navigationItem key="navigationItem" title="5일장" id="Qp3-Cy-tQW"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="paS-E9-5Ja" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -175,19 +147,16 @@
             <size key="intrinsicContentSize" width="63" height="18"/>
         </designable>
         <designable name="yfh-lz-Ytj">
-            <size key="intrinsicContentSize" width="66.666666666666671" height="66.666666666666671"/>
+            <size key="intrinsicContentSize" width="170.66666666666666" height="170.66666666666666"/>
         </designable>
     </designables>
     <resources>
-        <image name="fiveMarket_default" width="66.666664123535156" height="66.666664123535156"/>
+        <image name="ic-5market" width="170.66667175292969" height="170.66667175292969"/>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGrayColor">
-            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

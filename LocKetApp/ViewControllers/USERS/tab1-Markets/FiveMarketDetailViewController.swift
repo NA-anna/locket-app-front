@@ -24,6 +24,7 @@ class FiveMarketDetailViewController: UIViewController, MTMapViewDelegate {
     }
     @IBOutlet var marketName: UINavigationItem!
     @IBOutlet var viewFrame: UIView!
+    @IBOutlet var lblAddress: UILabel!
     @IBOutlet var textView: UITextView!
     @IBOutlet var btnLike: UIButton!
     
@@ -41,9 +42,10 @@ class FiveMarketDetailViewController: UIViewController, MTMapViewDelegate {
         guard let user = user, let fiveMarket = fiveMarket else {return}
         
         // 마켓정보
+        lblAddress.text = fiveMarket.rdnmadr
         let productList = fiveMarket.trtmntPrdlst.components(separatedBy: "+").joined(separator: ", ")
         marketName.title = fiveMarket.mrktNm
-        textView.text = "점포 수: \(fiveMarket.storNumber)\n상품: \(productList)\n\n주소\n(도로명):\(fiveMarket.rdnmadr) \n(지번):\(fiveMarket.lnmadr)\n\n공용화장실 유뮤: \(fiveMarket.pblicToiletYn)\n주차장: \(fiveMarket.prkplceYn)"
+        textView.text = "점포 수: \(fiveMarket.storNumber)\n상품: \(productList)\n\n공용화장실 유뮤: \(fiveMarket.pblicToiletYn)\n주차장: \(fiveMarket.prkplceYn)"
         
         //하트 색칠하기
         isFavorite = user.favorites.fav_fivemarkets.contains { element in

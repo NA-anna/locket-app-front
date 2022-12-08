@@ -19,22 +19,33 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ZP2-m6-Xaj">
                                 <rect key="frame" x="30" y="133" width="333" height="596"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img-fiveMarket" translatesAutoresizingMaskIntoConstraints="NO" id="XpZ-2I-hNh">
-                                        <rect key="frame" x="0.0" y="0.0" width="333" height="250"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img-fiveMarket" translatesAutoresizingMaskIntoConstraints="NO" id="XpZ-2I-hNh" customClass="RoundUIImageView" customModule="LocKetApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="333" height="200"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="250" id="IcK-6C-YhH"/>
+                                            <constraint firstAttribute="height" constant="200" id="IcK-6C-YhH"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qxO-Uv-huX">
-                                        <rect key="frame" x="0.0" y="258" width="333" height="170"/>
+                                        <rect key="frame" x="0.0" y="208" width="333" height="170"/>
                                         <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                         <color key="tintColor" systemColor="tintColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="170" id="TVo-gM-phY"/>
                                         </constraints>
                                     </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k2a-U4-nqW">
+                                        <rect key="frame" x="0.0" y="386" width="333" height="20.333333333333314"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYs-Ay-cSK">
-                                        <rect key="frame" x="0.0" y="436" width="333" height="160"/>
+                                        <rect key="frame" x="0.0" y="414.33333333333337" width="333" height="181.66666666666663"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </string>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -71,6 +82,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="btnLike" destination="uhS-K7-Cms" id="Wwu-Wc-aub"/>
+                        <outlet property="lblAddress" destination="k2a-U4-nqW" id="xzK-OH-vDf"/>
                         <outlet property="marketName" destination="REb-dA-zr6" id="VWW-5N-8rM"/>
                         <outlet property="textView" destination="bYs-Ay-cSK" id="8HA-Qj-wPp"/>
                         <outlet property="viewFrame" destination="qxO-Uv-huX" id="7Ty-hi-4rb"/>
@@ -97,6 +109,11 @@
             <point key="canvasLocation" x="802" y="-339"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="XpZ-2I-hNh">
+            <size key="intrinsicContentSize" width="220" height="104"/>
+        </designable>
+    </designables>
     <resources>
         <image name="heart" catalog="system" width="128" height="107"/>
         <image name="img-fiveMarket" width="220" height="104"/>

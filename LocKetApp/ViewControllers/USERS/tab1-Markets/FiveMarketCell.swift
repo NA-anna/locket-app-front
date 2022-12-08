@@ -13,7 +13,7 @@ class FiveMarketCell: UITableViewCell {
     @IBOutlet var imgVw: UIImageView!
     @IBOutlet var lblTitle: UILabel!
     @IBOutlet var lblPlace: UILabel!
-    @IBOutlet var lblDescription: UILabel!
+    //@IBOutlet var lblDescription: UILabel!
     @IBOutlet var lblDate: UILabel!
     
     // UITableView 오브젝트 세팅
@@ -25,7 +25,7 @@ class FiveMarketCell: UITableViewCell {
                 
         if let idx = market.rdnmadr.firstIndex(of: " ") {
             let place = market.rdnmadr[...idx]
-            lblPlace.text = "지역: \(place)"
+            lblPlace.text = "\(place)"
         }else {
             lblPlace.text = "주소: \(market.rdnmadr)"
         }
@@ -34,8 +34,8 @@ class FiveMarketCell: UITableViewCell {
         let openDay = market.mrktEstblCycle.components(separatedBy: "+").joined(separator: ", ")
         lblDate.text = openDay
 
-        let productList = "판매품목: " + market.trtmntPrdlst.components(separatedBy: "+").joined(separator: ", ")
-        lblDescription.text = productList
+//        let productList = "판매품목: " + market.trtmntPrdlst.components(separatedBy: "+").joined(separator: ", ")
+//        lblDescription.text = productList
         
         
     }

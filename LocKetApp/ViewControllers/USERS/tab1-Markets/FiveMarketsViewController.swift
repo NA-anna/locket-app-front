@@ -9,31 +9,16 @@ import UIKit
 
 class FiveMarketsViewController: UITableViewController {
 
-    var pFiveMarkets = fiveMarkets //필터링 후 이 페이지에서만 사용되는 프라이빗 배열
+    //var pFiveMarkets = fiveMarkets //필터링 후 이 페이지에서만 사용되는 프라이빗 배열
     
-    @IBOutlet var segment: UISegmentedControl!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // style
         self.navigationController?.navigationBar.topItem?.title = ""  // 내비게이션바 back 문구 지우기
     }
-    @IBAction func actSegmentChanged(_ sender: Any) {
-//        switch segment.selectedSegmentIndex {
-//        case 0 : print(pFiveMarkets)
-//        case 1:
-//            self.pFiveMarkets = fiveMarkets.filter { market in
-//                let idx = market.rdnmadr.index(market.rdnmadr.startIndex, offsetBy: 1)
-//                //let place = market.rdnmadr[...idx]
-//                print(idx)
-//                return true //place == "서울"
-//            }
-//        default: print(pFiveMarkets)
-//        }
-    }
+   
     
-    
-
     
     
     
