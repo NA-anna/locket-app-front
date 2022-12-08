@@ -52,16 +52,18 @@ class FavoritesViewController: UITableViewController {
         
         // 테이블 오브젝트
         let lblTitle = cell.viewWithTag(1) as? UILabel
-        
+        let imageView = cell.viewWithTag(2) as? UIImageView
         // 플리마켓
         if indexPath.section == 0 {
             if let index = markets.firstIndex(where: { $0._id == user.favorites.fav_fleamarkets[tableIndex].market_id }){
                 let marketName = markets[index].name
                 lblTitle?.text = marketName
             }
+            
         // 5일장
         }else {
             lblTitle?.text = user.favorites.fav_fivemarkets[tableIndex].market_name
+            imageView?.image = UIImage(named: "ic-5market")
         }
 
         return cell

@@ -50,7 +50,7 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="KYz-sq-TWD">
                                             <rect key="frame" x="31.666666666666657" y="17.666666666666671" width="330" height="75"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="10" contentMode="scaleAspectFill" image="rocket_up" translatesAutoresizingMaskIntoConstraints="NO" id="PPr-dO-n2P" customClass="RoundUIImageView" customModule="LocKetApp" customModuleProvider="target">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFill" image="rocket_up" translatesAutoresizingMaskIntoConstraints="NO" id="PPr-dO-n2P" customClass="RoundUIImageView" customModule="LocKetApp" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="75" id="Jdh-Lx-F4o"/>

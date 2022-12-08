@@ -23,10 +23,16 @@ class FiveMarketDetailViewController: UIViewController, MTMapViewDelegate {
         }
     }
     @IBOutlet var marketName: UINavigationItem!
+    @IBOutlet var btnLike: UIButton!
     @IBOutlet var viewFrame: UIView!
     @IBOutlet var lblAddress: UILabel!
-    @IBOutlet var textView: UITextView!
-    @IBOutlet var btnLike: UIButton!
+    @IBOutlet var imgVwRestroom: UIImageView!
+    @IBOutlet var imgVwParking: UIImageView!
+    @IBOutlet var lblStoreNumber: UILabel!
+    @IBOutlet var lblProductList: UILabel!
+    @IBOutlet var lblOpenDay: UILabel!
+    
+    
     
 
     override func viewDidLoad() {
@@ -35,18 +41,23 @@ class FiveMarketDetailViewController: UIViewController, MTMapViewDelegate {
 
         // style
         self.navigationController?.navigationBar.topItem?.title = ""  // 내비게이션바 back 문구 지우기
-        textView.layer.borderWidth = 1.0
-        textView.layer.borderColor = UIColor.systemGray5.cgColor
+
         
         // 데이터
         guard let user = user, let fiveMarket = fiveMarket else {return}
         
         // 마켓정보
-        lblAddress.text = fiveMarket.rdnmadr
-        let productList = fiveMarket.trtmntPrdlst.components(separatedBy: "+").joined(separator: ", ")
         marketName.title = fiveMarket.mrktNm
-        textView.text = "점포 수: \(fiveMarket.storNumber)\n상품: \(productList)\n\n공용화장실 유뮤: \(fiveMarket.pblicToiletYn)\n주차장: \(fiveMarket.prkplceYn)"
+        lblAddress.text = fiveMarket.rdnmadr
+        imgVwRestroom.isHighlighted =  fiveMarket.pblicToiletYn == "Y" ? true : false
+        imgVwParking.isHighlighted =  fiveMarket.prkplceYn == "Y" ? true : false
+        lblStoreNumber.text = fiveMarket.storNumber
+        let productList = fiveMarket.trtmntPrdlst.components(separatedBy: "+").joined(separator: ", ")
+        lblProductList.text = productList
+        let openDay = fiveMarket.mrktEstblCycle.components(separatedBy: "+").joined(separator: ", ")
+        lblOpenDay.text = openDay
         
+    
         //하트 색칠하기
         isFavorite = user.favorites.fav_fivemarkets.contains { element in
             if element.market_name == fiveMarket.mrktNm {

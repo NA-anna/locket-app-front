@@ -42,7 +42,7 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="vhP-ep-L5T">
                                             <rect key="frame" x="15" y="6.6666666666666643" width="335" height="66.666666666666686"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="rocket_up 1" translatesAutoresizingMaskIntoConstraints="NO" id="0Zt-UG-PPX">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" image="rocket_up 1" translatesAutoresizingMaskIntoConstraints="NO" id="0Zt-UG-PPX">
                                                     <rect key="frame" x="0.0" y="0.0" width="50" height="66.666666666666671"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="50" id="Gbp-6g-9e5"/>

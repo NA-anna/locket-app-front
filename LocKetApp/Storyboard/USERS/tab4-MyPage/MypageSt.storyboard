@@ -337,7 +337,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="PxK-gf-4Jo">
                                         <rect key="frame" x="59.666666666666657" y="79.666666666666671" width="273.66666666666674" height="80.000000000000014"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="rocket_up" translatesAutoresizingMaskIntoConstraints="NO" id="Hle-Dp-hrX" customClass="RoundUIImageView" customModule="LocKetApp" customModuleProvider="target">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="Hle-Dp-hrX" customClass="RoundUIImageView" customModule="LocKetApp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="80" id="cHr-ax-DGV"/>
@@ -470,7 +470,6 @@
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="project 1" width="66.666664123535156" height="66.666664123535156"/>
         <image name="questionmark.circle" catalog="system" width="128" height="123"/>
-        <image name="rocket_up" width="170.66667175292969" height="170.66667175292969"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

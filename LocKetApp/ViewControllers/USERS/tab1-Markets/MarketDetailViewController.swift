@@ -26,10 +26,14 @@ class MarketDetailViewController: UIViewController, MTMapViewDelegate {
         }
     }
     @IBOutlet var marketName: UINavigationItem!
+    @IBOutlet var btnLike: UIButton!
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var viewFrame: UIView!
+    @IBOutlet var lblAdress: UILabel!
+    @IBOutlet var lblDate: UILabel!
+    
     @IBOutlet var textView: UITextView!
-    @IBOutlet var btnLike: UIButton!
+    
     @IBOutlet var btnApplying: UIButton!
     
     override func viewDidLoad() {
@@ -59,7 +63,10 @@ class MarketDetailViewController: UIViewController, MTMapViewDelegate {
         // 마켓정보
         guard let des = market.description else {return}
         marketName.title = market.name
-        textView.text = "날짜 : \(market.startdate) 부터 \(market.enddate)까지\n \n장소: \(market.place)\n\n\(des)"
+        lblAdress.text = market.place
+        lblDate.text = "\(market.startdate) 부터 \(market.enddate)까지\n \n\(des)"
+        
+        textView.text = "\(des)"
         
         // 하트 색칠하기
         isFavorite = user.favorites.fav_fleamarkets.contains { element in

@@ -26,7 +26,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="THc-4x-75e">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="THc-4x-75e">
                                 <rect key="frame" x="30" y="133" width="333" height="645"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vey-Uz-8gS" customClass="RoundUIImageView" customModule="LocKetApp" customModuleProvider="target">
@@ -41,15 +41,51 @@
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OwP-f5-hz5">
-                                        <rect key="frame" x="0.0" y="258" width="333" height="100"/>
+                                        <rect key="frame" x="0.0" y="260" width="333" height="100"/>
                                         <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                         <color key="tintColor" systemColor="tintColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="CLB-Jk-9Bd"/>
                                         </constraints>
                                     </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7ID-aB-xYF">
+                                        <rect key="frame" x="0.0" y="370" width="333" height="22"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="address" translatesAutoresizingMaskIntoConstraints="NO" id="jeW-ck-TgS">
+                                                <rect key="frame" x="0.0" y="0.0" width="22" height="22"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="22" id="4A6-yH-cAd"/>
+                                                    <constraint firstAttribute="width" constant="22" id="rIa-cO-jPe"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="adress" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2nW-wG-Xkr">
+                                                <rect key="frame" x="22" y="0.0" width="311" height="22"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nvo-ex-TTf">
+                                        <rect key="frame" x="0.0" y="402" width="333" height="22"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar" translatesAutoresizingMaskIntoConstraints="NO" id="jFr-Yl-NK0">
+                                                <rect key="frame" x="0.0" y="0.0" width="22" height="22"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="22" id="Oxx-CH-Oi3"/>
+                                                    <constraint firstAttribute="height" constant="22" id="wuN-zq-Tqs"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="adress" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4CU-Do-9pD">
+                                                <rect key="frame" x="22" y="0.0" width="311" height="22"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="F9c-73-sCn">
-                                        <rect key="frame" x="0.0" y="366" width="333" height="237"/>
+                                        <rect key="frame" x="0.0" y="434" width="333" height="167"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </string>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -99,6 +135,8 @@
                         <outlet property="btnApplying" destination="avW-ks-NNG" id="QgF-ro-uVX"/>
                         <outlet property="btnLike" destination="RnV-sC-C50" id="sK6-Os-aUB"/>
                         <outlet property="imageView" destination="vey-Uz-8gS" id="Fnj-kW-Spr"/>
+                        <outlet property="lblAdress" destination="2nW-wG-Xkr" id="6Ma-l8-ZNV"/>
+                        <outlet property="lblDate" destination="4CU-Do-9pD" id="qJa-4v-5Te"/>
                         <outlet property="marketName" destination="qFQ-k3-5PM" id="iIZ-Zj-WjM"/>
                         <outlet property="textView" destination="F9c-73-sCn" id="fc5-Vw-Y53"/>
                         <outlet property="viewFrame" destination="OwP-f5-hz5" id="FE9-1X-22B"/>
@@ -126,6 +164,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="address" width="30" height="30"/>
+        <image name="calendar" width="32" height="32"/>
         <image name="heart" catalog="system" width="128" height="107"/>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
