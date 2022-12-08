@@ -245,15 +245,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q4A-Jn-Pzz" userLabel="연유라떼님, 안녕하세요.">
-                                <rect key="frame" x="29.999999999999986" y="126" width="239.66666666666663" height="80"/>
+                                <rect key="frame" x="30" y="133" width="216" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="pzN-p7-hpL"/>
                                 </constraints>
                                 <attributedString key="attributedText">
                                     <fragment content="연유라떼님">
                                         <attributes>
-                                            <font key="NSFont" metaFont="system" size="20"/>
-                                            <font key="NSOriginalFont" metaFont="system" size="20"/>
+                                            <font key="NSFont" size="18" name=".AppleSDGothicNeoI-Regular"/>
+                                            <font key="NSOriginalFont" metaFont="system" size="18"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -261,14 +261,14 @@
                                         <string key="content">,
 </string>
                                         <attributes>
-                                            <font key="NSFont" metaFont="system" size="20"/>
+                                            <font key="NSFont" metaFont="system" size="18"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="안녕하세요">
                                         <attributes>
-                                            <font key="NSFont" metaFont="system" size="20"/>
-                                            <font key="NSOriginalFont" metaFont="system" size="20"/>
+                                            <font key="NSFont" size="18" name=".AppleSDGothicNeoI-Regular"/>
+                                            <font key="NSOriginalFont" metaFont="system" size="18"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -276,46 +276,46 @@
                                         <string key="content">.
 </string>
                                         <attributes>
-                                            <font key="NSFont" metaFont="system" size="20"/>
+                                            <font key="NSFont" metaFont="system" size="18"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="등록된">
                                         <attributes>
-                                            <font key="NSFont" metaFont="system" size="20"/>
-                                            <font key="NSOriginalFont" metaFont="system" size="20"/>
+                                            <font key="NSFont" size="18" name=".AppleSDGothicNeoI-Regular"/>
+                                            <font key="NSOriginalFont" metaFont="system" size="18"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content=" ">
                                         <attributes>
-                                            <font key="NSFont" metaFont="system" size="20"/>
+                                            <font key="NSFont" metaFont="system" size="18"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="마켓내역을">
                                         <attributes>
-                                            <font key="NSFont" metaFont="system" size="20"/>
-                                            <font key="NSOriginalFont" metaFont="system" size="20"/>
+                                            <font key="NSFont" size="18" name=".AppleSDGothicNeoI-Regular"/>
+                                            <font key="NSOriginalFont" metaFont="system" size="18"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content=" ">
                                         <attributes>
-                                            <font key="NSFont" metaFont="system" size="20"/>
+                                            <font key="NSFont" metaFont="system" size="18"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="확인하세요">
                                         <attributes>
-                                            <font key="NSFont" metaFont="system" size="20"/>
-                                            <font key="NSOriginalFont" metaFont="system" size="20"/>
+                                            <font key="NSFont" size="18" name=".AppleSDGothicNeoI-Regular"/>
+                                            <font key="NSOriginalFont" metaFont="system" size="18"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content=".">
                                         <attributes>
-                                            <font key="NSFont" metaFont="system" size="20"/>
+                                            <font key="NSFont" metaFont="system" size="18"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -323,7 +323,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Yy8-Sf-AN6">
-                                <rect key="frame" x="30" y="236" width="333" height="490"/>
+                                <rect key="frame" x="30" y="263" width="333" height="463"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="marketcell" id="96d-Bx-9uk" customClass="MarketCell" customModule="LocKetApp" customModuleProvider="target">
@@ -333,7 +333,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="333" height="70"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ohm-31-uQo">
+                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ohm-31-uQo">
                                                     <rect key="frame" x="0.0" y="5" width="333" height="60"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sJW-Ab-hJN" customClass="RoundUIImageView" customModule="LocKetApp" customModuleProvider="target">
@@ -349,7 +349,7 @@
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i4F-8y-nYH">
-                                                            <rect key="frame" x="91" y="20.333333333333336" width="231" height="19.333333333333336"/>
+                                                            <rect key="frame" x="100" y="20.333333333333336" width="213" height="19.333333333333336"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -398,8 +398,8 @@
                             <constraint firstItem="Yy8-Sf-AN6" firstAttribute="centerX" secondItem="Bfv-QO-xLZ" secondAttribute="centerX" id="bhF-JI-eYf"/>
                             <constraint firstItem="Rth-sD-OPp" firstAttribute="bottom" secondItem="Yy8-Sf-AN6" secondAttribute="bottom" constant="92" id="fKP-XJ-5ec"/>
                             <constraint firstItem="q4A-Jn-Pzz" firstAttribute="leading" secondItem="Yy8-Sf-AN6" secondAttribute="leading" id="jf6-cw-Owd"/>
-                            <constraint firstItem="q4A-Jn-Pzz" firstAttribute="top" secondItem="Rth-sD-OPp" secondAttribute="top" constant="23" id="wHA-zE-24x"/>
-                            <constraint firstItem="Yy8-Sf-AN6" firstAttribute="top" secondItem="q4A-Jn-Pzz" secondAttribute="bottom" constant="30" id="xE0-lh-bIU"/>
+                            <constraint firstItem="q4A-Jn-Pzz" firstAttribute="top" secondItem="Rth-sD-OPp" secondAttribute="top" constant="30" id="wHA-zE-24x"/>
+                            <constraint firstItem="Yy8-Sf-AN6" firstAttribute="top" secondItem="q4A-Jn-Pzz" secondAttribute="bottom" constant="50" id="xE0-lh-bIU"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="qyu-7r-JAP">
