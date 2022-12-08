@@ -52,8 +52,9 @@
                                                         </label>
                                                         <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYD-ML-jFu">
                                                             <rect key="frame" x="206.33333333333334" y="0.0" width="106.66666666666666" height="24.333333333333332"/>
+                                                            <color key="tintColor" red="0.96862745100000003" green="0.76862745099999996" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <state key="normal" title="Button"/>
-                                                            <buttonConfiguration key="configuration" style="gray" image="chevron.down" catalog="system" title="진행상태"/>
+                                                            <buttonConfiguration key="configuration" style="tinted" image="chevron.down" catalog="system" imagePlacement="trailing" title="진행상태"/>
                                                         </button>
                                                     </subviews>
                                                 </stackView>
