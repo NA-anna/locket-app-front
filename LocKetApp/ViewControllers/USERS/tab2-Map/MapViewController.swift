@@ -85,7 +85,7 @@ class MapViewController: UIViewController, MTMapViewDelegate {
         case 3 :
             markersOfMarkets(category: segment.titleForSegment(at: 3)!)
         case 4 :
-            markersOfMarkets(category: segment.titleForSegment(at: 4)!)
+            markersOf5Markets()
         default: return
         }
         
@@ -141,7 +141,7 @@ class MapViewController: UIViewController, MTMapViewDelegate {
                 default: return
                 }
                 marker.showAnimationType = .noAnimation
-                if let idx = markets.lastIndex(of: market) {
+                if let idx = markets.firstIndex(of: market) {
                     marker.tag = idx
                 }
                 markers.append(marker)
@@ -151,7 +151,7 @@ class MapViewController: UIViewController, MTMapViewDelegate {
     }
   
     
- 
+/*
     func mapView(_ mapView: MTMapView!, updateCurrentLocation location: MTMapPoint!, withAccuracy accuracy: MTMapLocationAccuracy) {
         let currentLocation = location?.mapPointGeo()
         if let latitude = currentLocation?.latitude,
@@ -163,7 +163,7 @@ class MapViewController: UIViewController, MTMapViewDelegate {
     func mapView(_ mapView: MTMapView!, updateDeviceHeading headingAngle: MTMapRotationAngle) {
         print("headingAngle: ", headingAngle)
     }
-    
+*/
 
     func mapView(_ mapView: MTMapView!, touchedCalloutBalloonOf poiItem: MTMapPOIItem!) {
         

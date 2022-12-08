@@ -75,7 +75,7 @@ struct Market: Codable, Equatable {
     
     func isGathering() -> Bool {
         if let sellersForm = sellersForm {
-            return (needSellers && sellersForm.deadline > Date().toString())
+            return (needSellers && sellersForm.deadline >= Date().toString())
         } else {
             return false
         }

@@ -121,33 +121,47 @@
                                             <rect key="frame" x="0.0" y="0.0" width="333" height="70"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="do4-JP-W1n">
-                                                    <rect key="frame" x="106" y="20" width="133" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m82-rO-oIT" customClass="RoundUIImageView" customModule="LocKetApp" customModuleProvider="target">
-                                                    <rect key="frame" x="9" y="0.0" width="91" height="65"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                            <real key="value" value="5"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                    </userDefinedRuntimeAttributes>
-                                                </imageView>
-                                                <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EaJ-8h-iZX">
-                                                    <rect key="frame" x="216" y="17" width="101" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="tintColor" red="0.93725490570000003" green="0.77647060160000003" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                    <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" title="모집보기 &gt;"/>
-                                                    <connections>
-                                                        <segue destination="LkP-tz-4lQ" kind="show" id="sWM-jY-k2m"/>
-                                                    </connections>
-                                                </button>
+                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="yVd-8K-6S1">
+                                                    <rect key="frame" x="0.0" y="5" width="333" height="60"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m82-rO-oIT" customClass="RoundUIImageView" customModule="LocKetApp" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="90" height="60"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="90" id="dRg-w6-8ke"/>
+                                                                <constraint firstAttribute="height" constant="60" id="sqv-yy-XJS"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="5"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="do4-JP-W1n">
+                                                            <rect key="frame" x="91" y="20" width="141" height="20.333333333333329"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EaJ-8h-iZX">
+                                                            <rect key="frame" x="233" y="13" width="100" height="34.333333333333336"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="100" id="Vv8-m5-3xr"/>
+                                                            </constraints>
+                                                            <color key="tintColor" red="0.93725490570000003" green="0.77647060160000003" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <state key="normal" title="Button"/>
+                                                            <buttonConfiguration key="configuration" style="plain" title="모집보기 &gt;"/>
+                                                            <connections>
+                                                                <segue destination="LkP-tz-4lQ" kind="show" id="sWM-jY-k2m"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="yVd-8K-6S1" firstAttribute="centerY" secondItem="0eB-Yd-D2L" secondAttribute="centerY" id="Go5-BE-D10"/>
+                                                <constraint firstItem="yVd-8K-6S1" firstAttribute="centerX" secondItem="0eB-Yd-D2L" secondAttribute="centerX" id="PnA-7G-rgy"/>
+                                                <constraint firstItem="yVd-8K-6S1" firstAttribute="leading" secondItem="0eB-Yd-D2L" secondAttribute="leading" id="hYi-FG-JVD"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="btn" destination="EaJ-8h-iZX" id="4KU-yh-Rn9"/>
