@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "wc (1).png",
+      "filename" : "placeholder.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "wc (1) 1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "wc (1) 2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
