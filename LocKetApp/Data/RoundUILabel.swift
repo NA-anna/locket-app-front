@@ -16,4 +16,14 @@ class RoundUILabel : UILabel {
             layer.masksToBounds = cornerRadius > 0
         }
     }
+    
+    @IBInspectable var topInset: CGFloat = 4.0
+    @IBInspectable var bottomInset: CGFloat = 4.0
+    @IBInspectable var leftInset: CGFloat = 8.0
+    @IBInspectable var rightInset: CGFloat = 8.0
+    
+    override func drawText(in rect: CGRect) {
+        let insets = UIEdgeInsets(top: topInset, left: leftInset, bottom: bottomInset, right: rightInset)
+        super.drawText(in: rect.inset(by: insets))
+    }
 }

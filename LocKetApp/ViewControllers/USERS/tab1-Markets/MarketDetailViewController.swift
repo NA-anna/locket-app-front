@@ -31,9 +31,7 @@ class MarketDetailViewController: UIViewController, MTMapViewDelegate {
     @IBOutlet var viewFrame: UIView!
     @IBOutlet var lblAdress: UILabel!
     @IBOutlet var lblDate: UILabel!
-    
     @IBOutlet var textView: UITextView!
-    
     @IBOutlet var btnApplying: UIButton!
     
     override func viewDidLoad() {
@@ -143,6 +141,7 @@ class MarketDetailViewController: UIViewController, MTMapViewDelegate {
             
         }
     }
+
     
 
     // MARK: - Navigation

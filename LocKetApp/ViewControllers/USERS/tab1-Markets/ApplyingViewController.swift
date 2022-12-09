@@ -16,9 +16,12 @@ class ApplyingViewController: UIViewController {
     //Azure Storage 설정 세팅
     var blobstorage: AZBlobService = AZBlobService.init(connectionString, containerName: "sellerprofile")
     
+    let textViewPlaceHolder = "자세한 설명을 적어주세요." //스토리보드의 텍스트뷰의 dedfault text와 일치 시켜야 동작함
+    
+    
+    @IBOutlet var btnDone: UIBarButtonItem!
     @IBOutlet var lblHello: UILabel!
     @IBOutlet var imageView: UIImageView!
-    
     @IBOutlet var txtFldCategory: UITextField!
     @IBOutlet var txtFldSubCategory: UITextField!
     @IBOutlet var txtFldSNS: UITextField!
@@ -27,27 +30,34 @@ class ApplyingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
-        guard let user = user, let market = market else {return}
-        let name = user.name
-        
-        // 오브젝트 설정
-        lblHello.text = "\(name)님, \n'\(market.name)' 셀러 참가를 위해 \n아래 내용을 적어주세요"
-        
+        // style
+        self.navigationController?.navigationBar.topItem?.title = ""  // 내비게이션바 back 문구 지우기
         txtVwDescription.layer.borderWidth = 1.0
         txtVwDescription.layer.cornerRadius = 10
         txtVwDescription.layer.borderColor = UIColor.systemGray6.cgColor
+        
+        guard let market = market, let sellerForm = market.sellersForm else {return}
+        
+        
+        // 오브젝트 설정
+        lblHello.text = "\(sellerForm.description)"
         
         
         // UITextField 프로토콜
         txtFldSubCategory.delegate = self
         txtFldSNS.delegate = self
         
+        // UITextView 프로토콜
+        txtVwDescription.delegate = self
         
         // UIPickerView 프로토콜
         let picker = UIPickerView()
         picker.delegate = self
         self.txtFldCategory.inputView = picker // 텍스트 필드 입력 방식을 키보드 대신 피커 뷰로 설정
+    }
+    // 빈 화면 터치 시 입력 닫기
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
     
     @IBAction func actPhotoLibrary(_ sender: Any) {
@@ -58,15 +68,27 @@ class ApplyingViewController: UIViewController {
         present(picker, animated: true)
     }
     
+    @IBAction func actCategoryValueChanged(_ sender: Any) {
+        enableAddBtn()
+    }
+    @IBAction func actSubCategoryDidEnd(_ sender: Any) {
+        enableAddBtn()
+    }
     @IBAction func actApplying(_ sender: Any) {
         post()
     }
 
-    
-    // 빈 화면 터치 시 입력 닫기
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
+    // 입력 확인 후 버튼 활성화 함수
+    func enableAddBtn(){
+        if txtFldCategory.text != "" && txtFldSubCategory.text != "" && txtVwDescription.text != textViewPlaceHolder
+        {
+            btnDone.isEnabled = true
+        }else {
+            btnDone.isEnabled = true
+        }
     }
+    
+
     
     func post() {
         
@@ -91,7 +113,7 @@ class ApplyingViewController: UIViewController {
         postSeller( collection: "sellers", body: bodyData) { statusCode in
             if statusCode <= 204 {
                 
-                // alert 
+                // alert
                 let alert = UIAlertController(title: "", message: "참여하기가 신청되었습니다!", preferredStyle: .alert)
                 let actionOK = UIAlertAction(title: "확인", style: .default, handler: { _ in
                     //화면전환
@@ -125,6 +147,12 @@ class ApplyingViewController: UIViewController {
     }
 }
 
+
+
+//===========================================================================================
+// Extension 확장 - Protocol
+//===========================================================================================
+
 // UIImagePicker -> Photo Library
 extension ApplyingViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     
@@ -138,12 +166,6 @@ extension ApplyingViewController: UIImagePickerControllerDelegate, UINavigationC
         dismiss(animated: true)
     }
 }
-
-
-
-
-
-
 
 // UIPickerView
 extension ApplyingViewController: UIPickerViewDelegate, UIPickerViewDataSource {
@@ -188,5 +210,22 @@ extension ApplyingViewController: UITextFieldDelegate {
         txtFldSNS.resignFirstResponder()
         
         return true
+    }
+}
+
+// UITextView : placeholder 기능
+extension ApplyingViewController: UITextViewDelegate {
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.text == textViewPlaceHolder {
+            textView.text = nil
+            textView.textColor = .black
+        }
+    }
+    
+    func ApplyingViewController(_ textView: UITextView) {
+        if textView.text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+            textView.text = textViewPlaceHolder
+            textView.textColor = .lightGray
+        }
     }
 }

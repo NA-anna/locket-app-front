@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XcI-Nu-pmP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cGc-lk-hdH">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -19,7 +19,7 @@
                         <color key="tintColor" red="0.93725490570000003" green="0.77647060160000003" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="XcI-Nu-pmP" kind="relationship" relationship="rootViewController" id="rEB-8w-6vi"/>
+                        <segue destination="iyC-iJ-lcT" kind="relationship" relationship="rootViewController" id="HHF-QC-o2A"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XfB-Sj-evN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -86,7 +86,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <searchBar key="tableHeaderView" contentMode="redraw" id="b8j-3k-19O">
-                            <rect key="frame" x="0.0" y="0.0" width="180" height="44"/>
+                            <rect key="frame" x="0.0" y="0.0" width="390" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
                             <connections>
@@ -140,53 +140,53 @@
             <point key="canvasLocation" x="326" y="529"/>
         </scene>
         <!--마켓 등록 하기-->
-        <scene sceneID="NG0-Vs-G7U">
+        <scene sceneID="Fwg-sg-AFw">
             <objects>
-                <viewController storyboardIdentifier="addingSt" id="XcI-Nu-pmP" customClass="AddViewController" customModule="LocKetApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="lLm-FE-CB2">
+                <viewController storyboardIdentifier="addingSt" id="iyC-iJ-lcT" customClass="AddViewController" customModule="LocKetApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="J4q-8b-czZ">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="78j-IH-q2p">
-                                <rect key="frame" x="78" y="91" width="115" height="115"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IOe-3c-lPF">
+                                <rect key="frame" x="40" y="108" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" image="photo.artframe" catalog="system"/>
                                 <connections>
-                                    <action selector="actPhotoLibrary:" destination="XcI-Nu-pmP" eventType="touchUpInside" id="GlE-Ng-Jzi"/>
+                                    <action selector="actPhotoLibrary:" destination="iyC-iJ-lcT" eventType="touchUpInside" id="lTW-wF-zU5"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cGx-1l-HaA">
-                                <rect key="frame" x="198" y="91" width="115" height="115"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zy0-H3-Clw">
+                                <rect key="frame" x="138" y="91" width="115" height="115"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="제목" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rdz-Il-ULS">
-                                <rect key="frame" x="23" y="214" width="344" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="제목" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mbc-Cl-yqz">
+                                <rect key="frame" x="40" y="214" width="311" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="actTitleDidEnd:" destination="XcI-Nu-pmP" eventType="editingDidEnd" id="xPX-m8-OIe"/>
+                                    <action selector="actTitleDidEnd:" destination="iyC-iJ-lcT" eventType="editingDidEnd" id="YHN-Ou-rbf"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="카테고리" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zyY-vF-CbB">
-                                <rect key="frame" x="23" y="256" width="344" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="카테고리" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k20-1v-cqW">
+                                <rect key="frame" x="40" y="256" width="311" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="actCategoryValueChanged:" destination="XcI-Nu-pmP" eventType="editingDidEnd" id="ysq-E3-3za"/>
+                                    <action selector="actCategoryValueChanged:" destination="iyC-iJ-lcT" eventType="editingDidEnd" id="FIG-Dn-eku"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="날짜" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bc3-Ux-DYz">
-                                <rect key="frame" x="23" y="298" width="30" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="날짜" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r11-EP-YpF">
+                                <rect key="frame" x="40" y="298" width="30" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="quF-lq-xzs">
-                                <rect key="frame" x="23" y="327" width="116" height="34"/>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="uyj-ks-CU2">
+                                <rect key="frame" x="40" y="327" width="116" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <date key="minimumDate" timeIntervalSinceReferenceDate="599569200">
                                     <!--2020-01-01 11:00:00 +0000-->
@@ -196,15 +196,15 @@
                                 </date>
                                 <locale key="locale" localeIdentifier="ko"/>
                             </datePicker>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="부터" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v8d-h6-pQi">
-                                <rect key="frame" x="154" y="327" width="29.5" height="34"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="부터" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="awf-7X-GUb">
+                                <rect key="frame" x="158" y="327" width="29.5" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="Lei-fv-pgn">
-                                <rect key="frame" x="206" y="327" width="122" height="34"/>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="Xq7-rS-ixJ">
+                                <rect key="frame" x="206" y="327" width="116" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <date key="minimumDate" timeIntervalSinceReferenceDate="599569200">
                                     <!--2020-01-01 11:00:00 +0000-->
@@ -214,76 +214,80 @@
                                 </date>
                                 <locale key="locale" localeIdentifier="ko"/>
                             </datePicker>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="까지" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Yr-HB-fZb">
-                                <rect key="frame" x="338" y="327" width="29.5" height="34"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="까지" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RUV-Oh-05F">
+                                <rect key="frame" x="325" y="327" width="29.5" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="장소" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T4M-6o-qOY">
-                                <rect key="frame" x="23" y="369" width="301" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="장소" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PgV-ob-niG">
+                                <rect key="frame" x="40" y="369" width="270" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <imageReference key="background" image="chevron.right" catalog="system" symbolScale="default" variableValue="1"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oz3-M4-1Jc">
-                                <rect key="frame" x="323" y="369" width="44" height="34"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RdK-wU-jZl">
+                                <rect key="frame" x="307" y="369" width="44" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="magnifyingglass" catalog="system"/>
                                 <connections>
-                                    <segue destination="b2R-9A-TI8" kind="show" identifier="place" id="Wba-vI-MBs"/>
+                                    <segue destination="b2R-9A-TI8" kind="show" identifier="place" id="rot-0d-fN8"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="자세한 설명을 적어주세요." translatesAutoresizingMaskIntoConstraints="NO" id="cIY-Z5-TJT">
-                                <rect key="frame" x="23" y="411" width="344" height="141"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="자세한 설명을 적어주세요." translatesAutoresizingMaskIntoConstraints="NO" id="iZQ-jL-FQA">
+                                <rect key="frame" x="40" y="411" width="311" height="114"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="셀러모집이 필요하신가요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h8C-RZ-kij">
-                                <rect key="frame" x="23" y="560" width="287" height="31"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="셀러모집이 필요하신가요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dR6-ca-Qnv">
+                                <rect key="frame" x="40" y="533" width="254" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="WWj-Kp-Kzl">
-                                <rect key="frame" x="318" y="560" width="51" height="31"/>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="sLs-Wy-2Yq">
+                                <rect key="frame" x="302" y="533" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="swNeedSellers:" destination="XcI-Nu-pmP" eventType="valueChanged" id="gCz-wa-BG5"/>
+                                    <action selector="swNeedSellers:" destination="iyC-iJ-lcT" eventType="valueChanged" id="Djb-7v-EbX"/>
                                 </connections>
                             </switch>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eqS-Le-TrU">
-                                <rect key="frame" x="23" y="598" width="344" height="212"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Ka-wI-xMV">
+                                <rect key="frame" x="40" y="571" width="311" height="212"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="셀러 수" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vzU-VY-uS5">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="셀러 수" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dLT-lg-48a">
                                         <rect key="frame" x="0.0" y="0.0" width="75" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="61b-PY-4Ul">
-                                        <rect key="frame" x="83" y="0.0" width="260" height="34"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H49-XS-OIE">
+                                        <rect key="frame" x="83" y="0.0" width="227" height="34"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <connections>
+                                            <action selector="actSelletCountDidEnd:" destination="iyC-iJ-lcT" eventType="editingDidEnd" id="8N5-ZK-Df8"/>
+                                        </connections>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="모집마감" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Vj-vv-pA5">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="모집마감" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xOe-hT-e4a">
                                         <rect key="frame" x="0.0" y="42" width="75" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="w8M-uL-v9f">
-                                        <rect key="frame" x="84" y="42" width="218" height="34"/>
+                                    <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="bpo-y6-T14">
+                                        <rect key="frame" x="84" y="42" width="185" height="34"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                         <date key="minimumDate" timeIntervalSinceReferenceDate="599569200">
                                             <!--2020-01-01 11:00:00 +0000-->
@@ -293,67 +297,71 @@
                                         </date>
                                         <locale key="locale" localeIdentifier="ko"/>
                                     </datePicker>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="모집 카테고리" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rde-ML-KJu">
-                                        <rect key="frame" x="0.0" y="84" width="302" height="34"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="모집 카테고리" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GTS-Ll-HfQ">
+                                        <rect key="frame" x="0.0" y="84" width="269" height="34"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="actSellerCategoryValueChanged:" destination="iyC-iJ-lcT" eventType="valueChanged" id="Iac-kk-Lc2"/>
+                                        </connections>
                                     </textField>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="자세한 설명을 적어주세요." translatesAutoresizingMaskIntoConstraints="NO" id="qqN-sx-Beq">
-                                        <rect key="frame" x="0.0" y="126" width="344" height="86"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="자세한 설명을 적어주세요." translatesAutoresizingMaskIntoConstraints="NO" id="PP7-Eo-Mgy">
+                                        <rect key="frame" x="0.0" y="126" width="311" height="86"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="까지" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fEZ-re-5tp">
-                                        <rect key="frame" x="296" y="42" width="47" height="34"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="까지" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JC4-Fk-1aL">
+                                        <rect key="frame" x="273" y="42" width="47" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wRz-6M-30W">
-                                        <rect key="frame" x="303" y="84" width="40" height="34"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zp8-yS-NMb">
+                                        <rect key="frame" x="270" y="84" width="40" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="chevron.right" catalog="system"/>
                                         <connections>
-                                            <segue destination="Omp-gJ-5mq" kind="show" identifier="category" id="fUE-Ed-Qn0"/>
+                                            <segue destination="Omp-gJ-5mq" kind="show" identifier="category" id="kJF-2m-orX"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="V2t-8V-U1C"/>
+                        <viewLayoutGuide key="safeArea" id="1k1-WZ-uRp"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <navigationItem key="navigationItem" title="마켓 등록 하기" id="OmH-Jb-zLd">
-                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="등록" id="z0e-di-nsg">
+                    <navigationItem key="navigationItem" title="마켓 등록 하기" id="x9m-Zl-9Mv">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="등록" id="Ui8-xu-an3">
                             <connections>
-                                <action selector="actDone:" destination="XcI-Nu-pmP" id="BXq-gW-YoJ"/>
+                                <action selector="actDone:" destination="iyC-iJ-lcT" id="B8L-MN-TNL"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="btnDone" destination="z0e-di-nsg" id="KSr-RH-FfB"/>
-                        <outlet property="datePickerDeadline" destination="w8M-uL-v9f" id="DM8-yo-Jnz"/>
-                        <outlet property="datePickerEndDate" destination="Lei-fv-pgn" id="UX5-Zn-CuQ"/>
-                        <outlet property="datePickerStartDate" destination="quF-lq-xzs" id="lzL-De-Xib"/>
-                        <outlet property="imageView" destination="cGx-1l-HaA" id="Taz-xx-JOi"/>
-                        <outlet property="swSeller" destination="WWj-Kp-Kzl" id="MWD-1g-BJe"/>
-                        <outlet property="txtFldCategory" destination="zyY-vF-CbB" id="cIq-JA-HTQ"/>
-                        <outlet property="txtFldName" destination="rdz-Il-ULS" id="WF6-aJ-bol"/>
-                        <outlet property="txtFldPlace" destination="T4M-6o-qOY" id="IMm-sc-dnc"/>
-                        <outlet property="txtFldSellerCategories" destination="Rde-ML-KJu" id="zqD-Kz-0ds"/>
-                        <outlet property="txtFldSellerCount" destination="61b-PY-4Ul" id="yVH-bE-E4c"/>
-                        <outlet property="txtVwDescription" destination="cIY-Z5-TJT" id="CVP-NM-vfa"/>
-                        <outlet property="txtVwSellerDescription" destination="qqN-sx-Beq" id="91h-y1-kOP"/>
-                        <outlet property="viewSellers" destination="eqS-Le-TrU" id="ewu-ir-TZw"/>
+                        <outlet property="btnDone" destination="Ui8-xu-an3" id="Vny-5y-wAS"/>
+                        <outlet property="datePickerDeadline" destination="bpo-y6-T14" id="zbg-39-3e3"/>
+                        <outlet property="datePickerEndDate" destination="Xq7-rS-ixJ" id="eDm-nq-vDp"/>
+                        <outlet property="datePickerStartDate" destination="uyj-ks-CU2" id="j2D-K9-zuv"/>
+                        <outlet property="imageView" destination="zy0-H3-Clw" id="1tk-7X-LJ5"/>
+                        <outlet property="swSeller" destination="sLs-Wy-2Yq" id="Sws-Xl-WZ9"/>
+                        <outlet property="txtFldCategory" destination="k20-1v-cqW" id="Xhc-4D-KVa"/>
+                        <outlet property="txtFldName" destination="Mbc-Cl-yqz" id="mCs-tb-t17"/>
+                        <outlet property="txtFldPlace" destination="PgV-ob-niG" id="k6b-l8-1L3"/>
+                        <outlet property="txtFldSellerCategories" destination="GTS-Ll-HfQ" id="77J-ST-Wwc"/>
+                        <outlet property="txtFldSellerCount" destination="H49-XS-OIE" id="j0M-S9-wHK"/>
+                        <outlet property="txtVwDescription" destination="iZQ-jL-FQA" id="utJ-aA-odM"/>
+                        <outlet property="txtVwSellerDescription" destination="PP7-Eo-Mgy" id="DWj-a0-TT0"/>
+                        <outlet property="viewSellers" destination="8Ka-wI-xMV" id="8cX-Yt-TKg"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="h0l-go-yWo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FoW-Vf-Rlo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-601.53846153846155" y="864.45497630331749"/>
         </scene>

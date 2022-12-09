@@ -129,6 +129,9 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system"/>
                             </button>
+                            <connections>
+                                <action selector="actFavorite:" destination="XSt-HB-kkW" id="y7Y-gK-PCX"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>

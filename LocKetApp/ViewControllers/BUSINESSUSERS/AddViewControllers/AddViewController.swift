@@ -35,6 +35,7 @@ class AddViewController: UIViewController {
     }
     var latitude: String?
     var longitude: String?
+    let textViewPlaceHolder = "자세한 설명을 적어주세요." //스토리보드의 텍스트뷰의 dedfault text와 일치 시켜야 동작함
     
     @IBOutlet var btnDone: UIBarButtonItem!
     @IBOutlet var imageView: UIImageView!
@@ -51,7 +52,6 @@ class AddViewController: UIViewController {
     @IBOutlet var txtFldSellerCategories: UITextField!
     @IBOutlet var txtVwSellerDescription: UITextView!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -62,12 +62,19 @@ class AddViewController: UIViewController {
         txtVwDescription.layer.cornerRadius = 10
         txtVwDescription.layer.borderColor = UIColor.systemGray6.cgColor
         
+        txtVwSellerDescription.layer.borderWidth = 1.0
+        txtVwSellerDescription.layer.cornerRadius = 10
+        txtVwSellerDescription.layer.borderColor = UIColor.systemGray6.cgColor
+        
         // 오브젝트 세팅
         viewSellers.isHidden = true
         
-        
         // UITextField 프로토콜
         txtFldName.delegate = self
+        
+        // UITextView 프로토콜
+        txtVwDescription.delegate = self
+        txtVwSellerDescription.delegate = self
         
         // UIPickerView 프로토콜
         let picker = UIPickerView()
@@ -97,13 +104,17 @@ class AddViewController: UIViewController {
        
         if  sender.isOn{
             viewSellers.isHidden = false
-            //viewMain.frame.size.height = 1100
         }else {
             viewSellers.isHidden = true
-            //viewMain.frame.size.height = 800
-
+            enableAddBtn()
         }
           
+    }
+    @IBAction func actSelletCountDidEnd(_ sender: Any) {
+        enableAddBtn()
+    }
+    @IBAction func actSellerCategoryValueChanged(_ sender: Any) {
+        enableAddBtn()
     }
     @IBAction func actDone(_ sender: Any) {
         post()
@@ -113,9 +124,9 @@ class AddViewController: UIViewController {
     
     // 입력 확인(타이틀, 카테고리, 장소) 후 버튼 활성화 함수
     func enableAddBtn(){
-        if txtFldName.text != "" && txtFldCategory.text != "" && txtFldPlace.text != ""
+        if txtFldName.text != "" && txtFldCategory.text != "" && txtFldPlace.text != "" && txtVwDescription.text != textViewPlaceHolder
         {
-            if swSeller.isOn && txtFldSellerCount.text != "" && txtFldSellerCategories.text != "" {
+            if swSeller.isOn && txtFldSellerCount.text != "" && txtFldSellerCategories.text != "" && txtVwSellerDescription.text != textViewPlaceHolder {
                 btnDone.isEnabled = true
                 return
             }else if !swSeller.isOn {
@@ -244,6 +255,9 @@ class AddViewController: UIViewController {
 
 }
 
+//===========================================================================================
+// Extension 확장 - Protocol
+//===========================================================================================
 
 // UIImagePicker -> Photo Library
 extension AddViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
@@ -303,4 +317,19 @@ extension AddViewController: UITextFieldDelegate {
     }
 }
 
-
+// UITextView : placeholder 기능
+extension AddViewController: UITextViewDelegate {
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.text == textViewPlaceHolder {
+            textView.text = nil
+            textView.textColor = .black
+        }
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+            textView.text = textViewPlaceHolder
+            textView.textColor = .lightGray
+        }
+    }
+}
