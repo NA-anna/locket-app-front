@@ -195,7 +195,7 @@
                                                                     </label>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cva-mS-cI9">
                                                                         <rect key="frame" x="83.333333333333357" y="0.0" width="192.66666666666663" height="22"/>
-                                                                        <color key="tintColor" systemColor="labelColor"/>
+                                                                        <color key="tintColor" red="0.96862745100000003" green="0.76862745099999996" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                         <state key="normal" title="Button"/>
                                                                         <buttonConfiguration key="configuration" style="plain" title="054-650-6612">
                                                                             <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
@@ -309,9 +309,6 @@
         <image name="restroom_n" width="30" height="30"/>
         <image name="restroom_y" width="42.666667938232422" height="42.666667938232422"/>
         <image name="star2" width="512" height="512"/>
-        <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
