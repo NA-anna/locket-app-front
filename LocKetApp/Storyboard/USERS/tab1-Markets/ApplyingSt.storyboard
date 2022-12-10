@@ -24,7 +24,7 @@
             </objects>
             <point key="canvasLocation" x="3169" y="401"/>
         </scene>
-        <!--셀러 참여 신청하기-->
+        <!--셀러 참여 하기-->
         <scene sceneID="rnN-vz-zcd">
             <objects>
                 <viewController id="tZH-Cn-fyA" customClass="ApplyingViewController" customModule="LocKetApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -42,6 +42,18 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="topInset">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="bottomInset">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="leftInset">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rightInset">
+                                        <real key="value" value="8"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
@@ -102,7 +114,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="셀러 참여 신청하기" id="nTg-1r-eOw">
+                    <navigationItem key="navigationItem" title="셀러 참여 하기" id="nTg-1r-eOw">
                         <barButtonItem key="rightBarButtonItem" enabled="NO" title="신청" id="xBX-ud-QYj">
                             <connections>
                                 <action selector="actApplying:" destination="tZH-Cn-fyA" id="1kY-ph-Gcv"/>
