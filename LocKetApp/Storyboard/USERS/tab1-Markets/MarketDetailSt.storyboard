@@ -84,7 +84,7 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="F9c-73-sCn">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="F9c-73-sCn">
                                         <rect key="frame" x="0.0" y="434" width="333" height="167"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </string>
@@ -99,7 +99,7 @@
                                         </constraints>
                                         <color key="tintColor" red="1" green="0.77976776920000002" blue="0.26943790480000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="참여 하기">
+                                        <buttonConfiguration key="configuration" style="filled" title="셀러 참여 하기">
                                             <backgroundConfiguration key="background" cornerRadius="15"/>
                                             <color key="baseBackgroundColor" red="0.96841138599999999" green="0.77008184850000005" blue="0.25373728350000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
@@ -128,15 +128,15 @@
                                 <color key="tintColor" red="0.96841138599999999" green="0.77008184850000005" blue="0.25373728350000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system"/>
+                                <connections>
+                                    <action selector="actFavorite:" destination="XSt-HB-kkW" eventType="touchUpInside" id="sZJ-B7-K89"/>
+                                </connections>
                             </button>
-                            <connections>
-                                <action selector="actFavorite:" destination="XSt-HB-kkW" id="y7Y-gK-PCX"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="btnApplying" destination="avW-ks-NNG" id="QgF-ro-uVX"/>
-                        <outlet property="btnLike" destination="RnV-sC-C50" id="sK6-Os-aUB"/>
+                        <outlet property="btnLike" destination="RnV-sC-C50" id="jyV-nT-yqA"/>
                         <outlet property="imageView" destination="vey-Uz-8gS" id="Fnj-kW-Spr"/>
                         <outlet property="lblAdress" destination="2nW-wG-Xkr" id="6Ma-l8-ZNV"/>
                         <outlet property="lblDate" destination="4CU-Do-9pD" id="qJa-4v-5Te"/>

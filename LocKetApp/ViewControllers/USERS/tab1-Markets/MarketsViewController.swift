@@ -104,8 +104,12 @@ class MarketsViewController: UITableViewController {
         
         
         if let index = tableView.indexPathForSelectedRow?.row {
+            if self.searchFlag {
+                vc?.market = searchedMarkets[index]
+            }else {
+                vc?.market = pMarkets[index]
+            }
             
-            vc?.market = pMarkets[index]
             
         }
     }

@@ -367,31 +367,31 @@
         <scene sceneID="bbY-TA-34l">
             <objects>
                 <tableViewController storyboardIdentifier="AppliedListView" id="QFu-5e-jxz" customClass="AppliedListViewController" customModule="LocKetApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" allowsSelection="NO" rowHeight="450" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="Up4-wE-Pph">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" allowsSelection="NO" rowHeight="530" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="Up4-wE-Pph">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="listcell" id="mpv-6t-YlN">
-                                <rect key="frame" x="20" y="55.333332061767578" width="353" height="450"/>
+                                <rect key="frame" x="20" y="55.333332061767578" width="353" height="530"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mpv-6t-YlN" id="5ba-6q-97L">
-                                    <rect key="frame" x="0.0" y="0.0" width="353" height="450"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="353" height="530"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="lk1-o8-5A5">
-                                            <rect key="frame" x="20" y="25" width="313" height="400"/>
+                                            <rect key="frame" x="20" y="25" width="313" height="480"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="1SS-Bb-un7">
-                                                    <rect key="frame" x="0.0" y="0.0" width="313" height="24.333333333333332"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="313" height="36.333333333333336"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="마켓이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P66-7p-yDB">
-                                                            <rect key="frame" x="0.0" y="0.33333333333333215" width="254" height="24"/>
+                                                            <rect key="frame" x="0.0" y="12.333333333333336" width="254" height="23.999999999999993"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" tag="6" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="신청상태" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YqQ-V6-Ho9">
-                                                            <rect key="frame" x="254" y="4" width="59" height="20.333333333333332"/>
+                                                            <rect key="frame" x="254" y="15.999999999999998" width="59" height="20.333333333333329"/>
                                                             <color key="tintColor" red="0.93725490570000003" green="0.77647060160000003" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                             <color key="textColor" systemColor="tintColor"/>
@@ -399,11 +399,14 @@
                                                         </label>
                                                     </subviews>
                                                 </stackView>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NHu-Ls-Qe0">
-                                                    <rect key="frame" x="0.0" y="36.333333333333343" width="313" height="182"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NHu-Ls-Qe0">
+                                                    <rect key="frame" x="0.0" y="48.333333333333314" width="313" height="313.00000000000006"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="NHu-Ls-Qe0" secondAttribute="height" multiplier="1:1" id="THr-Mv-XAa"/>
+                                                    </constraints>
                                                 </imageView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="TfI-Rn-lqa">
-                                                    <rect key="frame" x="0.0" y="230.33333333333337" width="313" height="169.66666666666663"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="TfI-Rn-lqa">
+                                                    <rect key="frame" x="0.0" y="373.33333333333331" width="313" height="106.66666666666669"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="신청 카테고리" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sxh-8j-4T2">
                                                             <rect key="frame" x="0.0" y="0.0" width="313" height="20.333333333333332"/>
@@ -412,13 +415,13 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SNS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cIg-RR-En2">
-                                                            <rect key="frame" x="0.0" y="28.333333333333343" width="313" height="20.333333333333329"/>
+                                                            <rect key="frame" x="0.0" y="28.333333333333371" width="313" height="20.333333333333329"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" systemColor="systemGray2Color"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="5" contentMode="scaleToFill" ambiguous="YES" editable="NO" text="설명" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRc-wc-65U">
-                                                            <rect key="frame" x="0.0" y="56.666666666666657" width="313" height="113"/>
+                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="5" contentMode="scaleToFill" editable="NO" text="설명" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRc-wc-65U">
+                                                            <rect key="frame" x="0.0" y="56.666666666666686" width="313" height="50"/>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                             <color key="textColor" systemColor="labelColor"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>

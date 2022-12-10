@@ -98,7 +98,6 @@ class MarketDetailViewController: UIViewController, MTMapViewDelegate {
     
     @IBAction func actFavorite(_ sender: UIButton) {
         isFavorite.toggle()
-        
         guard var user = user, let market = market, let market_id = market._id else { return }
         let lat  = Double(market.location.coordinates[0])
         let long = Double(market.location.coordinates[1])

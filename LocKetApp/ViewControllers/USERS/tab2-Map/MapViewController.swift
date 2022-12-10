@@ -142,6 +142,7 @@ class MapViewController: UIViewController, MTMapViewDelegate {
                 }
                 marker.showAnimationType = .noAnimation
                 if let idx = markets.firstIndex(of: market) {
+                    print(idx)
                     marker.tag = idx
                 }
                 markers.append(marker)

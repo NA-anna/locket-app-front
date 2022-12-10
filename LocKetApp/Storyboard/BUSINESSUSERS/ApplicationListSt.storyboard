@@ -27,19 +27,19 @@
         <scene sceneID="GyX-pn-EqX">
             <objects>
                 <tableViewController storyboardIdentifier="SellerListView" id="KfM-6L-i7l" customClass="ApplicationListViewController" customModule="LocKetApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" allowsSelection="NO" rowHeight="450" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="x8M-jI-7vd">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" allowsSelection="NO" rowHeight="530" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="x8M-jI-7vd">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="sellercell" id="EAi-iz-2hX" customClass="SellerCell" customModule="LocKetApp" customModuleProvider="target">
-                                <rect key="frame" x="20" y="55.333332061767578" width="353" height="450"/>
+                                <rect key="frame" x="20" y="55.333332061767578" width="353" height="530"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EAi-iz-2hX" id="CSa-UE-oQ1">
-                                    <rect key="frame" x="0.0" y="0.0" width="353" height="450"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="353" height="530"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="pbw-71-Rkh">
-                                            <rect key="frame" x="20" y="25" width="313" height="400"/>
+                                            <rect key="frame" x="20" y="25" width="313" height="480"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="gFJ-VP-5ge">
                                                     <rect key="frame" x="0.0" y="0.0" width="313" height="24.333333333333332"/>
@@ -59,9 +59,9 @@
                                                     </subviews>
                                                 </stackView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cjq-Zy-CFH" customClass="RoundUIImageView" customModule="LocKetApp" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="36.333333333333343" width="313" height="182"/>
+                                                    <rect key="frame" x="0.0" y="36.333333333333343" width="313" height="313"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="182" id="T9E-3Z-dhK"/>
+                                                        <constraint firstAttribute="width" secondItem="cjq-Zy-CFH" secondAttribute="height" multiplier="1:1" id="LGe-n4-87L"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -70,7 +70,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="UVa-w1-fYd">
-                                                    <rect key="frame" x="0.0" y="230.33333333333337" width="313" height="169.66666666666663"/>
+                                                    <rect key="frame" x="0.0" y="361.33333333333331" width="313" height="118.66666666666669"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="신청 카테고리" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MPh-yd-BMk">
                                                             <rect key="frame" x="0.0" y="0.0" width="313" height="20.333333333333332"/>
@@ -79,13 +79,13 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SNS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3U-4S-B0g">
-                                                            <rect key="frame" x="0.0" y="28.333333333333343" width="313" height="20.333333333333329"/>
+                                                            <rect key="frame" x="0.0" y="28.333333333333371" width="313" height="20.333333333333329"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" systemColor="systemGray2Color"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="5" contentMode="scaleToFill" editable="NO" text="설명" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgd-ic-Owd">
-                                                            <rect key="frame" x="0.0" y="56.666666666666657" width="313" height="113"/>
+                                                            <rect key="frame" x="0.0" y="56.666666666666686" width="313" height="62"/>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                             <color key="textColor" systemColor="labelColor"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>

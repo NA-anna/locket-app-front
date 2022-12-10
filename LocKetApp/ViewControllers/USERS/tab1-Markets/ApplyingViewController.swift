@@ -227,5 +227,6 @@ extension ApplyingViewController: UITextViewDelegate {
             textView.text = textViewPlaceHolder
             textView.textColor = .lightGray
         }
+        enableAddBtn()
     }
 }

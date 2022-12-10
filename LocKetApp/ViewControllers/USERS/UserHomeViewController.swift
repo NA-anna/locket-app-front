@@ -163,8 +163,8 @@ extension UserHomeViewController: UICollectionViewDataSource, UICollectionViewDe
 //    }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let height = collectionView.bounds.height //* 2/3
-        return CGSize(width: height * 1, height: height)
+        let height = collectionView.bounds.height
+        return CGSize(width: height * 2/3, height: height)
     }
 }
 
