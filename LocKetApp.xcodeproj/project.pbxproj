@@ -266,7 +266,7 @@
 				A47901B3292F4F110032003C /* UsersTabBarSt.storyboard */,
 				A456E07F292F6DDA00388D42 /* UserHomeSt.storyboard */,
 				A4A36A2F292F1AC8001696CE /* tab1Markets */,
-				A4B4BE0A294068F9002D678E /* tab2-Map */,
+				A4B4BE0A294068F9002D678E /* tab2Map */,
 				A4B4BE09294068ED002D678E /* tab3-Favorites */,
 				A4B4BE08294068BE002D678E /* tab4-MyPage */,
 			);
@@ -538,12 +538,12 @@
 			path = "tab3-Favorites";
 			sourceTree = "<group>";
 		};
-		A4B4BE0A294068F9002D678E /* tab2-Map */ = {
+		A4B4BE0A294068F9002D678E /* tab2Map */ = {
 			isa = PBXGroup;
 			children = (
 				A491A730292B8DBD0061BA62 /* MapSt.storyboard */,
 			);
-			path = "tab2-Map";
+			path = tab2Map;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
