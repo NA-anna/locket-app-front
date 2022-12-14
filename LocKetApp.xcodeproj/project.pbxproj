@@ -265,8 +265,8 @@
 			children = (
 				A47901B3292F4F110032003C /* UsersTabBarSt.storyboard */,
 				A456E07F292F6DDA00388D42 /* UserHomeSt.storyboard */,
-				A4A36A2F292F1AC8001696CE /* tab1Markets */,
-				A4B4BE0A294068F9002D678E /* tab2Map */,
+				A4A36A2F292F1AC8001696CE /* tab1-Markets */,
+				A4B4BE0A294068F9002D678E /* tab2-Map */,
 				A4B4BE09294068ED002D678E /* tab3Favorites */,
 				A4B4BE08294068BE002D678E /* tab4MyPage */,
 			);
@@ -510,7 +510,7 @@
 			path = "tab4-MyPage";
 			sourceTree = "<group>";
 		};
-		A4A36A2F292F1AC8001696CE /* tab1Markets */ = {
+		A4A36A2F292F1AC8001696CE /* tab1-Markets */ = {
 			isa = PBXGroup;
 			children = (
 				A4A36A2B292F18C6001696CE /* FiveMarketsSt.storyboard */,
@@ -519,7 +519,7 @@
 				A438075C2933DD1E00C4596C /* MarketDetailSt.storyboard */,
 				A400850D293535CD009FC8BD /* ApplyingSt.storyboard */,
 			);
-			path = tab1Markets;
+			path = "tab1-Markets";
 			sourceTree = "<group>";
 		};
 		A4B4BE08294068BE002D678E /* tab4MyPage */ = {
@@ -538,12 +538,12 @@
 			path = tab3Favorites;
 			sourceTree = "<group>";
 		};
-		A4B4BE0A294068F9002D678E /* tab2Map */ = {
+		A4B4BE0A294068F9002D678E /* tab2-Map */ = {
 			isa = PBXGroup;
 			children = (
 				A491A730292B8DBD0061BA62 /* MapSt.storyboard */,
 			);
-			path = tab2Map;
+			path = "tab2-Map";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
