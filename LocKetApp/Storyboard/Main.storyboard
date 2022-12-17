@@ -163,7 +163,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Qik-w1-21l">
-                                <rect key="frame" x="34" y="184.66666666666663" width="322.33333333333337" height="475"/>
+                                <rect key="frame" x="34" y="184.66666666666663" width="322.33333333333331" height="475.00000000000011"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="D6B-XD-cnV">
                                         <rect key="frame" x="111" y="0.0" width="100" height="100"/>
