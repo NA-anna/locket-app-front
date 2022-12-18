@@ -9,152 +9,6 @@
     </dependencies>
     <scenes>
         <!--Login View Controller-->
-        <scene sceneID="fI9-zr-liv">
-            <objects>
-                <viewController id="Urm-u1-Jve" customClass="LoginViewController" customModule="LocKetApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="i0y-8H-MEa">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="Ed4-OQ-WKB">
-                                <rect key="frame" x="57.333333333333343" y="59.333333333333314" width="275.66666666666663" height="725.33333333333348"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" image="rocket 2" highlightedImage="rocket 2" translatesAutoresizingMaskIntoConstraints="NO" id="ZXe-Em-4PP">
-                                        <rect key="frame" x="0.0" y="0.0" width="275.66666666666669" height="50"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가는날이장날" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9rX-oD-Zhv">
-                                        <rect key="frame" x="0.0" y="82" width="275.66666666666669" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="25"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="FPv-md-z3K">
-                                        <rect key="frame" x="0.0" y="144" width="275.66666666666669" height="32"/>
-                                        <segments>
-                                            <segment title="개인 회원"/>
-                                            <segment title="사업자"/>
-                                        </segments>
-                                    </segmentedControl>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="아이디" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h3a-NQ-8zK">
-                                        <rect key="frame" x="0.0" y="206.99999999999997" width="275.66666666666669" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IFI-9X-tGJ">
-                                        <rect key="frame" x="0.0" y="273" width="275.66666666666669" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zPX-Z8-qoX">
-                                        <rect key="frame" x="0.0" y="339" width="275.66666666666669" height="34"/>
-                                        <color key="backgroundColor" systemColor="systemRedColor"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="로그인">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="actLogin:" destination="Urm-u1-Jve" eventType="touchUpInside" id="EvA-kJ-pFd"/>
-                                        </connections>
-                                    </button>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6PJ-YS-JkV">
-                                        <rect key="frame" x="0.0" y="405" width="275.66666666666669" height="34"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQ0-1I-K2u">
-                                                <rect key="frame" x="0.0" y="0.0" width="168.66666666666666" height="34"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain"/>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oNs-Y2-QoS">
-                                                <rect key="frame" x="178.66666666666666" y="0.0" width="63" height="34"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="회원가입">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dOJ-Hf-2tP">
-                                                <rect key="frame" x="251.66666666666663" y="0.0" width="24" height="34"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain"/>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" alignment="center" id="Qgk-xH-sTj">
-                                        <rect key="frame" x="0.0" y="471.00000000000006" width="275.66666666666669" height="103.66666666666669"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ti5-d3-SrC">
-                                                <rect key="frame" x="0.0" y="34.666666666666629" width="137.66666666666666" height="34.333333333333343"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="아이디찾기"/>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="67q-UJ-kPd">
-                                                <rect key="frame" x="137.66666666666666" y="41.666666666666629" width="5" height="20.333333333333329"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tUz-f5-6HJ">
-                                                <rect key="frame" x="142.66666666666666" y="34.666666666666629" width="132.99999999999997" height="34.333333333333343"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="비밀번호찾기"/>
-                                            </button>
-                                        </subviews>
-                                        <viewLayoutGuide key="safeArea" id="DVN-c9-9Hz"/>
-                                    </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SNS 간편 로그인" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mrl-Jj-kvT">
-                                        <rect key="frame" x="0.0" y="606.66666666666663" width="275.66666666666669" height="20.333333333333371"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="JqM-WX-DUA">
-                                        <rect key="frame" x="0.0" y="659" width="275.66666666666669" height="66.333333333333371"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VvN-6H-gaW">
-                                                <rect key="frame" x="0.0" y="0.0" width="61" height="66.333333333333329"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="apple"/>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UCt-cp-Xrh">
-                                                <rect key="frame" x="62" y="0.0" width="77" height="66.333333333333329"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="kakao"/>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6aH-0p-WJi">
-                                                <rect key="frame" x="140" y="0.0" width="60.666666666666657" height="66.333333333333329"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="google"/>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YbE-hO-UDY">
-                                                <rect key="frame" x="201.66666666666666" y="0.0" width="73.999999999999972" height="66.333333333333329"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="facebook"/>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="Kh2-Rj-Y6B"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="Ed4-OQ-WKB" firstAttribute="centerX" secondItem="i0y-8H-MEa" secondAttribute="centerX" id="Owa-sd-9ke"/>
-                            <constraint firstItem="Ed4-OQ-WKB" firstAttribute="centerY" secondItem="i0y-8H-MEa" secondAttribute="centerY" id="PYn-Z4-96E"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="fXU-wX-HlD"/>
-                    <connections>
-                        <outlet property="segment" destination="FPv-md-z3K" id="EqC-IT-0k2"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5Gk-Gi-c0s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="248" y="-82"/>
-        </scene>
-        <!--Login View Controller-->
         <scene sceneID="yG5-2C-bMl">
             <objects>
                 <viewController storyboardIdentifier="login" id="2k3-Uz-O89" customClass="LoginViewController" customModule="LocKetApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -163,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Qik-w1-21l">
-                                <rect key="frame" x="34" y="184.66666666666663" width="322.33333333333331" height="475.00000000000011"/>
+                                <rect key="frame" x="34" y="184.66666666666663" width="322.33333333333331" height="475"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="D6B-XD-cnV">
                                         <rect key="frame" x="111" y="0.0" width="100" height="100"/>
@@ -661,20 +515,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="apple" width="36.666667938232422" height="36.333332061767578"/>
-        <image name="facebook" width="50" height="50"/>
-        <image name="google" width="36.666667938232422" height="36.666667938232422"/>
-        <image name="kakao" width="53" height="52.333332061767578"/>
-        <image name="rocket 2" width="50" height="50"/>
         <image name="rocket_up" width="170.66667175292969" height="170.66667175292969"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
