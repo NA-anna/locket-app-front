@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A400850C29352616009FC8BD /* FiveMarketsCellX.swift in Sources */ = {isa = PBXBuildFile; fileRef = A400850B29352616009FC8BD /* FiveMarketsCellX.swift */; };
 		A400850E293535CD009FC8BD /* ApplyingSt.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A400850D293535CD009FC8BD /* ApplyingSt.storyboard */; };
 		A4008510293539A6009FC8BD /* AddingSt.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A400850F293539A6009FC8BD /* AddingSt.storyboard */; };
 		A438075929335FC300C4596C /* MypageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A438075829335FC300C4596C /* MypageViewController.swift */; };
@@ -111,7 +110,6 @@
 		0DBD1F6CCA14FCEE6C33FC4C /* Pods_LocKetApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocKetApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FC14F7F5E26D947265CA310 /* Pods-LocKetApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocKetApp.debug.xcconfig"; path = "Target Support Files/Pods-LocKetApp/Pods-LocKetApp.debug.xcconfig"; sourceTree = "<group>"; };
 		63B5E63C81B72C97837214C7 /* Pods-LocKetApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocKetApp.release.xcconfig"; path = "Target Support Files/Pods-LocKetApp/Pods-LocKetApp.release.xcconfig"; sourceTree = "<group>"; };
-		A400850B29352616009FC8BD /* FiveMarketsCellX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiveMarketsCellX.swift; sourceTree = "<group>"; };
 		A400850D293535CD009FC8BD /* ApplyingSt.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ApplyingSt.storyboard; sourceTree = "<group>"; };
 		A400850F293539A6009FC8BD /* AddingSt.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddingSt.storyboard; sourceTree = "<group>"; };
 		A438075829335FC300C4596C /* MypageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MypageViewController.swift; sourceTree = "<group>"; };
@@ -293,7 +291,6 @@
 				A4B4BDFB293F43B8002D678E /* MarketsCell.swift */,
 				A4931EFF29308821003DA9D0 /* MarketDetailViewController.swift */,
 				A44ACA52293236B9001F0900 /* ApplyingViewController.swift */,
-				A400850B29352616009FC8BD /* FiveMarketsCellX.swift */,
 			);
 			path = "tab1-Markets";
 			sourceTree = "<group>";
@@ -732,7 +729,6 @@
 				A4C08ED3293D9BB00075294B /* SellerCell.swift in Sources */,
 				A444C09D293276E0008F02C5 /* GlobalData.swift in Sources */,
 				A438075929335FC300C4596C /* MypageViewController.swift in Sources */,
-				A400850C29352616009FC8BD /* FiveMarketsCellX.swift in Sources */,
 				A49DF6EB292B85140008D6B8 /* AddViewController_category.swift in Sources */,
 				A654D4E6293F82C900C0808F /* SideMenuNavigationController.swift in Sources */,
 				A4C08ED1293D96320075294B /* MarketCell.swift in Sources */,

@@ -12,7 +12,7 @@ class SignInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
     }
     
     // 빈 화면 터치 시 키보드 내려가기
