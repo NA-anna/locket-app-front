@@ -212,6 +212,7 @@
 		A4C08ECE293CB3800075294B /* ApplicationListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationListViewController.swift; sourceTree = "<group>"; };
 		A4C08ED0293D96320075294B /* MarketCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketCell.swift; sourceTree = "<group>"; };
 		A4C08ED2293D9BB00075294B /* SellerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellerCell.swift; sourceTree = "<group>"; };
+		A4E65E432955D745003A1D67 /* LocKetApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LocKetApp.entitlements; sourceTree = "<group>"; };
 		A654D4E5293F82C900C0808F /* SideMenuNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuNavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -351,6 +352,7 @@
 		A49DF67C292B64FF0008D6B8 /* LocKetApp */ = {
 			isa = PBXGroup;
 			children = (
+				A4E65E432955D745003A1D67 /* LocKetApp.entitlements */,
 				A49DF6EF292B85620008D6B8 /* Data */,
 				A49DF6A2292B82AC0008D6B8 /* Storyboard */,
 				A49DF6A1292B82A00008D6B8 /* ViewControllers */,
@@ -889,6 +891,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_ENTITLEMENTS = LocKetApp/LocKetApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = LP572SD537;
@@ -929,6 +932,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_ENTITLEMENTS = LocKetApp/LocKetApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = LP572SD537;

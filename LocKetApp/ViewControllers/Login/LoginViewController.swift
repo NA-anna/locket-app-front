@@ -6,14 +6,16 @@
 //
 
 import UIKit
+import AuthenticationServices
 import ProgressHUD
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController { //}, ASAuthorizationControllerDelegate {
     
     @IBOutlet var segment: UISegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        addButton()
     }
     override func viewDidAppear(_ animated: Bool) {
         ProgressHUD.dismiss()
@@ -86,13 +88,42 @@ class LoginViewController: UIViewController {
                     
                 }
             }
-            
-            
         }
-  
     }
+    
+    func addButton() {
+            let button = ASAuthorizationAppleIDButton(authorizationButtonType: .signIn, authorizationButtonStyle: .black)
+            button.addTarget(self, action: #selector(loginHandler), for: .touchUpInside)
+            //signInView.addSubview(button)
+    }
+    @objc func loginHandler() {
+            let request = ASAuthorizationAppleIDProvider().createRequest()
+            request.requestedScopes = [.fullName, .email]
+            let controller = ASAuthorizationController(authorizationRequests: [request])
+            controller.delegate = self
+            controller.presentationContextProvider = self as? ASAuthorizationControllerPresentationContextProviding
+            controller.performRequests()
+    }
+
+    
 }
 
 
 
 
+
+extension LoginViewController : ASAuthorizationControllerDelegate  {
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
+        if let credential = authorization.credential as? ASAuthorizationAppleIDCredential {
+            let user = credential.user
+            print("👨‍🍳 \(user)")
+            if let email = credential.email {
+                print("✉️ \(email)")
+            }
+        }
+    }
+    
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
+        print("error \(error)")
+    }
+}
