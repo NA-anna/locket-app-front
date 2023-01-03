@@ -305,7 +305,7 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
-		A4931EF9292F74D9003DA9D0 /* USERS */ = {
+		A4931EF9292F74D9003DA9D0 /* Users */ = {
 			isa = PBXGroup;
 			children = (
 				A4931EF6292F74BA003DA9D0 /* UserHomeViewController.swift */,
@@ -314,10 +314,10 @@
 				A49E693F2941B7F50011C475 /* tab3-Favorites */,
 				A49E69402941B7FC0011C475 /* tab4-MyPage */,
 			);
-			path = USERS;
+			path = Users;
 			sourceTree = "<group>";
 		};
-		A4931EFA292F751A003DA9D0 /* BUSINESSUSERS */ = {
+		A4931EFA292F751A003DA9D0 /* Businessusers */ = {
 			isa = PBXGroup;
 			children = (
 				A47901B5292F6B300032003C /* BusinessHomeViewController.swift */,
@@ -328,7 +328,7 @@
 				A4C08ED2293D9BB00075294B /* SellerCell.swift */,
 				A491A739292B8E730061BA62 /* AddViewControllers */,
 			);
-			path = BUSINESSUSERS;
+			path = Businessusers;
 			sourceTree = "<group>";
 		};
 		A49DF671292B64FF0008D6B8 = {
@@ -385,8 +385,8 @@
 			isa = PBXGroup;
 			children = (
 				A4931EF8292F74CB003DA9D0 /* Login */,
-				A4931EF9292F74D9003DA9D0 /* USERS */,
-				A4931EFA292F751A003DA9D0 /* BUSINESSUSERS */,
+				A4931EF9292F74D9003DA9D0 /* Users */,
+				A4931EFA292F751A003DA9D0 /* Businessusers */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
