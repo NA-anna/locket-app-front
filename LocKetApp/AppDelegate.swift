@@ -33,6 +33,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
+//    // apple signIn 분기
+//    func applicationDidBecomeActive(_ application: UIApplication) {
+//        if #available(iOS 13.0, *) {
+//                 
+//                let appleIDProvider = ASAuthorizationAppleIDProvider()
+//                appleIDProvider.getCredentialState(forUserID: userIdentifier) { (credentialState, error) in
+//                    switch credentialState {
+//                    case .authorized:
+//                        //인증성공 상태
+//                    case .revoked:
+//                        //인증만료 상태
+//                    default:
+//                        //.notFound 등 이외 상태
+//                    }
+//                }
+//            
+//        }
+//    }
 
 }
 
