@@ -136,7 +136,7 @@ extension LoginViewController : ASAuthorizationControllerDelegate  {
             
             //apple 로그인 성공
             userLogin(true)
-            //delegate?.appleLoginSuccess()
+            
         }
     }
     // Fail
