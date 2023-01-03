@@ -135,6 +135,10 @@ extension LoginViewController : ASAuthorizationControllerDelegate  {
             if let fullName = credential.fullName { print("😀 \(fullName)") }
             
             //apple 로그인 성공
+            // 처음에는 이메일과 풀네임 제공 그 다음부터는 제공 x
+            // 분기 필요
+            // 이메일 있으면 -> 신규 사용자 -> 데이터 추가
+            // 이메일 없으면 -> 기존 사용자
             userLogin(true)
             
         }
@@ -142,6 +146,8 @@ extension LoginViewController : ASAuthorizationControllerDelegate  {
     // Fail
     func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
         print("error \(error)")
+        
+        //apple 로그인 실패
         userLogin(false)
     }
 }
