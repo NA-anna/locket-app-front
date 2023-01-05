@@ -130,16 +130,38 @@ extension LoginViewController : ASAuthorizationControllerDelegate  {
         if let credential = authorization.credential as? ASAuthorizationAppleIDCredential {
             print("👨‍🍳 \(credential.user)")
             
-            if let email = credential.email { print("✉️ \(email)") }
-            if let authorizationCode = credential.authorizationCode { print(authorizationCode) }
-            if let fullName = credential.fullName { print("😀 \(fullName)") }
             
-            //apple 로그인 성공
             // 처음에는 이메일과 풀네임 제공 그 다음부터는 제공 x
             // 분기 필요
-            // 이메일 있으면 -> 신규 사용자 -> 데이터 추가
-            // 이메일 없으면 -> 기존 사용자
-            userLogin(true)
+            // -이메일 있으면 -> 신규 사용자 -> 데이터 추가
+            // -이메일 없으면 -> 기존 사용자
+            if let email = credential.email, email != "",
+               let authorizationCode = credential.authorizationCode,
+               let fullName = credential.fullName, let familyName = fullName.familyName, let givenName = fullName.givenName{
+                credential.ide
+                print("1")
+                print("✉️ \(email)")
+                print("🔐 \(authorizationCode)")
+                print("😀 \(fullName)")
+                
+              
+                let bodyData : [String: Any] = [ "id": authorizationCode, "name": familyName+givenName, "email": email ]
+                print(bodyData)
+                postUser(body: bodyData){
+                    getLoginUser(id: "heungmin7") { isOK in
+                        self.userLogin(isOK)
+                    }
+                }
+            
+                
+            }else {
+                print("2")
+                getLoginUser(id: "heungmin7") { isOK in
+                    self.userLogin(isOK)
+                }
+            }
+            
+            
             
         }
     }

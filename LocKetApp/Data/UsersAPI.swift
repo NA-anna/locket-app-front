@@ -9,6 +9,7 @@ import Foundation
 import Alamofire
 
 var user: User?
+//로그인 유저 조회 후 전역변수에 저장
 func getLoginUser( id: String, handler: @escaping(Bool)->() ) { 
     
     // 1 url request
@@ -31,7 +32,7 @@ func getLoginUser( id: String, handler: @escaping(Bool)->() ) {
         }
     }
 }
-
+//아이디와 일치하는 유저 조회
 func getUser( id: String, handler: @escaping(User)->() ) {
     
     // 1 url request
@@ -46,15 +47,36 @@ func getUser( id: String, handler: @escaping(User)->() ) {
         switch response.result {
         case .success( _)://obj):
             guard let data = response.value else { fatalError() }
-            //user = data
             handler(data)
         case .failure(let e):
             print(e.localizedDescription)
-            //handler(false)
         }
     }
 }
 
+//유저 등록
+func postUser( body: [String : Any], handler: @escaping()->() ) {
+    print("유저 등록")
+    // 1 url request
+    let strUrl = host + "/users"
+
+    // 2 Alamofire
+    let params: Parameters = body
+    AF.request(
+        strUrl,
+        method: .post,
+        parameters: params,
+        encoding: JSONEncoding.default // [인코딩 스타일]
+    ).responseDecodable(of: User.self) { response in
+        debugPrint(response)
+        switch response.result {
+        case .success(_): //통신성공
+            handler()
+        case .failure(let e):   //통신실패
+            print(e.localizedDescription)
+        }
+    }
+}
 func putUserData( collection route : String, id : String, body: [String : Any], handler: @escaping()->() ) {
     
     // 1 url request
