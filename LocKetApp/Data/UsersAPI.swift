@@ -67,7 +67,7 @@ func postUser( body: [String : Any], handler: @escaping()->() ) {
         method: .post,
         parameters: params,
         encoding: JSONEncoding.default // [인코딩 스타일]
-    ).responseDecodable(of: User.self) { response in
+    ).response() { response in
         debugPrint(response)
         switch response.result {
         case .success(_): //통신성공

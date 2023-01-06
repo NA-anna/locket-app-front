@@ -130,6 +130,7 @@ extension LoginViewController : ASAuthorizationControllerDelegate  {
         if let credential = authorization.credential as? ASAuthorizationAppleIDCredential {
             print("👨‍🍳 \(credential.user)")
             
+//            if let identityToken = credential.identityToken {}
             
             // 처음에는 이메일과 풀네임 제공 그 다음부터는 제공 x
             // 분기 필요
@@ -138,25 +139,32 @@ extension LoginViewController : ASAuthorizationControllerDelegate  {
             if let email = credential.email, email != "",
                let authorizationCode = credential.authorizationCode,
                let fullName = credential.fullName, let familyName = fullName.familyName, let givenName = fullName.givenName{
-                credential.ide
-                print("1")
+                
                 print("✉️ \(email)")
                 print("🔐 \(authorizationCode)")
                 print("😀 \(fullName)")
                 
               
-                let bodyData : [String: Any] = [ "id": authorizationCode, "name": familyName+givenName, "email": email ]
+                let bodyData : [String: Any]
+                = [ "id": credential.user,
+                    "loginPw": "",
+                    "name": familyName+givenName,
+                    "profile": "",
+                    "tel": "",
+                    "email": email,
+                    "favorites": []
+                ]
                 print(bodyData)
                 postUser(body: bodyData){
-                    getLoginUser(id: "heungmin7") { isOK in
+                    getLoginUser(id: credential.user) { isOK in
                         self.userLogin(isOK)
                     }
                 }
-            
-                
+            // 000131.2b9dc317df69499eb2c79ef1f705d2d1.0451
+            // 000131.2b9dc317df69499eb2c79ef1f705d2d1.0451
             }else {
-                print("2")
-                getLoginUser(id: "heungmin7") { isOK in
+
+                getLoginUser(id: credential.user) { isOK in
                     self.userLogin(isOK)
                 }
             }
