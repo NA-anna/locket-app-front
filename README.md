@@ -8,8 +8,9 @@
 - swift (MVC모델, alamofire)
 
 2. 주요 기능 
-- 플리마켓을 등록하고, 셀러를 모집하고, 셀러를 신청할 수 있다.
-- 비상설 오프라인 마켓 정보를 지도와 목록으로 볼 수 있다.
+- 마켓 등록 : 플리마켓/벼룩시장 등의 마켓을 등록
+- 셀러 모집, 셀러 신청
+- 오프라인 마켓 정보를 지도와 목록으로 표시.
 
 3. 자세한 내용 
 - https://drive.google.com/file/d/1kBVFg-HoLY1eQHhseGnd6mfG_Z_P-Yc3/view?usp=drivesdk
