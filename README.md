@@ -1,6 +1,6 @@
 # locket-app-front
 
-### 가는날이장날 app
+### 가는날이장날(loc-ket) app
 - 당신도 셀러가 될 수 있습니다!
 - local + market 
 - 오프라인 플리마켓/벼룩시장, 비상설 마켓정보 플랫폼
