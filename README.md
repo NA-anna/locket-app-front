@@ -14,6 +14,8 @@
 - 오프라인 마켓 정보를 지도와 목록으로 표시
 
 ## 시연영상
+https://www.youtube.com/watch?v=vCezJ20Rnxo
+
 https://user-images.githubusercontent.com/118866030/218668400-ca7cfbc4-1a20-4318-8b79-646c04b01a7e.mp4
 
 ## 프레젠테이션 
